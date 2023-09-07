@@ -1,25 +1,40 @@
-//Arrays Indexs Programs
-package com.pravinkumar.day1;
+package com.pravinkumar.day2;
+
+import java.util.ArrayList;
 
 public class Array_Exs_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		int arr[]= {10,20,30,40,50};
-		
-		//Printing the Element using the Index Numbers
-		System.out.println("Thrid Number in thi Index:" + arr[3]);
-		
-		//Updating the Element using the Index Numbers
-		arr[3]=90;
-		System.out.println("Third Number in this Index after the Changes:" + arr[3]);
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
 
-		System.out.println("Array Elements are:");
-		for(int i=0;i<arr.length;i++)
-		{
-			System.out.println(arr[i]);
+		// [10,20,30,40,50]
+		System.out.println("List: " + list);
+
+		// Updates the number in list using the Index for help
+		list.set(3, 25);
+		System.out.println("List: " + list);
+
+		// Accessed by the index for findings
+		System.out.println(list.get(1));
+
+		int sum = 0;
+		for (int i = 0; i < list.size(); i++) {
+			sum = sum + list.get(i);
 		}
+
+		System.out.println("sum:" + sum);
+		// travelsal in the Index (Print one by one in the Memory of the Array)
+		System.out.println("Array List Elements are:");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+
 	}
 
 }

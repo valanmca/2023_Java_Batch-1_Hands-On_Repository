@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            Login Page
+        </title>
+        <style>
+            body{
+                background-color: lightgrey;
+            }
+            .LoginDiv{
+                border: 5px solid white;
+                border-radius: 50px;
+                background-color: darkslateblue;
+                width: 400px;
+                position: absolute;
+                top: 15%;
+                left: 25%;
+            }
+            .textbox{
+                border: 2px solid black; 
+                border-radius: 50px; 
+            }
+            tr{
+                height: 30px;
+            }
+            ::placeholder{
+                text-align: center;
+            }
+            button:hover{
+                background-color: darkgoldenrod;
+                font-weight: bold;
+                cursor:pointer;
+                color: white;
+            }
+            td,th{
+                color: white;
+            }
+            td:hover,th:hover{
+                color: darkgoldenrod;
+            }
+            input{
+                text-align: center;
+            }
+        </style>
+        <script>
+        function validateform(){  
+       var nameReqEx='^[A-Z a-z]+$';
+       var passwordReqEx='^[0-9]+$';
+       var name=document.getElementById("name").value;  // Validation by ID.
+       var password=document.getElementById("password").value;  
+  
+      if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+      }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+      if(! name.match(nameReqEx)){
+        alert("Enter valid username");
+      }
+      if (! password.match(passwordReqEx)){
+        alert("Enter valid password");
+      }
+    }  
+        </script>
+    </head>
+    <body>
+        <div class="LoginDiv">
+    <form name="myform">
+    <table align="center">
+        <tr>
+            <th colspan="2"><h1>Login</h1></th></tr>
+        <tr>
+            <td><b>User Name:  </b></td>
+            <td><input type="text" class="textbox" onfocus="this.placeholder=''" placeholder="Enter username" id="name"></td></tr>
+        <tr>
+            <td><b>Password: </b></td>
+            <td><input type="text" class="textbox" onfocus="this.placeholder=''" placeholder="Enter password" id="password"></td></tr>
+        <tr>
+            <td></td>
+            <td align="center"><button type="submit" onclick="validateform()">Login</button> <button type="button">Cancel</button></td></tr>
+        <tr>
+            <td colspan="2" align="right">New user! <button type="button">Sign up</button></td></tr>
+    </table>
+    </form>
+        </div>
+    </body>
+</html>

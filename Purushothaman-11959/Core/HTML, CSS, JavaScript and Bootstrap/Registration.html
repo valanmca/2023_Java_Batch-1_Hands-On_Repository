@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Registeration</title>
+        <style>
+            body{
+                background-color: lightgrey;
+            }
+            tr{
+                height: 30px;
+                color: white;
+            }
+            th{
+                font-size: x-large;
+                height: 40px;
+            }
+            td:hover,th:hover{
+                color: darkgoldenrod;
+            }
+            .RegisterDiv{
+                background-color:darkslateblue;
+                border-radius: 50px;
+                border: 5px solid white;
+                height: 450px;
+                width: 480px;
+                position: absolute;
+                top: 15%;
+                left: 25%;
+            }
+            button:hover{
+                font-weight: bold;
+                background-color:darkgoldenrod;
+                cursor: pointer;
+                color:white;
+            }
+            input{
+                text-align: center;
+            }
+            ::placeholder{
+                text-align: center;
+            }
+            .textbox{
+                border: 1px solid;
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function validateform(){  
+       var nameReqEx='^[A-Z a-z]+$';
+       var passwordReqEx='^[0-9]+$';
+       var name=document.getElementById("name").value;    // Validation by ID.
+       var email=document.myform.email.value;             // Validation by name.
+       var date=document.myform.date.value;
+       var gender=document.myform.gender.value;
+       var address=document.myform.address.value;
+       var office=document.getElementById("office").value;
+       var language=document.getElementById("language").value;  
+       var password=document.myform.password.value;
+       var cnpassword=document.myform.cnpassword.value;
+ 
+      if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+      }  if(! name.match(nameReqEx)){
+        alert("Enter valid name");
+        return false;
+      } if(email==null || email==""){
+        alert("Email must not be empty");
+        return false;
+      } if(date==null || date==""){
+      alert("Select Date of Birth");
+      return false;
+      } if(gender==null || gender==""){
+        alert("Select gender");
+        return false;
+      } if(address==null || address==""){
+        alert("Enter address");
+        return false;
+      }
+      if(office==null || office==""){
+        alert("Select office");
+        return false;
+      } if(password==null || password==""){  
+      alert("Enter password");  
+      return false;
+    } if (! password.match(passwordReqEx)){
+        alert("Enter valid password");
+        return false;
+    } if(cnpassword==null || cnpassword==""){
+        alert("Enter password for confirmation");
+        return false;
+    } if(! cnpassword.match(password)){
+        alert("Enter the same password")
+        return false;
+    }
+
+}
+        </script>
+    </head>
+    <body>
+        <div class="RegisterDiv">
+        <table align="center">
+        <form style="text-align: center;" name="myform">
+        <tr>
+            <th colspan="2"><b>Register</b></th></tr>
+        <tr>
+            <td><b> Name: </b></td>
+            <td><input name="name" id="name" type="text" class="textbox" onfocus="this.placeholder=''" placeholder="Enter your name"></td></tr>
+        <tr>
+            <td><b> Email id: </b></td>
+            <td><input name="email" type="email" class="textbox" onfocus="this.placeholder=''" placeholder="Enter your email"></td></tr>
+        <tr>
+            <td><b> D.O.B: </b></td>
+            <td><input name="date" type="date" name="date" class="textbox"></td></tr>
+        <tr>
+            <td><b> Gender: </b></td>
+            <td><input name="gender" type="radio"><label>Male</label><input type="radio" name="gender"><label>Female</label></td></tr>
+        <tr>
+            <td><label><b>Address: </b></label></td>
+            <td><textarea name="address" rows="1" cols="4" class="textbox" onfocus="this.placeholder=''" placeholder="Enter your address with pincode"></textarea></td></tr>  
+        <tr>
+            <td><label for="office"><b>Office: </b></label></td>
+            <td><select id="office" class="textbox"><option value="">Select location</option>
+                <option value="Chennai">Chennai</option><option value="Virudhunagar">Virudhunagar</option></select></td></tr>
+        <tr>
+            <td><b> Languages Known: </b></td>
+            <td><input id="language" type="checkbox" class="textbox" name="checkbox1" value="Tamil"><label>Tamil</label>
+                <input type="checkbox" class="textbox"  name="checkbox1" value="English"><label>English</label>
+                <input type="checkbox" class="textbox"  name="checkbox1" value="Telugu"><label>Telugu</label></td></tr>
+        <tr>
+            <td><b> Password: </b></td>
+            <td><input name="password" type="password" class="textbox" onfocus="this.placeholder=''" placeholder="Enter password"></td></tr>
+        <tr>
+            <td><b> Confirm Password: </b></td>
+            <td><input name="cnpassword" type="password" class="textbox" onfocus="this.placeholder=''" placeholder="Confirm password"></td></tr>
+        <tr>
+            <td></td>
+            <td align="center"><b><button type="submit" value="Submit" onclick="validateform()">Sign Up</button></b></td></tr>
+        <tr>
+            <td></td>
+            <td>Have an account? <b><button type="button">Login here!</button></b></td></tr>
+        </table>
+        </form>
+    </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

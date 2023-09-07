@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+           body{
+            background-color: lightgrey;
+            }
+            .CalculatorDiv{
+                background-color:darkslateblue;
+                border: 5px solid white;
+                border-radius: 50px;
+                width: 400px;
+                height: 180px;
+                left: 25%;
+                top: 15%;
+                position: absolute;
+            }
+            tr{
+                height: 30px;
+            }
+            button:hover{
+                background-color:darkgoldenrod;
+                cursor: pointer;
+                font-weight: bold;
+                color: white;
+            }
+            button,input{
+                border-radius: 30px;
+            }
+            input{
+                text-align: center;
+            }
+            th{
+                font-size: larger;
+                color: white;
+            }
+            td{
+                color: white;
+            }
+            ::placeholder{
+                text-align: center;
+            }
+            th:hover,td:hover{
+                color: darkgoldenrod;
+            }
+        </style>
+        <script>
+            function addition(){
+                var a = document.getElementById("n1").value;
+                var b= document.getElementById("n2").value;
+                var sum= parseInt(a)+parseInt(b);
+                document.getElementById("result").innerHTML="<font color='white'><b>Addition</b>: "+sum;
+            }
+            function subtraction(){
+                var a = document.getElementById("n1").value;
+                var b= document.getElementById("n2").value;
+                var sub= parseInt(a)-parseInt(b);
+                document.getElementById("result").innerHTML="<font color='white'><b>Subtraction</b>: "+sub;
+            }
+            function multiplication(){
+                var a = document.getElementById("n1").value;
+                var b= document.getElementById("n2").value;
+                var multiple= parseInt(a)*parseInt(b);
+                document.getElementById("result").innerHTML="<font color='white'><b>Multiplication</b>: "+multiple;
+            }
+            function division(){
+                var a = document.getElementById("n1").value;
+                var b= document.getElementById("n2").value;
+                var divide= parseInt(a)/parseInt(b);
+                document.getElementById("result").innerHTML="<font color='white'><b>Division</b>: "+divide;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="CalculatorDiv">
+    <table align="center">
+        <tr><th colspan="2"><b><center>Calculator</center></b></th></tr>
+        <form>
+            <tr>
+                <td><b>Number 1: </b></td>
+                <td><input type="number" onfocus="this.placeholder=''" placeholder="Enter 1st number" id="n1"></td></tr>
+            <tr>
+                <td><b>Number 2: </b></td>
+                <td><input type="number" onfocus="this.placeholder=''" placeholder="Enter 2nd number" id="n2"></td></tr>
+            <tr>
+                <td> <button type="button" onclick="addition()">Add</button> 
+                    <button type="button" onclick="subtraction()">Subtract</button> </td>
+                <td> <button type="button" onclick="multiplication()">Multiple</button> 
+                    <button type="button" onclick="division()">Division</button></td></tr> 
+                <br>
+            <tr><td colspan="2"><div id="result"></div></td></tr>
+                
+        </form>
+    </table>
+    </div>
+    </body>
+</html>

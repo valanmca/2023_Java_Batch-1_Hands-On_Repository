@@ -1,0 +1,29 @@
+/*Class and Id Selector*/
+#MyH1Style1 {
+    color:  orangered; 
+    border: 2px solid orangered;
+    text-align: center;
+ }
+ .MyH1Style2{
+    color: goldenrod; 
+    border: 2px solid goldenrod;
+    text-align: center;
+ }
+ /*Universal Selector*/
+ *{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 35%, rgba(0,212,255,1) 100%);
+     
+ }
+ /*Grouping Selector*/
+ p,b{
+     color: green;
+     border: 2px solid green;
+    text-align: center;
+ }
+ /*Element or Tag Selector*/
+ h2{
+     color: blueviolet;
+     border: 2px solid blueviolet;
+    text-align: center;
+ }

@@ -1,0 +1,218 @@
+<html>
+
+<head>
+    <style>
+        .REgister {
+            border: 4px solid black;
+            height: 350px;
+            width: 350;
+            position: absolute;
+            top: 150px;
+            background-color: white;
+            margin-left: 400px;
+            border-radius: 5%;
+        }
+
+        .Log {
+            text-decoration: none;
+        }
+
+        .Log:hover {
+            cursor: pointer;
+            background-color: orangered;
+
+        }
+
+        .reg:hover {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+    <script>
+        function Check() {
+            var nameReqEx = '^[A-Z a-z]+$';
+            var emailReqEx='^[A-Z a-z 1-9]+$';
+            var cpassReqEx= '^[0-9]+$';
+            var name = document.getElementById("n1").value;
+            var email = document.getElementById("n2").value;
+            var male = document.getElementById("n3");
+            var female = document.getElementById("n4");
+            var dob=document.getElementById('n5').value;
+            var cpass=document.getElementById('n6').value;
+            var pass=document.getElementById('n7').value;
+            var country=document.getElementById('n8').value;
+
+
+            if (name==null || name == "") {
+                alert("Field conot be empty")
+                return false;
+
+            }
+            if(! name.match(nameReqEx)){
+                alert("Invalid Username")
+                return false;
+            }
+            
+            if (email==null || email=="") {
+                alert("email connot be empty")
+                return false;
+
+            }
+            if(!male.checked && !female.checked){
+                alert("Select Male or Female ");
+                return false;
+            }
+            
+            if (dob==null || dob=="" ) {
+                alert("dob conot be empty")
+                return false;
+
+            }
+            if (pass==null || pass=="" ) {
+                alert("pass connot be empty")
+                return false; 
+            }
+            if(! pass.match(cpassReqEx)){
+                alert("Enter valid Password")
+                return false;
+            }
+            if (cpass==null || cpass=="" ) {
+                alert("Cpass conot be empty")
+                return false;
+
+            }
+            if(! cpass.match(pass)){
+                alert("Password Dosen't match")
+                return false;
+            }
+            if(country==null || country==""){
+                alert("country cannot be empty ")
+                return false;
+            }
+            
+
+            
+            
+            
+            
+
+        }
+
+    </script>
+    <title>Registration</title>
+</head>
+
+<body style="background-color: rgb(184, 223, 223);">
+    <center>
+        <h3><b><u>Registration</u></b></h3>
+    </center>
+    <br>
+    <div class="Register">
+        <form>
+            <table align="center">
+                <tr>
+                    <th colspan="4" align="center"><u>Registration Page</u><br><br></th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">User Name</td>
+                    <td style="border: 2px;background-color: bisque;">:<input type="text" placeholder="name" onfocus="this.placeholder=''" id="n1">
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">Email Id</td>
+                    <td style="border: 2px;background-color: bisque;">:<input type="email" placeholder="@gmail.com" onfocus="this.placeholder=''"
+                            id="n2"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">Gender</td>
+                    <td>:MALE<input type="radio" name="gender" id="n3">FEMALE<input type="radio" name="gender"  id="n4"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">D.O.B</td>
+                    <td style="border: 2px;background-color: bisque;">:<input type="date" onfocus="this.placeholder=''" id="n5"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">Create Password</td>
+                    <td style="border: 2px;background-color: bisque;">:<input type="password" onfocus="this.placeholder=''"
+                            placeholder="new password" id="n6"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">Confirm Password</td>
+                    <td style="border: 2px;background-color: bisque;">:<input type="password" onfocus="this.placeholder=''"
+                            placeholder="Confirm Password" id="n7"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">Nationality</td>
+                    <td>:<select name="Country" id="n8">
+                            <option value="">Country</option>
+                            <option value="India">India</option>
+                            <option value="US">US</option>
+                            <option value="England">England</option>
+                            <option value="Africa">Africa</option>
+                            <option value="SriLanka">SriLanka</option>
+                        </select></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="4" align="center" class="reg"><button style="color: lightcoral;"
+                            onclick="Check()">Register</button>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="center" colspan="2" style="color: crimson;">Already have an account?</td>
+                    <td colspan="2"><a class="Log" href="Login_Page.html">Login here!!!</a>
+                </tr>
+
+
+
+
+
+            </table>
+
+
+
+
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

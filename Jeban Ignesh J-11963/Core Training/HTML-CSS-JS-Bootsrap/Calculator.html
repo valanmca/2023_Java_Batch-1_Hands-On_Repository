@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <style>
+        .cal {
+            border: 4px solid black;
+            height: 200px;
+            width: 350;
+            position: absolute;
+            top: 250px;
+            background-color: white;
+            margin-left: 400px;
+            border-radius: 5%;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: red;
+
+        }
+    </style>
+    <script>
+        function addition(){
+           var a = document.getElementById("n1").value;
+           var b = document.getElementById("n2").value;
+
+            var sum= parseInt (a)+parseInt(b);
+            document.getElementById("result").innerHTML="<font color='blue'><b>Addition="+sum+"</b></font>";
+        }
+        function subtraction(){
+            var a = document.getElementById("n1").value;
+           var b = document.getElementById("n2").value;
+
+            var sum= parseInt (a)-parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Red'><b>Subtraction="+sum+"</b></font>";
+
+        }
+        function multiplication(){
+            var a = document.getElementById("n1").value;
+           var b = document.getElementById("n2").value;
+
+            var sum= parseInt (a)*parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Orange'><b>Multiplication="+sum+"</b></font>";
+
+        }
+        function division(){
+            var a = document.getElementById("n1").value;
+           var b = document.getElementById("n2").value;
+
+            var sum= parseInt (a)/parseInt(b);
+            document.getElementById("result").innerHTML="<font color='sky Blue'><b>Division="+sum+"</b></font>";
+
+        }
+    </script>
+    <title>Calculator</title>
+</head>
+<center>
+
+    <body style="background-color: darkturquoise;">
+
+
+        <div class="cal" align="center">
+            <form>
+
+                <table align="center">
+
+                    <tr>
+                        <th align="center"><b>
+                                <h3><u>Calculator</u></h3>
+                            </b></th>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+
+                    <tr>
+                        <td colspan="2px" align="center"><b>Number 1:</b><input type="number"
+                                placeholder="enter number" id="n1"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td colspan="2px" align="center"><b>Number 2:</b><input type="number"
+                                placeholder="enter number" id="n2"></td>
+                    </tr><br><br>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td colspan="2px" align="center">
+                            <button type="button" onclick="addition()">Add</button>
+                            <button type="button" onclick="subtraction()">Sub</button>
+                            <button type="button" onclick="multiplication()">Multi</button>
+                            <button type="button" onclick="division()">Division</button>
+                            <br>
+                            
+                        </td>
+                    </tr>
+                    <tr id="result">
+
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+
+
+
+
+    </body>
+</center>
+
+</html>

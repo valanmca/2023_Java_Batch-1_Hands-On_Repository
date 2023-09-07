@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <style>
+        .div1 {
+            border: 4px solid black;
+            height: 200px;
+            width: 350;
+            position: absolute;
+            top: 250px;
+            background-color: white;
+            margin-left: 400px;
+            border-radius: 5%;
+        }
+
+        .Reg {
+            text-decoration: none;
+        }
+
+        .Reg:hover {
+            cursor: pointer;
+            background-color: orangered;
+
+        }
+
+        .Log:hover {
+            cursor: pointer;
+            color: blueviolet;
+        }
+    </style>
+    <script>
+        function Check() {
+            var nameReqEx = '^[A-Z,a-z]+$';
+            var passReqEx = '^[0-9]+$';
+            var name = document.getElementById("in1").value;
+            var pass = document.getElementById("in2").value;
+
+            if (name == "" || pass == "") {
+                alert("Field cannot be empty")
+                return false;
+
+            }
+
+            if (!name.match(nameReqEx)) {
+                alert("Invalid User Name")
+                return false;
+            }
+            if (!pass.match(passReqEx)) {
+                alert("Invalid Password")
+                return false;
+            }
+            if (pass.length >= 6) {
+                alert("Invalid Password")
+                return false;
+            }
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+    <title>Login_Page</title>
+</head>
+<center>
+
+    <body style="background-color: antiquewhite;">
+        <div style="background-color: goldenrod">
+            <h2><b>
+                    <marquee behavior="jeb" direction="right">
+                        <center>Login Here!!!</center>
+                    </marquee>
+                </b></h3>
+        </div>
+
+        <div class="div1">
+            <form>
+                <table align="center">
+                    <tr>
+                        <th colspan="2" align="center"><b>Login Page</b><br><br></th>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td style="border: 2px solid black; background-color: bisque;"><input type="text"
+                                placeholder="name" onfocus="this.placeholder=''" id="in1"><br></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Enter the Password</td>
+                        <td style="border: 2px solid black; background-color: bisque;"><input type="text "
+                                placeholder="password" onfocus="this.placeholder=''" id="in2"><br></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td colspan="2" align="center" style="background-color: rgb(167, 243, 55);">
+                            <button style="background-color: rgb(180, 180, 185); " class="Log"
+                                onclick="Check()">Login</button>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+
+                    <tr>
+                        <td colspan="2" align="center" style="background-color: red;">
+                            <center><b>New User?</b></center>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td colspan="2" align="center"><a class="Reg" href="Registration.html">Register here!!!</a>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</center>
+
+</html>

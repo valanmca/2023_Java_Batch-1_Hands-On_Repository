@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Login </title>
+   <style>
+    .div{
+        background:rgb(228, 92, 92);
+        height:250px;
+        width:450px;
+        border:2px solid black;
+        border-radius:30px;
+        position:absolute;
+        top:200px;
+        
+        margin-left: 300px;
+    }
+    .mytextbox1{
+        height:25px;
+        width:200px;
+        border-radius:20px;
+        border:2px solid pink;
+        cursor:pointer;
+
+        
+    }
+    .mytextbox1:hover{
+        height:25px;
+        width:200px;
+        border-radius:20px;
+        border:2px solid rgb(122, 12, 30);
+        cursor:pointer;
+    }
+    .button{
+        height:20px;
+        width:70px;
+        border-radius:20px;
+
+    }
+    .button:hover{
+        height:23px;
+        width:73px;
+        cursor:pointer;
+        background-color:rgb(90, 149, 226);
+       font-weight: bold;
+        border-radius:20px;
+        border:2px solid pink;
+    }
+    a:hover{
+        text-decoration: none;
+        cursor:pointer;
+        color:antiquewhite;
+        background: light pink;
+
+
+    }
+    
+    .detail{
+        font-size: 60px;
+    }
+  
+
+   
+   </style>
+
+     <script>
+
+        function check()
+        {
+            var userRedExp='^[A-Za-z]+$';
+            var PassRegExp='^[0-9]+$';
+            var username=document.getElementById("uname").value;
+            var password=document.getElementById("password").value;
+           
+            if (username=="" ){
+                alert("name  can't be blank");
+                return false;
+            }
+          
+            if(!username.match(userRedExp))
+            {
+                alert("Invalid user name");
+                return false;
+            }
+            if(password=="")
+            {
+                alert("password  can't be blank");
+                return false;
+            }
+
+            if(!password.match(PassRegExp))
+            {
+                alert("Invalid password ");
+                return false;
+            }
+            if(password.length>10)
+            {
+                alert(" password dont excceds 10 char");
+                return false;
+            }
+      
+             
+            
+            
+            
+
+        }
+        </script>
+</head>
+
+<body style="background-image: radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(54,54,47,0.9724264705882353) 100%)">
+    <div style="border: 2pxsolid  black;border-radius:20px;background-image: radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(54,54,47,0.9724264705882353) 100%);">
+        <marquee behavior="alternate"><H2><font color="black" >LOG IN PAGE</font> </H2></marquee>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+        <div class="div">
+            <form >
+                <table align="center">
+                       <tr>
+                        <th  colspan="2"><h2>Log in !!!</h2></th>
+                       </tr>
+
+                        <tr>
+                            <td class="Detail"><label for="username"><B>Username:</B></label><br></td>
+                            <td><input class="mytextbox1" onfocus="this.placeholder=''" type="text" placeholder="Username"  id="uname"><br></td>
+                        </tr>
+
+                          <tr> </tr><tr></tr><tr></tr>
+                          
+                        <tr>
+                            <td class="Detail"><B>Password:</B></td>
+                            <td><input class="mytextbox1"  onfocus="this.placeholder=''"type="Password" placeholder="password" id="password"><br></td>
+                        </tr>
+
+                       <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        
+                        <tr>
+                            <td colspan="2" align="center">&emsp;&nbsp;<input  class="button"  onclick="check()" type="Submit" value="Log In"></td>
+                        </tr>
+
+                        <tr></tr><tr></tr><tr></tr>
+
+                        <tr>
+                            <td style="text-align: right;"  colspan="2"><b>Not a user </b><a  class="a"href="Registration.html">Register here</a></td>
+                        </tr>
+                </table>
+            </form>
+        </div>
+   
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+            <script>
+                function factorial(){
+                    var a=document.getElementById('n1').value;
+                    var a1=parseInt(a);
+                    var fact=1;
+                   
+                    var i=1;
+                    for(i=1;i<=a1;i++)
+                    {
+                        fact= fact*i;
+                    }
+                    document.getElementById("fact").innerHTML="<h1>factorial:"+fact;
+                }
+                </script>
+
+
+
+       
+    </head>
+
+    <body>
+        <lable>Enter a number </lable>
+        <input type="number" id="n1" placeholder="enter num to find factorial">
+        <input type="button" onclick="factorial()" value="factorial">
+        <p id="fact">
+
+        </p>
+    </body>
+</html>

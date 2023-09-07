@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function addition(){
+            var a=document.getElementById('n1').value;
+            var b=document.getElementById('n2').value;
+            var sum=parseInt(a) + parseInt(b);
+            document.getElementById("result").innerHTML="<font color='black'><b>Addition :</b></font>"+sum;
+           
+        }
+
+        function subtraction(){
+            var a=document.getElementById('n1').value;
+            var b=document.getElementById('n2').value;
+            var sub=parseInt(a) -parseInt(b);
+            document.getElementById("result").innerHTML="<font color='black'><b>Subtraction :</b></font>"+sub+"</b></font>";
+           
+        }
+
+        function multiplication(){
+            var a=document.getElementById('n1').value;
+            var b=document.getElementById('n2').value;
+            var sub=parseInt(a)*parseInt(b);
+            document.getElementById("result").innerHTML="<font color='black' size='20px'><b>Multilication :</b></font>"+sub+"</b></font>";
+           
+        }
+
+        function Division(){
+            var a=document.getElementById('n1').value;
+            var b=document.getElementById('n2').value;
+            var sub=parseInt(a)/parseInt(b);
+            document.getElementById("result").innerHTML="<font color='black'><b>division :</b></font>"+sub;
+           
+        }
+    </script>
+</head>
+<body style ="background-image: radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(54,54,47,0.9724264705882353) 100%);">
+
+   
+
+    <h2 style=" border:5px solid whitesmoke;padding:3px;margin:3px;color:rgb(79, 241, 241);text-align:center;">Calculator</h2>
+<div >
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Su12dg1JtPu3dk7Q7-7ku1rOOg7wUF4kJA&usqp=CAU" >
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2E1dF3cdkg8lF1NIkTR-3Q7-_Aos7GeDDQ&usqp=CAU">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOv3iHiHZ7FAS8LWNqHZtfBx9oUjCKBooosQ&usqp=CAU">
+</div>
+
+<form >
+    <center>
+        <fieldset style="border:5px inset rgb(15, 15, 15);padding:20px;margin-top:40px;margin-bottom:40px;margin-right:400px;margin-left:400px">
+        <lable style="color:rgb(8, 8, 8);"><b>Enter Number 1:</b></lable>
+        <input type="number" name="n1" placeholder="N1" id="n1">
+        <br>
+        <br>
+        <lable style="color:rgb(13, 14, 14);"><b>Enter Number 2:</b></lable>
+        <input type="number" name="n2" placeholder="N2" id="n2">
+        <br>
+        <br>
+        <lable style="color:rgb(13, 14, 14);"><b>Add</b></lable> 
+        <input type="button" onclick="addition()" value="ADD">&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <lable style="color:rgb(8, 8, 8);"><b>SUB</b></lable>
+        <input type="button"  onclick="subtraction()" value="SUB">&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <lable style="color:rgb(10, 10, 10);"><b>MUL</b></lable>
+        <input type="button" value="MUL" onclick="multiplication()">&nbsp;&nbsp;&nbsp;&nbsp;
+        <lable style="color:rgb(20, 20, 20);"><b>DIV</b></lable>
+        <input type="button" value="DIV" onclick="Division()">
+        <p id="result" >
+       
+        </p>
+        
+    </fieldset>
+</center>
+    </form>
+
+    
+   
+    
+
+    
+</body>
+</html>

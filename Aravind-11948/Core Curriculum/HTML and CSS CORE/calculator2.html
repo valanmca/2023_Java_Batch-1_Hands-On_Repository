@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function addition1()
+        {
+            
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var sum=parseInt(a)+parseInt(b);
+            document.getElementById("result").innerHTML="addition:"+sum;
+        }
+    </script>
+</head>
+<body>
+    <label> number1:</label>
+    <input type="number" name="n1" id="n1" ></input>
+    <br>
+
+    <label> number2:</label>
+    <input type="number"  name="n2" id="n2"> </input>
+    <br>
+
+    <input type="button" onclick="addition1()" value="Add">
+
+    <p id="result"></p>
+
+    
+
+
+    
+</body>
+</html>

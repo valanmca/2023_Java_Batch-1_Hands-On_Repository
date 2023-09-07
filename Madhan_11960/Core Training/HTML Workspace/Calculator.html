@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <style>
+        *{
+   padding: 0;
+   margin: 0;
+   font-family: 'poppins', sans-serif;
+}
+body{
+   background-color: azure;
+   display: grid;
+   height: 100vh;
+   place-items: center;
+}
+.main{
+   width: 400px;
+   height: 400px;
+   background-color: white;
+   position: absolute;
+   border: 5px solid black;
+   border-radius: 6px; 
+}
+.main input[type='text'] {
+   width: 88%;
+   position: relative;
+   height: 80px;
+   top: 5px;
+   text-align: right;
+   padding: 3px 6px;
+   outline: none;
+   font-size: 40px;
+   border: 5px solid black;
+   display: flex;
+   margin: auto;
+   border-radius: 6px;
+   color: black;
+}
+.btn input[type='button']{
+   width:90px;
+   padding: 2px;
+   margin: 2px 0px;
+   position: relative;
+   left: 0px;
+   top: 20px;
+   height: 60px;
+   cursor: pointer;
+   font-size: 18px;
+   transition: 0.5s;
+   background-color:lightseagreen;
+   border-radius: 6px;
+   color: white;
+}
+.btn input[type='button']:hover{
+   background-color: black;
+   color: white;
+}
+    </style>
+    
+    <script>
+ 
+   function clearScreen() {
+              document.getElementById("result").value ="";
+          }
+      function display(value) {
+         
+          document.getElementById("result").value += value;
+           
+          }
+      function calculate() {
+             var p = document.getElementById("result").value;
+             var q = eval(p);
+             document.getElementById("result").value = q;
+          }
+  
+  
+   
+  </script>
+  
+</head>
+<body align="center">
+    <div class="main" >
+        <input type="text" id="result">
+        <div class="btn">
+        <input type="button" value="9" onclick="display(9)">
+        <input type="button" value="8"onclick="display(8)">
+        <input type="button" value="7"onclick="display(7)">
+        <input type="button" value="C"onclick="clearScreen()">
+        <br>
+        <input type="button" value="6"onclick="display(6)">
+        <input type="button" value="5"onclick="display(5)">
+        <input type="button" value="4"onclick="display(4)">
+        <input type="button" value="/"onclick="display('/')">
+        <br>
+        <input type="button" value="3"onclick="display(3)">
+        <input type="button" value="2"onclick="display(2)">
+        <input type="button" value="1"onclick="display(1)">
+        <input type="button" value="x"onclick="display('*')">
+        <br>
+        <input type="button" value="0"onclick="display(0)">
+        <input type="button" value="+"onclick="display('+')">
+        <input type="button" value="-"onclick="display('-')">
+        <input type="button" value="="onclick="calculate()">
+    </div>
+    </div>
+   
+</body>
+</html>

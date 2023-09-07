@@ -1,0 +1,27 @@
+package com.naveen.day5;
+
+//Adding Duplicate Value
+import java.util.TreeSet;
+
+public class TreeEx03 {
+
+	public static void main(String[] args) {
+		TreeSet<String> ts = new TreeSet<String>();
+		// Display the input in Alphabetical order - String
+
+		ts.add("Arasu");
+		ts.add("Anbu");// The Tree compares all the literals and do the sorting. It not only checks the
+						// First Letter.
+		ts.add("Arav");
+		ts.add("Anbu");
+		ts.add("Anand");
+		ts.add("Aravind");
+
+		System.out.println(ts);
+
+		// While adding duplicate elements the tree can accept the duplicate but it just
+		// ignore while runtime.
+
+	}
+
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <style>
+        .frame{
+            border: 4px solid black;
+            width: 40%;
+            border-radius: 30px;
+            background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(199, 255, 30) 100%);        
+        }
+        p,button,td{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        button:hover{
+            background-color:  rgb(186, 126, 242);;
+            cursor: pointer;
+        }
+        
+::placeholder{
+    color: rgb(158, 179, 255);
+    text-align: center;
+    color: black;
+}
+
+        a:hover{
+            text-decoration: none;
+            color:rgb(255, 0, 0);
+        }
+
+        a{
+            text-decoration: none;
+      
+        }
+    </style>
+
+<script>
+
+
+function check(){
+var username = document.getElementById("Uname").value;
+var password = document.getElementById("Upassword").value;
+var UsernameReq = '^[A-Z a-z]+$';
+var PasswordReq = '^[0-9]+$';
+
+if(username == "" || password == "")
+{
+ alert("Filed can't empty");
+ return false;
+}
+
+if( !username.match(UsernameReq))
+{
+alert("Invalid Username Format");
+return false;
+}
+
+if( !password.match(PasswordReq))
+{
+alert("Invalid Password Format");
+return false;
+}
+
+if ( username == "mahesh" && password == "11962"){
+    alert ("Login successfully");
+    return false;
+}
+
+}
+</script>
+
+</head>
+<body style="padding-top: 100px;padding-left: 350px;">
+<form action="">
+    <div class="frame">
+<table align="center">
+<tr>
+    <th><h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Login</h3> 
+    </th>
+</tr>
+<tr>
+    <td>
+    <p >Username</p>&emsp;<input type="text" id="Uname" placeholder="Enter your username" style="width: 200px; height: 25px;border-radius: 6px;">
+</td>
+</tr>
+
+<tr><td>
+    <p>
+    Password </p>&emsp;<input type="password" id="Upassword" placeholder="Enter your password " style="width: 200px; height: 25px; border-radius: 6px;"><br><br>
+</td>
+
+</tr>
+
+<tr align="center"><td colspan="3">
+    <button style="width: 80PX;height: 30PX;border-radius: 5PX;" onclick="check()">login</button>
+
+</td >
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr style="text-align: center;"> <td>   New User?   <a href="sign_up.html"> Sign up</a></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+
+</table></div>
+</form>
+</body>
+</html>

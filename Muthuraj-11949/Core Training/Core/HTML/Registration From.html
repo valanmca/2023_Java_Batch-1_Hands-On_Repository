@@ -1,0 +1,135 @@
+<html>
+<style>
+     table {
+          border: 3px solid rgb(128, 0, 0);
+          height: 600px;
+          width: 600px;
+          background-color: silver;
+     }
+
+     .MytextStyle {
+          border: 3px solid rgb(221, 182, 167);
+     }
+
+     button {
+          border: 3px solid rgb(108, 169, 172);
+          background-color: rgb(217, 243, 243);
+     }
+</style>
+
+      <script>
+        function loginValidation(){
+            alert("ok");
+
+            var FristNameReqEx = "^[A-z a-z]+$";
+            var lastNameReqEx = "^[A-z a-z]+$";
+            var EmailReqEx = "^[A-z a-z]+$";
+            var userNameReqEx = "^[A-Z a-z]+$";
+            var passwordReqEx = "^[0-9]+$";
+           
+            var Firstname = document.getElementById("Firsttname").value
+            var Lastname = document.getElementById("Lastname").value;
+          
+            var Email = document.getElementById("E-mail").value;
+            var Date = document.getElementById("Date").value;
+
+            var username = document.getElementById("userName").value;
+            var password = document.getElementById("pwd").value;
+
+            if (Firstname == "") {
+                alert("Enter the firstname");
+            }
+
+           else if (!firstname.match(FirstNameReqEx)) {
+                alert("fristname did not match")
+            }
+            
+            if (Lastname== "") {
+                alert("Enter the lastname");
+            }
+            else if(!lastname.match(lastNameReqEx)) {
+                alert(" lastname did not match")
+            }   
+            if(E-mail == ""){
+               alert("Enter the emailid")
+            }
+           else if (!E-mail.match(EmailReqEx)) {
+                alert(" lastname did not match")
+            }   
+            if (userName == "" || password == " ") {
+                alert("Field cannot be empty");
+            }
+           else if(!userName.match(userNameReqEx)) {
+                alert("Username did not match")
+            };
+             if(!password.match(passwordReqEx)) {
+                alert("Password did not match")
+            } 
+            else if(password.length>10) {
+                alert("Invalid Password")
+            }
+          }
+    </script>
+<head>
+     <title>
+          Student Registration Form
+     </title>
+</head>
+
+<body bgcolor="pink">
+          <table align="center">
+               <tr>
+                    <th colspan="2">Student Registration From</th>
+                <tr><td label for="Fristname"><b>FirstName:</b></label></td>
+               <td><input type="text"  onfocus="this.placeholder=''" placeholder=" Firstname" size="20" id="FirstName"></td></tr>
+                <tr>
+                    <td label for="Lastname"><b>lastname :</b></label></td>
+                <td><input type="text"  onfocus="this.placeholder=''" placeholder=" Lastname" size="20" id="Lastname"></td></tr>
+                <tr><td label for="E-mail"><b>E-mail:</b></label></td>
+                <td><input type="text"  onfocus="this.placeholder=''" placeholder=" E-mail" size="20" id="E-mail"></td></tr>
+          <tr>
+                    <td><b>Date of Brith:</b></td>
+                    <td><input type="Date" id="DOB"class="MytextStyle" size="30" placeholder=" Enter the Date Birth "></td></tr>
+               
+               <tr>
+               <td label for="Username"><b>Enter UserName:</b></label></td>
+              <td><input type="text"  onfocus="this.placeholder=''" placeholder=" Username" size="20"id="UserName"><td>
+              </tr>
+
+               <tr>
+               <td label for="Upassword"><b>Enter Password:</b></label></td>
+               <td><input type="password"  onfocus="this.placeholder=''" placeholder="Password" size="20" id="pwd"></td>
+              </tr>
+
+               <tr>
+               <td><b>Gender:</b></td>
+               <td><input type="radio" name="gender" value="Male" size="10">Male
+               <input type="radio" name="gender" value="Female" size="10">Female
+               <input type="radio" name="gender" value="Others" size="10">Others</td></tr>
+                    
+               <tr>
+                    <td><b>Langauage:</b></td>
+                    <td><input type="checkbox" name="id" value="">Tamil
+                         <input type="checkbox" name="id" value="">English
+                         <input type="checkbox" name="id" value="">Hindi</td>
+               </tr>
+               
+
+               <tr>
+                    <td><b>Course:</b></td>
+                     <td><select name="Course">
+                              <option value="-1" Selected>Selected--</option>
+                              <option value="CS">Computer Fundamentals</option>
+                              <option value="AI">Artificial Intelligence</option>
+                              <option value="ML">Machine Learning</option>
+                              <option value="OOPS">Object Oriented Programming</option>
+                              <option value="DBMS">Database Management System</option>
+                     </select><td></tr>
+                    <tr>
+          
+                    <td> <button type="button"  onclick="loginValidation()">Submit</button></td>
+               
+               </tr>
+          </table>
+</body>
+</html>

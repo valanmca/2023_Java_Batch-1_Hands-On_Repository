@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        table {
+            border: 6px solid black;
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            top: 100px;
+            left: 350px;
+            padding: 20px;
+            border-radius: 20%;
+            background-color: black;
+        }
+
+        #text {
+            width: 100%;
+        }
+
+        button {
+            width: 60px;
+            height: 40px;
+            border: 3px;
+            border-radius: 30%;
+            background-color: gray;
+            color: white;
+        }
+
+        input {
+            border-radius: 50px;
+            height: 40px;
+        }
+
+        button:hover {
+            background-color: rgb(93, 142, 242);
+            cursor: pointer;
+        }
+
+        .buton,
+        .buton2 {
+            background-color: rgb(235, 164, 34);
+        }
+
+        body {
+            background-image: url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script>
+    function clearscreen() 
+    { document.getElementById("text").value = ""; 
+} 
+    function display(value) { document.getElementById("text").value += value;
+ } 
+ function calculate() { var a = document.getElementById("text").value; 
+ var b = eval(a); document.getElementById("type").value = b; 
+}
+    </script>
+</head>
+
+<body><table class="table"><tr></tr><tr>
+    <td colspan="3"align="center">
+        
+        <input style="border: 2px solid;" type="text" name="" id="text">
+                </td><td><button class="buton2" onclick="clearscreen()">C</button></td></tr>
+        <tr><td><button value="0" onclick="display(0)">0</button></td><td><button value="1"
+                    onclick="display(1)">1</button></td><td><button value="2"
+                    onclick="display(2)">2</button></td><td><button class="buton" value="+"
+                    onclick="display('+')">+</button></td></tr><tr><td><button value="3"
+                    onclick="display(3)">3</button></td><td><button value="4"
+                    onclick="display(4)">4</button></td><td><button value="5"
+                    onclick="display(5)">5</button></td><td><button class="buton" value="-"
+                    onclick="display('-')">-</button></td></tr><tr><td><button value="6"
+                    onclick="display(6)">6</button></td><td><button value="7"
+                    onclick="display(7)">7</button></td><td><button value="8"
+                    onclick="display(8)">8</button></td><td><button class="buton" value="*"
+                    onclick="display('*')">*</button></td></tr><tr><td><button value="9"
+                    onclick="display(9)">9</button></td><td><button value="."
+                    onclick="display('.')">.</button></td><td><button value="="
+                    onclick="calculate()">=</button></td><td><button class="buton" value="/"
+                    onclick="display('/')">/</button></td></tr></table>
+                </body>
+
+</html>

@@ -1,3 +1,0 @@
-Welcome to GIT
-
-This is my first message.

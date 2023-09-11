@@ -1,3 +1,0 @@
-This is first sample file in sample git repository.
-
-Modify the content.

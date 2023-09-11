@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        table{
+            background-color: black;
+            color: aliceblue;
+            height: 300px;
+            width: 250px;
+            border-radius: 10px;
+            border-spacing: 15px;
+            border-style: groove;
+            
+        
+        }
+        td{
+            height: 1cm;
+            width: 1cm;
+            border-radius: 1cm;
+            border-style: groove;
+            
+        }
+
+        th{
+            height: 2cm;
+            width: 5cm;
+            color: aliceblue;
+            text-align: right;
+            font-weight: bold;
+            font-size: x-large;
+            border-style: groove;
+        }
+
+        input{
+           text-align: right;
+           background-color: black;
+           color: aliceblue;
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           font-weight: bold;
+           font-size: 20;
+           border: none;
+
+        }
+
+        button{
+            height: 1.5cm;
+            width: 1.5cm;
+            border-radius: 1.5cm;
+            border: none;
+            font-size: 28;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;        
+            color: black;
+        }
+
+        button:hover{
+            border-color: aqua;
+            background-color: #002244;
+        }
+
+
+    </style>
+
+    <script>
+        function clearscreen(){
+            document.getElementById("result").value="";
+        }
+
+        function display(){
+            document.getElementById("result").value += value;
+        }
+
+        function calculate(){
+            var a = document.getElementById("result").value;
+            var b = eval(a);
+            document.getElementById("result").value= b;
+        }
+    </script>
+</head>
+<body style="padding-top: 10%;background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);" >
+    <table align="center"  style="text-align: center;">
+
+        <tr><th colspan="4"><input type="text" placeholder="0" onfocus="this.placeholder=''" id="result"></th></tr>
+
+        <tr><td><button style="background-color: #F08080; color: red;">C</button></td>
+        <td><button  value="C" onclick="clearscreen()" style="background-color: #4f3dd7; color: aliceblue;">&divide;</button></td>
+        <td><button value="*" onclick="display('*')" style="background-color: #4f3dd7; color: aliceblue;">x</button></td>
+        <td><button value="" onclick="display()" style="background-color: #4f3dd7; color: aliceblue;">&#9003;</button></td></tr>
+
+        <tr><td><button value="7" onclick="display('7')" style="background-color:#002244 ;color: aliceblue;">7</button></td>
+            <td><button value="8" onclick="display('8')" style="background-color:#002244 ;color: aliceblue;">8</button></td>
+            <td><button value="9" onclick="display('9')" style="background-color:#002244 ;color: aliceblue;">9</button></td>
+            <td><button value="-" onclick="display('-')" style="background-color: #4f3dd7; color: aliceblue;">-</button></td>
+
+        <tr><td><button value="4" onclick="display('4')" style="background-color:#002244 ;color: aliceblue;">4</button></td>
+            <td><button value="5" onclick="display('5')" style="background-color:#002244 ;color: aliceblue;">5</button></td>
+            <td><button value="6" onclick="display('6')" style="background-color:#002244 ;color: aliceblue;">6</button></td>
+            <td><button value="+" onclick="display('+')" style="background-color: #4f3dd7; color: aliceblue;">+</button></td>
+
+        <tr><td><button value="1" onclick="display('1')" style="background-color:#002244 ;color: aliceblue;">1</button></td>
+            <td><button value="2" onclick="display('2')" style="background-color:#002244 ;color: aliceblue;">2</button></td>
+            <td><button value="3" onclick="display('3')" style="background-color:#002244 ;color: aliceblue;">3</button></td>
+            <td rowspan="2"><button  value="=" onclick="calculate()"style="background-color: #4B6F44;color: aliceblue;">=</button></td></tr>
+        <tr><td><button value="()" onclick="display('(')" style="background-color: #4f3dd7; color: aliceblue;">(</button></td>
+            <td><button value="0" onclick="display('0')" style="background-color:#002244 ;color: aliceblue;">0</button></td>
+            <td><button value=")" onclick="display(')')"style="background-color: #4f3dd7; color: aliceblue;">)</button></td>
+
+        
+
+    </table>
+
+    
+</body>
+</html>

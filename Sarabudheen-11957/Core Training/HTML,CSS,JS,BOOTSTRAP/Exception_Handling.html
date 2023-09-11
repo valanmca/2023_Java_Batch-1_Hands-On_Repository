@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+
+    <script>
+        var a = 10;
+        document.write("<br> Before Exception  " +a);
+
+        try{
+            a=10/0;
+            if (a==Infinity)
+            {
+                throw "can't divided by 0.";
+            }
+        }
+
+        catch(err){
+            alert (err);
+        }
+
+        document.write("<br> After Exception  " + a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

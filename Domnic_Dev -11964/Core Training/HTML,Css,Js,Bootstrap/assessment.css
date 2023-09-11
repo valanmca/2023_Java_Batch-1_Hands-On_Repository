@@ -1,0 +1,30 @@
+body{
+    
+}
+#nav{
+   background-image: url(laptop1.webp);
+   height: 20%;
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+#abtus,span{
+    color: orange;
+    font-weight: bold;
+}
+#Home{
+    font-size:smaller;
+
+}
+#lap1{
+    height: 40%;
+    width: 40%;
+}
+#abt
+{
+    color: orange;
+}
+footer{
+    background-color: black;
+    color: white;
+    align-items: center;
+}

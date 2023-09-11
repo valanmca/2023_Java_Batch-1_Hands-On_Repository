@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>Login page</title>
+    <style>
+        .login {
+                       
+            position: absolute;
+            top: 90px;
+            left: 300px;
+            
+            width: 40%;
+            height: 200px;
+            
+
+        }
+
+        .reg {
+            text-decoration: none;
+        }
+
+        .reg:hover {
+            cursor: pointer;
+            background-color: aqua;
+        }
+
+        .login1 {
+            height: 20px;
+            width: 50px;
+
+        }
+
+        .login1:hover {
+            height: 25px;
+            width: 55px;
+            cursor: pointer;
+
+        }
+        body{
+            background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            
+            
+        }
+        input{
+            background: transparent;
+            fill: none;
+        }
+
+      
+       
+    </style>
+    <script>
+        function login(){
+            var usernameReqEx='^[A-Z a-z]+$';
+            var passwordReqEx='^[0-9]+$';
+            var username =document.getElementById("Uname").value;
+            var password =document.getElementById("passw").value;
+
+            
+
+            if(username==""&& password=="")
+            {
+                alert("Fields cannot be empty");
+            }
+            if(! username.match(usernameReqEx)){
+                alert("Invalid Username");
+
+            }
+            if(! password.match(passwordReqEx)){
+                alert("Invalid password");
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="login">
+        <form>
+            <table align="center">
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <th colspan="2">LOGIN PAGE</th>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr><tr><tr></tr></tr></tr>
+                <tr>
+                    <td class="email">Enter the Username:</td>
+                    <td><input type="text" placeholder="Enter your email" id="Uname" style="border: 1;"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td class="passw">Enter the Password:</td>
+                    <td><input type="password" name="" placeholder="Enter your password" id="passw"
+                        style="border: 1;"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2" align="center"><button class="login1" onclick="login()">Login</button></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="center" colspan="2">New User? <a class="reg" href="registration.html">Register</a> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

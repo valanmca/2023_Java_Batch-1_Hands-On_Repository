@@ -1,0 +1,274 @@
+<html>
+
+<head>
+    <title>Registration Page</title>
+    <style>
+        .reg {
+
+            position: absolute;
+            left: 300px;
+        }
+
+        .regs {
+            height: 20px;
+            width: 90px;
+
+        }
+
+        .regs:hover {
+            height: 25px;
+            width: 100px;
+            cursor: pointer;
+
+        }
+
+        body {
+            background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            background: transparent;
+            fill: none;
+        }
+
+        ::placeholder {
+            color: black;
+        }
+    </style>
+    <script>
+        function reg() {
+            var usernameReqEx = '^[A-Z a-z]+$';
+            var passwordReqEx = '^[0-9]+$';
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("password").value;
+            var uname = document.getElementById("uname").value;
+            var email = document.getElementById("email").value;
+            var phno = document.getElementById("phno").value;
+            var gender = document.form.gender.value;
+            var address = document.getElementById("address").value;
+            var dob = document.getElementById("dob").value;
+            var password = document.getElementById("password").value;
+            var password2 = document.getElementById("password2").value;
+            var country = document.getElementById("country").value;
+
+
+            if (uname == null || uname == "") {
+                alert("Name section can't be empty");
+                return false;
+            }
+            if(! username.match(usernameReqEx)){
+                alert("Invalid Username");
+                return false;
+            }
+         
+
+          
+            if (email == null || email == "") {
+                alert("Email filed section can't be empty");
+                return false;
+
+            }
+            if (phno == null || phno == "") {
+                alert("Enter your phone number");
+                return false;
+
+            }
+            if(phno.length!=10)
+            {
+                alert("Mobile number must be 10 digits ");
+                return false;
+            }
+
+            if(gender== null || gender==""){
+                alert("Select gender");
+                return false;
+            }
+            if (address == null || address == "") {
+                alert("Address field can't be empty");
+                return false;
+            }
+            if (dob == "") {
+                alert("D.O.B should be selected");
+                return false;
+            }
+            if (password == null || password == "") {
+                alert("Password need to be entered");
+                return false;
+            }
+            if(! password.match(passwordReqEx)){
+                alert("Invalid password");
+                 return false;
+            }
+            if(password2==null || password2=="")
+            {
+                alert("Re-Entered Password can't be blank");
+                return false;
+            }
+            if (password2 != password) {
+                alert("Password is not matching");
+                return false;
+            }
+            if (country == null || country == "Default") {
+                alert("Select country");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <center> <b>
+            <div>Registration Page</div>
+        </b></center>
+    <br>
+    <div class="reg">
+        <table align="center" class="table">
+            <form name="form">
+                <div>
+                    <tr>
+                        <td>Username</td>
+                        <td>:<input type="text" placeholder="Enter your Username" id="uname"> </td>
+                    </tr>
+
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Email.Id </td>
+                        <td>:<input type="email" placeholder="Enter your email.id" id="email"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Phone.no </td>
+                        <td>:<input type="phonenumber" placeholder="Enter your phno" id="phno"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Gender </td>
+                        <td>:<input type="radio" name="gender" id="male">MALE <input type="radio" id="female"
+                                name="gender">FEMALE</td>
+
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Address </td>
+                        <td>:<textarea name="" id="address" cols="20" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td> D.O.B </td>
+                        <td>:<input type="date" name="date.of.birth" id="dob"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Enter the password </td>
+                        <td>:<input type="password" placeholder="Enterpassword" id="password"> </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Re Enter the password </td>
+                        <td>:<input type="password" placeholder="Re enter password" id="password2"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Language </td>
+                        <td>:<input type="checkbox" name="" id="">Tamil
+                            <input type="checkbox" name="" id="">English
+                            <input type="checkbox" name="" id="">Espanol
+                            <input type="checkbox" name="" id="">German
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Country </td>
+                        <td> :<select id="country">
+                                <option >Default</option>
+                                <option value="india">India</option>
+                                <option value="u.s">U.S</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Germany">Germany</option>
+                                <option value="England">England</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr>
+                    <tr></tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    </tr>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center"><button class="regs" onclick="reg()">Register</button></td>
+                    </tr>
+                </div>
+            </form>
+        </table>
+    </div>
+</body>
+
+</html>

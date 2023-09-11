@@ -1,0 +1,26 @@
+<html>
+<head>
+   <b>Current Time:<span id="txt"></span></b> 
+    <script>
+        var s1="Javascript";
+        document.write("<br><h1>");
+        var s2=s1.concat(" Language");
+        document.write(s2);
+        document.write(" <br> "+ s1.charAt(1));
+        document.write(" <br> "+ s1.indexOf('a'));
+        document.write(" <br> "+ s1.lastIndexOf('a'));
+        document.write(" <br> "+ s1.toUpperCase());
+
+
+      var today = new Date();
+      var h=today.getHours();
+      var m=today.getMinutes();
+      var s=today.getSeconds();
+      document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

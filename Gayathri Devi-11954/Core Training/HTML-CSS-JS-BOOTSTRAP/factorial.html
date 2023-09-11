@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Factorial</title>
+    <style>
+        .MyTable {
+            border: 5px solid navy;
+            /* width: 40%; */
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        th {
+            color: navy;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .MyTextBox {
+            width: 280px;
+            height: 35px;
+            border: 2px solid navy;
+            border-radius: 5px;
+            color: navy;
+        }
+
+        .MyTextBox:hover {
+            border: 3px dotted navy;
+            visibility: visible;
+        }
+
+
+        button {
+            border: none;
+            background-color: navy;
+            width: 120px;
+            margin-left: 10px;
+            border-radius: 15px;
+            height: 35px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: white;
+            color: navy;
+            border: 3px dotted navy;
+            /* transform: translateY(0) scaleY(1);
+            transition: all .6s ease; */
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: navy;
+        }
+
+        a:hover {
+            color: navy;
+        }
+
+        b,
+        th {
+            color: navy(171, 37, 171);
+        }
+    </style>
+    <script>
+        function fact() {
+            var a = parseInt(document.getElementById("n1").value);
+            var ans=1;
+            for (var i = 1; i <= a; i++) {
+                ans = ans * i;
+            }
+            document.getElementById("result").innerHTML = "<b>Factorial of given number : " + ans + "</b>";
+        }
+    </script>
+</head>
+
+<body>
+    <table class="MyTable" align="center" cellpadding="10" cellspacing="10">
+        <tr>
+            <th colspan="2">Factorial</th>
+        </tr>
+        <tr>
+            <td><label><b>Enter Number :</b> </label></td>
+            <td><input class="MyTextBox" type="number" id="n1" name="number1" required></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><button onclick="fact()">Find Factorial</button>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function Addition(){
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sum =  parseInt(a)+parseInt(b);
+            document.getElementById("result").innerHTML="<font color='red'><b>Addition</b> : "+sum;
+        }
+        function Subtraction(){
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sub =  parseInt(a)-parseInt(b);
+            document.getElementById("result").innerHTML="<font color='red'><b>Subtraction</b> : "+sub;
+        }
+        function Multiplication(){
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var mul =  parseInt(a)*parseInt(b);
+            document.getElementById("result").innerHTML="<font color='red'><b>Multiplication</b> : "+mul;
+        }
+        function Division(){
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var div =  parseInt(a)/parseInt(b);
+            document.getElementById("result").innerHTML="<font color='red'><b>Division</b> : "+div;
+        }
+    </script>
+</head>
+<body style="padding-top: 200px; padding-left: 250px; padding-right: 250px;" >
+    <center>
+        <form action="">
+            <fieldset style="border: 4px solid rgb(92, 218, 70);">
+            <p><b><font style="color: rgb(92, 218, 70);">Calculator</font></b></p>
+                <div>
+                    <label for="num1"><b>Number 1</b></label>
+                    <input type="number" id="num1" name="num1"><br><br>
+                    <label for="num2"><b>Number 2</b></label>
+                    <input type="number" id="num2" name="num2">
+                <br><br>
+                
+                <button type="button" onclick="Addition()" style="border: 4px solid rgb(92, 218, 70);">Addition</button>&nbsp;
+                <button type="button" onclick="Subtraction()" style="border: 4px solid rgb(92, 218, 70);">Subtraction</button>&nbsp;
+                <button type="button" onclick="Multiplication()" style="border: 4px solid rgb(92, 218, 70);">Multiplication</button>&nbsp;
+                <button type="button" onclick="Division()" style="border: 4px solid rgb(92, 218, 70);">Division</button>
+                </div>
+                <div id="result">
+                    
+                </div>
+                
+            </fieldset>
+        </form>
+    </center>
+    
+</body>
+</html>

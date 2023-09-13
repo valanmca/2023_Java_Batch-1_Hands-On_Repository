@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        .full{
+            width: 370px;
+            height: 580px;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            position: absolute;
+            top: 2%;
+            left: 30%;
+            border-radius: 20px;
+        }
+        th{
+            height: 86px;
+            text-align: right;
+        }
+        td{
+           width: 76px; 
+           height: 76px;
+           text-align: center;
+           font-size: larger;
+           font-weight:bolder;
+           background-color: rgb(65, 60, 60);
+           border-radius: 90px;
+        }
+        table {
+            border-spacing: 15px;
+        }
+        .light{
+            background-color: rgb(58, 62, 65); 
+        }
+        .dark{
+            background-color: rgb(237, 108, 38);
+        }
+        td:hover{
+            background-color: rgb(78, 73, 73);
+            cursor: pointer;
+        }
+        .light:hover{
+            background-color: rgb(67, 71, 73);
+            cursor: pointer;
+        }
+
+        .dark:hover{
+            background-color: rgb(240, 120, 55);
+            cursor: pointer;
+        }
+        
+        input[type=text]{
+            outline: none;
+            width: 100%;
+            font-size: 40px;
+            background-color: black;
+            color: white;
+            height: 80px;
+            border-radius: 20px;
+            border: 4px solid black;
+            text-align: right;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to right, #343148FF, #D7C49EFF);">
+    <div class="full">
+    <table align="center">
+        <tr>
+            <th colspan="4"><input class="MyTextBox"  type="text" id="result"></th>
+        </tr>
+        <tr>
+            <td class="light" onclick="clearScreen()">C</td>
+            <td class="light" onclick="display('%')"  value="%">%</td>
+            <td class="light" onclick="backspace()" id="backspace">&#8592;</td>
+            <td class="light" onclick="display('/')"  value=&#xF7> &#xF7;</td>
+        </tr>
+        <tr>
+            <td onclick="display('7')" value="7">7</td>
+            <td onclick="display('8')" value="8">8</td>
+            <td onclick="display('9')" value="9">9</td>
+            <td class="light" onclick="display('*')" value="*">X</td>
+        </tr>
+        <tr>
+            <td onclick="display('4')"  value="4">4</td>
+            <td onclick="display('5')"  value="5">5</td>
+            <td onclick="display('6')"  value="6">6</td>
+            <td onclick="display('-')"  value="-" class="light">-</td>
+        </tr>
+        <tr>
+            <td onclick="display('1')"  value="1">1</td>
+            <td onclick="display('2')"  value="2">2</td>
+            <td onclick="display('3')"  value="3">3</td>
+            <td onclick="display('+')"  value="+" class="light">+</td>
+        </tr>
+        <tr>
+            <td onclick="display('0')"  value="0">0</td>
+            <td onclick="display('00')"  value="00">00</td>
+            <td onclick="display('.')"  value=".">.</td>
+            <td onclick="calculate()"  value="=" class="dark">=</td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

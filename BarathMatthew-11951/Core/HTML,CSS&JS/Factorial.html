@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function work(){   
+        var a = document.getElementById("factorial").value;
+       let b=1;
+       for(var i =a;i>=1;i--){
+            b=b*i;
+       }
+       
+       document.getElementById("result").innerHTML="result : "+b;
+    }
+
+</script>
+</head>
+<body>
+    <form action="">
+        <label for="fact">Enter the num</label>
+        <input type="text" name="fact" id="factorial">
+        <button type="button" onclick="work() ">get result</button>
+        <div id ="result">
+
+        </div>
+    </form>
+</body>
+</html>

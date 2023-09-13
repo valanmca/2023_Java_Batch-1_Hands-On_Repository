@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <style>
+        .register{
+            border: 4px solid #343148FF;;
+            position: absolute;
+            top: 15%;
+            left: 30%;
+            width: 400px;
+            height: 590px;
+            align-content: center;
+            border-radius: 20px;
+            align-content: center;
+            padding: 30px;
+            background-color: #D7C49EFF;
+        }
+        th,
+        td {
+        padding: 8px;
+        }
+        button{
+            border: 2px solid #343148FF;;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        button:hover{
+            border: 4px solid rgb(48, 45, 66);
+            border-radius: 10px;
+            cursor: pointer;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        input[type=text],input[type=password],input[type=number],input[type=date],textarea,input[type=radio] {
+            border: 3px solid #ccc;
+            outline: none;
+        }
+        input[type=text]:focus {
+            border: 3px solid #343148FF;
+        }
+        input[type=number]:focus{
+            border: 3px solid #343148FF;
+        }
+        input[type=password]:focus{
+            border: 3px solid #343148FF;
+        }
+        input[type=date]:focus{
+            border: 3px solid #343148FF;   
+        }
+        textarea:focus{
+            border: 3px solid #343148FF;   
+        }
+        select:focus{
+            border: 3px solid #343148FF;   
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+    <script>
+        function registrationValidation(){
+        var Firstname = document.getElementById ("Firstname").value;
+        var FirstnameRegEx = /^[a-zA-Z\-]+$/;
+        var Lastname = document.getElementById("Lastname").value;
+        var email = document.getElementById("email").value;
+        var emailRegEx = '[a-z0-9]+@[a-z]+\.[a-z]{2,3}';
+        var PhNO = document.getElementById("PhNo").value;
+        var PhNORegEx = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
+        var address = document.getElementById("address").value;
+        var username = document.getElementById("username").value;
+        var usernameRegEx = /^[a-zA-Z\-]+$/;
+        var password = document.getElementById("password").value;
+        var passwordRegEx = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        var confirmPass = document.getElementById("confirmPass").value;
+        
+        if (Firstname==""){
+            alert("First name cannot be Empty .")
+        }
+        else if(Lastname==""){
+            alert("Last name cannot be empty . ")
+        }
+        else if (email==""){
+            alert("Email cannot be empty .")
+        }
+        else if (! email.match(emailRegEx)){
+            alert("Enter correct email")
+        }
+        else if (PhNO==""){
+            alert("Phone number cannot be empty .")
+        }
+        else if (! PhNO.match(PhNORegEx)){
+            alert("Enter correct PhNo")
+        }
+        else if (address ==""){
+            alert("Address cannot be empty")
+        }
+        else if(username==""){
+        alert("user name required");
+              }
+      else if(! username.match(usernameRegEx)){
+        alert("Enter the valid user name ")
+      }
+
+      else if(password==""){
+        alert("password should not be empty");
+      
+      }
+      else if(! password.match(passwordRegEx)){
+        alert("enter the valid password");
+      }
+      else if(confirmPass==""){
+        alert("Confirm Password should not be empty");
+      }
+      else if (password!==confirmPass){
+        alert("confirm Password should match the password")
+      }
+      
+}
+    </script>
+</head>
+<body style="background-image: linear-gradient(to right, #343148FF, #D7C49EFF);">
+    <form >
+        <div class="register">
+        <table>
+            <tr>
+                <th colspan="2">Register</th>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" placeholder="Firstname" id="Firstname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" placeholder="Lastname" id="Lastname"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" placeholder="Email" id = "email"></td>
+            </tr>
+            <tr>
+                <td>Ph No</td>
+                <td><input type="number" placeholder="Ph Number" id="PhNo"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="radio" value="Male">Male
+                <input type="radio" name="radio" value="Female">Female</td>
+            </tr>
+            <tr>
+                <td>Date Of Birth</td>
+                <td> <input type="Date" id="birthday" name="Name"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td> <textarea id="address" name="address" rows="4" cols="25" placeholder="Address"></textarea></td>
+            </tr>
+            <tr>
+                <td>district</td>
+                <td> <select name="district" id="district" style="border: 3px solid #ccc; outline: none;">district
+                  <option value="district">kanayakumari</option>
+                  <option value="virudhunagar">virudhunagar</option>
+                  <option value="virudhunagar">Madurai</option>
+                  <option value="virudhunagar">chennai</option>
+                  <option value="virudhunagar">combatore</option>
+                  <option value="virudhunagar"> Thirunelveli</option>
+                  <option value="virudhunagar">thuthukudi</option>
+                  <option value="virudhunagar">Neyvali</option></td>
+              </select>
+
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" size="30" placeholder="Username" id="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" size="30" name="Password" placeholder="Password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" size="30" name="Password" placeholder="Confirm password" id="confirmPass"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Cancel</button></td>
+                <td><button type="button" style="width: 250px;" onclick="registrationValidation()">Rigister</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">If existing user <a href="Login.html">Login</a></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+
+</html>
+

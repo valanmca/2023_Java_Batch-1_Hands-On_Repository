@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Page CSS</title>
+        <style>
+            .Calculator 
+            {
+                width : 50px;
+                height : 168px ;
+                background-color : black;
+                border-radius : 10px ;
+                border : none;
+            }
+            .c 
+            {
+                font-style : italic ;
+                top : -10px;
+                background-color : white;
+                border-radius: 10px;
+            }
+            .dispaly 
+            {
+                text-align : right ;
+                border : none ;
+                width : 110px;
+                background-color : black ;
+                color : white ;
+            }
+            .dispaly:hover
+            {
+                background-color : lightskyblue ;
+            }
+            .buttons 
+            {
+                border-radius : 30px ;
+                background-color : darkslategrey ;
+            }
+            .button 
+            {
+                border-radius : 30px ;
+                background-color : darkslategrey ;
+            }
+            .button:hover
+            {
+                background-color : lightblue ;
+            }
+            .buttonl
+            {
+                border-radius : 30px ;
+                background-color : orange ;
+            }
+            .buttonl:hover
+            {
+                background-color : lightyellow ;
+            }
+            .buttons:hover
+            {
+                background-color : lightblue ;
+            }
+            .buttond 
+            {
+                border-radius : 30px ;
+                width : 23px ;
+                background-color : orange ;
+            }
+            .buttond:hover
+            {
+                background-color : lightyellow ;
+            }
+            .buttonr
+            {
+                border-color : black ;
+                border-radius : 30px ;
+                width : 23px ;
+                background-color : lightslategray ;
+            }
+            .buttonr:hover
+            {
+                background-color : lightgoldenrodyellow ;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <form class="Set" name="Calculators">
+            <fieldset class="Calculator">
+            <table>
+                <tr>
+                    <th class="c"><b><center>Calculator</center></b></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="dispaly" type="text" placeholder="0" name="display" id="display"></align>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="buttonr" type="button" value="C" onclick="Calculators.display.value=''">&nbsp;
+                        <input class="buttonr" type="button" value="&larr;" onclick="Calculators.display.value=Calculators.display.value.slice(0 , -1)">&nbsp;
+                        <input class="buttonr" type="button" value="%" onclick="Calculators.display.value+='%'">
+                        <input class="buttond" type="button" value="/" onclick="Calculators.display.value+='/'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="buttons" type="button" value="7" onclick="Calculators.display.value+='7'">&nbsp;
+                        <input class="buttons" type="button" value="8" onclick="Calculators.display.value+='8'">&nbsp;
+                        <input class="buttons" type="button" value="9" onclick="Calculators.display.value+='9'">
+                        <input class="buttond" type="button" value="*" onclick="Calculators.display.value+='*'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="buttons" type="button" value="4" onclick="Calculators.display.value+='4'">&nbsp;
+                        <input class="buttons" type="button" value="5" onclick="Calculators.display.value+='5'">&nbsp;
+                        <input class="buttons" type="button" value="6" onclick="Calculators.display.value+='6'">
+                        <input class="buttond" type="button" value="-" onclick="Calculators.display.value+='-'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="buttons" type="button" value="1" onclick="Calculators.display.value +='1'">&nbsp;
+                        <input class="buttons" type="button" value="2" onclick="Calculators.display.value +='2'">&nbsp;
+                        <input class="buttons" type="button" value="3" onclick="Calculators.display.value +='3'">
+                        <input class="buttond" type="button" value="+" onclick="Calculators.display.value +='+'">   
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="button" type="button" value="   0     " onclick="Calculators.display.value+='0'" >
+                        <input class="button" type="button" value=" . " onclick="Calculators.display.value+='.'">
+                        <input class="buttonl" type="button" value="="   onclick="Calculators.display.value = eval(Calculators.display.value)">     
+                    </td>
+                </tr>
+            <script>
+                function c(val)
+                {
+                    document.getElementById("d").value=val;
+                }
+            </script>
+            </table>
+            </fieldset>
+        </form>
+        </center>
+    </body>
+</html>

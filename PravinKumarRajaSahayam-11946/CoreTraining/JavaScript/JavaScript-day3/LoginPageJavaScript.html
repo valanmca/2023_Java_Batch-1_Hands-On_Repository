@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    <style>
+        .MyTable
+        {
+            border: 5px solid violet;
+            width: 30%;
+            height: 100px;
+            border-radius: 20px;
+        }
+        th{
+            color: violet;
+            font-size: 25px;
+            font-style: italic;
+        }
+        .MyTextBox
+        {
+            width: 280px;
+            height: 35px;
+            border: 2px solid violet;
+            border-radius: 5px;
+        }
+        .MyTextBox:hover{
+            background-color : lightgoldenrodyellow;
+        }
+        .Submit
+        {
+            border: none;
+            background-color: darkmagenta;
+            width: 60px;
+            border-radius: 10px;
+            height: 35px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            color : violet;
+        }
+        .Submit:hover{
+            background-color : lightgray;
+            border : 1px solid ;
+        }
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color:violet;
+}
+.Box{
+top: -10px;
+left: -10px;
+}
+a:hover{
+background-color : lightslategray;
+}
+td
+
+    </style>
+    <script>
+        function loginValidation()
+        {
+            var usernameReqEx = '^[A-Z a-z]+$';
+            var passwordReqEx = '^[0-9]+$';
+            var username = document.getElementById("userName").value;
+            var password = document.getElementById("passwords").value;
+            if(username == "" || password == "")
+            {
+                alert("Fields can not be empty");
+            }
+            else if(! username.match(usernameReqEx))
+            {
+                alert("Invalid User Name");
+            }
+            if(! password.match(passwordReqEx))
+            {
+                alert("Invalid Password");
+            }
+        }
+        </script>
+        </head>
+    <body>
+       <form>
+        <center><table class="MyTable">
+            
+            <tr>
+                <th colspan="2">Login Page</th>
+            </tr>
+            <tr>
+                <td>
+                    <b>Email ID:</b> 
+                </td>
+                <td>
+                    <input class="MyTextBox" type="text" onfocus=" this.value=''" placeholder="Enter the Email" id="userName" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+               <b> Password:</b>
+                </td>
+                <td>
+                    <input class="MyTextBox" type="password" id="passwords" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <input class="Submit" type="Submit" value="Submit" onclick="loginValidation()" >
+                </td>
+            </tr>
+            <tr>
+                <td class="Box" align="right" colspan="2">
+                    Not a User? <a href="" > Register Here</a>
+                </td>
+            </tr>
+        </table></center>
+       </form>
+    </body>
+</html>

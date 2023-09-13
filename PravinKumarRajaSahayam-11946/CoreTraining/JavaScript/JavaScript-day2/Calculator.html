@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function addition()
+            {
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var sum = parseInt(a) + parseInt(b) ;
+                document.getElementId("result").innerHTML = "<font color = 'blue'  ><b>Addition : " + sum + " </b>";   
+            }
+            function substraction()
+            {
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var substraction = parseInt(a - b) ;
+                document.getElementById("result").innerHTML = "<font color = 'blue'  ><b>Substraction : " + substraction + "</b>";
+            }
+            function division()
+            {
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var division = parseInt(a / b) ;
+                document.getElementById("result").innerHTML = "<font color = 'blue'  ><b>Division : " + division + "</b>";
+            }
+            function multiplication()
+            {
+                var a= document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var multiplication = parseInt(a * b) ;
+                document.getElementById("result").innerHTML = "<font color = 'blue'  ><b>Multiplication : " + multiplication + "</b>";
+            }
+        </script>
+    </head>
+    <body>
+        <h><center><b>Calculator</b></center></h>
+        <br>
+        <label for="number1"><b>Enter the Number 1 : </b></label>
+        <br>
+        <input type="number" name="number1" required="" id="n1" >
+        <br>
+        <label for="number2"><b>Enter the Number 2 : </b></label>
+        <br>
+        <input type="number" name="number2" required="" id="n2">
+        <br>
+        <br>
+        <br>
+        <input type="button" value="Add" onclick="addition()" >&nbsp
+        <input type="button" value="Sub" onclick="substraction()" >&nbsp
+        <input type="button" value="Div" onclick="division()" >&nbsp
+        <input type="button" value="Mul" onclick="multiplication()" >&nbsp
+        <br>
+        <div id = "result" >
+
+            </div>
+    </body>
+</html>

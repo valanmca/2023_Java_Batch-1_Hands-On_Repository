@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script></script>
+    <style>
+      @media only screen and (max-width: 600px) {
+  .loginDiv {
+            border: 2px solid black;
+            border-radius: 20px;
+            align-content: center;
+
+  }
+  @media only screen and (min-width: 100px){
+    .loginDiv{
+        text-align: center;
+    }
+    
+  }
+}
+        /* .loginDiv{
+            border: 2px solid black;
+            border-radius: 20px;
+            align-content: center;
+
+
+        } */
+        .login{
+            /* color:  blueviolet; */
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .user{
+            /* color: blueviolet; */
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .reg{
+           text-decoration: none;
+           font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .pass{
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .button:hover{
+            
+            background-color:  blueviolet;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+
+
+        }
+        .reg:hover{
+            background-color: aqua;
+        }
+    </style>
+<script>
+function loginvalidation(){
+
+    var user = document.getElementById("user").value;
+    var password=document.getElementById("password").value;
+    var passwordRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var userRegex = /^[a-zA-Z]+$/ ;
+    if (user==" "){
+        alert("user name must not be empty");
+    }
+    if (user !=userRegex){
+        alert("enter the proper user name");
+    }
+    if (password==" "){
+        alert("password must not be empty");
+    }
+    if (password !=passwordRegex){
+        alert("Enter valid password");
+    }
+
+}
+
+</script>
+
+</head>
+<body style="padding-top: 20%;padding-left: 30%;padding-right: 20%; ">
+
+    <div class="loginDiv" style="background-image: linear-gradient(to right, #9796f0, #fbc7d4);">
+        <form action="">
+            <table width="50%" align="center">
+                <tr><th colspan="2" class="login"><b style="text-decoration:underline;">Login page</b></th></tr><br>
+                <tr>
+                    <td class="user">UserName</td><td class="user"><input type="text" onfocus="this.value=''" id="user" placeholder="Enter your name" style="border: 2px solid blueviolet;"></td><br>  
+
+                </tr>
+            
+                <tr>
+                    <td class="pass">Password</td><td><input type="password" placeholder="password" id="password" style="border: 2px solid blueviolet;"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center" ><button class="button" style="display: inline-block; padding: 15px,32px; margin: 4px,2px; color: black;" onclick="loginvalidation()"> Sign In</button></td>
+                </tr>
+              
+                <tr>
+                    <td colspan="2" align="center" style="color: red;" >Not a user<a href="" class="reg">Register here</a> </td>
+                </tr>
+                <br>
+                <br>
+             
+                
+            
+            </table>
+            <br><br>
+            <br>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script></script>
+    <style>
+      .reg{
+        border: 2px solid black;
+        border-radius: 20px;
+        background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+        position: absolute;
+        top: 200px;
+        right:400px;
+        left: 350px;
+        
+      }
+      .form{
+        text-align: center;
+        
+        
+      }
+
+      body{
+        @media screen {
+          min-width: fit-content;
+          max-width: fit-content;
+          align-items: center;
+        }
+      }
+    </style>
+
+    <script>
+      function validateform(){
+        var userRegEx = /^[a-zA-Z\-]+$/;
+        var lasRegEx = /^[a-zA-Z\-]+$/;
+        var phnoRegEx = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
+
+        var  emailRegEx =  '[a-z0-9]+@[a-z]+\.[a-z]{2,3}';
+        var passwordRegEx= /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        var first=document.getElementById("first").value;
+        var last = document.getElementById("last").value;
+        var email=document.getElementById("email").value;
+        var phno=document.getElementById("phno").value;
+        var Dob=document.getElementById("Dob").value;
+        var gender=document.getElementById("gender").value;
+        var Address=document.getElementById("Address").value;
+        var district=document.getElementById("district").value;
+        var UserName=document.getElementById("UserName").value;
+        var password=document.getElementById("password").value;
+        
+
+
+      
+        if( first==""){
+        alert("first name is required");
+      }
+
+       else if(! first.match(userRegEx)){
+        alert("enter the valid first name ")
+
+      }
+        if(last==""){
+        alert("last name is required");
+       
+      
+      }
+
+      else if(!last.match(lasRegEx)){
+        alert("enter the valid last name")
+      }
+
+      if(email==""){
+        alert("Email id required");
+        
+      
+      }
+      else if(!email.match(emailRegEx)){  
+        alert("enter the valid email")
+
+      }
+      if(phno==""){
+        alert("phone no required");
+        
+      
+      }
+      else if(!phno.match(phnoRegEx)){
+        alert("phone number should be 10 numbers ")
+      }
+
+      if(Dob==""){
+        alert("enter your Dob");
+       
+        
+      }
+      // if(Dob!=DobRegex){
+      //   alert("Enter valid Dob");
+        
+      // }
+
+      if(gender==""){
+        alert("Select your gender");
+        
+        
+      }
+      // if(Gender!=GenderRegex){
+      //   alert("enter the gender correctly");
+        
+      // }
+
+      if(Address==""){
+        alert("Address field should not be empty");
+        
+        
+      }
+
+      if(district==""){
+        alert(" enter the district")
+      }
+
+      if(UserName==""){
+        alert("user name required");
+        
+        
+      }
+      else if(!UserName .match(userRegEx)){
+        alert("Enter the valid user name ")
+      }
+
+      if(password=""){
+        alert("password shouls not be empty");
+        
+        
+      }
+     else if(!password .match(passwordRegEx)){
+        alert("enter the valid password");
+      }
+
+
+    }
+      
+    </script>
+    
+</head>
+        <body  style="background-image: linear-gradient(to right, #9796f0, #fbc7d4);">
+          <form name="reg_form" method="" action="">
+          <div class="reg" style="border: 2px solid black; border-radius: 20px; width: 50%; align-content: center;">
+            
+            <table width="50%" align="center">
+              <tr>
+               <td colspan="2" rowspan="1" style="text-align: center; text-decoration: underline;font-size: 24px;"><b>Registation</b></td> 
+              </tr>
+              <br>
+              <tr>
+                <td>FirstName</td>
+                <td><input type="text" placeholder="Enter your first Name" id="first" style="border: 2px solid blueviolet;"></td>
+              </tr>
+
+              <tr>
+                <td>LastName</td>
+                <td><input type="text" placeholder="Enter your last Name" id="last" style="border: 2px solid blueviolet;"></td>
+              </tr>
+
+              <tr>
+                <td>Email</td>
+                <td><input type="email" placeholder="Enter your Email" id="email" id="email" style="border: 2px solid blueviolet;"></td>
+              </tr>
+
+              <tr>
+                <td>PhNo</td>
+                <td><input type="number" placeholder="Enter your phno" id="phno" style="border: 2px solid blueviolet;"></td>
+              </tr>
+
+              <tr>
+                <td>Dob</td>
+                <td><input type="date" placeholder="select date and time" id="Dob" style="border: 2px solid blueviolet;"></td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>Male<input type="radio" placeholder="" id="gender" style="border: 2px solid blueviolet;"> Female<input type="radio" name="gender" placeholder="" style="border: 2px solid blueviolet;"></td>
+              </tr>
+
+              <tr>
+                <td>Address</td>
+                <td><textarea name="Address" id="Address" cols="10" rows="3"  style="border: 2px solid blueviolet;"></textarea></td>
+              </tr>
+
+              <tr>
+                <td>district</td>
+
+               
+                <td> <select name="district" id="district" style="border: 2px solid blueviolet;">district 
+                  <option value="district">kanayakumari</option>
+                  <option value="virudhunagar">virudhunagar</option>
+                  <option value="virudhunagar">Madurai</option>
+                  <option value="virudhunagar">chennai</option>
+                  <option value="virudhunagar">combatore</option>
+                  <option value="virudhunagar"> Thirunelveli</option>
+                  <option value="virudhunagar">thuthukudi</option>
+                  <option value="virudhunagar">Neyvali</option></td>
+    
+              </select>
+                
+              </tr>
+
+              <tr>
+                <td>UserName</td>
+                <td><input type="text" id="UserName" placeholder="Enter your name" style="border:2px solid blueviolet ">
+                </td>
+              </tr>
+
+              <tr>
+                <td>password</td>
+                <td><input type="password"  id="password" placeholder="Password" style="border:2px solid blueviolet ">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Submit
+                </td>
+                <td>
+                  <button type="button" style="border: 2px solid blueviolet;" onclick="validateform()">Register</button></td>
+                <td></td>
+
+              </tr>
+
+            </table>
+          </div>
+        </form>   
+        </body>
+   
+
+
+    
+
+</html>

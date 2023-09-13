@@ -1,0 +1,36 @@
+<h1>Directives :- </h1>
+<button (click)="changeFlag()">Show and Hide</button>
+<br>
+<div class="MyDiv1" style="border-style : solid" *ngIf="flag">
+    <br>
+<ul>
+    <li *ngFor="let vec of vehicles" > {{vec}}</li>
+</ul>
+<div class="MyDiv1" style="border-style : solid" *ngIf="flag">
+    <br>
+<ul>
+    <li (click)="setSelectedVehicle(vec)" *ngFor="let vec of vehicles" > {{vec}}</li>
+</ul>
+<br>
+<b>You have Selected : {{ selectedVehicle}} </b>
+<!---<button (click)="changeBike()" *ngFor="let vehicles">For Bike Details</button>
+<br>
+<div *ngIf="bike">
+    <p>This is the bikes</p>
+</div>
+<ul>
+<li (click) = "setSelectedVehicles(vechiles)" *ngFor="let vechiles of vehicles"> {{vechiles}}</li>
+</ul>
+ <br>
+You have Selectd {{ selectedVehicles }}--->
+   <div [ngSwitch] = "selectedVehicle" >
+    <font color = "green" *ngSwitchCase = "'car'" ><b>Four Wheeler</b></font>
+    <font color = "green" *ngSwitchCase = "'bike'" ><b>Two Wheeler</b></font>
+    <font color = "green" *ngSwitchCase = "'auto'" ><b>Three Wheeler</b></font>
+    <font color = "red" *ngSwitchDefault ><b>Invalid Selection</b></font>
+ </div>
+ </div>
+ </div>
+ 
+    
+

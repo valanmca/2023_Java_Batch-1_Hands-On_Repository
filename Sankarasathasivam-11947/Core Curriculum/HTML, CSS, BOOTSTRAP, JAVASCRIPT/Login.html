@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        .title{
+            margin-left:430px;
+        }
+        .Login{
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: rgb(241, 241, 247);
+            height: 270px;
+            width:500px;
+            margin-left:300px;
+            margin-top: 100px;
+        }
+
+        .Textbox{
+            border-radius:10px;
+            height: 30px;
+            width:200px;
+        }
+
+        .linkform:hover{
+            text-decoration:none;
+            cursor:progress;
+            color:rgb(255, 0, 0);
+        }
+
+        .btn:hover{
+            height:30px;
+            width:70px;
+            cursor:pointer;
+            background-color:rgb(6, 215, 243);
+        }
+
+
+    </style>
+
+    <script>
+        function loginValidation(){
+            var userNameReqEx='^[A-Z a-z]+$';
+            var passwordReqEx='^[0-9]+$';
+            var userName=document.getElementById("Uname").value;
+            var password=document.getElementById("pwd").value;
+
+            if(userName==""|| password==""){
+                alert("Fields can't be Empty");
+            }
+            if(!userName.match(userNameReqEx))
+            {
+                alert("Invalid userName");
+            }
+            if(!password.match(passwordReqEx))
+            {
+                alert("Invalid Password");
+            }
+        }
+    </script>
+</head>
+<body bgcolor="Lavender">
+    <div class="title">
+        <h1>Login Portal!!!</h1>
+    </div>
+    
+    <div class="Login">
+    <form>
+        <table align="center">
+        <tr><th colspan="2"><h2>Enter the Details</h2></th></tr>
+        
+        <tr><td><b>Username</b></td><td><input class="Textbox" onfocus="this.value=''" type="text" placeholder="Enter Username" id="Uname"></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td><b>Password</b></td><td><input class="Textbox" type="password" placeholder="Enter Password" id="pwd"></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td colspan="2" align="center"><button class="btn" style="border-radius:5px; font-family: 'Times New Roman';" onclick="loginValidation()">Login</button></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td colspan="2" align="center">If Not a User?  <a class="linkform" href="Register.html" target ="content"><b>Register</b></a></td></tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

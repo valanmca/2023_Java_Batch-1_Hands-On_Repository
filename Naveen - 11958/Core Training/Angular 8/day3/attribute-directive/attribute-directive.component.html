@@ -1,0 +1,22 @@
+<h1><u>Attribute Directives</u></h1>
+<div>
+    <br>
+    <!-- ngStyle -->
+    <p>Single Click</p>
+    <h2 [ngStyle]="myStyle">Example for ngStyle</h2>
+    <button (click)="changeStyle()">Change Style</button>
+    <br>
+    <p>Multiple Click</p>
+    <h2 [style.color]="myColor">Example for ngStyle</h2>
+    <button (click)="changeColor()">Change Style</button>
+    <br>
+    
+    <!-- ngClass -->
+    <br><br>
+    <p>Single Click</p>
+    <h2 [ngClass]="myClass">Example for ngClass</h2>
+    <button (click)="changeClass()">Change Style</button>
+    <br>
+    <h2 [ngClass]="myClassColor">Example for ngClass</h2>
+    <button (click)="changeClassColor()">Change Style</button>
+</div>

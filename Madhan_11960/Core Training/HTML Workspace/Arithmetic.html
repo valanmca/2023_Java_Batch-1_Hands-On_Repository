@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Arithmetic Operations</title>
+    
+    <script>
+        function addition(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var sum=parseInt(a)+ parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Blue'><b>Addition :"+sum +"</br> </font>";
+        }
+
+        function Subtraction(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var sub=parseInt(a)- parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Red'><b>Subtraction :"+sub+"</br> </font>";
+        }
+
+        function Multiplication(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var Mul=parseInt(a)* parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Green'><b>Multiplication :"+Mul +"</br> </font>";
+        }
+
+        function Division(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var Div=parseInt(a)/ parseInt(b);
+            document.getElementById("result").innerHTML="<font color='Violet'><b>Division :"+Div +"</br> </font>";
+        }
+        </script>
+</head>
+<body bgcolor="LightGray">
+    <div  style="border: 2px solid black;" width="200px" height="100px">
+    <center><font color="Violet"><h1>Calculator</font></h1>
+        <br>
+        <br>
+    <label for="number">Enter First number</label>
+    <input type="number" name="number1" id="n1"><br><br>
+    <label for="number">Enter Second number</label>
+    <input type="number" name="number2"id="n2"><br><br>
+    <input type="button" value="Addition" onclick="addition()">
+    <input type="button" value="Subtraction" onclick="Subtraction()">
+    <input type="button" value="Multiplication" onclick="Multiplication()">
+    <input type="button" value="Division" onclick="Division()"><br><br>
+    <div id="result">
+    </div>
+
+</center>
+</div>
+   
+</body>
+</html>

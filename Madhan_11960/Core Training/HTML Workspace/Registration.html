@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Registration form validation</title>
+    <script>
+        function validation(){
+            var firstnameReqEx='^[A-Z a-z]+$';
+            var lastnameReqEx='^[A-Z]+$';
+            var mailformat='^([A-Za-z0-9])+\@([A-Za-z0-9])+\.([A-Za-z]{2,4})+$';
+            var firstname=document.getElementById('firstname').value;
+            var lastname=document.getElementById('lastname').value;
+            var course=document.getElementById('Course');
+            var phone=document.getElementById('phone');
+            var UAddress=document.getElementById('address').value;
+            var Uemail=document.getElementById('email').value;
+            var Upass=document.forms.password1.value;
+            var Confirmpass=document.forms.password2.value;
+
+            if(firstname==""|| firstname==null)
+            {
+                alert("Firstname cannot be empty")
+            }
+            if(! firstname.match(firstnameReqEx))
+            {
+                alert("firstname did not match")
+            }
+
+            if(lastname=="" || lastname==null)
+            {
+                alert("Lastname cannot be empty")
+            }
+
+            if(! lastname.match(lastnameReqEx))
+            {
+                alert("Lastname did not match")
+            }
+
+
+            if(course.value=="" || course.value==null)
+            {
+                alert("Please select an Course");
+            
+            }
+            var s=document.getElementById("rbtn1");
+                var n=document.getElementById("rbtn2");
+                if(!s.checked && !n.checked){
+                    alert("Plz select your gender");
+                }
+
+            if(phone.value=="" || phone.value==null)
+            {
+                alert("Enter Phone number");
+            }
+            
+           
+                 if (phone>10) {
+                    alert('10 digit mobile number is required');
+                }
+            
+             if(UAddress=="" || UAddress==null)
+                {
+                    alert("Enter the address");
+                
+                }
+                if(Uemail=="" || Uemail==null)
+                {
+                    alert("Enter the  mail id");
+                    
+                }
+
+                if(! Uemail.match(mailformat))
+            {
+                alert("Enter valid e-mail");
+            }
+
+                if(Upass=="" || Upass==null)
+                {
+                    alert("Enter the Password");
+                    
+                }
+
+                if(Confirmpass=="" || Confirmpass==null)
+                {
+                    alert("Enter confirm Password");
+                    
+                }
+
+                if(Upass==Confirmpass)
+                {
+                    return true;
+                }
+                else{
+                    alert("Password must be same");
+                    return false;
+                }
+
+                
+            }
+    </script>
+</head>
+<body bgcolor="LightCyan">
+    <center><font color="Violet"><h1>Registration details</h1></font></center>
+    <form name="forms">
+    <label for="fname">First Name</label>
+    <input type="text" name="firstname" id="firstname" required><br><br>
+    <label for="lname">Last Name</label>
+    <input type="text" name="lastname" id="lastname" required><br><br>
+
+    <label>Course</label>
+    <select id="Course">
+        <option value="">Course</option>
+        <option value="bca">BCA</option>
+        <option value="mca">MCA</option>
+        <option value="b.sc">B.Sc</option>
+        <option value="m.sc">M.Sc</option>
+    </select>
+    <br>
+    <br>
+    <label>Skills</label><br>
+    <div><p id="messages"></p></div>
+    <input type="checkbox" name="container" value="Java">Java<br>
+    <input type="checkbox" name="container" value="C">C<br>
+    <input type="checkbox" name="container" value="C++">C++<br>
+    <input type="checkbox" name="container" value=".Net">.Net<br><br>
+    
+    <label>Gender</label><br>
+    <input type="radio" name="gender" value="Male" id="rbtn1">
+    <label for="male">Male</label><br>
+    <input type="radio" name="gender" value="Female"  id="rbtn2" > 
+    <label for="Female">Female</label><br>
+    <br>
+    <label>Phone no</label><br>
+    <input type="text" name="countrycode" value="+91" size="5">
+    <input type="number" name="phone no" value="" id="phone" required ><br>
+    <small>Format: 1234567890</small><br><br>
+    <br>
+    <label>Address</label><br>
+    <textarea id="address" required></textarea><br><br>
+    <label>E-Mail</label>
+    <input type="e-mail" name="email" placeholder="Enter Usermail Id" id="email" required><br><br>
+    <label>Password</label>
+    <input type="password" name="password1" placeholder="Enter User password" id="pass" required><br><br>
+    <label>Confirm Password</label>
+    <input type="password" name="password2" placeholder="Enter same password"id="conpass" required><br><br>
+    <input type="button" value="Submit" onclick="validation()">
+
+    
+</form>
+</body>
+</html>

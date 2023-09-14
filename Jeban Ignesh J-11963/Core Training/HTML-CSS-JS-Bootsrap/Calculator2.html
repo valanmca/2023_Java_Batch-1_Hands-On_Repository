@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <style>
+        .calc {
+            border: 5px solid black;
+            height: 350;
+            width: 305;
+            border-radius: 5%;
+            position: absolute;
+            top: 150px;
+            left: 480px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: medium;
+            background-color: #78b1ce;
+
+
+        }
+
+        button {
+            height: 40px;
+            width: 50px;
+            border-radius: 10px;
+            background-color: #0ea2c8;
+        }
+
+        input {
+            height: 90px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: #eaebec;
+        }
+    </style>
+    <script>
+        function clearScreen(){
+            document.getElementById("result").value="";
+        }
+        function display(value){
+            document.getElementById("result").value+=value;
+        }
+
+    </script>
+    <title>Calculator</title>
+</head>
+
+<body
+    style="background-image: url(https://img.freepik.com/free-photo/flat-lay-desk-items-blue-background_23-2148604896.jpg);background-repeat: no-repeat; background-size: 100% 100%; position: absolute;">
+
+    <div class="calc">
+        <form>
+            <table>
+                <h3 style="color: aliceblue;"><b>Casio</b></h3>
+
+                <tr></tr>
+                <tr>
+                    <td colspan="5"><input type="text" id="result"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr> 
+                    <td><button value="7" onclick="display('7')">7</td>
+                    <td><button value="8" onclick="display('8')">8</button></td>
+                    <td><button value="9" onclick="display('9')">9</button></td>
+                    <td><button value="/" onclick="display('/')">/</button></td>
+                    <td><button value="+-" onclick="display('+-')">+-</button></td>
+                </tr>
+                <tr>
+                    <td><button value="4" onclick="display('4')">4</button></td>
+                    <td><button value="5" onclick="display('5')">5</button></td>
+                    <td><button value="6" onclick="display('6')">6</button></td>
+                    <td><button value="*" onclick="display('*')">*</button></td>
+                    <td><button value="~" onclick="display('~')">~</button></td>
+                </tr>
+                <tr>
+                    <td><button value="1" onclick="display('1')">1</button></td>
+                    <td><button value="2" onclick="display('2')">2</button></td>
+                    <td><button value="3" onclick="display('3')">3</button></td>
+                    <td><button value="-" onclick="display('-')">-</button></td>
+                    <td><button value="%" onclick="display('%')">%</button></td>
+                </tr>
+                <tr>
+                    <td><button value="0" onclick="display('0')">0</button></td>
+                    <td><button value="." onclick="display('.')">.</button></td>
+                    <td><button value="+" onclick="display('+')">+</button></td>
+                    <td><button value="=" onclick="display('=')">=</button></td>
+                    <td><button value="C" style="background-color: lemonchiffon;" onclick="clearScreen()">C</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

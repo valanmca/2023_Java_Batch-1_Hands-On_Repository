@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial</title>
+    <style>
+        .MyTable{
+            border: 5px solid violet;
+            /* width: 40%; */
+            height: 50px;
+            border-radius: 20px;
+        }
+        
+        th{
+            color: violet;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+        .MyTextBox{
+            width: 280px;
+            height: 35px;
+            border: 2px solid violet;
+            border-radius: 5px;
+            color: rgb(171, 37, 171);
+        }
+        .MyTextBox:hover{
+            border: 3px solid rgb(171, 37, 171); 
+            visibility: visible; 
+        }
+        ::placeholder{
+            color: rgb(171, 37, 171) ;
+        }
+    
+        button{
+            border: none;
+            background-color: violet;
+            width: 100px;
+            margin-left: 10px;
+            border-radius: 15px;
+            height: 35px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        button:hover{
+            background-color: white;
+            color: violet;
+            border: 3px solid violet;
+            transform: translateY(0) scaleY(1);
+            transition: all .6s ease;
+        }
+        b, th{
+            color: rgb(171, 37, 171);
+        }
+    </style>
+    <script>
+        function factorial(){
+            var num,fact,i;
+            fact = 1;
+            
+            num = parseInt(document.getElementById("n1").value);
+            for(i=1;i<=num;i++){
+                fact = fact*i;
+            }
+            document.getElementById("result").innerHTML = "The factorial of the number is: " + fact ;  
+
+        }
+    </script>
+</head>
+<body>
+    <table class="MyTable" align="center" cellpadding="10" cellspacing="10">
+        <tr><th colspan="2">Factorial of a number</th></tr>
+        <tr><td><label><b>Enter Number :</b> </label></td>
+        <td><input class="MyTextBox" type="number" id="n1" placeholder="Enter number" ></td></tr>
+    
+        <tr><td colspan="2"><button onclick="factorial()">Factorial</button></td></tr>
+        <tr><td colspan="2"><div id="result">
+    
+        </div></td></tr>
+        </table>
+</body>
+</html>

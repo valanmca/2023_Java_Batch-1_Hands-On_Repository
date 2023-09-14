@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Caculator</title>
+
+    <style>
+        .CalcDiv {
+            border: none;
+            border-radius: 40px;
+            background-color: #041E42;
+            height: 200px;
+            width: 400px;
+            top: 200px;
+            left: 600px;
+            position: absolute;
+        }
+
+        button {
+            border-radius: 80px;
+            height: 40px;
+            width: 40px;
+            border: none;
+            text-align: center;
+            font-size: 48;
+            font-weight: bold;
+
+        }
+    </style>
+    <script>
+        function addition(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var sum=parseInt(a) + parseInt(b);
+            document.getElementById("result").innerHTML="<font color='white'> <b>Addition of 2 Numbers is </b>  : "  +sum;
+        }
+
+        function subraction(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var sub=parseInt(a) - parseInt(b);
+            document.getElementById("result").innerHTML="<font color='white'> <b>Subraction of 2 Numbers is </b>  : "  +sub;
+        }
+
+        function multiplication(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var mul=parseInt(a) * parseInt(b);
+            document.getElementById("result").innerHTML="<font color='white'> <b>Multiplication of 2 Numbers is </b>  : "  +mul;
+        }
+
+        function Division(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var div=parseInt(a) / parseInt(b);
+            document.getElementById("result").innerHTML="<font color='white'> <b>Division of 2 Numbers is </b>  : "  +div;
+        }
+    </script>
+
+
+</head>
+
+<body style="background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);">
+    <div class="CalcDiv">
+        <table align="center">
+
+            <tr>
+                <th colspan="2" style="text-align: center;color: aliceblue;">
+                    <h2>CALCULATOR</h2>
+                </th>
+            </tr>
+            <tr>
+                <td style="color: aliceblue"><label for="name"><b>Number 1 :</b></label></td>
+                <td><input type="text" placeholder="Enter Number 1" name="number1" id="n1"></td>
+            </tr>
+
+            <tr>
+                <td style="color: aliceblue"><label for="name"><b>Number 2 :</b></label></td>
+                <td><input type="text" placeholder="Enter Number 2" name="number2" id="n2"></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <button onclick="addition()">+</button>
+                    <button onclick="subraction()">-</button>
+                    <button onclick="multiplication()">*</button>
+                    <button onclick="Division()">/</button>
+                </td>
+                <tr><td colspan="2"><div id="result"></div> </td></tr>
+            </tr>
+        </table>
+</body>
+
+</html>

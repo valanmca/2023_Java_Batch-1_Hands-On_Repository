@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Details</title>
+    <script>
+        function loginValidation(){
+            var userNameReqEx='^[A-Z a-z]+$';
+            var passwordReqEx='^[0-9]+$';
+            var userName=document.getElementById('userName').value;
+            var password=document.getElementById('pwd').value;
+            if(userName=="" || password==" ")
+            {
+                alert("Field cannot be empty");
+            }
+            if(! userName.match(userNameReqEx))
+            {
+                alert("Username did not match")
+            }
+            if(! password.match(passwordReqEx))
+            {
+                alert(" Password did not match")
+            }
+            if(password.length>10)
+            {
+                alert("Invalid Password")
+            }
+        } 
+    </script>
+</head>
+<body bgcolor="Lavender">
+   
+    
+    <form>
+       <center> <font color="violet"><h2>LOGIN</h2></font><br>
+        <br>
+        <br>
+        <br>
+    
+    <label for="Uname"><b>Enter UserName</b></label>
+    <input type="text" onfocus="this.placeholder=''"  placeholder=" Username"  size="20" id="userName"><br><br>
+    <label for="Upassword"><b>Enter Password</b></label>
+    <input type="password" onfocus="this.placeholder=''" placeholder="Password" size="20"id="pwd"><br><br>
+   
+    <button type="button" onclick="loginValidation()">Submit</button><br><br>
+
+    Not a user? <a href="Registration.html" >Register</a>
+</center> 
+</form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+    <head><title>Timetable</title></head>
+    <style>
+        body{
+            background-color: lightgrey;
+            }
+        .TimetableDiv{
+            left:10%;
+            top: 20%;
+            width: 1160px;
+            height: 500px;
+            position: absolute;
+        }
+        th{
+            background-color:cornflowerblue;
+        }
+        h2{
+            top: 5%;
+            left: 35%;
+            position: absolute;
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+        @keyframes slidein {
+        from {
+        margin-left: 100%;
+        width: 300%;
+        }
+
+        to {
+        margin-left: 0%;
+        width: 100%;
+        }
+}
+    </style>
+    <body>
+        <h2>TIME TABLE</h2>
+        <div class="TimetableDiv">
+        <table cellspacing="0" style="width: 60%;height: 300px;" border="5" width="50%" height="50%">
+        <tr align="center">
+            <th style="background-color:darkseagreen;">Day/Period</th>
+            <th>I <br>9:30-10:30</th>
+            <th>II <br>10:20-11:10</th>
+            <th>III <br>11:10-12:00</th>
+            <th>12:00-12:40</th>
+            <th>IV <br>12:40-1:30</th>
+            <th>V <br>1:30-2:20</th>
+            <th>VI <br>2:20-3:10</th>
+            <th>VII <br>3:10-4:00</th>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Monday</b></td>
+            <td>Eng</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td rowspan="6" style="background-color: mediumaquamarine;">L<br>U<br>N<br>C<br>H</td>
+            <td colspan="3">LAB</td>
+            <td>Phy</td>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Tuesday</b></td>
+            <td colspan="3">LAB</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td>SPORTS</td>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Wednesday</b></td>
+            <td>Mat</td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LIBRARY</td>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Thursday</b></td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Friday</b></td>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td>Eng</td>
+            <td>Phy</td>
+        </tr>
+        <tr align="center">
+            <td style="background-color: indianred;"><b>Saturday</b></td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td colspan="3">SEMINAR</td>
+            <td>SPORTS</td>
+        </tr>
+        </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            var a=10;
+            document.write("<br> Before Exception");
+            try{
+                a=10/0;
+                if(a==infinity)
+                {
+                    throw "can't Divide by Zero";
+                }
+            }
+            catch(err){
+                alert(err);
+            }
+            document.write("<br> After Exception"+a);
+        </script>
+    </head>
+</html>

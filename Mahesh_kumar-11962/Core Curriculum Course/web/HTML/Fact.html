@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>calculator</title>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .div{
+            border: 4px solid black;
+            width: 60%;
+            height: 50%;
+            border-radius: 30px;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(203, 255, 30) 100%);        
+        }
+
+
+        button{
+
+      
+            border: 1px solid black;
+            width: 200PX;
+            height: 30PX;
+            border-radius: 8PX;
+            left: 20px;
+            font-weight: bold
+            
+            ;
+}
+
+input{
+  border-radius: 6px;
+  height: 22px;
+  width: 180px;
+  text-align: center;
+}
+
+button:hover{
+    border: 2px solid black;
+    background: rgb(34,193,195);
+    background: rgb(2,0,36); 
+    font-weight: bold;
+    color: white;
+    background-color: blueviolet;
+}
+</style>
+
+<script>
+function fact()
+{
+    
+value_01 =document.getElementById("val_01").value;
+var fact =1;
+for(i=1;i<=value_01;i++){
+   fact=fact*i;
+}
+document.getElementById("result").innerHTML= "Result:"+fact;
+
+}
+
+
+
+
+</script>
+
+</head>
+<body style="padding-top: 100px;padding-left: 20%;">
+<div class="div">
+
+    <h2 style="margin-left: 40%;">Find Factorial Value</h2>
+
+<br>
+    &emsp;
+    <br>
+    <label style="margin-left: 20%;">&nbsp;Enter Integer Value </label>&emsp;&nbsp;
+    <input type="number" width="200px" name="Num_01" id="val_01" placeholder="Only integer values allowed">
+    <br>
+<div style="margin-top: 40px;">
+    <button style="width: 100px; margin-left: 40%;" onclick="fact()">Find</button> &emsp;
+
+</div>
+    <p style="height: 10px;"></p>
+
+<div id="result" style="text-align: center;"></div>
+<p style="height: 10px;"></p>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js methods</title>
+    <script>
+        var s1 = "Javascript"
+        document.write("<br><hr>");
+        var s2 = s1.concat("Language");
+        document.write(s2);
+        document.write("<br>" + s1.charAt(1));
+        document.write("<br>" + s1.indexOf('a'));
+        document.write("<br>" + s1.lastIndexOf('a'));
+        document.write("<br>" + s1.toUpperCase());
+        document.write("<br>" + s1.toLowerCase());
+        document.write("<br>" + s1.substring(2,6));
+        document.write("<br>" + s1.substr(2));
+        document.write("<hr>");
+
+        var date = new Date();
+        document.write(date);
+        document.write("<br>" + date.getDate());
+        document.write("<br>" + date.getMonth());
+        document.write("<br>" + date.getFullYear());
+        document.write("<br>" + date.getDay());
+        document.write("<br>" + date.getHours());
+        document.write("<br>" + date.getMinutes());
+        document.write("<br>" + date.getSeconds());
+        document.write("<hr>");
+
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        document.write(h +":" + m + ":" + s);
+        document.write("<hr>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

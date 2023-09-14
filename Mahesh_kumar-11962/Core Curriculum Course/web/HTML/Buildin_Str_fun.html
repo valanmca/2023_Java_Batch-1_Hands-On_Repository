@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build in String Functions</title>
+
+    <script>
+
+var word_01 = "javascript";
+document.write("<br><h1>");
+document.write(word_01);
+var word_02 = "language";
+document.write("<br><h2>"+word_02+"<br>");
+document.write(word_01.concat(word_02 +"<br>"));
+
+
+var date = new Date();
+var day = date.getDate();
+var month = date.getMonth();
+var year = date.getFullYear();
+
+document.write("Date is:"+day+"/"+month+"/"+year+"<br> ");
+
+
+var hours = date.getHours();
+var min = date.getMinutes();
+var sec = date.getSeconds();
+
+document.write("Time is :"+hours+"/"+min+"/"+sec);
+
+
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>

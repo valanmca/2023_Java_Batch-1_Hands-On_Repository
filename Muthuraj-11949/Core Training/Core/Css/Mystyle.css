@@ -1,0 +1,19 @@
+
+    h1{
+        color: blue; 
+        border: 2px solid blue;
+        text-align: center;
+    }
+    #MyH1Style1{
+        color: rgb(0, 255, 64);
+         border: 2px solid rgb(0, 255, 55);
+        text-align: center;
+        
+    }
+    b{
+        color: rgb(255, 0, 13); 
+        border: 2px solid rgb(255, 0, 0);
+        text-align: center;
+        
+    }
+    

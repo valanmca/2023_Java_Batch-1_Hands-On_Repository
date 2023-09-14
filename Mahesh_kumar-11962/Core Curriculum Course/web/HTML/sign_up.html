@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Registeration</title>
+        <style>
+          *{
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+            body{
+                background-color: rgb(255, 255, 255);
+            }
+            tr{
+                height: 30px;
+                color: white;
+            }
+            th{
+                font-size: x-large;
+                height: 40px;
+            }
+            td:hover,th:hover{
+                color: darkgoldenrod;
+            }
+            .RegisterDiv{
+              background: rgb(255,255,255);
+              background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(188, 255, 30) 100%);
+              border-radius: 50px;
+              border: 5px solid rgb(0, 0, 0);
+              height: 450px;
+              width: 480px;
+              position: absolute;
+              top: 15%;
+              left: 25%;
+            }
+
+            button{
+              border: 1px solid black;
+              width: 150PX;
+              height: 30PX;
+              border-radius: 8PX;
+              left: 20px;
+            }
+
+            button:hover{
+              background-color:  rgb(186, 126, 242);;
+              cursor: pointer;
+            }
+
+            ::placeholder{
+              text-align: center;
+            }
+            .textbox{
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function validateform(){  
+              var name=document.getElementById("name").value;    // Validation by ID.
+              var email=document.myform.email.value;             // Validation by name.
+              var date=document.myform.date.value;
+              var gender=document.myform.gender.value;
+              var address=document.myform.address.value;
+              var office=document.getElementById("office").value;
+              var language=document.getElementById("language").value;  
+              var password=document.myform.password.value;
+              var cnpassword=document.myform.cnpassword.value;
+              var UsernameReq = '^[A-Z a-z]+$';
+              var PasswordReq = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+              /*var emailReq = '^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$';*/
+ 
+      if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+      }  
+
+      if (!name.match(UsernameReq)){  
+      alert("format mismatch in name field");  
+      return false;  
+      }  
+      
+      if(email==null || email==""){
+      alert("Email must not be empty");
+      return false;
+      } 
+/*
+      if(!email.match(emailReq))
+      {
+        alert("format mismatch in email");
+        return false;
+      }
+      */
+      if(date==null || date==""){
+      alert("Select Date of Birth");
+      return false;
+      } 
+      if(gender==null || gender==""){
+        alert("Select gender");
+        return false;
+      } 
+      if(address==null || address==""){
+        alert("Enter address");
+        return false;
+      } 
+      if(office==null || office==""){
+        alert("Select office");
+        return false;
+      }
+      if(password==null || password=="")
+      {  
+      alert("Password must be at least 6 characters long.");  
+      return false;
+     } 
+    if(cnpassword==null || cnpassword==""){
+      alert(" plz enter the conform your password");
+      return false;
+    }
+
+    if(!password.match(PasswordReq))
+    {
+     alert("format mismatch  occured in password ");
+     return false;
+    }
+    if(!cnpassword.match(password))
+    {
+      alert(" password mismatch");
+    }
+    if(cnpassword.match(password))
+    {
+      alert(" form validation completed ");
+    }
+}  
+ </script>
+
+    </head>
+    <body>
+        <div class="RegisterDiv">
+        <table align="center">
+        <form style="text-align: center;" name="myform">
+        <tr>
+            <th colspan="2"><b>Register</b></th></tr>
+        <tr>
+            <td> Name: </td>
+            <td><input name="name" id="name" type="text" class="textbox" placeholder="Enter your name"></td></tr>
+        <tr>
+            <td> Email id: </td>
+            <td><input name="email" type="email" class="textbox" placeholder="Enter your email"></td></tr>
+        <tr>
+            <td> D.O.B: </td>
+            <td><input name="date" type="date" name="date" class="textbox"></td></tr>
+        <tr>
+            <td> Gender: </td>
+            <td><input name="gender" type="radio"><label>Male</label>
+                <input type="radio" name="gender"><label>Female</label>
+              </td></tr>
+        <tr>
+            <td><label>Address: </label></td>
+            <td><textarea name="address" rows="1" cols="4" class="textbox" placeholder="Enter your address with pincode"></textarea></td></tr>  
+        <tr>
+            <td><label for="office">Work Location: </label></td>
+            <td><select id="office" class="textbox"><option value="">Select location</option>
+                <option value="Chennai">Chennai</option><option value="Virudhunagar">Virudhunagar</option>
+                <option value="Work from Home">Work from Home</option>
+              </select></td></tr>
+        <tr>
+            <td> Interested Plateform: </td>
+            <td><input id="language" type="checkbox" class="textbox" name="checkbox1" value="Web"><label>Web</label>
+                <input type="checkbox" class="textbox"  name="checkbox1" value="Mobile"><label>Mobile</label>
+                <input type="checkbox" class="textbox"  name="checkbox1" value="Desktop"><label>Desktop</label></td></tr>
+        <tr>
+            <td> Password: </td>
+            <td><input name="password" type="password" class="textbox" placeholder="Enter password"></td></tr>
+        <tr>
+            <td> Confirm Password: </td>
+            <td><input name="cnpassword" type="password" class="textbox" placeholder="Confirm password"></td></tr>
+        <tr>
+            <td></td>
+            
+            <td align="center"><b><button type="submit"  style="margin-right: 130px; margin-top: 30px;" value="Submit" onclick="validateform()" >Sign Up</button></b></td></tr>
+        <tr>
+            <td></td>
+           </tr>
+        </table>
+        </form>
+    </div>
+    </body>
+    </html>
+
+

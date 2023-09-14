@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <style>
+               .MyTable{
+            border: 5px solid violet;
+            /* width: 40%; */
+            height: 100px;
+            border-radius: 20px;
+        }
+        
+        th{
+            color: violet;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+        .MyTextBox{
+            width: 280px;
+            height: 35px;
+            border: 2px solid violet;
+            border-radius: 5px;
+            font-size: 20px;
+            color: rgb(171, 37, 171);
+        }
+        .MyTextBox:hover{
+            border: 3px solid rgb(171, 37, 171);  
+        }
+    
+        .button{
+            border: none;
+            background-color: violet;
+            width: 100px;
+            margin-left: 10px;
+            border-radius: 15px;
+            height: 35px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .button:hover{
+            background-color: white;
+            color: violet;
+            border: 3px solid violet;
+            transform: translateY(0) scaleY(1);
+            transition: all .6s ease;
+        }
+
+        b, th{
+            color: rgb(171, 37, 171);
+        }
+        .date{
+            border: 2px solid violet;
+            border-radius: 5px;
+            color:rgb(171, 37, 171);
+        }
+        ::placeholder{
+            color: rgb(171, 37, 171) ;
+        }
+        
+        
+    </style>
+</head>
+
+<body><from><table class="MyTable" cellspacing="10" cellpadding="10" align="center">
+    <tr><th colspan="2">Bio-Data Registration</th></tr>
+    <tr><td><label><b>First Name:</b> </label></td>
+    <td><input required type="text" id="fname" name="fname" class="MyTextBox" placeholder="Enter your first name"></td></tr>
+    <tr><td><label><b>Last Name:</b> </label></td>
+    <td><input required type="text" id="lname" name="lname" class="MyTextBox" placeholder="Enter your last name"></td></tr>
+
+    <tr><td><label><b>Gender</b> : </label></td>
+    <td><input type="radio" id="gender" name="gender" value="Male" required/> <b>Male</b> 
+    <input type="radio" id="gender" name="gender" value="Female" /> <b>Female</b>
+    <input type="radio" id="gender" name="gender" value="other" /> <b>Other</b> </td></tr>
+
+    <tr><td><label><b>Languages Known :</b> </label></td>
+    <td><input class="checkbox" type="checkbox" name="gender" value="Tamil" required /> <b>Tamil</b>
+    <input type="checkbox" name="gender" value="Telegu" /> <b>Telegu</b>
+    <input type="checkbox" name="gender" value="English" /> <b>English</b>
+    <input type="checkbox" name="gender" value="Hindi" /> <b>Hindi</b> </td></tr>
+
+    <tr><td><label><b>Father's Name:</b> </label></td>
+    <td><input type="text" id="fname1" class="MyTextBox" placeholder="Enter your father's name"></td></tr>
+    <tr><td><label><b>Mother's Name:</b> </label></td>
+    <td><input type="text" id="mname1" class="MyTextBox" placeholder="Enter your mother's name"></td></tr>
+
+    <tr><td><label><b>Date of Birth:</b> </label></td>
+    <td><input class="date" type="date" name="dob"></td></tr>
+
+    <tr><td><label><b>Address:</b> </label></td>
+    <td><textarea required id="address" cols="20" rows="5" class="MyTextBox" value="address"></textarea></td></tr>
+
+    <tr><td><label> <b>Course :</b> </label></td>
+    <td><select id="select">
+        <option value="Course">Course</option>
+        <option value="BCA">B.Tech</option>
+        <option value="BBA">B.E</option>
+        <option value="B.Tech">M.Tech</option>
+        <option value="MBA">MBA</option>
+        <option value="MCA">MCA</option>
+        <option value="M.Tech">MCom</option>
+    </select></td></tr>
+
+    <tr><td><label><b>Phone :</b> </label></td>
+    <td>
+    <input type="text" pattern="\d*" id="num" class="MyTextBox" name="phone" maxlength="10" minlength="10" size="10" /></td></tr>
+
+    <tr><td><label><b>Email:</b> </label></td>
+    <td><input type="email" class="MyTextBox" name="email" id="email" /></td></tr>
+
+    <tr><td><label><b>Password:</b> </label></td>
+    <td><input id="pwd" type="password" class="MyTextBox" name="password" /></td></tr>
+
+    <tr><td><label><b>Re-type Password:</b> </label></td>
+    <td><input id="pwd1" type="password" class="MyTextBox" name="repass" /></td></tr>
+
+    <tr><td><input class="button" type="reset" value="Reset">
+    <input class="button" type="submit" value="Submit" onclick="registerValidation()" /></td></tr>
+    </table></from>
+
+    <script src="validation.js"></script>
+
+</body>
+
+</html>

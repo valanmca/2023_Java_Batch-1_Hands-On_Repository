@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <h1><center><font color="darkblue">Registration Details</font></center></h1>
+        <hr color="black">
+
+        <style>
+            .Reg{
+                margin-top:50px;
+                margin-left:350px;
+                width:500px;
+                height:600px;
+                border:5px solid saddlebrown;
+                border-radius:10px;
+            }
+
+            .box{
+                width:250px;
+                height:30px;
+                border-radius:10px;
+                border-color:darkred; 
+            }
+
+            button:hover{
+                cursor:pointer;
+                border-radius:10px;
+                background-color:darkseagreen;
+                width:70px;
+                height:30px;
+            }
+
+            .btn:hover{
+                cursor:pointer;
+                border-radius:10px;
+                background-color:rgb(250, 35, 6);
+                width:70px;
+                height:30px;
+            }
+            .b1{
+                width:150px;
+                height:30px;
+                border-radius:10px;
+                border-color:darkred;
+            }
+
+        </style>
+        <script>
+            function check(){
+                var nameRegEx='^[A-Z a-z]+$';
+                var NoRegEx='^[0-9]+$';
+                var Firstname=document.getElementById("n1").value;
+                var lastname=document.getElementById("n2").value;
+                var Course=document.getElementById("n3").value;
+                var Specialization=document.getElementById("n4").value;
+                var Number=document.getElementById("n5").value;
+                var Address=document.getElementById("n6").value;
+                var email=document.getElementById("n7").value;
+                var Password=document.getElementById("n8").value;
+                var RetypePassword=document.getElementById("n9").value;
+
+                if(Firstname==""||Firstname==null){
+                    alert("Firstname field can't be empty");
+                    return false;
+                }
+                if(!Firstname.match(nameRegEx))
+                {
+                    alert("Invalid FirstName");
+                    return false;
+                }
+                if(lastname==""||lastname==null)
+                {
+                    alert("Lastname field can't be empty");
+                    return false;
+                }
+                if(!lastname.match(nameRegEx))
+                {
+                    alert("Invalid lastname");
+                    return false;
+                }
+                if(Course==""||Course==null)
+                {
+                    alert("Course field can't be empty");
+                    return false;
+                }
+                if(Specialization==""||Specialization==null)
+                {
+                    alert("Specialization field can't be empty");
+                    return false;
+                }
+                if(Number=="" || Number==null)
+                {
+                    alert("Number field can't be empty");
+                    return false;
+                }
+                if(Address==""||Address==null)
+                {
+                    alert("Address field can't be empty");
+                    return false;
+                }
+                if(email==""||email==null)
+                {
+                    alert("Email field can't be empty");
+                    return false;
+                }
+                if(Password==""||Password==null)
+                {
+                    alert("Password field can't be empty");
+                    return false;
+                }
+                if(RetypePassword==""||RetypePassword==null)
+                {
+                    alert("RetypePassword field can't be empty");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor="navajowhite">
+        <div class="Reg">
+        <form>
+            <table align="center">
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><b>First Name</b></td>
+                <td><input class="box" type="text" placeholder="Enter First Name" onfocus="this.placeholder=''" size="40" id="n1"  ></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><b>Last Name</b></td>
+                <td><input class="box" type="text" placeholder="Enter Last Name" onfocus="this.placeholder=''" size="40" id="n2" ></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><b>Degree</b>
+        <td>
+        <select id="n3" style="height: 20px; width:120px; border-radius:10px; border-width:2px; border-color: darkred;">
+            <option value="">Select Course</option>
+            <option value="BE">BE</option>
+            <option value="B.Tech">B.Tech</option>
+        </select></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr>
+        <td><b>Specialization</b></td>
+        <td><select id="n4" style="height: 20px; width:70px; border-radius:10px; border-width:2px; border-color: darkred;">
+            <option value="">Select</option>
+            <option value="EEE">EEE</option>
+            <option value="BIO-TECH">BIO-TECH</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+        </select></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td><b>Gender</b>
+        <td><input type="radio" value="Male" name="Gender">Male
+        
+        <input type="radio" value="Female" name="Gender">Female
+        
+        <input type="radio" value="other" name="Gender">Other</td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        
+        <tr><td><b>Mobile No</b></td>
+        <td><input class="box" type="phonenumber" placeholder="Enter number" onfocus="this.placeholder=''" size="10" id="n5" required></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+        <tr><td><b>Address</b></td>
+        <td><textarea style="height: 50px; width:250px; border-radius:10px; border-width:2px; border-color: darkred;" id="n6" onfocus="this.textarea=''" size="50"></textarea></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+        <tr><td><b>Email Id</b></td>
+            <td><input class="box" type="email" placeholder="Enter email" onfocus="this.placeholder=''" id="n7"></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+        <tr><td><b>Password</b></td>
+            <td><input class="box" type="Password" placeholder="Enter Password" onfocus="this.placeholder=''" id="n8"></td></tr>
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+        <tr><td><b>Re-type Password</b></td>
+        <td><input class="box" type="password" placeholder="Re-Enter Password" onfocus="this.placeholder=''" id="n9"></td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        
+        <tr><td><b>Hobbies</b></td>
+            <td><input type="checkbox">Drawing
+            <input type="checkbox">Singing
+            
+            <input type="checkbox">Acting</td></tr>
+
+
+            <tr>
+                <td>      </td>
+                <td><input type="checkbox">Others <input class="b1" type="text" placeholder="Others"> </td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+        <tr><td><button style="border-radius:10px;" onclick="check()">Register</button></td>
+        <td><button class="btn" style="border-radius:10px;">Cancel</button></td></tr>
+
+    </table>
+    </form>
+    </div>
+    </body>
+</html>

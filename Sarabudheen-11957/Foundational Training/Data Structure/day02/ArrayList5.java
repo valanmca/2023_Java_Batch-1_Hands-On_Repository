@@ -1,0 +1,32 @@
+/***** Multiplication Table Using ArrayList... *****/
+package com.sara.day02;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayList5 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> list1 = new ArrayList<Integer>();
+		for (int i = 1; i <= 10; i++) {
+			list1.add(i);
+		}
+		System.out.println(list1);
+
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter The Number : ");
+		int Number = sc.nextInt();
+		for (int i = 0; i < list1.size(); i++) {
+			list2.add(list1.get(i) * Number);
+		}
+
+		System.out.println(list2);
+
+		for (int i = 0; i < list1.size(); i++) {
+			System.out.println(list1.get(i) + " * " + Number + " = " + list2.get(i));
+		}
+
+	}
+
+}

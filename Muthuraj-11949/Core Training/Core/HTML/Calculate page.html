@@ -1,0 +1,80 @@
+<html>
+    <style>
+        table{
+                border : 3px solid rgba(128, 0, 0, 0.719);
+                    height: 400px;
+                    width: 400px;
+                    background-color: rgb(187, 170, 71);
+                    border-radius: 50px;
+                   }
+                .MytextStyle{
+                    border: 3px solid rgb(185, 80, 255);
+                }
+                button{
+                    border: 5px solid rgb(206, 67, 125); background-color: rgb(125, 154, 161);
+                }
+            </style>
+            <script>
+                function addition(){
+                    var a= document.getElementById("n1").value;
+                    var b= document.getElementById("n2").value;
+                    var sum= parseInt(a) + parseInt (b);
+                    document.getElementById("result").innerHTML = Addition=+sum;
+
+                }
+                function subraction(){
+                    var a= document.getElementById("n1").value;
+                    var b= document.getElementById("n2").value;
+                    var sum= parseInt(a) - parseInt (b);
+                    document.getElementById("result").innerHTML = Subraction=+sum;
+
+                }
+                function multiplication(){
+                    var a= document.getElementById("n1").value;
+                    var b= document.getElementById("n2").value;
+                    var sum= parseInt(a) * parseInt (b);
+                    document.getElementById("result").innerHTML = Multiplication=+sum;
+
+                }
+                function divison(){
+                    var a= document.getElementById("n1").value;
+                    var b= document.getElementById("n2").value;
+                    var sum= parseInt(a) / parseInt (b);
+                    document.getElementById("result").innerHTML = Divison=+sum;
+
+                }
+            </script>
+            
+           <head><h2><title>Calculator App</h2></title>
+<body bgcolor="pink">
+   
+         <table align="center">
+              <tr>
+                   <th colspan="2"><b>Calculator App</b></th>
+                   </td>
+              </tr>
+              <tr>
+                   <td><b>Enter Frist number:</b></td>
+                   <td><input type="number" class="MytextStyle" id='n1' placeholder="Enter Frist number"></td>
+              </tr>
+              <tr>
+                   <td><b>Enter Second number:</b></td>
+                   <td><input type="number" class="MytextStyle" id='n2' placeholder="Enter Second number "></td>
+              </tr>
+              <tr>
+                <!-- <td align="Centre"><b>Result:</b></td> 
+                <td><input type="text" class="MytextStyle" id="result" placeholder="Result"></td>-->
+           </tr>
+
+           <tr><td colspan="2" align="center">
+            <button onclick="addition()"><b>ADD</b></button>
+            <button onclick="subraction()"><b>SUB</b></button>
+            <button onclick="multiplication()"><b>MUL</b></button>
+            <button onclick="divison()"><b>DIV</b></button>
+
+        </td></tr>
+        <tr id="result">
+            <td></td>
+        </tr>
+    </body>
+</html>

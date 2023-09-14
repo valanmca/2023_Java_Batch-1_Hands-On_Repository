@@ -1,0 +1,59 @@
+h1{
+    color:cadetblue
+}
+*{
+    border: 3px black;
+    background-color: antiquewhite;
+}
+p,b{
+    border:10px;
+    border-color: black;
+}
+
+.div{
+        background:rgb(228, 92, 92);
+        height:250px;
+        width:450px;
+        border:2px solid black;
+        border-radius:30px;
+        position:absolute;
+        top:200px;
+        margin-left: 300px;
+    }
+.mytextbox1{
+        height:25px;
+        width:200px;
+        border-radius:20px;
+        border:2px solid black;
+        cursor:pointer;
+
+        
+    }
+.mytextbox1:hover{
+        height:25px;
+        width:200px;
+        border-radius:20px;
+        border:2px solid rgb(122, 12, 30);
+        cursor:pointer;
+    }
+.button{
+        height:20px;
+        width:70px;
+        border-radius:20px;
+
+    }
+.button:hover{
+        height:23px;
+        width:73px;
+        cursor:pointer;
+        background-color:rgb(90, 149, 226);
+       	font-weight: bold;
+        border-radius:20px;
+        border:2px solid black;
+    }
+a:hover{
+        text-decoration: none;
+        cursor:pointer;
+        color:antiquewhite;
+        background: solid grey;
+    }

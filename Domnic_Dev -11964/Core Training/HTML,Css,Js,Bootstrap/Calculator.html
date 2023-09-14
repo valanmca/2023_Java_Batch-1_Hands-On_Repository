@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      background-image: url('https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+
+    }
+
+    table {
+      position: absolute;
+      top: 150px;
+      left: 300px;
+    }
+
+    input,
+    button {
+      background: transparent;
+      fill: none;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: crimson;
+      
+    }
+
+    ::placeholder {
+      color: black;
+    }
+
+  </style>
+  <script>
+    function addition() {
+      var a = document.getElementById("n1").value;
+      var b = document.getElementById("n2").value;
+      var sum=parseInt(a)+parseInt(b);
+      document.getElementById("result").innerHTML="Addition :"+ sum;
+    }
+    function Substraction() {
+      var a = document.getElementById("n1").value;
+      var b = document.getElementById("n2").value;
+      var sub=parseInt(a)-parseInt(b);
+      document.getElementById("result").innerHTML="Substraction :"+ sub;
+    }
+    function Multiply() {
+      var a = document.getElementById("n1").value;
+      var b = document.getElementById("n2").value;
+      var mul=parseInt(a)*parseInt(b);
+      document.getElementById("result").innerHTML="Multiplication :"+ mul;
+    }
+    function Division() {
+      var a = document.getElementById("n1").value;
+      var b = document.getElementById("n2").value;
+      var div=parseInt(a)/parseInt(b);
+      document.getElementById("result").innerHTML="Division :"+ div;
+    }
+    
+    
+  </script>
+</head>
+
+<body>
+
+
+  <table>
+    <tr>
+      <td align="center" colspan="2">Calculator</td>
+    </tr>
+
+    <tr>
+      <td>Enter the first number :</td>
+      <td><input type="number" id="n1" placeholder="Number 1"> </td>
+    </tr>
+    <tr>
+    <tr></tr>
+    </tr>
+    <tr>
+      <td>Enter the Second number :</td>
+      <td> <input type="number" id="n2" placeholder="Number 2"></td>
+    </tr>
+    <tr>
+    <tr>
+    <tr></tr>
+    </tr>
+    </tr>
+    <tr align="center">
+      <td colspan="2"> <button onclick="addition()">Add</button>
+        <button onclick="Substraction()">Substraction</button>
+        <button onclick="Multiply()">Multiply</button>
+        <button onclick="Division()">Division</button>
+      </td>
+      <tr></tr><tr></tr>
+    <tr>
+      <td colspan="2" align="center">
+        <div id="result" > </div> 
+      </td>
+    </tr>
+       
+    
+
+  </table>
+
+</body>
+
+</html>

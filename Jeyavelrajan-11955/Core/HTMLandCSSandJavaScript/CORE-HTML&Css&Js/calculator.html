@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        function Addition(){
+             var a=document.getElementById("num1").value;
+             var b=document.getElementById("num2").value;
+             var sum = parseInt(a)+parseInt (b);
+             document.getElementById("result").innerHTML="<font color='blue'> Addition :"+sum;
+        }
+        function Subraction(){
+            var a=document.getElementById("num1").value;
+             var b=document.getElementById("num2").value;
+             var sum = parseInt(a)-parseInt (b);
+             document.getElementById("result").innerHTML="<font color='green'> Subraction:"+sum;
+        }
+        function Multiplication(){
+            var a=document.getElementById("num1").value;
+             var b=document.getElementById("num2").value;
+             var sum = parseInt(a)*parseInt (b);
+             document.getElementById("result").innerHTML="<font color='green'> Multiplication:"+sum;
+        }
+        function Division(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var sum= parseInt(a)/parseInt(b);
+            document.getElementById("result").innerHTML="<font color='yellow'>Division:"+sum;
+        }
+    </script>
+</head>
+<body style="padding-top: 200px;padding-left: 200px;padding-right: 200px; background-image: linear-gradient(to right, #9796f0, #fbc7d4);">
+    <div style="color: blueviolet">
+            
+        <form action="">
+         <fieldset  style="border: 2px solid black">
+           <legend><b> Calculator</b></legend>
+            <br>
+            <label for="Number1">&nbspNumber 1 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="Number" id="num1" name="Number2"  style="border: 4px solid blueviolet"><br><br>
+            <label for="number2">&nbspNumber 2 :</label>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input type="Number" id="num2" name="Number2"  style="border: 4px solid blueviolet"><br><br><br>
+            <label for="submit">&nbsp&nbspCalculation :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <button type="button" style="border: 4px solid blueviolet" onclick="Addition()">Addition</button>&nbsp; 
+            <button type="button" style="border: 4px solid blueviolet" onclick="Subraction()">Subraction</button>&nbsp; 
+            <button type="button" style="border: 4px solid blueviolet" onclick="Multiplication()">Multiplication</button>&nbsp; 
+            <button type="button" style="border: 4px solid blueviolet" onclick="Division()">Division</button>&nbsp;  
+            <br>   
+            <div id="result"></div>
+         </fieldset>
+        </form>
+    </div>
+    <!--  -->
+  
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
+    <style>
+        .MyTable{
+            border: 5px solid violet;
+            height: 90px;
+            border-radius: 20px;
+            width: 420px;
+        }
+        
+        th{
+            color: violet;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+        .MyTextBox{
+            width: 350px;
+            height: 60px;
+            border: 2px solid violet;
+            border-radius: 5px;
+            color: rgb(171, 37, 171);
+            font-size: xx-large;
+            text-align: right;
+        }
+        
+        
+    
+        button{
+            border: none;
+            background-color: violet;
+            width: 80px;
+            margin-left: 10px;
+            border-radius: 3px;
+            height: 60px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+        }
+        button:hover{
+            background-color: white;
+            color: violet;
+            border: 3px solid violet;
+            transform: translateY(0) scaleY(1);
+            transition: all .6s ease;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: violet;
+        }
+        a:hover{
+            color: rgb(171, 37, 171);
+        }
+        b, th{
+            color: rgb(171, 37, 171);
+        }
+        .equal{
+            background-color: rgb(171, 37, 171);
+        }
+    </style>
+</head>
+<body>
+    <table class="MyTable" align="center">
+        <tr><th>Calculator</th></tr><br>
+        <tr><td><input class="MyTextBox"  type="text" id="result"></td></tr>
+        <tr><td><button onclick="clearScreen()">C</button>
+            <button onclick="backspace()" id="backspace"><i class="fas fa-backspace"></i></button>
+            <button onclick="display('%')"  value="%">%</button>
+            <button onclick="display('/')"  value="/">/</button></td>
+        </tr>
+        <tr><td>
+            <button onclick="display('7')" value="7">7</button>
+            <button onclick="display('8')" value="8">8</button>
+            <button onclick="display('9')" value="9">9</button>
+            <button onclick="display('*')" value="*">X</button></td>
+        </tr>
+        <tr><td>
+            <button onclick="display('4')"  value="4">4</button>
+            <button onclick="display('5')"  value="5">5</button>
+            <button onclick="display('6')"  value="6">6</button>
+            <button onclick="display('-')"  value="-">-</button></td>
+        </tr>
+        <tr><td>
+            <button onclick="display('1')"  value="1">1</button>
+            <button onclick="display('2')"  value="2">2</button>
+            <button onclick="display('3')"  value="3">3</button>
+            <button onclick="display('+')"  value="+">+</button></td>
+        </tr>
+        <tr><td>
+            <button onclick="display('00')"  value="00">00</button>
+            <button onclick="display('0')"  value="0">0</button>
+            <button onclick="display('.')"  value=".">.</button>
+            <button onclick="calculate()"  value="=" class="equal">=</button></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>

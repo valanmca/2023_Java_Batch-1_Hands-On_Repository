@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <h1>Calculator</h1>
+        <script>
+            function addition(){
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var sum=parseInt(a)+parseInt(b);
+                document.getElementById("result").innerHTML = "addition:"+sum;
+            }
+            function subtraction(){
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var sum=parseInt(a)-parseInt(b);
+                document.getElementById("result").innerHTML="subtraction:"+sum;
+            }
+            function multiplication(){
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var sum=parseInt(a)*parseInt(b);
+                document.getElementById("result").innerHTML="Multiplication:"+sum;
+            }
+            function division(){
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var sum=parseInt(a)/parseInt(b);
+                document.getElementById("result").innerHTML="Division:"+sum;
+            }
+        </script>
+    </head>
+    <!--Command-->
+    <body style="background-image: url(https://cdn.wallpapersafari.com/71/85/prl9QF.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+        <table>
+            <tr><td>Number</td><td>1</td><td><input type="value" id="n1"></td></tr>
+            <tr><td>Number</td><td>2</td><td><input type="value" id="n2"></td></tr>
+            <tr><td><button type="add" onclick="addition()">Add</button>
+                <button type="Sub" onclick="subtraction()">Sub</button></td>
+                <td><button type="Mul" onclick="multiplication()">Multiply</button>
+                <button type="div" onclick="division()">Div</button></td></tr>
+        </table>
+        <p id="result">
+
+        </p>
+        
+    </body>
+</html>

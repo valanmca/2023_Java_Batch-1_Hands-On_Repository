@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="MyStyel.css">
+    <!-- Inline CSS -->
+    <style>
+        /* Element tag selector */
+        h1{
+            color:red;
+            border: 5px solid red;
+            border-radius: 30px;
+            text-align: center;
+        }
+        /* class selector */
+        .myh1style2{ 
+            color:blue;
+            border: 5px dashed blue;
+            border-radius: 30px;
+            text-align: center;
+        }
+        /* Id selector */
+        #myh1style1{
+            color:yellowgreen;
+            border: 5px dotted yellowgreen;
+            border-radius: 30px;
+            text-align: center;
+        }
+        /* Universal selector */
+        *
+        {
+            background-color: wheat;
+        } 
+        /* Grouping Selector */
+        h1,p{
+            color:purple;
+            border: 5px solid purple;
+            border-radius: 30px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myh1style1">My Text 1 form Internal css</h1>
+    <h1 class="myh1style2">My Text 2 Internal css</h1>
+    <h1>My Text 3 Internal css</h1>
+    <p>My Paragraph text 1 Internal css</p>
+
+    <h2>This is my heading 2 from external css</h2>
+    <h3>This is my heading 3 form external css</h3>
+
+    <h4 style="color:orange;background-color: brown;">This is heading from Inline css</h4>
+</body>
+</html>

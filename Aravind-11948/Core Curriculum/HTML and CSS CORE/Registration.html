@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .div{
+          background-color: antiquewhite;
+          border:20px solid rgb(197, 109, 109);
+            height:700px;
+            width:600px;
+            top:100px;
+            left:150px;
+            position:absolute;
+          
+
+            padding:50px;
+            border-style:groove;
+            
+        }
+        .textbox{
+            height:25px;
+            width:300px;
+            border-radius:20px;
+            border:2px solid pink;
+            
+        }
+        .textbox:hover{
+            height:25px;
+            width:300px;
+            cursor:pointer;
+            border-radius:20px;
+            border:2px solid rgb(207, 25, 55);
+            cursor:pointer;
+        }
+        textarea{
+            border-radius:20px;
+            border:2px solid pink;
+        }
+        textarea:hover{
+            border-radius:20px;
+            border:2px solid pink;
+            border:2px solid rgb(207, 25, 55);
+            cursor:pointer;
+        }
+        .texthead{
+          font-weight: bold;
+          font-family:Times New Roman;
+          
+        }
+       
+        
+        
+        .button{
+            height:25px;
+            width:65px;
+            border-radius:20px;
+           }
+           .button:hover{
+            height:30px;
+            width:70px;
+            border-radius:20px;
+            background-color: lightpink;
+           }
+           body{
+                background-image: radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(54,54,47,0.9724264705882353) 100%);
+            }
+
+    </style>
+    <script>
+      function check(){
+       
+
+       var nameRegEx='^[A-Za-z]+[0-9]+$';
+       var nameRegEx1='^[A-Za-z]+$';
+       var NoRegEx='^[0-9]+$';
+       var emailRegEx='^([A-za-z0-9])+\@([A-za-z])+\.+([A-Za-z]{2,4})$'
+       var firstname= document.getElementById("n1").value;
+       var middlename= document.getElementById("n2").value;
+       var Lastname= document.getElementById("n3").value;
+       var date= document.getElementById("n4").value;
+       var course= document.getElementById("n5").value;
+       var genderM= document.getElementById("n6");
+       var genderF= document.getElementById("n7");
+       var cont=document.getElementById("n8").value;
+       var address=document.getElementById("n9").value;
+       var email=document.getElementById("n10").value;
+       var pass=document.getElementById("n11").value;
+       var Retypepass=document.getElementById("n12").value;
+            
+           
+            if (firstname==""||firstname==null)
+            {
+              alert("name cant be blank");
+              return false;
+            }
+            if(!firstname.match(nameRegEx)&&!firstname.match(nameRegEx1))
+            {
+              alert("Invalid firstname");
+              return false;
+            }
+            
+            // if (middlename==""||middlename==null)
+            // {
+            //   alert("name cant be blank");
+            //   return false;
+            // }
+            if (Lastname==""||Lastname==null)
+            {
+              alert("Last name cant be blank");
+              return false;
+            }
+            if(!Lastname.match(nameRegEx))
+            {
+              alert("Invalid Lastname");
+              return false;
+            }
+
+            if (date==""||date==null)
+            {
+              alert("date cant be blank");
+              return false;
+            }
+            if (course==""||course==null)
+            {
+              alert("course cant be blank");
+              return false;
+            }
+            if(!genderM.checked && !genderF.checked)
+            {
+              alert("select Male or female");
+              return false;
+            }
+           
+            if (cont==""||cont==null)
+            {
+              alert("contact  cant be blank");
+              return false;
+            }
+            if(!cont.match(NoRegEx) )
+            {
+              alert("Invalid contact number")
+              return false;
+            }
+
+            if( cont.length!=10){
+              alert("Mobile Number must be 10 digits");
+              return false;
+            }
+
+            if (address=="" || address==null)
+            {
+              alert("Address cant be blank");
+              return false;
+            }
+
+            if (email==""||email==null)
+            {
+              alert("email cant be blank");
+              return false;
+            }
+
+            if (pass==""||pass==null)
+            {
+              alert("password cant be blank");
+            }
+           
+            if (Retypepass==""||Retypepass==null)
+            {
+              alert("Retype-password cant be blank");
+            }
+            if(!pass.match(NoRegEx) )
+            {
+               alert("Invalid password")
+            }
+            if(pass!=Retypepass)
+            {
+              alert("password and retypepassword must be same")
+            }
+
+            confirm("Are you sure you want to Register using the detail you provide above");
+
+            
+          }
+          
+               
+           
+            
+    </script>
+   
+    <title>Document</title>
+</head>
+<body >
+    
+    <center><H2><font color="Red"><i>REGISTRATION PAGE</i></font> </H2></center>
+    <hr >
+  
+    
+
+    <div class="div">
+        <form name="">
+        
+            <legend><font color="blue"><h3>Register</h3></font></legend>
+        
+          <table class="table1">
+            <tr>
+                <td><label class="texthead">First Name&nbsp;&nbsp;&nbsp;&nbsp;:</label></td>
+                <td><input class="textbox" type="text" placeholder="Firstname" onfocus="this.placeholder=''" size="40" id="n1" required/></td></tr>
+         
+            <tr>
+                <tr></tr><tr></tr><tr></tr>
+                <td><lable class="texthead">Middle Name:</lable></td>
+                <td><input class="textbox" type="text" placeholder="middlenamename" onfocus="this.placeholder=''" size="40" id ="n2"/></td>
+            </tr>
+            <tr></tr><tr></tr><tr></tr>
+          
+            <tr> 
+                <td><lable class="texthead">Last Name&nbsp;&nbsp;&nbsp;&nbsp;:</lable></td>
+                <td><input class="textbox" type="text" placeholder="lastname"  onfocus="this.placeholder=''" size="40" id="n3" required/> </td>
+            </tr>
+            <tr></tr><tr></tr><tr></tr>
+
+        </tr>
+
+        <tr></tr><tr></tr><tr></tr>
+        
+
+        <tr><td><lable class="texthead">DOB:</lable></td>
+        <td><input  class="textbox" type="date" name="DATE" placeholder="Email"   onfocus= "this.placeholder='' " id="n4" required/></td>
+      </tr>
+          <tr></tr><tr></tr>
+        <tr>
+            <td><p class="texthead">Select the course:</p></td>
+              <td><select style="height:25px;width:100px;border-radius:20px;border:2px solid pink;" id ="n5">
+            
+             <option  value="" >Course</option>  
+             <option value="BCA">BCA</option>  
+             <option value="BBA">BBA</option>  
+             <option value="B.Tech">B.Tech</option>  
+             <option value="MBA">MBA</option>  
+             <option value="MCA">MCA</option>  
+             <option value="M.Tech">M.Tech</option>   
+             </select></td>
+           </tr>
+          <tr></tr><tr></tr><tr></tr>
+          
+        <tr>
+         <td><lable class="texthead">Gender:</lable></td>
+          
+          <td><input  type="radio" name="gender" value="Male"   id="n6" checked>Male
+          <input  type="radio" name="gender" value="Female"  id="n7">Female
+          
+
+        </tr>
+
+          <tr></tr><tr></tr><tr></tr>
+          <tr></tr><tr></tr><tr></tr>
+          
+          
+          <tr>
+            <td><lable class="texthead">Phone Number:</lable></td>
+            <td><input  style="height:25px;width:25px;border-radius:20px;border:2px solid pink;" type="text" name="country code" placeholder="country code" value="+91" size="2"/>
+             <input class="textarea" type="phonenumber" name="no" placeholder="phone no" size="10" id="n8" required /></td>
+          
+          </tr>
+
+             <tr></tr><tr></tr><tr></tr>
+             <tr></tr><tr></tr><tr></tr>
+             <tr></tr><tr></tr><tr></tr>
+             <tr></tr><tr></tr><tr></tr>
+          
+          <tr>
+            <td><lable class="texthead">Current Address:</lable></td>
+          
+            <td><textarea   rows="5"cols="60"  placeholder="CurrentAddress"  id="n9" required></textarea> </td>
+        
+        </tr>
+        
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+       
+        
+        <tr>
+        <td><lable class="texthead">Skills:</lable></td>
+        
+        <td><input type="checkbox" name="skill" value="java">Java
+        <input type="checkbox" name="skill" value="C++">c++
+        <input type="checkbox" name="skill" value="C">c
+        <input type="checkbox" name="skill" value="Data structure">Data structure
+        <input type="checkbox" name="skill" value="OOPS">OOPS</td>
+
+        </tr>
+        <tr></tr><tr></tr><tr></tr>
+        
+        <tr></tr><tr></tr><tr></tr>
+       
+
+          <tr>
+
+            <td><lable class="texthead">Email:</lable></td>
+           <td><input  class="textbox" type="email" name="email" placeholder="Email"  id="n10" required/></td>
+        
+        </tr>
+        
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+       
+        
+        <tr>
+          <td><lable class="texthead">Password:</lable></td>
+          <td><input  class="textbox" type="Password"  placeholder="password"  id="n11" required/></td>
+        
+        </tr>
+
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+        
+
+       <tr> 
+         
+        <td><lable class="texthead">Re-type password:</lable></td>
+        <td><input class="textbox" type="password" name="password" placeholder="Re-type Password" id="n12" required/></td>
+
+        </tr>
+
+        <tr></tr><tr></tr><tr></tr>
+        <tr></tr><tr></tr><tr></tr>
+        
+        
+
+        <tr><td><lable class="texthead">Click here!!! </lable></td>
+            <td ><input class="button "  type="button" onclick="check()" value="Register"></td>
+        </tr>
+
+
+    </table>
+    
+         </form>
+
+        </div>
+
+
+   
+</body>
+</html>

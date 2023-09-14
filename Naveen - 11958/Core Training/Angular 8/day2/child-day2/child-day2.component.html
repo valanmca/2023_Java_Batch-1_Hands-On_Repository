@@ -1,0 +1,42 @@
+
+<h1>One way Data Binding</h1>
+<b>Employee id: {{ eid }}
+<br>
+Employee Name: {{ ename }}
+<br>
+Employee Salary: {{ esalary }}
+<br>
+<!-- Interpolation -->
+<h3><u>Interpolation</u></h3>
+Employee email: <input type="text" value="{{ email }}"/>
+<br>
+Sum of 2 values: <input type="text" value="{{ getAddition(10,20) }}"/><br>
+<img src="{{ imagePath }}" width="{{ imageWidth }}" height="{{ imageHeight }}">
+<br>
+
+<h3><u>Property Binding</u></h3>
+<!-- Property Binding -->
+Employee email: <input type="text" [value]="email"/>
+<br>
+Sum of 2 values: <input type="text" [value]="getAddition(10,20)"/>
+<br>
+<img [src]="imagePath" [width]="imageWidth" [height]="imageHeight">
+<br>
+
+<!-- Event Binding -->
+<h3><u>Event Binding</u></h3>
+<button (click)="changeId()">Change Id</button>
+<button (click)="changeName()">Change Name</button>
+<button (click)="changeEmail()">Change Email</button>
+<button (click)="changeSalary()">Change Salary</button>
+<button (click)="changeImage()">Change Image</button>
+<br>
+
+<h1>Two way Data Binding</h1>
+<!-- Two Way Binding -->
+<h3><u>Two Way Binding</u></h3>
+<br>
+Enter your Name: <input type="text" [(ngModel)]="name" />
+<br>
+Welcome {{ name }}
+</b>

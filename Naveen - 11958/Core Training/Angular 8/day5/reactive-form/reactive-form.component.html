@@ -1,0 +1,94 @@
+<h1><u>Reactive Angular Form</u></h1>
+<table cellspacing="5" cellpadding="5">
+    <div>
+        <form [formGroup]="myForm" (ngSubmit)="myFunction(myForm.value)">
+            <tr>
+                <th>
+                    <header><font color="blue"><b>Registration Page</b></font></header>
+                </th>
+            </tr>
+            <tr>
+                <td><label><b>Name :</b></label></td>
+                <td><input type="text" formControlName="name" /></td>
+                <td>
+                    <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+                        <div *ngIf="myForm.get('name')!.hasError('required')">
+                            <font color="red"><b>Name Required.</b></font>
+                        </div>
+                        <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                            <font color="red"><b>Invalid Name.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label><b>Email :</b></label></td>
+                <td><input type="text" formControlName="email" /></td>
+                <td>
+                    <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+                        <div *ngIf="myForm.get('email')!.hasError('required')">
+                            <font color="red"><b>Email Required.</b></font>
+                        </div>
+                        <div *ngIf="myForm.get('email')!.hasError('pattern')">
+                            <font color="red"><b>Invalid Email.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label><b>Age :</b></label></td>
+                <td><input type="text" formControlName="age" maxlength="2" /></td>
+                <td>
+                    <div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+                        <div *ngIf="myForm.get('age')!.hasError('required')">
+                            <font color="red"><b>Age Required.</b></font>
+                        </div>
+                        <div *ngIf="myForm.get('age')!.hasError('pattern')">
+                            <font color="red"><b>Invalid Age.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label><b>Phone :</b></label></td>
+                <td><input type="text" formControlName="phone" maxlength="10" minlength="10" /></td>
+                <td>
+                    <div *ngIf="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+                        <div *ngIf="myForm.get('phone')!.hasError('required')">
+                            <font color="red"><b>Phone Number Required.</b></font>
+                        </div>
+                        <div *ngIf="myForm.get('phone')!.hasError('pattern')">
+                            <font color="red"><b>Invalid Phone Number.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label><b>Country :</b></label></td>
+                <td><select formControlName="country">
+                        <option value="India">India</option>
+                        <option value="Bharat">Bharat</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="China">China</option>
+                    </select></td>
+            </tr>
+
+            <tr><button [disabled]="myForm.invalid">Register</button></tr>
+        </form>
+    </div>
+</table>
+
+<br>
+<br>
+<br>
+
+    
+   <table cellspacing="5" cellpadding="5"><div><tr><td><b>Name :</b></td> <td>{{ name1 }}</td></tr>
+    <tr><td><b>Email :</b></td> <td>{{ email1 }}</td></tr>
+    <tr><td><b>Age :</b></td> <td>{{ age1 }}</td></tr>
+    <tr><td><b>Phone :</b></td> <td>{{ phone1 }}</td></tr>
+    <tr><td><b>Country :</b></td> <td>{{ country1 }}</td></tr>
+   </div></table>

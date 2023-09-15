@@ -1,0 +1,113 @@
+<h1>Template Driven Forms [TDF]</h1>
+<br>
+<table cellpadding="5" cellspacing="5">
+    <div>
+
+        <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+            <tr>
+                <td><label>Name: </label></td><td><input type="text" name="name" #name="ngModel" ngModel required pattern="[A-Z a-z]+"></td>
+
+                <td>
+                    <div *ngIf="name.touched">
+                        <div *ngIf="name.errors?.['required']">
+                            <font color="red"><b>Name Required.</b></font>
+                        </div>
+                        <div *ngIf="name.errors?.['pattern']">
+                            <font color="red"><b>Invalid Name.</b></font>
+                        </div>
+                        <div *ngIf="name.valid">
+                            <font color="green"><b>Valid Name.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+
+            <br>
+            <tr>
+                <td><label>Email: </label></td><td><input type="text" name="email" #email="ngModel" ngModel required
+                        pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"></td>
+
+                <td>
+                    <div *ngIf="email.touched">
+                        <div *ngIf="email.errors?.['required']">
+                            <font color="red"><b>Email Required.</b></font>
+                        </div>
+                        <div *ngIf="email.errors?.['pattern']">
+                            <font color="red"><b>Invalid Email.</b></font>
+                        </div>
+                        <div *ngIf="email.valid">
+                            <font color="green"><b>Valid Email.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <br>
+            <tr>
+                <td><label>Age: </label></td><td><input type="text" name="age" #age="ngModel" ngModel required pattern="[0-9]+" maxlength="2"></td>
+
+                <td>
+                    <div *ngIf="age.touched">
+                        <div *ngIf="age.errors?.['required']">
+                            <font color="red"><b>Age Required.</b></font>
+                        </div>
+                        <div *ngIf="age.errors?.['pattern']">
+                            <font color="red"><b>Invalid Age.</b></font>
+                        </div>
+                        <div *ngIf="age.valid">
+                            <font color="green"><b>Valid Age.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <br>
+            <tr>
+                <td><label>Phone: </label></td><td><input type="text" name="phone" #phone="ngModel" ngModel required pattern="[0-9]{10}" maxlength="10"
+                        minlength="10"></td>
+
+                <td>
+                    <div *ngIf="phone.touched">
+                        <div *ngIf="phone.errors?.['required']">
+                            <font color="red"><b>Phone Number Required.</b></font>
+                        </div>
+                        <div *ngIf="phone.errors?.['pattern']">
+                            <font color="red"><b>Invalid Phone Number.</b></font>
+                        </div>
+                        <div *ngIf="phone.valid">
+                            <font color="green"><b>Valid Phone Number.</b></font>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <br>
+            <tr>
+                <td><label>Country: </label></td><td><select name="country" #country="ngModel" ngModel required>
+                        <option value="India">India</option>
+                        <option value="Bharat">Bharat</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="China">China</option>
+                    </select></td>
+            </tr>
+
+            <br>
+            <tr><button [disabled]="myForm.invalid">Register</button></tr>
+        </form>
+    </div>
+</table>
+
+<br>
+<br>
+<div>
+
+    Name : {{ name1 }}<br>
+    Email : {{ email1 }}<br>
+    Age : {{ age1 }}<br>
+    Phone : {{ phone1 }}<br>
+    Country : {{ country1 }}<br>
+
+</div>

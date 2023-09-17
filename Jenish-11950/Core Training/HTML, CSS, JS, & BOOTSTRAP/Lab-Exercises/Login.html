@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .grad2 {
+            background-image: radial-gradient(circle, whitesmoke, purple, black);
+        }
+
+        body {
+            margin-top: 5%;
+            border-radius: 20px;
+
+        }
+
+        .login {
+            margin-top: 10%;
+            border: 5px solid white;
+            border-radius: 20px;
+            height: 30%;
+            width: 40%;
+        }
+
+        button {
+            margin-left: 30%;
+            width: 80px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: palevioletred;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function check() {
+            var usernameReqEx = '^[A-Z a-z]+$';
+            var passwordReqEx = '^[0-9]+$';
+            var username = document.getElementById("Uname").value;
+            var password = document.getElementById("Upassword").value;
+            if(username == "" || password == ""){
+                alert("Fields can not be empty");
+                return false;
+            }
+            if (! username.match(usernameReqEx)) {
+                alert("Only contains Alphabets");
+                return false;
+            }
+            if (! password.match(passwordReqEx)) {
+                alert("Only contains numeric");
+                return false;
+            }
+            if(username == "jenish" || password == "12345") {
+                alert("Login Successfull");
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body class="grad2" bgcolor="whitesmoke">
+    <center>
+        <form>
+            <div class="login">
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            <h2>Login</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><b>Email ID:</b></td>
+                        <td><input id="Uname" type="text" onfocus="this.value=' '" placeholder="Enter your email"><br></td>
+                    </tr>
+                    <tr>
+                        <td><b>Password:</b></td>
+                        <td><input id="Upassword" type="password" placeholder="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="check()" style="background-color: pink;">
+                            <a href="Login.html">Sign In</a></button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">Not a User? <a href="RegistrationForm.html">Register Here</a></td>
+                    </tr><br>
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>

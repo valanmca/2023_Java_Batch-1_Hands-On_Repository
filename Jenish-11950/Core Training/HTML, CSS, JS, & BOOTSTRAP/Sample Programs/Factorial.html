@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Factorial</title>
+    <script>
+        function fact() {
+            value1 = document.getElementById("value").value;
+            var fact = 1;
+            for (i = 1; i <= value1; i++) {
+                fact = fact * i;
+            }
+            document.getElementById("result").value = fact;
+        }
+    </script>
+</head>
+
+<body>
+    <label>Value :</label>
+    <input type="number" name="Value" id="value" placeholder="value"><br><br>
+    <button onclick="fact()">Submit</button><br><br>
+    <label>Result :</label>
+    <input type="number" name="Result" id="result" placeholder="answer"><br><br>
+</body>
+
+</html>

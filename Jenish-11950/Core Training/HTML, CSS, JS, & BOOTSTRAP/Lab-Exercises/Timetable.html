@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        .grad2{
+            background-image: radial-gradient(circle, whitesmoke, purple, black);
+        }
+        .row{
+            background-color: cadetblue;
+        }
+        .col{
+            background-color:darkcyan;
+        }
+        .lab{
+            background-color: chocolate;
+        }
+        .lunch{
+            background-color: goldenrod;
+        }
+        .lib{
+            background-color: darkgoldenrod;
+        }
+        .sem{
+            background-color: crimson;
+        }
+        .eng{
+            background-color: deeppink;
+
+        }
+        .mat{
+            background-color:deepskyblue;
+            
+        }.che{
+            background-color:olivedrab;
+            
+        }.phy{
+            background-color:orangered;
+            
+        }
+        .sports{
+            background-color:springgreen;
+            
+        }
+    </style>
+</head>
+
+<body class="grad2">
+    <br>
+    <center>
+        <h2>TimeTable</h2>
+        <table border="5px" cellspacing="0" style="width: 50%; height: 300px;">
+            <tr class="row">
+                <th >Day/Period</th>
+                <th>I <br>9.30-10.20</th>
+                <th>II<br>10.20-11.10</th>
+                <th>III<br>11.10-12.00</th>
+                <th><br>12.00-12.40</th>
+                <th>IV<br>12.40-1.30</th>
+                <th>V<br>1.30-2.20</th>
+                <th>VI<br>2.20-3.10</th>
+                <th>VII<br>3.10-4.00</th>
+            </tr>
+            <tr align="center">
+                <td class="col">Monday</td>
+                <td class="eng">Eng</td>
+                <td class="mat">Mat</td>
+                <td class="che">Che</td>
+                <td class="lunch"rowspan="6"><b>
+                        <center>L<br>U<br>N<br>C<br>H<br></center>
+                    </b></td>
+                <td class="lab"colspan="3">
+                    <center>LAB</center>
+                </td>
+                <td class="phy">Phy</td>
+            </tr>
+            <tr align="center">
+                <td class="col">Tuesday</td>
+                <td class="lab" colspan="3">
+                    <center>LAB</center>
+                </td>
+                <td class="eng">Eng</td>
+                <td class="che">Che</td>
+                <td class="mat">Mat</td>
+                <td>Sports</td>
+            </tr>
+            <tr align="center">
+                <td class="col">Wednesday</td>
+                <td class="mat">Mat</td>
+                <td class="phy">Phy</td>
+                <td class="eng">Eng</td>
+                <td class="che">Che</td>
+                <td class="lib" colspan="3">
+                    <center>LIBRARY</center>
+                </td>
+            </tr>
+            <tr align="center">
+                <td class="col">Thrusday</td>
+                <td class="phy">Phy</td>
+                <td class="eng">Eng</td>
+                <td class="che">Che</td>
+                <td class="lab" colspan="3">
+                    <center>LAB</center>
+                </td>
+                <td class="mat">Mat</td> 
+            </tr>
+            <tr align="center">
+                <td class="col">Friday</td>
+                <td class="lab" colspan="3">
+                    <center>LAB</center>
+                </td>
+                <td class="mat">Mat</td>
+                <td class="che">Che</td>
+                <td class="eng">Eng</td>
+                <td class="phy">Phy</td>
+            </tr>
+            <tr align="center">
+                <td class="col">Saturday</td>
+                <td class="eng">Eng</td>
+                <td class="che">Che</td>
+                <td class="mat">Mat</td>
+                <td class="sem"colspan="3">
+                    <center>SEMINAR</center>
+                </td>
+                <td>Sports</td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

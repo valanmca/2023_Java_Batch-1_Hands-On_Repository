@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .grad2 {
+            background-image: radial-gradient(circle, whitesmoke, purple, black);
+        }
+
+        button {
+            background-color: blueviolet;
+            border-radius: 10px;
+
+        }
+
+        fieldset {
+            border: 5px;
+            border-color: black;
+            border-style: ridge;
+            border-radius: 30px;
+            background-color: mediumorchid;
+        }
+
+        .id {
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function Add(){
+           var a=document.getElementById("num1").value;
+           var b=document.getElementById("num2").value;
+           var sum = parseInt(a)+parseInt (b);
+           document.getElementById("result").innerHTML= + sum;
+        }
+
+    </script>
+</head>
+
+<body class="grad2" bgcolor="plum" style="padding: 100px;">
+    <center>
+        <fieldset style="height: 50%; width: 50%;">
+            <center>
+                <h2>Calculator</h2>
+            </center>
+            <center>
+                <p>Enter the First Number: <input type="number"   id="num1"></p>
+                <p>Enter the Second Number: <input type="number"  id="num2"></p>
+            </center>
+            <center>
+                <button onclick="Add()">Add</button>
+                <button>Sub</button>
+                <button>Mul</button>
+                <button>Div</button>
+                <!-- <p>Answer:<input type="text" id="result"/></p> -->
+                <div id="result ">
+
+                </div>
+           <!-- </center>
+        </fieldset><br>
+        <iframe src="" width="100%" height="500%" title="Sample"></iframe>
+    </center>-->
+</body>
+
+</html>

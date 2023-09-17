@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <script>
+        function Registration() {
+            var fnameReqEx = '^[A-Z a-z]+$';
+            var fname = document.getElementById("fname").value;
+            var mnameReqEx = '^[A-Z a-z]+$';
+            var mname = document.getElementById("mname").value;
+            var lnameReqEx = '^[A-Z]+$';
+            var lname = document.getElementById("lname").value;
+            var phone = document.getElementById("phone").value;
+            var phno = '^\d{10}$';
+            
+             if(fname == "" && mname == "" && lname == "") {
+                alert("Fields can not be empty");
+            }
+           else if(! fname.match(fnameReqEx)){
+                alert("Field must have contains Alphabet Only");
+                //return false;
+            }
+            else if( ! mname.match(mnameReqEx)){
+               alert("Field must have contains Alphabet Only");
+                //return false;
+            }
+            else if(! lname.match(lnameReqEx)){
+                alert("Field must have contains Alphabet Only");
+                //return false;
+            }
+            else if(phone.length != 10){
+                alert("Enter 10 Digit Only");
+            }
+        }
+        
+    </script>
+</head>
+
+<body bgcolor="lightpink">
+    <hr>
+    <center>
+        <h1 style="font-size:40px;">Student Registration Form</h1>
+    </center>
+    <hr>
+    <br>
+    <form>
+        <label>
+            Firstname:
+        </label>
+        <input type="text" id="fname" placeholder="Enter firstname" size="15"><br>
+        <br>
+        <label>
+            Middlename:
+        </label>
+        <input type="text" id="mname" placeholder="Enter middlename" size="15"><br>
+        <br>
+        <label>
+            Lastname:
+        </label>
+        <input type="text" id="lname" placeholder="Enter lastname" size="15"><br>
+        <br>
+        <hr>
+        <br>
+        <label for="start"> Date of birth:</label>
+        <input type="date" id="start" name="trip-start" value="">
+        <br>
+        <br>
+        <hr>
+        <br>
+        <label>
+            Course:
+        </label>
+        <select>
+            <option value="Degree">Degree</option>
+            <option value="UG">UG</option>
+            <option value="PG">PG</option>
+        </select>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <label> Gender
+            <br>
+            <br>
+            <input type="radio" name="male">Male<br>
+            <input type="radio" name="female">Female<br>
+            <input type="radio" name="others">Others<br>
+        </label>
+        <br>
+        <hr>
+        Sports<br>
+        <br>
+        <input type="checkbox" name="sports[]" value="Cricket">Cricket<br>
+        <input type="checkbox" name="sports[]" value="Football">Football<br>
+        <input type="checkbox" name="sports[]" value="Chess">Chess<br>
+        <br>
+        <hr>
+        <br>
+        <label>
+            Phone :
+        </label>
+        <input type="text" name="country code" value="+91" size="2" />
+        <input type="phonenumber" id="phone" name="phoneno"/> <br> <br>
+        <hr>
+        Address
+        <br>
+        <textarea cols="80" rows="5" value="address">
+        </textarea>
+        <br>
+        <br>
+        <hr>
+        Email:
+        <input type="email" id="email" name="email" /> <br>
+        <br> <br>
+        Password:
+        <input type="Password" id="pass" name="pass"> <br>
+        <br> <br>
+        Re-type password:
+        <input type="Password" id="repass" name="repass"> <br> <br>
+        
+        <button onclick="Registration()">Submit</button>
+    </form>
+
+</body>
+
+</html>

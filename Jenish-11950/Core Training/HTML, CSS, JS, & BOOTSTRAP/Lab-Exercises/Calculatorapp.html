@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Comic Sans MS;
+        }
+
+        body {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: whitesmoke;
+        }
+
+        .container {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 10px 20px 20px;
+            background: black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .display {
+            height: 70px;
+            width: 100%;
+            outline: none;
+            border: none;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: blue;
+        }
+        ::placeholder {
+            color: blue;
+        }
+
+        .buttons {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .buttons button {
+            padding: 10px;
+            border-radius: 18px;
+            border: 3px border-color=#000e1a;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: palegreen;
+        }
+
+        .buttons button:active {
+            background-color: palegreen;
+            transform: scale(0.99);
+        }
+
+        .operator {
+            background-color: palevioletred;
+            color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="display" placeholder="0">
+
+        <div class="buttons">
+            <button class="operator" data-value="AC">AC</button>
+            <button class="operator" data-value="DEL">DEL</button>
+            <button class="operator" data-value="%">%</button>
+            <button class="operator" data-value="/">/</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button class="operator" data-value="*">*</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button class="operator" data-value="-">-</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button class="operator" data-value="+">+</button>
+
+            <button data-value="0">0</button>
+            <button data-value="00">00</button>
+            <button data-value=".">.</button>
+            <button class="operator" data-value="=">=</button>
+        </div>
+    </div>
+</body>
+
+</html>

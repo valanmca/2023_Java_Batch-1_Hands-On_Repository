@@ -1,0 +1,11 @@
+p{
+    border-style : solid ;
+    border-color : lightgreen ;
+    border-radius : 10px ;
+    width : 850px ;
+    height : 100px ;
+    color : green ;
+    top : 100px ;
+    margin-top : -180px ;
+    margin-left : 15px ;
+}

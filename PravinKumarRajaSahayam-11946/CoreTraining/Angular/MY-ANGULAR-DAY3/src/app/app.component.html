@@ -1,0 +1,59 @@
+<h1>Directives :- </h1>
+<button (click)="changeFlag()">Show and Hide</button>
+<br>
+<div class="MyDiv1" style="border-style : solid" *ngIf="flag">
+    <br>
+<ul>
+    <li *ngFor="let vec of vehicles" > {{vec}}</li>
+</ul>
+<div class="MyDiv1" style="border-style : solid" *ngIf="flag">
+    <br>
+<ul>
+    <li (click)="setSelectedVehicle(vec)" *ngFor="let vec of vehicles" > {{vec}}</li>
+</ul>
+<br>
+<b>You have Selected : {{ selectedVehicle}} </b>
+<!---<button (click)="changeBike()" *ngFor="let vehicles">For Bike Details</button>
+<br>
+<div *ngIf="bike">
+    <p>This is the bikes</p>
+</div>
+<ul>
+<li (click) = "setSelectedVehicles(vechiles)" *ngFor="let vechiles of vehicles"> {{vechiles}}</li>
+</ul>
+ <br>
+You have Selectd {{ selectedVehicles }}--->
+   <div [ngSwitch] = "selectedVehicle" >
+    <font color = "green" *ngSwitchCase = "'car'" ><b>Four Wheeler</b></font>
+    <font color = "green" *ngSwitchCase = "'bike'" ><b>Two Wheeler</b></font>
+    <font color = "green" *ngSwitchCase = "'auto'" ><b>Three Wheeler</b></font>
+    <font color = "red" *ngSwitchDefault ><b>Invalid Selection</b></font>
+ </div>
+ </div>
+</div>
+ <div *ngIf="styles">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br><br>
+  <br>
+  <br>
+  <h1><b>Attribute Directives Example</b></h1>
+  <p><b>ngStyle</b></p>
+  <h1 [ngStyle] = "myStyle" >Example for ngStyle</h1>
+ 
+  <h3 [style.color] = "myColor" >Example for ngStyle</h3>
+  <button (click)="changeColor()" >Change the color and Style</button>
+
+  <p><b>ngClass</b></p>
+  <h1 [ngClass] = "myClass" >Example for ngClass </h1>
+  <h1 [ngClass] = "myClassColor" >Example for ngClass </h1>
+  <button (click)="changeClass()" >Change the Class </button>
+ </div>
+  <app-factorial-table-examples></app-factorial-table-examples>
+ 
+ 
+    
+

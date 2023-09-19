@@ -1,0 +1,17 @@
+.class
+{
+    left : 100px ;
+    color : lightblue ;
+    margin-right : 100px ;
+}
+.top
+{
+    background-color :coral ;
+    width : 59px ;
+    height : 100px ;
+    align-content: center;
+}
+td{
+    background-color : darkblue ;
+    text-align : center ;
+}

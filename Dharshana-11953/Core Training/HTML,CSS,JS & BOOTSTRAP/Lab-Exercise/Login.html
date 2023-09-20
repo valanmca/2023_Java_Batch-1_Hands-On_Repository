@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Login Form </title>
+    <style>
+        .LoginDiv {
+            border: 3px solid blue;
+            width: 40%;
+            top: 10%;
+            left: 20%;
+            border-radius: 50px;
+            position: absolute;
+        }
+
+        th {
+            color: blue;
+            font-size: 25%;
+            font-style: italic;
+        }
+
+        .MyTextBox {
+            width: 250px;
+            height: 40px;
+        }
+
+        button {
+            border: none;
+            width: 200px;
+            height: 35px;
+            background-color: darkgoldenrod;
+            cursor: pointer;
+            border-radius: 15px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function check() {
+            var usernameRegEx = '^[A-Z a-z]+$';
+            var passwordRegEx = '^[0-9]+$';
+            var username = document.getElementById("Uname").value;
+            var password = document.getElementById("Upassword").value;
+            if (username == "" || password == "") {
+                alert("Field can not be blank");
+                return false;
+            }
+
+            if (!username.match(usernameRegEx)) {
+                alert("Invalid UserName");
+            }
+            if (!password.match(passwordRegEx)) {
+                alert("Invalid Password");
+            }
+            if (username == "Minion" || password == "123") {
+                alert("Login Successfully");
+                return true;
+            }
+            if (username != "Minion" || password != "123") {
+                alert("Login UnSuccessfully");
+                return true;
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body bgcolor="AntiqueWhite" style="padding: 100px;">
+    <div class="LoginDiv">
+        <form>
+            <table align="center">
+                <tr>
+                    <th colspan="2">
+                        <font size="5">LoginPage<br></font>
+                    </th>
+                </tr><br>
+                <tr>
+                    <td><b>UserName:</b><input id="Uname" class="MyTextBox" onfocus="this.value=' '" type="text"
+                            placeholder="Enter Your UserName"></td>
+                </tr>
+                <tr>
+                    <td><b>Password:</b><input id="Upassword" class="MyTextBox"  type="password"
+                            placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick="check()">Sign In</button></td>
+                </tr><br>
+                <tr>
+                    <td colspan="2" align="right">Not a user?<a href="">RegisterHere</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

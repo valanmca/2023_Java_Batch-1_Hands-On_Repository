@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Helvetica, ;
+        }
+
+        body {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: whitesmoke;
+        }
+
+        .container {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 10px 20px 20px;
+            background: black;
+            box-shadow: 0 5px 10px goldenrod (0, 0, 0, 0.05);
+        }
+
+        .display {
+            height: 70px;
+            width: 100%;
+            outline: goldenrod;
+            border: 2px;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: #000e1a;
+        }
+
+        .buttons {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .buttons button {
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px border-color=goldenrod;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #eee;
+        }
+
+        .buttons button:active {
+            background-color: goldenrod;
+            transform: scale(0.99);
+        }
+
+        .operator {
+            color: #ff8d2f;
+        }
+    </style>
+    <script>
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+
+
+        function equal() {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+
+        function clr() {
+            document.getElementById("result").value = 0;
+        }
+        function del() {
+            var back = document.getElementById("result").value;
+            document.getElementById("result").value = back.substr(0, back.length - 1);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="display" value="0">
+
+        <div class="buttons">
+            <button onclick="clr()" class="operator" data-value="AC">AC</button>
+            <button onclick="del()" class="operator" data-value="DEL">DEL</button>
+            <button onclick="display('%')" class="operator" data-value="%">%</button>
+            <button onclick="display('/')" class="operator" data-value="/">/</button>
+            <button onclick="display('7')" data-value="7">7</button>
+            <button onclick="display('8')" data-value="8">8</button>
+            <button onclick="display('9')" data-value="9">9</button>
+            <button onclick="display('*')" class="operator" data-value="*">*</button>
+            <button onclick="display('4')" data-value="4">4</button>
+            <button onclick="display('5')" data-value="5">5</button>
+            <button onclick="display('6')" data-value="6">6</button>
+            <button onclick="display('-')" class="operator" data-value="-">-</button>
+            <button onclick="display('1')" data-value="1">1</button>
+            <button onclick="display('2')" data-value="2">2</button>
+            <button onclick="display('3')" data-value="3">3</button>
+            <button onclick="display('+')" class="operator" data-value="+">+</button>
+            <button onclick="display('0')" data-value="0">0</button>
+            <button onclick="display('00')" data-value="00">00</button>
+            <button onclick="display('.')" data-value=".">.</button>
+            <button onclick="equal()" class="operator" data-value="=">=</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

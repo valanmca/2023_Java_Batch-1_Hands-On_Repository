@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        .Div2 {
+            border: 3px solid blue;
+            background-color: cadetblue;
+            width: 60%;
+            top: 10%;
+            left: 20%;
+            border-radius: 50px;
+            position: absolute;
+        }
+
+        button {
+            border: none;
+            width: 200px;
+            height: 35px;
+            background-color: darkgoldenrod;
+            cursor: pointer;
+            border-radius: 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .MyTextBox {
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+    <script>
+        function register(){
+            var firstnameRegEx,middlenameRegEx,lastnameRegEx= '^[A-Z a-z]+$';
+            var firstname,middlename,lastname = document.getElementById("First","Middle","Last").value;
+            var phone=document.getElementById("Phone").value;
+            var phoneRegEx = '^[0-9]+$';
+            /*var middlename = document.getElementById("Middle").value;
+            var lastname = document.getElementById("Last").value;*/
+            if (firstname == "" || middlename == "" || lastname == "") {
+                alert("Field can not be blank");
+                return false;
+            }
+            else if (firstname.match(firstnameRegEx)) {
+                alert("Only Alphabets");
+                return false;
+            }
+            else if (middlename.match(middlenameRegEx)) {
+                alert("Only Alphabets");
+                return false;
+            }
+            else if (lastname.match(lastnameRegEx)) {
+                alert("Only Capital Letters");
+                return false;
+            }
+            else if(phone.length<10){
+                alert("Must be 10 digits");
+                return false;
+            }
+            /*if (!phone.match(phoneRegEx)) {
+                alert("The num must be 10 digits");
+            }*/
+
+        }
+        
+    </script>
+
+</head>
+
+<body bgcolor="lightgray">
+    <center>
+        <div class="Div2">
+            <form>
+                <table>
+                    <tr>
+                        <th colspan="4"><h2><b><i><u>Registration Form<br></u></i></b></h2></th>
+                    </tr>
+
+                    <tr>
+                        <td><label>
+                                Firstname:
+                            </label></td>
+                        <td><input id="First" class="MyTextBox" onfocus="this.value=' '" type="text" placeholder="Enter firstname" size="15"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                                Middlename:
+                            </label></td>
+                        <td><input id="Middle" class="MyTextBox" onfocus="this.value=' '" type="text" placeholder="Enter middlename" size="15"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                                Lastname:
+                            </label></td>
+                        <td><input id="Last" class="MyTextBox" onfocus="this.value=' '" type="text" placeholder="Enter lastname" size="15"><br></td>
+
+                    </tr>
+                    <tr>
+                        <td><label>
+                                Date of Birth:
+                            </label></td>
+                        <td><input class="MyTextBox" type="date" value="2017-06-01"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                                Course:
+                            </label></td>
+                        <td><select>
+                                <option value="Degree">Degree</option>
+                                <option value="UG">UG</option>
+                                <option value="PG">PG</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">
+                                Gender:
+                            </label></td>
+                        <td><input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <input type="radio"  name="gender" value="Other">Others</td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label>
+                                Phone :
+                            </label></td>
+                        <td><input id="Phone" onfocus="this.value=' '" type="text" name="country code" value="+91" size="2">
+                        <input type="text" name="phone" size="10"></td>
+                    </tr>
+                    <tr>
+                        <td><label> Address </label></td>
+                        <td><textarea cols="20" rows="5" value="address">
+                </textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                                Email:
+                            </label></td>
+                        <td><input class="MyTextBox" type="email" id="email" name="email" /> <br></td>
+                    <tr>
+                        <td><label>
+                                Password:
+                            </label></td>
+                        <td><input class="MyTextBox" type="Password" id="pass" name="pass"> <br></td>
+
+                    <tr>
+                        <td><label>
+                                Confirm password:
+                            </label></td>
+                        <td><input class="MyTextBox" type="Password" id="repass" name="repass"> <br></td>
+                    <tr>
+                        <td colspan="2" align="center"><button onclick="register()">Submit</button></td>
+                    </tr><br>
+        </div>
+        </table>
+        </form>
+    </center>
+</body>
+
+</html>

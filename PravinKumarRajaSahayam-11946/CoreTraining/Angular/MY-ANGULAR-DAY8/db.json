@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 10111,
+      "name": "PravinKumar RajaSahayam",
+      "salary": "10000000"
+    },
+    {
+      "id": 10112,
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "1",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123"
+    },
+    {
+      "id": "1235",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "12345"
+    },
+    {
+      "id": "12345678",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "12370987654323456789"
+    },
+    {
+      "id": "3",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "1237098765432345678903"
+    },
+    {
+      "id": "10113",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "101115",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "10",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "1011111",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "1011384",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123709876543234567890"
+    },
+    {
+      "id": "12345",
+      "name": "PravinKumarRajaSahaym",
+      "salary": "123456789"
+    },
+    {
+      "id": "121345",
+      "name": "PravinKumarRajaSahayam",
+      "salary": "12345678"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

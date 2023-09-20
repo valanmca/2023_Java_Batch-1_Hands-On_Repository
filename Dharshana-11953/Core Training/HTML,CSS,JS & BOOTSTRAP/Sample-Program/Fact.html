@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Factorial</title>
+
+    <script>
+    function fact() {
+         value1 = document.getElementById("value").value; 
+         var fact = 1; 
+         for (i = 1; i <= value1; i++) { 
+            fact = fact * i; 
+          }
+             document.getElementById("result").value = fact; 
+          }
+     </script>
+</head>
+
+<body>
+     <label>Value :</label>
+      <input type="number" name="Value" id="value" placeholder="value"><br><br>
+    &emsp;<button onclick="fact()">Submit</button>
+     <label>Result :</label>
+      <input type="number" name="Result" id="result" placeholder="answer"><br><br>
+</body>
+
+</html>

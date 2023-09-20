@@ -1,0 +1,9 @@
+<p>reactiveform works!</p>
+<form [formGroup]="Myform" >
+    name:<input type="text" formControlName="name">
+    <div *ngIf="Myform.get('name')!.touched && Myform.get('name')!.invalid">
+        <div *ngIf="Myform.get('name')!.hasError('required')">
+            <font color="red">Name is reaquired</font>
+        </div>
+    </div>
+</form>

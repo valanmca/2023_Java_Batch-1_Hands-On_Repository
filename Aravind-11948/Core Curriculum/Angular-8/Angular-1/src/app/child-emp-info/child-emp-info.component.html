@@ -1,0 +1,32 @@
+<p>child-emp-info works!</p>
+<p>Services </p>
+
+<button (click)="getInfoFromServices1()">Emp1 Detail</button>
+
+<ul>
+    <li *ngFor="let info of infoReceived1">{{info}}</li>
+</ul>
+<br>
+<br>
+
+
+<button (click)="getInfoFromServices2()">Emp1 Detail</button>
+
+<ul>
+    <li *ngFor="let info of infoReceived2">{{info}}</li>
+</ul>
+
+<br>
+<br>
+<button (click)="getInfoFromServices3()">Emp1 Detail</button>
+
+<ul>
+    <li *ngFor="let info of infoReceived3">{{info}}</li>
+</ul>
+
+<p>{{getid1()}}</p>
+
+<input type="number" [(ngModel)]="a">
+<br>
+<p>The result is <span>{{result}}</span></p>
+<button (click)="getfact()">get fact</button>

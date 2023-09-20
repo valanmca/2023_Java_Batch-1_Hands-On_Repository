@@ -1,0 +1,10 @@
+.div1{
+    border:5px solid  red;
+    border-radius:20px;
+    position:absolute;
+    left:250px;
+    height:100px;
+    width:100px;
+    justify-content: center;
+
+}

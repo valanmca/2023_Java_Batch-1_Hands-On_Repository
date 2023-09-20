@@ -1,0 +1,42 @@
+<p>form works!</p>
+
+<!-- <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+    <label>Name:</label><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z]+">
+    <br><br>
+    <div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+            <font color="red">Name is required</font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            <font color="red">Invalid name</font>
+        </div>
+
+    </div>
+    <button [disabled]="myForm.invalid">Register</button>
+</form> -->
+
+<form #myform="ngForm" (ngSubmit)="myfunction(myform.value)" >
+    <label >Name:</label><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z]+">
+    <div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+            <font color="red"> Name is required </font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            <font color="red"> invalid name</font>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    Email:<input type="text" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <div *ngIf="email.touched">
+          <div *ngIf="email.errors?.['required']">
+              <font color="red">Email is required </font>
+          </div>
+          <div *ngIf="email.errors?.['pattern']">
+            <font color="red">Invalid email</font>
+          </div>
+    </div>
+    <button [disabled]="myform.invalid">Register</button>
+</form>
+ 

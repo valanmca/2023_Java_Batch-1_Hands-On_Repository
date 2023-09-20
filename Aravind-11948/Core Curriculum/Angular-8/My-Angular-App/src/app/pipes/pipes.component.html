@@ -1,0 +1,49 @@
+<p>pipes works!</p>
+{{name|uppercase}}
+{{date}}
+<div>
+    <table width="80%">
+        <tr> <td>UpperCase pipe: {{name|uppercase}}</td></tr>
+        <tr> <td>LowerCase pipe : {{name|lowercase}}</td></tr>
+        <tr> <td>TitleCase pipe : {{name|titlecase}}</td></tr>
+    </table>
+    <hr>
+    <br>
+
+    <table width="80%">
+        <tr> <td>Date pipe: {{date}}</td></tr>
+        <tr> <td>Date pipe: {{date|date:'dd/MMM/yyyy'}}</td></tr>
+        <tr> <td>Date pipe: {{date|date:'dd-MM-yy'}}</td></tr>
+        <tr> <td>Date pipe: {{date|date:'fullDate'}}</td></tr>
+        <tr> <td>Date pipe: {{date|date:'fullDate'|uppercase}}</td></tr>
+        <tr> <td>Date pipe: {{date|date:'shortTime'}}</td></tr>
+
+    </table>
+    <hr>
+    <br>
+
+    <table width="80%">
+        <tr><td>percent pipe:{{00.1856|percent}}</td></tr>
+        <tr><td>percent pipe:{{6589.23|currency:"USD"}}</td></tr>
+
+    </table>
+</div>
+<br><br>
+
+<div>
+    <b>Custum pipes </b>
+    <br><br>
+    <br>Array: {{arr1}}
+    
+    <br><br><b>Ascending:</b> {{arr1|sort:'ascending'}}
+    <br><br><b>Descending: </b>{{arr1|sort:'descending'}}
+    <br>{{arr1}}
+    <br><br><b>Reverse:</b> {{arr1|sort:'reverse'}}
+    <hr>
+    <br><b>string array</b>{{arr2}}
+    <br><br><b>Reverse:</b> {{arr2|sort:'reverse'}}
+    <br><br><b>Ascending:</b>  {{arr2|sort:'ascending'}}
+    <br><br><b>Descending: </b> {{arr2|sort:'descending'}}
+
+
+</div>

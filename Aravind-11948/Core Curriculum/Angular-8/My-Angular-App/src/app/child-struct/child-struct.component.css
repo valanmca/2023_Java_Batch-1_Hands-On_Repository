@@ -1,0 +1,9 @@
+.mydiv{
+    position:absolute;
+    left:700px;
+    top:1600px;
+    width:400px;
+    height:300px;
+    border:2px solid red;
+    border-radius:20px;
+}

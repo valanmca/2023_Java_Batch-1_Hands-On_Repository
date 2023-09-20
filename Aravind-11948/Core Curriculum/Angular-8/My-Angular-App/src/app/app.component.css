@@ -1,0 +1,28 @@
+h1{
+    color:blue;
+    text-align: center;
+}
+table,tr,td{
+  
+    border:2px solid brown;
+    border-radius:2px;
+   
+
+}
+div{
+    align-content: center;
+    margin-left:30%;
+    position:absolute;
+   
+}
+.home{
+    border:5px solid green;
+    border-radius:20px;
+    height:150px;
+    width:500px;
+ margin-top: 300px;
+}
+p{
+    color:green;
+    text-align: center;
+}

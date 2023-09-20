@@ -1,0 +1,15 @@
+.child{
+    border:5px solid red;
+    border-radius:20px;
+    height:60px;
+    width:400px;
+    margin-left:50px;
+    margin-top:10px;
+}
+p{
+    color:red;
+    text-align: center;
+}
+body{
+    background-color: aqua;
+}

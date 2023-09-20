@@ -1,0 +1,13 @@
+table,tr{
+    border:3px inset rgb(44, 224, 200);
+    padding:10px;
+    align-content:center;
+}
+th{
+    align-content: center;
+}
+td{
+    border:3px inset rgb(44, 224, 200);
+    padding:10px;
+    align-content:center;
+}

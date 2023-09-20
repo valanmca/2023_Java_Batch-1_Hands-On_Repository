@@ -1,0 +1,57 @@
+<body>
+  
+<h1>Welcome to Angular</h1>
+<div>
+  <table>
+  <tr><td>name</td>
+  <td>Age</td></tr>
+
+  <tr > <td>aravind</td>
+    <td>21</td></tr>
+</table>
+</div>
+
+
+<br>
+<app-child1></app-child1>
+<div class="home">
+  <p>Iam root </p>
+  <app-child></app-child>
+</div>
+
+<br>
+<h1>
+empid={{empid}}
+empname={{empname}}
+empsalary={{empsalary}}
+<br>
+
+
+sum={{getaddition(10,20)}} <br>
+
+factorial={{getfact(5)}}
+</h1>
+
+<input [(ngModel)]="fullName" /> <br/><br/>    
+<p> {{fullName}} </p>  
+<h1>{{fullName}}</h1> 
+
+
+Addition Of 10 And 20 :<input type="number" value="{{getaddition(10,20)}}"/>
+<br>
+<app-child-propertybind></app-child-propertybind>
+<app-child-event></app-child-event>
+<app-child-twoway></app-child-twoway>
+<app-child-struct></app-child-struct>
+<app-child-attribute></app-child-attribute>
+<app-factorial></app-factorial>
+<app-calculator></app-calculator>
+<app-calculator1></app-calculator1>
+<app-pipes></app-pipes>
+<app-form></app-form>
+<app-reactive-form></app-reactive-form>
+
+  
+
+
+</body>

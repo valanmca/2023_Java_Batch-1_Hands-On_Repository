@@ -1,0 +1,74 @@
+<p>form  and validations</p>
+<form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+    <label>Name</label><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z]+">
+    <div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+            <font color="red"><b>Name required</b></font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']"> 
+            <font color="red"><b>Invalid Name</b></font>
+        </div>
+    </div>
+    <br>
+    <br>
+    <label> Email</label><input type="text" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+<div *ngIf="email.touched">
+    <div *ngIf="email.errors?.['required']">
+        <font color="red"><b>Email required</b></font>
+    </div>
+    <div *ngIf="email.errors?.['pattern']">
+        <font color="red"><b>Invalid Email </b></font>
+    </div>
+</div>
+
+<br>
+<br>
+<label> Age</label><input type="text"  name="age" #age="ngModel" ngModel required pattern="[0-9]+"     maxlength="2"   >
+    <div *ngIf="age.touched">
+        <div *ngIf="age.errors?.['required']">
+            <font color="red"> Age required </font>
+        </div>
+        <div *ngIf="age.errors?.['pattern']">
+            <font color="red">Invalid Age</font>
+        </div>
+    </div>
+    <br>
+    <br>
+    <label >Phone Number</label><input type="tel" name="phone" #phone="ngModel" ngModel required pattern="[0-9]+" maxlength="10" minlength="10">
+    <div *ngIf="phone.touched">
+        <div *ngIf="phone.errors?.['required']">
+            <font color="red">Phone Number required</font> 
+        </div>
+        <div *ngIf="phone.errors?.['pattern']">
+            <font color="red">Invalid Phone Number</font> 
+        </div>
+     
+    </div>
+
+    
+    <br>
+    <br>
+    <label >Country</label> <select name="country" #country="ngModel" ngModel required >
+    <option value="India">India</option> <option value="China">China</option>
+</select>
+
+    <br>
+    <br>
+    <button [disabled]="myForm.invalid">Register</button>
+    
+</form>
+<br>
+<br>
+<p>Details Displayed After a Registration</p>
+<p>
+Username:{{uname}}
+<br>
+Email:{{uemail}}
+<br>
+Age:{{uage}}
+<br>
+Phone Number:{{uphone}}
+<br>
+Country:{{ucountry}}
+</p>
+

@@ -1,0 +1,48 @@
+<p>calculator Service</p>
+
+Addition of 10 & 20: {{sum}}
+<br>
+<br>
+Subtraction of 30 & 20: {{sub}}
+<br>
+<br>
+ multiplication of 3 & 20: {{mul}}
+ <br>
+ <br>
+ Division of 30 & 5: {{div}}
+
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid  border border-primary ">
+    <table class="table  table-bordererd ">
+        <tr  class="d-flex justify-content-center my-4"colspan="2"><th scope="col">Calculator</th>
+        </tr>
+        <tr class="d-flex justify-content-center">
+<td>Enter the num1:<input class="input-grop " type="number" name="num1" [(ngModel)]="num1"></td>
+</tr>
+<br>
+<br>
+<tr class="d-flex justify-content-center">
+<td>Enter the num2:<input class="input-grop " type="number"  name="num2" [(ngModel)]="num2"></td>
+</tr>
+<br>
+<br>
+<br>
+<tr class="d-flex justify-content-center">
+<td>The result is :<span><b>{{result}}</b></span></td>
+</tr>
+<br>
+<br>
+<br>
+<tr class="d-flex justify-content-center">
+    <td>
+<button class="btn btn-outline-primary btn-sm text-danger m-2" (click)="getadd()">Addition</button>
+<button class="btn btn-outline-primary btn-sm text-danger" (click)="getsub()">Subtraction</button>
+<button class="btn btn-outline-primary btn-sm text-danger  m-2" (click)="getmul()">Multiplication</button>
+<button class="btn btn-outline-primary btn-sm text-danger  m-2" (click)="getdiv()">Division</button>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,41 @@
+#grade {
+    height: 1000px;
+    background-image: linear-gradient(to bottom right, rgb(235, 177, 69), rgb(152, 241, 152));
+}
+
+.container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#navbarNav{
+    text-align: right;
+}
+
+.right {
+    padding-right: 60px;
+}
+
+.right p {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.right h5 {
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.right h1 {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+@media only screen and (max-width:600px){
+    body{
+        background-color: aliceblue;
+    }
+}
+@media only screen and(max-width:768px){
+    [class*="col-"]{
+        width: 100px;
+}
+}

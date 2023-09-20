@@ -1,0 +1,25 @@
+.div1 {
+    position: absolute;
+    top: 900px;
+    left: 50px;
+}
+.div2 {
+    position: absolute;
+    top: 1500px;
+    left: 50px;
+}
+h1{
+    text-align: center;
+}
+
+table {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    text-align: center;
+}
+
+div {
+    position: absolute;
+    top: 1250px;
+}

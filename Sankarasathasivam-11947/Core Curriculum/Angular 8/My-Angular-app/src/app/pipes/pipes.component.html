@@ -1,0 +1,35 @@
+<h4>Pipe Component</h4>
+<div>
+    <table width="100%">
+        <tr><td>Upper Case Pipe</td><td>{{name | uppercase}}</td></tr>
+        <tr><td>Lower Case Pipe</td><td>{{name|lowercase}}</td></tr>
+        <tr><td>Title Case Pipe</td><td>{{name|titlecase}}</td></tr>
+    </table>
+    <hr><br>
+    <table width="100%">
+        <tr><td>Date Pipe</td><td>{{date}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date|date:'dd/MMM/yyyy'}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date|date:'dd-MM-yy'}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date|date:'fullDate'}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date|date:'fullDate'|uppercase}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date|date:'shortTime'}}</td></tr>
+    </table>
+    <hr><br>
+    <table width="100%">
+        <tr><td>Percent Pipe</td><td>{{00.54565|percent}}</td></tr>
+        <tr><td>Currency Pipe</td><td>{{6589.23|currency:"GBP":"symbol"}}</td></tr>
+    </table>
+</div>
+<h4>CUSTOM PIPES</h4>
+<div>
+    <br><b>Normal : </b>{{arr1}}
+    <br><br><b>Reverse : </b>{{arr1|sort:'reverse'}}
+    <br><br><b>Ascending : </b>{{arr1|sort:'ascending'}}
+    <br><br><b>Descending : </b>{{arr1|sort:'descending'}}
+    <br><br><hr>
+    <br><b>Normal : </b>{{arr2}}
+    <br><br><b>Reverse : </b>{{arr2|sort:'reverse'}}
+    <br><br><b>Ascending : </b>{{arr2|sort:'ascending'}}
+    <br><br><b>Descending : </b>{{arr2|sort:'descending'}}
+    <br><br>
+</div>

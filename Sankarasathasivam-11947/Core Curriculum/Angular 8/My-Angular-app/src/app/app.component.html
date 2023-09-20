@@ -1,0 +1,66 @@
+<h1>Welcome to Angular</h1>
+<br>
+
+<div class="div1">
+  <h2>Root Component</h2>
+  <app-child></app-child>
+  <app-childproperty></app-childproperty>
+</div>
+
+<b>
+  empid={{empid}}
+  <br>
+  empname={{ empname }}
+  <br>
+  empsalary={{empsalary}}
+  <br>
+</b>
+<!--Interpolation-->
+<h1>
+  Sum={{getaddition(10,100)}}
+  Factorial={{getfactorial(5)}}
+</h1>
+<br>
+<input type="text" value="{{email}}" />
+<br>
+<br>
+Addition of two number :<input type="text" value="{{getaddition(10,30)}}" />
+<br>
+
+<!--Property Binding-->
+<img [src]="imagepath" [width]="width" [height]="height" />
+<br>
+
+<!--Event Binding-->
+<button (click)="changeName()">Change Name</button>
+<br>
+<br>
+<button (click)="changeEmail()">Change email</button>
+<br>
+<br>
+<button (click)="changeImage()">Change Image</button>
+
+<app-child-struct></app-child-struct>
+
+<app-child-attribute></app-child-attribute>
+<br>
+
+<app-child-factorial></app-child-factorial>
+<br>
+
+<!--Pipes-->
+<div class="Div">
+  <app-calculator></app-calculator>
+  <br>
+  <app-calc></app-calc>
+  <br>
+
+  <br>
+  <app-pipes></app-pipes>
+  <br>
+  <!--TEMPLATE DRIVEN Forms-->
+  <app-td-forms></app-td-forms>
+  <br>
+  <!--REACTIVE FORMS-->
+  <app-reactive-form></app-reactive-form>
+</div>

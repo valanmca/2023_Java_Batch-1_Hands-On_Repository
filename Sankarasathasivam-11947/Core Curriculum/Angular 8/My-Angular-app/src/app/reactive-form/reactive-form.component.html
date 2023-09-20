@@ -1,0 +1,15 @@
+<h3>REACTIVE FORM</h3>
+<div class="form_container">
+    <form [formGroup]="myForm" (ngSubmit)="myFunction(myForm.value)">
+        <header>Registration Page</header>
+        <label>Name</label><input type="text" formControlName="name"/>
+        <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+            <div *ngIf="myForm.get('name')!.hasError('required')">
+                <font color="red"><b>Name is Required</b></font>
+            </div>
+            <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                <font color="red">Invalid Name</font>
+            </div>
+        </div>
+    </form>
+</div>

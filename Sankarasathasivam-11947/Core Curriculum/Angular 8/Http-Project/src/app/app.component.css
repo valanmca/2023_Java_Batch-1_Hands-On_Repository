@@ -1,0 +1,41 @@
+.Div1{
+    height:10%;
+    width:100%;
+    border: 4px solid rgb(189, 189, 75);
+    text-align: center;
+    position: absolute;
+}
+.Div2{
+    height:90%;
+    width:60%;
+    position:absolute;
+    top:12% ;
+    border: 4px solid rgb(189, 189, 75);
+    
+}
+
+input{
+    
+    border:2px solid grey;
+    border-radius: 10px;
+}
+/* button{
+    width:100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(216, 40, 40);
+    color:white;
+    border:none;
+} */
+form{
+    margin-left: 20%;
+    margin-top: 20%; 
+}
+.Div3{
+    height:90%;
+    width:39%;
+    position: absolute;
+    left: 61%;
+    top:12%;
+    border: 4px solid rgb(189, 189, 75);
+}

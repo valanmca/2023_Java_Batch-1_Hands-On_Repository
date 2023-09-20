@@ -1,0 +1,9 @@
+.tab{
+    position:absolute;
+    margin-top: 300px;
+}
+table,td,th{
+    border: 2px solid black;
+    border-collapse:collapse;
+
+}

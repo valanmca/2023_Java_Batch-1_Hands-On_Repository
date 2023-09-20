@@ -1,0 +1,68 @@
+<html>
+
+<body>
+  <div class="Div1">
+    <h1>Employee Management System</h1>
+  </div>
+
+  <div class="Div2">
+
+    <form #myform="ngForm">
+      <label><b>Employee Id</b></label><br>
+
+      <input type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+      <div *ngIf="id.touched">
+        <div *ngIf="id.errors?.['required']">
+          <font color="red">ID Required</font>
+        </div>
+
+        <div *ngIf="id.errors?.['pattern']">
+          <font color="red">ID Invalid</font>
+        </div>
+      </div>
+      <br>
+      <br>
+      <label><b>Employee Name</b></label><br>
+      <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z]+">
+      <div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+          <font color="red">Name Required</font>
+        </div>
+
+        <div *ngIf="name.errors?.['pattern']">
+          <font color="red">Name Invalid</font>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <label><b>Employee Salary</b></label><br>
+      <input type="text" name="salary" #salary="ngModel" ngModel required pattern="[0-9]+">
+      <div *ngIf="salary.touched">
+        <div *ngIf="salary.errors?.['required']">
+          <font color="red">Salary Required</font>
+        </div>
+
+        <div *ngIf="salary.errors?.['pattern']">
+          <font color="red">Salary Invalid</font>
+        </div>
+      </div>
+      <br>
+      <br>
+      <button class="btn btn-danger btn-sm" (click)="InsertEmployee(myform.value)">Insert</button>&nbsp;
+      <button class="btn btn-danger btn-sm" (click)="deleteEmployee(myform.value)">Delete</button>&nbsp;
+      <button class="btn btn-danger btn-sm" (click)="updateEmployee(myform.value)">Update</button>
+    </form>
+
+    <font color="green"><b>{{result}}</b></font>
+  </div>
+
+  <div class="Div3">
+    <br><br>
+    <ul>
+      <li *ngFor="let emp of empList"><b>{{emp.id}}-{{emp.name}}-{{emp.salary}}</b></li>
+    </ul>
+  </div>
+</body>
+
+</html>

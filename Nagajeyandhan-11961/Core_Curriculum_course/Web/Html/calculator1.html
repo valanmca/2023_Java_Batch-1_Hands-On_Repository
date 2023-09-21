@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple Calculator</title>
+    <style>
+        table {
+            border: 1px solid black;
+            text-align: center ;
+            border-radius: 20px;
+            width: 200px;
+            height: 300px;
+            background-color: rgb(15, 15, 15);
+            position: absolute;
+            top: 70px;
+            left: 300px;
+
+        }
+        td{
+            width: 90px;
+            height: 50px;
+        }
+        input[type="button"] {
+            width: 70%;
+            font-size: 24px;
+            font-weight: bold;
+            border-color: rgb(69, 69, 69);
+            border-radius: 35px;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+            background-color: black;
+            
+        }
+        input[type="button"]:hover{
+            color:rgb(249, 82, 82);
+            background: rgb(14, 14, 14);
+            cursor: pointer;
+        }
+        input[type="text"] {
+            width: 85%;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: auto;
+            border: none;
+            color: white;
+            background-color: black;
+            height: 40px;
+        }  
+        body{
+            background-color:orange;
+            position: absolute;
+            top: 100px;
+            left: 150px;
+        }     
+    </style>
+    <script>
+        document.getElementById("result").disabled=true;
+        function back() {
+            var del = document.getElementById('result');
+            del.value = del.value.slice(0,-1);
+        }
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+        function calculate() {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+    </script>
+</head>
+<body>
+    <table >
+        <tr >
+            <td colspan="4">
+                <input type="text" placeholder="0" style="text-align: right;" id="result">
+            </td>                
+        </tr>
+        <tr>
+            <td> <input type="button" value="del" onclick="back('del')"></td>
+            <td> <input type="button" value="%" onclick="display('%')"></td>
+            <td> <input type="button" value="C" onclick="clearScreen('C')"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="7" onclick="display('7')"></td>
+            <td> <input type="button" value="8" onclick="display('8')"></td>
+            <td> <input type="button" value="9" onclick="display('8')"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="4" onclick="display('4')"></td>
+            <td> <input type="button" value="5" onclick="display('5')"></td>
+            <td> <input type="button" value="6" onclick="display('6')"></td>
+            <td><input type="button" value="-" onclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="1" onclick="display('1')"></td>
+            <td> <input type="button" value="2" onclick="display('2')"></td>
+            <td> <input type="button" value="3" onclick="display('3')"></td>
+            <td><input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="00" onclick="display('00')"></td>
+            <td> <input type="button" value="0" onclick="display('0')"></td>
+            <td> <input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="=" onclick="calculate('=')" style="background-color: rgb(69, 202, 247);"></td>
+        </tr>
+    </table>
+</body>
+</html>

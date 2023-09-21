@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <style>
+    body {
+        position: absolute;
+        top: 125px;
+        left: 350px;
+        background-color: orange;
+        font-style: italic;
+    }
+    .container{
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+        color: orange;
+        width: 275px;
+        height: 260px;
+        padding-left: 20px;
+    }
+    button{
+        margin-left: 15px;
+        border-radius: 15px;
+        width: 100px;
+        height: 25px;
+    }
+    button:hover{
+        background-color: orange;
+    }
+    input[type="number"]{
+        border-radius: 10px;
+        height: 20px;
+        width: 100px;
+    }
+    </style>
+    <script>
+        function  Addition(){
+            var a = document.getElementById("number1").value;
+            var b = document.getElementById("number2").value;
+            var sum = parseInt(a) + parseInt(b);
+            document.getElementById("result").innerHTML = "<font color='orange'><b> Addition: " + sum + "<b><font>"
+        }
+
+        function  Subtraction(){
+            var a = document.getElementById("number1").value;
+            var b = document.getElementById("number2").value;
+            var sub = parseInt(a) - parseInt(b);
+            document.getElementById("result").innerHTML = "<font color='orange'><b> Subtraction: " + sub + "<b><font>"
+        }
+
+        function  Multiplication(){
+            var a = document.getElementById("number1").value;
+            var b = document.getElementById("number2").value;
+            var mul = parseInt(a) * parseInt(b);
+            document.getElementById("result").innerHTML = "<font color='orange'><b> Multiplication: " + mul + "<b><font>"
+        }
+
+        function  Division(){
+            var a = document.getElementById("number1").value;
+            var b = document.getElementById("number2").value;
+            var div = parseInt(a) / parseInt(b);
+            document.getElementById("result").innerHTML = "<font color='orange'><b> Division: " + div + "<b><font>"
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3 align="center">Calculator</h3>
+
+        <label for="number1">Enter a number</label> &emsp;
+        <input type="number" id="number1" />
+        <br /><br />
+        <label for="number2">Enter a number</label> &emsp;
+        <input type="number" id="number2" /> <br><br>
+
+        <button onclick="Addition()" style="width: 100px; text-align: center">Add</button>
+        <button onclick="Subtraction()" style="width: 100px; text-align: center">Sub</button> <br><br>
+        <button onclick="Multiplication()" style="width: 100px; text-align: center">Mul</button>
+        <button onclick="Division()" style="width: 100px; text-align: center">Div</button> <br><br>
+
+        <div align="center" id="result">
+
+        </div>
+    </div>
+
+    
+</body>
+</html>

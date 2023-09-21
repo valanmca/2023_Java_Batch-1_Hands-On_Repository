@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        body {
+            position: absolute;
+            top: 125px;
+            left: 350px;
+            background-color: orange;
+            font-style: italic;
+        }
+        .container{
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: orange;
+            width: 275px;
+            height: 160px;
+            padding-left: 20px;
+        }
+        button{
+            margin-left: 15px;
+            border-radius: 15px;
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            left: 100px;
+
+        }
+        button:hover{
+            background-color: orange;
+        }
+        input[type="number"]{
+            border-radius: 10px;
+            height: 20px;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function fact(){
+            var a = document.getElementById("number1").value;
+
+        var fact = 1;
+        for(i = 1 ;i < a; i++){
+            fact= fact * i;
+        }
+        document.getElementById("result").innerHTML = "<font color='orange'><b> Factorial: " + fact + "<b><font>"
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h3 align="center">Factorial</h3>
+
+        <label for="number1">Enter a number</label> &emsp;
+        <input type="number" id="number1" /> <br><br>
+        
+        <button onclick="fact()" style="width: 100px; text-align: center">Click</button> <br><br>
+
+        <div style="color: orange;" align="center" id="result">
+
+        </div>
+    </div>
+
+</body>
+</html>

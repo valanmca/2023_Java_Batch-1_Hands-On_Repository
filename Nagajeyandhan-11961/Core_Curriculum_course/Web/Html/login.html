@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <style>
+        .login{
+            border: 5px solid orange;
+            width: 35%;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            border-radius: 30px;
+            height: 250px;
+            font-weight: 200;
+            background-color: rgb(11, 11, 11);
+            color: orange;
+            font-style: italic;
+            
+        }
+        body{
+            background-color: orange;
+        }
+        a{
+            color: rgb(103, 255, 247);
+            text-decoration: none;
+        }
+        a:hover{
+            color: chartreuse;
+            font-stretch: expanded;
+        }
+        .name{
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 7px;
+            height: 25px;
+        }
+        .password{
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 7px;
+            height: 25px;
+        }
+        .logbtn{
+            cursor: pointer;
+            color: black;
+            border-radius: 7px;
+            width: 100px;
+            height: 30px;
+        }
+        .logbtn:hover{
+            color: black;
+            background: orange;
+            border: 1px solid orange;
+            width: 90px;
+            height: 35px;
+            
+        }
+        .user{
+            padding-left: 50px;
+        }
+
+    </style>
+
+    <script>
+        function loginValidation(){
+            var uName = document.getElementById("name").value;
+            var uPassword = document.getElementById("password").value;
+
+            var uNameRegExp = '^[A-Za-z]+$';
+            var uPasswordRegExp = '^[0-9]+$'
+
+            if(uName == ""){
+                alert("User Name must not be empty");
+                return false;
+            }
+            if(uPassword == ""){
+                alert("Password must not be empty");
+                return false;
+            }
+
+            if( ! uName.match(uNameRegExp)){
+                alert("User name must contains alphabets only");
+                return false;
+            }
+            if( ! uPassword.match(uPasswordRegExp)){
+                alert("password must contains numbers only");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="login">
+        <form class="logform">
+            <table align="center">
+
+                <tr><th colspan="2"> <font color="orange"><h3><i>Login</i></h3></font> </th></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><label for="name">Enter UserName</label></td> <td><input  type="text" id="name" class="name" placeholder="Enter your Name" ></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><label for="password">Enter the Password</label></td> <td><input type="password" class="password" id="password" placeholder="Enter your Password"></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr align="center"><td colspan="2"><button onclick="loginValidation()"  class="logbtn">Login</button> </td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr> <td class="user">New User? <a href="Register.html">Register</a></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

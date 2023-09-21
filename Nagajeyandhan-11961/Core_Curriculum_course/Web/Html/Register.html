@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Registration page</title>
+    <style>
+        .register{
+            border: 1px solid black;
+            width: 30%;
+            height: 575px;
+            position: absolute;
+            left: 300px;
+            font-weight: 100;
+            color: orange;
+            background-color: rgb(11, 11, 11);
+            font-style: italic;
+            border-radius: 15px;
+        }
+        body{
+            background-color: orange;
+        }
+        button{
+            border-radius: 10px;
+            width: 50px;
+            height: 30px;
+        }
+        .green:hover{
+            background-color: rgb(103, 255, 247);
+            border: 1px solid rgb(103, 255, 247);
+            cursor: pointer;
+        }
+        .red:hover{
+            background-color: red;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(103, 255, 247);
+        }
+        a:hover{
+            cursor: pointer;
+            color: chartreuse;
+        }
+    </style>
+
+    <script>
+        function registerValidation(){
+            var uName = document.getElementById("name").value;
+        var uEmail = document.getElementById("email").value;
+        var uDob = document.getElementById("dob").value;
+        var uPhone = document.getElementById("mobile").value;
+        var uAddress = document.getElementById("address").value;
+        var uGender = document.form.gender.value;
+        var uPassword = document.getElementById("password").value;
+        var uConfirmpwd = document.getElementById("cpassword").value;
+        var state = document.getElementById("state").value;
+
+        var UNameRegExp = '^[A-z a-z]+$';
+        var uEmailRegExp = '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$';
+        var uPhoneRegExp = '^[0-9]+$';
+        var uPasswordRegExp = '^[0-9]+$';
+        var uConfirmpwdRegExp = '^[0-9]+$';
+
+        if(uName == ""){
+            alert("User name must not be empty");
+            return false;
+        }
+        if(uEmail == ""){
+            alert("Email must not be empty");
+            return false;
+        }
+        if(uDob == ""){
+            alert("DOB must not be empty");
+            return false;
+        }
+        if(uPhone == ""){
+            alert("Phone number must not be empty");
+            return false;
+        }
+        if(uGender == ""){
+            alert("Gender must not be empty");
+            return false;
+        }
+        if(uAddress == ""){
+            alert("Address must not be empty");
+            return false;
+        }
+        if(uPassword == ""){
+            alert("Password must not be empty");
+            return false;
+        }
+        if(uConfirmpwd == ""){
+            alert("Confirm password must not be empty");
+            return false;
+        }
+        if(state==null || state=="select your state"){
+            alert("state must not be empty");
+            return false;
+        }  
+        
+        if(!uName.match(UNameRegExp)){
+            alert("Name must be in alphabets only");
+            return false;
+        }
+        if( ! uEmail.match(uEmailRegExp)){
+            alert("Invalid Email Format");
+            return false;
+        }
+        
+        if(! uPhone.match(uPhoneRegExp)){
+            alert("Phone number should be in numbers only");
+            return false;
+        }
+        if(! uPassword.match(uPasswordRegExp)){
+            alert("Password should be in numbers only");
+            return false;
+        }
+
+        if(! uConfirmpwd.match(uPassword)){
+            alert("Confirm password not match with password");
+            return false;
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <form>
+        <div class="register">
+            <table  align="center">
+                <tr>
+                    <th colspan="2"><h3><i>Register</i></h3></th>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" placeholder="Name" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="email">Email Id </label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" placeholder="Email Id" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="dob">Date oF Birth </label>
+                    </td>
+                    <td>
+                        <input type="date" id="dob" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label id="language">Language Known </label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="java" name="java" value="java">
+                        <label for="vehicle1"> Java</label><br>
+                        <input type="checkbox" id="Angular" name="Angular" value="Angular">
+                        <label for="vehicle2"> Angular</label><br>
+                        <input type="checkbox" id="SQL" name="SQL" value="SQL">
+                        <label for="vehicle3"> SQL</label><br>
+                    </td>
+                </tr> 
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>       
+                <tr>
+                    <td>
+                        <label for="mobile">PhoneNumber</label>
+                    </td>
+                    <td>
+                        <input type="phonenumber" id="mobile" placeholder="Mobile number" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label>Gender</label> 
+                    </td>
+                    <td>
+                        <input type="radio" id="male" value="Male" name="gender">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" value="Female" name="gender">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="address">Address</label>
+                    </td>
+                    <td>
+                        <textarea id="address" placeholder="Enter you address" style="border-radius: 5px; height:20px"></textarea>
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" placeholder="Password" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="cpassword">ConfirmPassword</label>
+                    </td>
+                    <td>
+                        <input type="password" id="cpassword" placeholder="Confirm Password" style="border-radius: 5px; height:20px">
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <label for="state">State</label> 
+                    </td>
+                    <td>
+                        <select  id="state" style="border-radius: 5px; height:25px">
+                            <option>select your state</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Tamilnadu">Tamilnadu</option>
+                            <option value="Uttar pradesh">Uttar pradesh</option>
+                        </select> <br><br>
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <button onclick="registerValidation()" class="green" style="width: 100px">Register</button>
+                    </td>
+                    <td>
+                        <button class="red" style="width: 100px">Clear</button>
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td style="text-align:right" colspan="2">
+                        Aldready have an account? <a href="login.html">Sign Up</a>
+                    </td>
+                </tr>
+            
+            </table>
+        </div>
+        
+    </form>
+</body>
+</html>

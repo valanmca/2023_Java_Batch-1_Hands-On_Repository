@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="MyStyle.css">
+        <!--Element tag selector => h1{.....}
+            Id selector => #id_name{.....}
+            Class selector => .class_name{.....}
+            Grouping selector => h1,b{....}
+            Universal selector => *{......} -->
+
+    <style>
+        h1{
+            color: rgb(40, 8, 250);
+            border: 2px solid black;
+            text-align: center; 
+        }
+
+        #MyH1Style1{
+            color: rgb(250, 8, 85);
+            border: 2px solid black;
+            text-align: center;
+        }
+        #MyH1Style2{
+            color: rgb(251, 255, 0);
+            border: 2px solid black;
+            text-align: center;
+        }
+        
+        .MyH1Style3{ 
+            color: rgb(12, 255, 16);
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        h1,b{
+            color: rgb(40, 8, 250);
+            border: 2px solid black;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h1>My Text 1</h1>
+    <h1 id="MyH1Style1">My Text 2</h1>
+    <h1 id="MyH1Style2">My Text 3</h1>
+    <h1 class="MyH1Style3">My Text 4</h1>
+    <b>My Text 5</b>
+    <p>My Text 6</p>
+</body>
+</html>

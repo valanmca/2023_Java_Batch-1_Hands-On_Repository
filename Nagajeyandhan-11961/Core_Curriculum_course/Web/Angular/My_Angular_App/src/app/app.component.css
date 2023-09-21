@@ -1,0 +1,12 @@
+
+div{
+    border: 3px solid red;
+    height: 300px;
+    width: 35%;
+    border-radius: 13px;
+    position: absolute;
+    color: red;
+}
+h1{
+    padding-left: 50px;
+}

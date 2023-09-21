@@ -1,0 +1,66 @@
+<div>
+    <h1 style="text-align: center">Custom Pipes</h1>
+<br />
+
+<table class="table table-dark" style="width: 50%; margin-left: 25%">
+<thead>
+    <tr>
+        <th colspan="2" scope="row" style="text-align: center">
+        CUSTOM PIPE EXAMPLES (NUMBER)
+    </th>
+    </tr>
+</thead>
+<tbody class="table table-striped table-hover">
+    <tr>
+        <th scope="row">ORIGINAL ARRAY</th>
+        <td>{{ arr1 }}</td>
+    </tr>
+
+    <tr>
+        <th scope="row">REVERSE ARRAY</th>
+        <td>{{ arr1 | sort : "reverse" }}</td>
+    </tr>
+
+    <tr>
+        <th scope="row">SORT ACENDING</th>
+        <td>{{ arr1 | sort : "ascending" }}</td>
+    </tr>
+
+    <tr>
+        <th scope="row">SORT DESCENDING</th>
+        <td>{{ arr1 | sort : "descending" }}</td>
+    </tr>
+</tbody>
+</table>
+<br />
+<br />
+<table class="table table-dark" style="width: 50%; margin-left: 25%">
+<thead>
+    <tr>
+        <th colspan="2" scope="row" style="text-align: center">
+        CUSTOM PIPE EXAMPLES (STRING)
+    </th>
+    </tr>
+</thead>
+<tbody class="table table-striped table-hover">
+    <tr>
+        <th scope="row">ORIGINAL ARRAY</th>
+        <td>{{ arr2 }}</td>
+    </tr>
+    <tr>
+        <th scope="row">ARRAY REVERSE</th>
+        <td>{{ arr2 | sort : "reverse" }}</td>
+    </tr>
+    <tr>
+        <th scope="row">SORT ACENDING</th>
+        <td>{{ arr2 | sort : "ascending" }}</td>
+    </tr>
+    <tr>
+        <th scope="row">SORT DESCENDING</th>
+        <td>{{ arr2 | sort : "descending" }}</td>
+    </tr>
+</tbody>
+</table>
+<br/>
+</div>
+

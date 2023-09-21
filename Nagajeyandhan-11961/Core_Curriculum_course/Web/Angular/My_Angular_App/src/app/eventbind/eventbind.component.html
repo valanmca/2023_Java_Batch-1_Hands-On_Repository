@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Event Binding</h1>
+<p>
+    Name: {{name}} <br>
+    EmailID: {{email_Id}} <br>
+    <img [src]="imagepath" [width]="width" [height]="height"><br>
+
+    <button class="btn btn-outline-dark" (click)="changeName()">Change Name</button> &nbsp;
+    <button class="btn btn-outline-dark" (click)="changeEmail()">Change Email</button> &nbsp;
+    <button class="btn btn-outline-dark" (click)="changeImage()"> Change Image</button>
+</p>
+    </body>
+</html>
+

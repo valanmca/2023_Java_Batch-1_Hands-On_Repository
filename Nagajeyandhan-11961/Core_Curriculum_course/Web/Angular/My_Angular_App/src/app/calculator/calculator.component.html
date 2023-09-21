@@ -1,0 +1,26 @@
+<div>
+    <h1>Services</h1>
+    <h3>Arithmetic Operation</h3>
+    <span>Enter a number</span>
+    <input type="number" name="num1" [(ngModel)] = "num1"><br><br>
+    <span>Enter a number</span>
+    <input type="number" name="num2" [(ngModel)] = "num2"> <br><br>
+    
+
+    <span>The result is <b>{{result}}</b></span> <br><br>
+    <button class="btn btn-outline-dark " (click)="getAddition()">Addition</button> &nbsp;
+    
+    <button class="btn btn-outline-dark " (click)="getSubtraction()">Subtraction</button> &nbsp;
+
+    <button class="btn btn-outline-dark " (click)="getMultiplication()">Multiplication</button> &nbsp;
+
+    <button class="btn btn-outline-dark " (click)="getDivision()">Division</button> <br><br><br>
+    <hr>
+    <h3>Factorial</h3>
+    <span>Enter a number</span>
+    <input type="number" [(ngModel)] = "fact"><br><br>
+    <button class="btn btn-outline-dark" (click)="getFactorial()">Factorial</button><br><br>
+    <span>Factorial of <b>{{fact}}</b>  is <b>{{factRes}}</b> </span> <br><br>
+
+    
+</div>

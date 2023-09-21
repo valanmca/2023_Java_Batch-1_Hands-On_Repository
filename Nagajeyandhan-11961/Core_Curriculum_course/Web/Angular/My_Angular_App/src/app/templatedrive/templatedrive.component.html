@@ -1,0 +1,91 @@
+<body>
+    <h1 align="center">Template Driven Form</h1><br>
+    <form #registerForm = "ngForm" (ngSubmit)= "register(registerForm.value)">
+        <!-- Name -->
+        <div class="input-group mb-3 " style="width:30%;margin-left:35%">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter name</span>
+            </div>
+            <input type="text"  name="name" #name="ngModel" ngModel required pattern="[A-Za-z]+" class="form-control" placeholder="Username" >
+            <div *ngIf="name.touched">
+                <div *ngIf= "name.errors?.['required']">
+                    <font color="red">*name is required</font>
+                </div>
+                <div *ngIf= "name.errors?.['pattern']">
+                    <font color="red">* invalid Format</font>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Email Id -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Enter Email</span>
+            </div>
+            <input type="text" class="form-control" name="email" #email="ngModel" ngModel required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="Email Id">
+            <div *ngIf= "email.touched">
+                <div *ngIf= "email.errors?.['required']">
+                    <font color="red">*email required</font>
+                </div>
+                <div *ngIf= "email.errors?.['pattern']">
+                    <font color="red">*Invalid Format</font>
+                </div>
+            </div>
+        </div>
+
+        <!-- Age -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Enter Age</span>
+            </div>
+            <input type="text" name="age" #age="ngModel" ngModel required maxlength="2" class="form-control" placeholder="Age">
+            <div *ngIf= "age.touched">
+                <div *ngIf= "age.errors?.['required']">
+                    <font color="red">*age required</font>
+                </div>
+                <div *ngIf= "age.errors?.['pattern']">
+                    <font color="red">*Invalid Format</font>
+                </div>
+            </div><br>
+        </div>
+        
+
+        <!-- Phone  number -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter PhoneNumber</span>
+            </div>
+            <input type="text" name="phone" #phone="ngModel" ngModel required minlength="10" maxlength="10" class="form-control" placeholder="phoneNumber" >
+            <div *ngIf= "phone.touched">
+                <div *ngIf= "phone.errors?.['required']">
+                    <font color="red">*phonenumber required</font>
+                </div>
+            </div><br>
+        </div>
+        
+        <!-- Country -->
+        <label for="country" style="margin-left:35%">Choose a Country</label>
+        <select name="country" #country="ngModel" ngModel required>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select> <br><br>
+
+    <button  class="btn btn-outline-dark" [disabled]="registerForm.invalid" style="margin-left:45%">Register</button> <br>
+    <br>
+
+    <div *ngIf="flag" style="margin-left:5%"> 
+        <table border="2px">
+                <i>
+                    
+                    <tr><td>UserName</td><td><b>{{uName}}</b></td></tr>
+                    <tr><td>EmailID</td><td><b>{{uEmail}}</b></td></tr>
+                    <tr><td>Age</td><td><b>{{uAge}}</b></td></tr>
+                    <tr><td>Phone Number</td><td><b>{{uPhone}}</b></td></tr>
+                    <tr><td>Country</td><td><b>{{uCountry}}</b></td></tr>
+                </i>
+        </table><br>
+    </div>
+    
+        
+    </form>
+</body>

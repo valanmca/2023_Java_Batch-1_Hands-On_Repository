@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1>Structure Directive</h1>
+        <button class="btn btn-outline-dark" (click)="changeFlag()">Hide & show</button>
+<div class="div" *ngIf="flag">
+    
+</div> 
+<br>
+<div>
+    <ul type="none">
+        <li (click) = "setSelectedVehicle(vechiles)" *ngFor="let vechiles of vehicle"> {{vechiles}}</li>
+    </ul>
+    <br>
+    You have Selectd <b>{{ selectedVehicle }}</b>
+    <div [ngSwitch] ="selectedVehicle">
+        <font color="green" *ngSwitchCase ="'Two wheeler'"><b>Bike</b></font>
+        <font color="green" *ngSwitchCase ="'Three wheeler'"><b>Auto</b></font>
+        <font color="green" *ngSwitchCase ="'Four wheeler'"><b>Car</b></font>
+        <font color="red" *ngSwitchDefault><b>Invalid selection</b></font>
+    </div> 
+</div>
+
+    </body>
+</html>
+

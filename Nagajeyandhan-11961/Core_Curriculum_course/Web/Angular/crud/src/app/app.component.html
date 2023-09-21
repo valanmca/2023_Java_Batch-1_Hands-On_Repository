@@ -1,0 +1,59 @@
+<div class="header">
+  <h3>Employee Management System</h3>
+</div>
+
+<div class="row">
+  <div class="col-9">
+    <form [formGroup]="employeeForm"  (ngSubmit)= "submit(employeeForm.value)">
+        
+      <label><b>Employee ID</b></label><br>
+      <input type="text" formControlName ="id">
+      <div *ngIf ="employeeForm.get('id')!.touched && employeeForm.get('id')!.invalid">
+        <div *ngIf ="employeeForm.get('id')!.hasError('required')">
+            <font color="red">*id required</font>
+        </div>
+        <div *ngIf ="employeeForm.get('id')!.hasError('pattern')">
+            <font color="red">*invalid format</font>
+        </div>
+      </div>
+      <br>
+  
+      <label> <b>Employee Name</b></label><br>
+      <input type="text" formControlName ="name">
+      <div *ngIf ="employeeForm.get('name')!.touched && employeeForm.get('name')!.invalid">
+        <div *ngIf ="employeeForm.get('name')!.hasError('required')">
+            <font color="red">*name required</font>
+        </div>
+        <div *ngIf ="employeeForm.get('name')!.hasError('pattern')">
+            <font color="red">*invalid format</font>
+        </div>
+    </div><br>
+  
+    <label><b>Employee Salary</b></label><br>
+      <input type="text" formControlName ="salary">
+      <div *ngIf ="employeeForm.get('salary')!.touched && employeeForm.get('salary')!.invalid">
+        <div *ngIf ="employeeForm.get('salary')!.hasError('required')">
+            <font color="red">*salary required</font>
+        </div>
+        <div *ngIf ="employeeForm.get('salary')!.hasError('pattern')">
+            <font color="red">*invalid format</font>
+        </div>
+    </div>
+      <br><br>
+  
+      <button class="btn btn-danger" (click)="InsertEmployee(employeeForm.value)" [disabled]="employeeForm.invalid">Insert</button> &nbsp; 
+      <button class="btn btn-danger" (click)="DeleteEmployee(employeeForm.value)" >Delete</button>&nbsp; 
+      <button class="btn btn-danger" (click)="UpdateEmployee(employeeForm.value)" [disabled]="employeeForm.invalid">Update</button>
+    </form>
+    Result {{result}}
+  </div>
+
+  <div class="col-3">
+    <ul>
+      <li *ngFor = "let emp of empList">
+        <b>{{emp.id}} - {{emp.name}} - {{emp.salary}}</b>
+    </li>
+    </ul>
+        
+  </div>
+</div>

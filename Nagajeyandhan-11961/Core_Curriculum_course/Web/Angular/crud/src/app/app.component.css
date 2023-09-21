@@ -1,0 +1,26 @@
+.header{
+    margin-top: 20px;
+    border: 3px solid brown;
+    margin-left: 35px;
+    height:100px;
+    width:96%;
+    text-align: center;
+}
+h3{
+    margin-top: 30px;
+}
+.col-9{
+    margin-top: 25px;
+    margin-left: 45px;
+    border: 3px solid brown;
+    height:400px;
+    width:69%;
+}
+.col-3{
+    margin-top: 25px;
+    margin-left: 15px;
+    border: 3px solid brown;
+    height:400px;
+    margin-right: 10px;
+
+}

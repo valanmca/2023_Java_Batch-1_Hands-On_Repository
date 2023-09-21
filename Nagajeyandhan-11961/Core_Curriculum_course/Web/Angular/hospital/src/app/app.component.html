@@ -1,0 +1,39 @@
+<div class="hospital">
+
+    <div class="header">
+      <h3>Hospital Management</h3>
+    </div>
+      
+    <div class="row">
+
+      <div class="col-9">
+          <form [formGroup]="hospitalForm">
+              <label>Enter patient Id</label><br>
+              <input type="text" formControlName ="id"><br>
+
+              <label>Enter patient Nam</label><br>
+              <input type="text" formControlName= "patientName"><br>
+
+              <label>Enter patient Age</label><br>
+              <input type="text" formControlName= "age"><br>
+
+              <label>Enter patient BloodGroup</label><br>
+              <input type="text" formControlName= "bloodGroup"><br><br>
+
+              <button class="btn btn-outline-success" (click)="insertPatient(hospitalForm.value)">Insert</button> &nbsp;
+              <button class="btn btn-outline-primary" (click)="updatePatient(hospitalForm.value)">Update</button> &nbsp;
+              <button class="btn btn-outline-danger" (click)="deletePatient(hospitalForm.value)">Delete</button> &nbsp;
+          </form>
+          {{result}}
+      </div>
+
+      <div class="col-3">
+          <ul >
+            <li *ngFor="let hos of hosList">
+                {{hos.id}} - {{hos.patientName}} - {{hos.age}} - {{hos.bloodGroup}}
+            </li>
+          </ul>
+      </div>
+
+    </div>
+</div>

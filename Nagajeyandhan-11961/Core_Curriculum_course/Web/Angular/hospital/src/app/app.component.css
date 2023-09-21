@@ -1,0 +1,26 @@
+.header{
+    border: 3px solid blueviolet;
+    height: 100px;
+    width: 95%;
+    margin-left: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+h3{
+    margin-top: 25px;
+    color: blue;
+}
+
+.col-9{
+    border: 3px solid blueviolet;
+    height: 400px;
+    width: 65%;
+    margin-left: 42px;
+    margin-top: 40px;
+}
+.col-3{
+    border: 3px solid blueviolet;
+    height: 400px;
+    margin-left: 55px;
+    margin-top: 40px;
+}

@@ -1,0 +1,18 @@
+<p>child-struct works!</p>
+<p>Structural Directives</p>
+<button (click)="changeFlag()">Show and Hide</button>
+
+<div class="MyDiv1" *ngIf="flag">
+<ul>
+    <li (click)="setSelectedVehicle(vec)" *ngFor="let vec of vehicles">{{vec}}</li>
+</ul>
+<br>
+<b>You have selected : {{selectedVehicle}} </b>
+<br>
+<div [ngSwitch]="selectedVehicle">
+    <font color="blue" *ngSwitchCase="'Two Wheeler'"><b>Bike</b></font>
+    <font color="green" *ngSwitchCase="'Three Wheeler'"><b>Auto</b></font>
+    <font color="yellow" *ngSwitchCase="'four Wheeler'"><b>Car</b></font>
+    <font color="violet" *ngSwitchDefault><b>Invalid Selection</b></font>
+</div>
+</div>

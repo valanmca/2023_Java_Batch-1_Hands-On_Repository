@@ -1,0 +1,58 @@
+<!-- <div>
+    <table width="80%">
+        <tr>
+            <td> Upper Case Pipe </td><td>{{name | uppercase }}</td>
+        </tr>
+    </table>
+</div> -->
+
+<h2> Pipe Component</h2>
+<p>Upper case :  {{name | uppercase}}</p>
+<p>Lower case :  {{name | lowercase}}</p>
+<p>Title case :  {{name | titlecase}}</p>
+
+<hr>
+
+<table width="100%">
+    <tr>
+        <td> Date pipe</td><td>{{date}}</td>
+    </tr>
+    <tr>
+        <td> Date pipe</td><td>{{date | date:'dd/MMM/yyyy'}}</td>
+    </tr>
+    <tr>
+        <td> Date pipe</td><td>{{date | date:'dd-MM-yy'}} </td>
+    </tr>
+    <tr>
+        <td> Date pipe</td><td>{{date | date:'fullDate'}}</td>
+    </tr>
+    <tr>
+        <td> Date pipe</td><td>{{date | date: 'fullDate' | uppercase}}</td>
+    </tr>
+    <tr>
+        <td> Date pipe</td><td>{{date | date:'shortTime'}}</td>
+    </tr>
+</table>
+<hr>
+<br>
+<table width="26%">
+    <tr>
+        <td> Percent pipe</td><td>{{18719 | percent}}</td>
+    </tr>
+    <tr>
+        <td> Currency pipe</td><td>{{76789.54 | currency:"INR"}}</td>
+    </tr>
+</table>
+<hr>
+<h2>Custom Pipes</h2>
+<div>
+    <br> {{arr1}}
+    <br><br><b>Reverse : </b>  {{arr1 | sort:'reverse'}}
+    <br><br><b>Ascending : </b> {{arr1 | sort:'ascending'}}
+    <br><br><b>Descending : </b> {{arr1 | sort:'descending'}}
+    <hr>
+    <br> {{arr2}}
+    <br><br><b>Reverse : </b> {{arr2 | sort:'reverse'}}
+    <br><br><b>Ascending : </b> {{arr2 | sort:'ascending'}}
+    <br><br><b>Descending : </b> {{arr2 | sort:'descending'}}
+</div>

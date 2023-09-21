@@ -1,0 +1,9 @@
+.myDiv1{
+    position: absolute;
+    left: 400px;
+    top: 1600px;
+    width: 400px;   
+    height: 300px;  
+    border:2px solid rebeccapurple;
+    border-radius: 20px;;
+}

@@ -1,0 +1,52 @@
+
+<div class="head">
+ <h1 style="text-align: center;">Employee Management System </h1>
+</div>
+
+<div class="left" >
+  <div class="div1">
+  <form #details="ngForm" (ngSubmit)="details.form.valid && crud()">
+  <label>Employee Id </label><br>
+  <input type="number"  ngModel required pattern="[0-9]+" placeholder="Enter Employee ID" [(ngModel)]="form1.id" name="id" #id="ngModel" required maxlength="6" [ngClass]="{error : id.errors && id.touched}" onfocus="this.placeholder=' '"><br>
+  <div *ngIf="id.errors && id.touched">
+    <small class="text-danger" *ngIf="id.errors['required']">Employee Id is required</small>
+     <div *ngIf="id.errors?.['pattern']">
+      <font color="red">Invalid ID </font>
+      </div>
+    </div>
+
+  <label>Employee Name </label><br>
+  <input type="text" ngModel required pattern="[a-zA-Z]+" placeholder="Enter Employee Name" [(ngModel)]="form1.empName" name="empName" #empName="ngModel" required maxlength="32" [ngClass]="{error : empName.errors && empName.touched}" onfocus="this.placeholder=' '"><br>
+  <div *ngIf="empName.errors && empName.touched">
+    <small class="text-danger" *ngIf="empName.errors['required']">Employee Name is required</small>
+    <small class="text-danger" *ngIf="empName.errors['maxlength']">Max 32 characters allowed</small>
+    <div *ngIf="empName.errors?.['pattern']">
+      <font color="red">Invalid Name </font>
+      </div>
+    </div>
+
+  <label>Employee Salary </label><br>
+  <input type="number"   required pattern="[0-9]+" placeholder="Enter Employee Salary" [(ngModel)]="form1.empSal" name="empSal" #empSal="ngModel" required maxlength="6" [ngClass]="{error : empSal.errors && empSal.touched}" onfocus="this.placeholder=' '"><br>
+  <div *ngIf="empSal.errors && empSal.touched">
+    <small class="text-danger" *ngIf="empSal.errors['required']">Employee Salary is required</small>
+    <small class="text-danger" *ngIf="empSal.errors['maxlength']">Max 6 digit is acceptable</small>
+    <div *ngIf="empSal.errors?.['pattern']">
+      <font color="red">Invalid Salary </font>
+      </div>
+</div>
+  <br>
+  <button type="button" class="btn btn-danger" (click)="insertEmployee(details.value)">Insert</button>&nbsp;
+  <button type="button" class="btn btn-danger" (click)="deleteEmployee(details.value)">Delete</button>&nbsp;
+  <button type="button" class="btn btn-danger" (click)="updateEmployee(details.value)">Update</button>&nbsp;
+</form>
+</div>
+<br>
+&nbsp;&nbsp;<font color="green"><b>{{result}}</b></font>
+
+<div class="right">
+ <br>
+ <ul>
+  <li *ngFor="let emp of empList"><b>{{emp.id}} - {{emp.empName}} - {{emp.empSal}}</b></li>
+ </ul>
+</div>
+  </div>

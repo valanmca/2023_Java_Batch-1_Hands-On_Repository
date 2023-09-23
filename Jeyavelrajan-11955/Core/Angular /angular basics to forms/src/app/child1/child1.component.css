@@ -1,0 +1,10 @@
+.MyDiv1{
+    position: absolute;
+    left:200px;
+    top:100px;
+    width:300px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid green;
+
+}

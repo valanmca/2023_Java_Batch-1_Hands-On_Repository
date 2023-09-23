@@ -1,0 +1,232 @@
+<!-- <h1>Welcome to the angular </h1> -->
+<br>
+<!-- data binding in Angualar 
+angular- it is used to communicate between Typescript code and the other componment ex (Html,css,bootstrap)  to the users  
+Databinding is the necessary because when we write the code in typescript it is compiled to javascript and the result is 
+shown on HTML layout  thus to show the correct and spotaneous result to the users a proper communication is necessary 
+thats why databinding is uaed in Angular-->
+
+<!-- Model/component  <-> View/HTML    
+  there are two types of data binding are 
+     One way databinding ->    interpolation           Property Binding          Event Binding
+                             view <- component        view <- Component        view -> Component
+     
+    Two way Databinding  ->  view <->Component  -->  
+    
+
+<!-- Directives  
+Directives are instructions in the DOM . they specify how to place your components and business logic in the angular
+
+Directives are js class and declared as @Directive. The are 3directives in Angular.
+
+                 Component Directive  -> Directive with a template. Ex@component
+                 Structural Directive -> Modify the DOM structure.Add/Remove elements from DOM.
+                 Attribute Directives -> Change the appearance of elements.
+                                      
+                
+                Structural Directives 
+                  there are three types -> 1)ngif    2)ngFor    3)ngSwitch
+              
+                Attribute Directives - Change the appreance of elements -> dynamically
+                  There are three types->  1)ngStyle  2)ngClass  3)ngModel 
+                
+                -->
+
+<!-- Angular Service 
+                
+                services are objects that get instantiated just conce during the lifetime of an application.
+              They contain methods that maintain data throught the life of an application 
+              EX)Data is avaliable all the time 
+            
+            
+              The main objective of the Service is to organize and sare business logic, models or , data and functions
+              with different components of an angular application. They are usually implemented through 
+              dependency injection
+              
+              Structure of angular Service
+                                       > comp1---------- >
+                             App------ > comp2---------- >    Service
+                                       > comp3---------- >
+                                           
+              Reusable code that can be accessed from multiple components                  
+                                        
+            -->
+
+<!-- Pipes ,router ,Angular forms
+    
+            Pipes are simple functions to use in template expressions to accept an input value 
+            and return a transformed value
+
+            Pipes are useful because tou can use them throughout your application while only 
+            declaring each pipe once
+
+            For Exsample, you would use a pipe to show a date as april 15,1988 rather than tha 
+            raw string format
+
+                there are two types of pipes  
+                 
+                  Build in pipes               custom pipes
+                    |         \
+              Parameterised  chaining
+
+              to perform the pipe  using string interpolation
+
+              chaining -> use more than one pipe in the single 
+                -->
+
+<!-- Angular Forms and Validation
+  
+     Angular forms are used to handle users input.we can use Angular form in out application to enable users to log in to update profile, 
+     to enter information, and to perform many othe rdata-entry tasks 
+
+       there are two type of angular forms 
+      
+        Template driven Form 
+        Reactive Forms
+      
+      Both approaches are used to collect user input evengts from the view, validate the user input , create 
+      a form model and data  model to update , and provide a way to track changes .  
+    
+    
+    Angular Router 
+  
+  in a single-page app , you change what the user sees by showing or hiding portions of the display that correspond 
+  to the particular components, rather than gowing out to the server to get a new page. As users perform application 
+  tasks  they need to move between the different views that you have defined .
+
+      To handle the navigation from the one view to the next , you use the Angular Router , The rOUTER ENABLES NAVIGATION 
+    by interperting a brouser URL as an instruction to change the view 
+  
+       project CRUD using Http Client or fake rest API
+      
+  To install json server use this command 
+    Step 1- in terminal
+    npm install -g json-server
+       step 2-in package .json file 
+      Add this command 
+        "json-server":"json-server --watch db.json --port 3004"
+       Step3-in cmd on terminal
+      npm run json-server
+      
+      db.json file created
+
+      next- steps 
+    
+       1) in html -> use condition inside {form}
+       2)   in ts  -> inject service in the constructor
+       3)  in service  
+      
+      
+       Angular 10 features - for business unit-> means 
+
+      new date range picker -Angular material 
+      
+      to import 
+       MatFormFieldModule
+       MatDatePickerModule
+    
+
+      warning using common java script 
+      supported browser 
+
+    
+      ng new app-Name --strict  to avoid junk code and code coverage must be 75%
+     ng update @angular/cli@angular/core
+    
+    
+    Angular 14 Features 
+  
+    1)standlone components
+    
+     command : ng g Component-Name --Standlone
+    
+    @ Component({
+      selector:'app-standlonedemo',
+      standlone:true;
+      imports:[CommonModule],templateUrl:!/standlonedemo.component.hrml',
+      styleUrls:[!/standlonedemo.component.css]
+    })
+  
+    2)Typed Angular Forms -used in reactive forms 
+      
+    in ts file 
+       
+    export class SampleComponent{
+      var contactForm=new FormGroup({
+        name: new FormControl<string>('',{nonNullable:true}),
+        email:new FormControl<string>('',{nonNullable:true}),
+        contactNumber: new FormControl<number>(0,{nonNullable:false})  
+      })
+    }
+  
+  3)Router - streamilined page title accessiblity 
+     in angular 14, can we add the router title without any additional import on the page 
+    refer to the following code 
+  const routs:Routes=[{
+    component:HomeComponent
+    title:'HomePage'//<-- page title
+  },{
+    path:'about',
+    component:AboutComponent,
+    title:'AboutPage'<-- page title 
+  }]
+
+ 4)Extended developer diagostics- to identify the errors and commendss and give sugessions 
+
+    Eg
+     you type the wrong command like ng sevre  then it will give sugestion for right commands 
+    
+    
+ 5)Bind to protected component members 
+  
+  in angular v14, you can now bind to protected component members directly from your templates .
+   
+   @Component({
+    Selector:'my-component',
+    template:'{{message}}',//Now compiles 
+   })
+  
+  export class MyComponent{
+    protected message:string='hello world';
+  }
+
+ 6)More built- in improvements 
+
+   Angular 14 also incliudes support for the latest Tyscript 4.7 release and now targets ES2020
+  by default, which allows the CLI to ship smaller code without paring down features . -->
+
+<br>
+<!-- one way binding , two Way Binding -->
+<!-- <app-child></app-child> -->
+<br>
+<!-- Structural Directives -->
+<!-- <app-child1></app-child1> -->
+<br>
+<!-- Attribute Directive -->
+<!-- <app-child2></app-child2> -->
+<br>
+<!-- Factorial -->
+<!-- <app-child3></app-child3> -->
+<br>
+
+<!-- Services -->
+<!-- <app-child4></app-child4>          
+<app-child41></app-child41>
+<br> -->
+<!-- Pipes -->
+<!-- <app-child5></app-child5> -->
+
+
+
+<mat-toolbar color="primary">
+  <span>Curd Application</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button>ADD Employee</button>
+  <br>
+  <div> {{ 00.54565 | percent }}</div>
+</mat-toolbar>
+<!-- Angular Forms -->
+<app-child6></app-child6>
+<!-- Reactive Forms -->
+<app-child7></app-child7>
+

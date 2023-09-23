@@ -1,0 +1,155 @@
+<h1 style="text-align: center;">Template Driven Forms </h1>
+<br>
+<div style="margin-left: 43%;">
+    <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+        <tr>
+            <td>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Name</span>
+                    <input type="text" name="name" class="form-control" placeholder="name" aria-label="name" aria-describedby="basic-addon1" #name="ngModel" ngModel required pattern="[A-Za-z]+">
+                  </div>
+        
+        <!-- <input type="text" name="name" #name="ngModel" ngModel required pattern="[A-Za-z]+"> -->
+    
+        <div *ngIf="name.touched">
+            <div *ngIf="name.errors?.['required']">
+                <font color="red"><b>Name required</b></font>
+            </div>
+            <div *ngIf="name.errors?.['pattern']">
+                <font color="red"><b>Invalid name</b></font>
+            </div>
+
+        </div>
+    </td>
+    </tr>
+
+    <tr> 
+        <td>
+      
+        <!-- <input type="text" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"> -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </div>
+        <div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+                <font color="red"><b>Email required</b></font>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+                <font color="red"><b>Invalid Email</b></font>
+            </div>
+
+        </div>
+    </td>
+    </tr>
+
+ <tr>
+    <td>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">PhNo</span>
+            <input type="text" name="phoneno" class="form-control" placeholder="PhoneNo" aria-label="phoneno" aria-describedby="basic-addon1" #phoneno="ngModel" ngModel required pattern="[0-9 ]+" minlength="10" maxlength="10">
+          </div>
+        <!-- <input type="number" name="phoneno" #phoneno="ngModel" ngModel required pattern="[0-9 ]+" minlength="10" maxlength="10"> -->
+
+        <div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+                <font color="red"><b>PhoneNo required</b></font>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+                <font color="red"><b>Invalid Email</b></font>
+            </div>
+
+        </div>
+    </td>
+    </tr>
+
+
+ <tr>
+    <td>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1" >Age</span>
+            <input type="text" name="Age" class="form-control" placeholder="Age" aria-label="Username" aria-describedby="basic-addon1" name="age" #age="ngModel" ngModel required pattern="">
+          </div>
+        
+        <!-- <input type="text" name="age" #age="ngModel" ngModel required pattern="[1-9 ]+" minlength="1" maxlength="2"> -->
+
+        <div *ngIf="age.touched">
+            <div *ngIf="age.errors?.['required']">
+                <font color="red"><b>Age required</b></font>
+            </div>
+            <div *ngIf="age.errors?.['pattern']">
+                <font color="red"><b>Invalid Age</b></font>
+            </div>
+
+        </div>
+    </td>
+    </tr>
+
+    <tr>
+       <td>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Country</label>
+            <select class="form-select" id="inputGroupSelect01" name="country" #country="ngModel" ngModel required pattern="">
+              <option value="India" selected>India</option>
+              <option value="China">China</option>
+              <option value="Russia">Russia</option>
+            </select>
+          </div>
+        
+        <!-- <select name="country"  #country="ngModel" ngModel required pattern="">
+         <option value="India">India</option> <option value="China">China</option>
+        </select> -->
+      </td>
+    </tr>
+        <br>
+        <button class="btn btn-danger" (click)="changeFlag()" [disabled]="myForm.invalid">Register</button>
+
+    </form>
+</div>
+
+
+
+
+<table class="table table-hover"  *ngIf="flag" style=" display: inline; margin-left: 39%; margin-right: 18%;">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Input</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td> Name:</td>
+        <td>{{tname}}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Email:</td>
+        <td>:{{temail}}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>phNo:</td>
+        <td>{{tphoneno}}</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td> Age:</td>
+        <td>{{tage}}</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Country:</td>
+        <td>{{tcountry}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+

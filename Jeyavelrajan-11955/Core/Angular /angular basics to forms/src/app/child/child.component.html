@@ -1,0 +1,87 @@
+<h3>Example for one way dataBinding</h3>
+
+<b>
+  Employee id: {{eid}}
+</b>
+<br>
+
+<b>
+  Employee Name:{{ename}}
+</b>
+<br>
+
+<b>
+  Employee Salary:{{esalary}}
+</b>
+<br>
+
+<b>Sum : {{getaddition(13,34)}}
+</b>
+<br>
+
+<!-- String interpolation in Angular -> works on both HTML and plain text and other operations   -->
+<b>
+   <h3>interpolation in Angular</h3> 
+</b>
+<br>
+
+<b>
+    <input type="text" value="{{email}}"/> 
+</b>
+<br>
+<b>Addition of 13 and 34 is: <br>
+    <input type="text" value="{{ getaddition(13,34)}}"/> 
+</b>
+<br>
+<!-- Proerty binding in Angular -> only works in HTML element attribute -->
+<b>
+ <h3>Property Binding in Angular</h3>
+</b>
+<br>
+
+<b>
+    <input type="text" [value]="email"/>
+</b>
+<br>
+<b>
+<img [src]="imagepath"  alt="" [width]="imgwidth" [height]="imgheight">
+</b>
+<br>
+<b>
+   <h3>Event Binding in Angular </h3> 
+</b>
+<br>
+<b>
+    <button (click)="changename()">Change Name</button>
+</b>
+<br>
+<b>
+    <button (click)="changeemail()">Change Email</button>
+</b>
+<br>
+<b> <button (click)="changeimage()">Change Image</button></b>
+<br>
+<b>
+    <h3>2 Way DataBinding </h3>
+</b>
+<b>
+    Enter your Name <input type="text" [(ngModel)]="name"/>
+</b>
+<br>
+Welcome {{name}}
+<br>
+<b>
+    num1:<input type="number" [(ngModel)]="num1"/>
+</b>
+<br>
+<b>
+    num2:<input type="number" [(ngModel)]="num2"/>
+</b>
+<br>
+<b>
+    num3:<input type="number" value="{{getadd(num1,num2)}}"/> 
+</b>
+ 
+
+
+

@@ -1,0 +1,79 @@
+<h3>Reactive Forms Projects : -</h3>
+<div class="form-container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" >
+<header>Registration Page Forms</header>
+<br>
+<label><b>Name : </b></label><input type="text" formControlName="name" />
+<br>
+<div *ngIf= "myForm.get('name')!.touched && myForm.get('name')!.invalid" >
+    <div *ngIf = "myForm.get('name')!.hasError('required')" >
+        <font> * Name field is required</font>
+    </div>
+    <div *ngIf = "myForm.get('name')!.hasError('pattern')" >
+        <font> * Invalid field or name</font>
+    </div>
+</div>
+<br>
+<label><b>Email : </b></label><input type="text" formControlName="email" />
+<br>
+<div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid" >
+    <div *ngIf = "myForm.get('email')!.hasError('required')" >
+        <font> * Email field is required</font>
+    </div>
+    <div *ngIf = "myForm.get('email')!.hasError('pattern')" >
+        <font> * Invalid field or email</font>
+    </div>
+</div>
+<br>
+<label><b>Age</b></label><input type="text" formControlName="age" />
+<br>
+<div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid" >
+    <div *ngIf = "myForm.get('age')!.hasError('required')" >
+        <font> * Age field is required</font>
+    </div>
+    <div *ngIf = "myForm.get('age')!.hasError('pattern')" >
+        <font> * Invalid field or Age</font>
+    </div>
+    <div *ngIf = "myForm.get('age')!.hasError('maxlength')" >
+        <font> * Max length should be 3</font>
+    </div>
+    <br>
+    </div>
+    <br>
+    <label><b>Phone Number : </b></label><input type="text" formControlName="mobileNo" />
+    <br>
+<div *ngIf="myForm.get('mobileNo')!.touched && myForm.get('mobileNo')!.invalid" >
+    <div *ngIf = "myForm.get('mobileNo')!.hasError('required')" >
+        <font> * Phone Number field is required</font>
+    </div>
+    <div *ngIf = "myForm.get('mobileNo')!.hasError('pattern')" >
+        <font> * Invalid field or Phone Number</font>
+    </div>
+    <div *ngIf = "myForm.get('mobileNo')!.hasError('maxLength')" >
+        <font> * Max length should be 10</font>
+    </div>
+    <div *ngIf = "myForm.get('mobileNo')!.hasError('minLength')" >
+        <font> * Min length should be 10</font>
+    </div>
+</div>
+
+<br>
+    <button [disabled]="myForm.invalid" >Register</button>
+<br>
+<br>
+<br>
+<div>
+    <table table-collapse="">
+      <tr><td><b>Check your Input details correct afetr click the register button :- </b></td></tr>
+      <br>
+      <tr><td class="s"><b>Name :</b> {{names}}</td></tr>
+      <br>
+      <tr><td><b>Email :</b> {{emails}}</td></tr>
+      <br>
+      <tr><td><b> Age :</b> {{ages}}</td></tr>
+      <br>
+      <tr><td><b>Phone Number :</b> {{mobileNos}}</td></tr>
+    
+      <br></table></div>
+
+

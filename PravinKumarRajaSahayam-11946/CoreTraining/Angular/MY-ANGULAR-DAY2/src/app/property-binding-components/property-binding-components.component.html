@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY-ANGULAR-APPS-DAY2 PropertyBindingComponents</title>
+  </head>
+  <body>
+    <h1>Property Binding Example Projects :-</h1>
+    <br>
+    <p>
+      <b>Employee ID : {{eid}}</b>
+      <br>
+      <b>Employee Name : {{ename}}</b>
+      <br>
+      <b>Employee Salary : {{esalary}}</b>
+      <br>
+      <b>Sum : {{getAddition(10,50)}}</b>
+      <br>
+      <b>Email Id Address : </b><input type="text" [value]="email"/>
+      <br>
+      <b>Addition of 10 and 50 : </b><input type="text" [value]="getAddition(10,50)"/>
+      <br>
+      <img [src] = "imagePath"/>
+      <br>
+      <img [src] = "imagePath" [height] = "imageheight" [width] = "imagewidth" />
+      <br>
+      <img [src] = "imagePath" [height] = "imageheight" [width] = "imagewidth" />
+      <br>
+   </p>
+  </body>
+</html>

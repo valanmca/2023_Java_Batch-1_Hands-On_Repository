@@ -1,0 +1,77 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 50,
+      "comment": "This is fresh apple",
+      "date": "2023-09-22T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Carrot",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 140,
+      "comment": "This is vegetable",
+      "date": "2023-09-12T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Realme narzo",
+      "category": "Electronics",
+      "freshness": "Second Hand",
+      "price": 5000,
+      "comment": "This is not new phone",
+      "date": "2023-09-06T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Laptop",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 10000,
+      "comment": "This is Brand new one with amazing features",
+      "date": "2023-09-21T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Desktop Mac",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 4500,
+      "comment": "Desktop new",
+      "date": "2023-09-27T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "productName": "Naveen",
+      "category": "Electronics",
+      "freshness": "Second Hand",
+      "price": 10,
+      "comment": "Good Personality",
+      "date": "2023-09-12T18:30:00.000Z",
+      "id": 8
+    },
+    {
+      "productName": "Potato",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 500,
+      "comment": "efefef",
+      "date": "2023-09-15T18:30:00.000Z",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

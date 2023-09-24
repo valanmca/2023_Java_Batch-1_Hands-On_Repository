@@ -1,0 +1,105 @@
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="myDiv1">
+    <h2>Employee Management System</h2>
+  </div>
+  <div class="myDiv2">
+    <div class="myDiv4">
+      <form #myForm="ngForm">
+        <table cellpadding="5" cellspacing="5">
+          <tr>
+            <th align="left">Employee ID</th>
+          </tr>
+          <tr>
+            <td><input class="form-control" type="text" placeholder="Enter Id" name="id" #id="ngModel" ngModel required
+                pattern="[0-9]+" maxlength="6"></td>
+            <td>
+              <div *ngIf="id.touched">
+                <div *ngIf="id.errors?.['required']">
+                  <font color="red"><b>Id Required*</b></font>
+                </div>
+                <div *ngIf="id.errors?.['pattern']">
+                  <font color="red"><b>Invalid Id&nbsp;<i class="fa fa-close"></i></b></font>
+                </div>
+                <div *ngIf="id.valid">
+                  <font color="green"><b>Valid Id&nbsp;<i class="fa fa-check"></i></b></font>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th align="left">Employee Name</th>
+          </tr>
+          <tr>
+            <td><input class="form-control" placeholder="Enter Name" type="text" name="name" #name="ngModel" ngModel
+                required pattern="[A-Z a-z]+" maxlength="20"></td>
+            <td>
+              <div *ngIf="name.touched">
+                <div *ngIf="name.errors?.['required']">
+                  <font color="red"><b>Name Required*</b></font>
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                  <font color="red"><b>Invalid Name&nbsp;<i class="fa fa-close"></i></b></font>
+                </div>
+                <div *ngIf="name.valid">
+                  <font color="green"><b>Valid Name&nbsp;<i class="fa fa-check"></i></b></font>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th align="left">Employee Salary</th>
+          </tr>
+          <tr>
+            <td><input class="form-control" placeholder="Enter Salary" type="text" name="salary" #salary="ngModel"
+                ngModel required pattern="[0-9]+" maxlength="7"></td>
+            <td>
+              <div *ngIf="salary.touched">
+                <div *ngIf="salary.errors?.['required']">
+                  <font color="red"><b>Salary Required*</b></font>
+                </div>
+                <div *ngIf="salary.errors?.['pattern']">
+                  <font color="red"><b>Invalid Salary&nbsp;<i class="fa fa-close"></i></b></font>
+                </div>
+                <div *ngIf="salary.valid">
+                  <font color="green"><b>Valid Salary&nbsp;<i class="fa fa-check"></i></b></font>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><button type="button" [disabled]="myForm.invalid" class="btn btn-success" (click)="InsertEmployee(myForm.value)">Insert</button>&nbsp;
+              <button type="button"  class="btn btn-danger" (click)="deleteEmployee(myForm.value)">Delete</button>&nbsp;
+              <button type="button" [disabled]="myForm.invalid" class="btn btn-primary" (click)="updateEmployee(myForm.value)">Update</button>&nbsp;
+              <button type="reset" class="btn btn-secondary" (click)="resetEmployee(myForm.value)">Reset</button>
+            </td>
+        </table>
+      
+      </form>
+
+    </div><br>
+    <font color="green"><b>{{result}}</b></font>
+  </div>
+  <div class="myDiv3">
+    <br><br>
+    <!-- <ul>
+      <li *ngFor="let emp of empList"><b>{{emp.id}} - {{emp.name}} - {{emp.salary}}</b></li>
+    </ul> -->
+    <h3>Data Inserted</h3>
+    <table class="table table-bordered">
+      <tr class="success"><th>Emp ID</th><th>Emp Name</th><th>Emp Salary</th></tr>
+      <tr class="info" *ngFor="let emp of empList"><td>{{emp.id}}</td><td>{{emp.name}}</td><td>{{emp.salary}}</td></tr>
+    </table>
+  </div>
+</body>
+
+</html>

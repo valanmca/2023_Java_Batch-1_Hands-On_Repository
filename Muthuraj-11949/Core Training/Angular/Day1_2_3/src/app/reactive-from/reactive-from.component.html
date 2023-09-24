@@ -1,0 +1,13 @@
+<p>reactive-from works!</p>
+<div class="form_contaoner">
+    <form [formGroup]="myForm" (ngSubmit)="myFunction(myForm.value)">
+        <header>Registration Page</header>
+        Name:<input type="text" formControlName="name"/>      
+<div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+<div *ngIf="myFrom.get ('name')!.hashError('requried')">
+    <font color="red"><b>Name requried</b></font>
+</div>
+<div *ngIf="name.errors?.['pattern']">
+    <font color="red"><b>invalid Name</b></font>
+</div>
+</div>

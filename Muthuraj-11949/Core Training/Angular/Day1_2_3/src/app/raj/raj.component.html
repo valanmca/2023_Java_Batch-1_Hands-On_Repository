@@ -1,0 +1,8 @@
+<h3>Show or Hide</h3>
+<button  (click)="changeFlag()">Show or Hide</button>
+<div class="box" *ngIf="flag">
+    <ul>
+        <li *ngFor="let vec of vehicles"> {{vec}} </li>
+    </ul>
+</div>
+

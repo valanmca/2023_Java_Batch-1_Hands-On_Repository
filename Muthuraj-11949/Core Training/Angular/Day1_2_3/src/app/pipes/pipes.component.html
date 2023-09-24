@@ -1,0 +1,41 @@
+<p><b>Pipes works!</b></p>
+<div class="muthu">
+    <hr/><br>
+
+    <table  width="30%">
+        <tr><td>Upper Case Pipe </td><td>{{name | uppercase}}</td></tr>
+            <tr><td>Lower Case Pipe</td><td>{{name | lowercase}}</td></tr>
+                <tr><td>Title Case Pipe</td><td>{{name | titlecase}}</td></tr>
+    </table>
+
+<hr/><br>
+<table width="100%">
+    <tr><td>Date Pipe</td><td>{{date}}</td></tr>
+        <tr><td>Date Pipe</td><td>{{date | date:'dd/MMM/yyy'}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{date | date:'dd-MMM-yyy'}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{date | date:'dd-MMM-yyy'}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{date | date:'fullDate'}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{date | date:'fullDate' | uppercase}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{date | date:'shortTime'}}</td></tr>
+
+</table>
+<hr/><br>
+<table width="80%">
+    <tr><td>Date Pipe</td><td>{{date}}</td></tr>
+        <tr><td>Percent Pipe</td><td>{{00.54565 | percent'}}</td></tr>
+            <tr><td>Date Pipe</td><td>{{6589.23| currency:"USD"}}</td></tr>
+</table>
+<p><b>Sort pipe!</b></p>
+<div>
+    <br>Number {{arr1}}
+    <br><br>Reverse Number {{arr1 | sort: 'reverse'}}
+    <br><br>Ascending Number {{arr1 | sort: 'ascending'}}
+    <br><br>Descending Number{{arr1 | sort: 'descending'}}
+<h1>
+<br>Name: {{arr2}}
+<br><br>Reverse Name : {{arr2 | sort: 'reverse'}}
+<br><br>Ascending Name:  {{arr2 | sort: 'ascending'}}
+<br><br>Descending Name :{{arr2 | sort: 'descending'}}
+</h1>
+</div>
+</div>

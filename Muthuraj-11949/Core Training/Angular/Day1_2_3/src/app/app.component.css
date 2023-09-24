@@ -1,0 +1,19 @@
+h1{
+  color: aqua;
+  background-color: brown;
+}
+
+.box {
+  
+  height: 100px;
+  width: 300px;
+  border-radius: 5px;
+  border: 4px solid red;
+  padding: 50px;
+  
+}
+
+.imgpath{
+  height:40px;
+  width: 30px;
+}

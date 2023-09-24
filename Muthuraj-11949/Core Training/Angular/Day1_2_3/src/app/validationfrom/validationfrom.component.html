@@ -1,0 +1,59 @@
+<p><b>validationfrom works</b></p>
+<br>
+<div >
+ <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+        <label>Name:</label><input type="text" name="name" #name="ngModel" ngModel requried pattern="[a-zA-Z]+[a-zA-Z ]"/>      
+<div *ngIf="name.touched">
+<div *ngIf="name.errors?.['requried']">
+    <font color="red"><b>Name requried</b></font>
+</div>
+<div *ngIf="name.errors?.['pattern']">
+    <font color="red"><b>invalid Name</b></font>
+</div>
+</div>
+<br><br>
+
+<label>Email:</label><input type="text" name="Email" #email="ngModel" ngModel requried pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/> 
+<div *ngIf="email.touched">
+<div *ngIf="email.errors?.['requried']">
+    <font color="red"><b>email requried</b></font>
+</div>
+<div *ngIf="email.errors?.['pattern']">
+    <font color="red"><b>invalid email</b></font>
+</div>
+</div>
+<br><br>
+<label>age:</label><input type="text" name="age" #age="ngModel" ngModel requried pattern='[0-9]+' maxlength="2"/> 
+<div *ngIf="age.touched">
+
+     <div *ngIf="age.errors?.['requried']">
+         <font color="red"><b>age requried</b></font>
+     </div>
+
+     <div *ngIf="age.errors?.['pattern']">
+        <font color="red"><b>invalid age</b></font>
+     </div>
+
+</div>
+<br><br>
+
+
+<label>phone:</label><input type="text" name="Phone" #phone="ngModel" ngModel requried pattern="[0-9]+" maxlength="10"/> 
+<div *ngIf="phone.touched">
+<div *ngIf="phone.errors?.['requried']">
+
+    <font color="red"><b>phone requried</b></font>
+</div>
+<div *ngIf="phone.errors?.['pattern']">
+    <font color="red"><b>invalid phone</b></font>
+</div>
+</div>
+<br><br>
+
+<label>country:</label><select name="country" country="Country" #country="ngModel"  ngModel requried > 
+<option value="India">India</option><option value="China">China</option>
+</select>
+<br><br>
+<button [disabled]="myForm.invalid">Register</button>
+</form>
+</div>

@@ -1,0 +1,57 @@
+<html>
+    <head><h1>Welcome to Angular</h1>
+        </head>
+<br>
+<body>
+
+
+    <div class="box"><h3> Root Component</h3>
+    </div>
+    <br><br><br><br><br>
+
+<h3>
+    employeeId={{empid}}
+    <br>
+    employeeName={{empname}}
+    <br>
+    employeeSalary={{empsalary}}
+    <br>
+    employeePhone={{empphone}}
+
+
+</h3>
+<h2>
+    Addtion of 2 values: {{getAddition(10,30)}};
+    <br>
+    Factorial of given value: {{getFactorial(5)}}
+</h2>
+<br>
+  EmialID:<input type="text" [value]="ememail"/>
+   <br>
+   Addition of 10 and 20 is:<input type="text" [value]="getAddition(10,20)"/>
+   <br>
+   <h3>image</h3>
+   <img [src]="imagepath" [height]="imagehight" [width]="imagewidth"/>
+   <br>
+
+   <h3>  TWO WAY AND EVENT BINDING</h3>
+   <button (click)="changeName()">changeName</button>
+   <button (click)="changeEmail()">changeEmail</button>
+   <button (click)="changeImage()">changeImage</button>
+   <button (click)="changephone()">changephone</button>
+   <br>
+   <h3>FormsModule</h3>
+   Enter the name<input type="text" [(ngModel)]="name"/>
+   <br>
+   Welcome{{ name }}
+   <br><br>
+</body>
+</html>
+<app-raj></app-raj>
+<br>
+<app-child></app-child>
+<app-attribute></app-attribute>
+<br><br>
+<app-pipes></app-pipes>
+<app-validationfrom></app-validationfrom>
+<app-cal></app-cal>

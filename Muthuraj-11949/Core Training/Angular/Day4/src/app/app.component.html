@@ -1,0 +1,153 @@
+<div>
+  <p>
+      <mat-toolbar color="primary">
+          <label class="heading">HOSPITAL MANAGEMENT &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hospital" viewBox="0 0 16 16">
+            <path d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5Zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9h-.5Zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Z"/>
+            <path d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1V1Zm2 14h2v-3H7v3Zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm0-14H6v1h4V1Zm2 7v7h3V8h-3Zm-8 7V8H1v7h3Z"/>
+          </svg>&nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-pulse-fill" viewBox="0 0 16 16">
+  <path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9H1.475Z"/>
+  <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.88Z"/>
+</svg>
+          </label>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+          </button>
+      </mat-toolbar>
+  </p>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <div id="div2">
+              <form [formGroup]="myform">
+                  <label>Patient Number</label> <br>
+                  <mat-form-field class="example-full-width">
+                <input matInput formControlName="id">
+                  </mat-form-field>
+                  <br>
+                  <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+                      <div *ngIf="myform.get('id')!.hasError('required') ">
+                          <font>Register Number is required</font>
+                      </div>
+                      <div *ngIf="myform.get('id')!.hasError('pattern') ">
+                          <font>Register Number is not Valid </font>
+                      </div>
+                  </div>
+                  <label>Patient Name</label> <br>
+                  <mat-form-field class="example-full-width">
+                  <input matInput formControlName="name">
+                  </mat-form-field>
+                  <br>
+                  <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+                      <div *ngIf="myform.get('name')!.hasError('required') ">
+                          <font>Name is required</font>
+                      </div>
+                      <div *ngIf="myform.get('name')!.hasError('pattern') ">
+                          <font>Name is not Valid </font>
+                      </div>
+                  </div>
+                  <label>Father's name </label> <br>
+                  <mat-form-field class="example-full-width">
+                  <input matInput formControlName="fathername">
+                  </mat-form-field>
+                  <br>
+                  <div *ngIf="myform.get('fathername')!.touched && myform.get('fathername')!.invalid">
+                      <div *ngIf="myform.get('fathername')!.hasError('required') ">
+                          <font>Fathername is required</font>
+                      </div>
+                      <div *ngIf="myform.get('fathername')!.hasError('pattern') ">
+                          <font>Fathername is not Valid </font>
+                      </div>
+                  </div>
+                  <label>Gender</label>
+                  <mat-radio-group aria-label="Select an option" formControlName="gender">
+                      <mat-radio-button value="Male">Male</mat-radio-button>
+                      <mat-radio-button value="Female">Female</mat-radio-button>
+                      <mat-radio-button value="Other">Other</mat-radio-button>
+                  </mat-radio-group>
+                  <div *ngIf="myform.get('gender')!.touched && myform.get('gender')!.invalid">
+                      <div *ngIf="myform.get('gender')!.hasError('required') ">
+                          <font>Gender is required</font>
+                      </div>
+                  </div>
+                  <br>
+                  <br>
+                  <label>Board</label> <br>
+                  <mat-form-field class="dob">
+                      <mat-select formControlName="board">
+                          <mat-option value="State Board">State Board</mat-option>
+                          <mat-option value="CBSE">CBSE</mat-option>
+                      </mat-select>
+                  </mat-form-field>
+                  <div *ngIf="myform.get('board')!.touched && myform.get('board')!.invalid">
+                      <div *ngIf="myform.get('board')!.hasError('required') ">
+                          <font>Board is required</font>
+                      </div>
+                  </div>
+                  <br>
+                  <label>Date Of Birth </label> <br> <mat-form-field class="dob">
+                      <input matInput [matDatepicker]="picker" formControlName="dob">
+                      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field> <br>
+                  <div *ngIf="myform.get('dob')!.touched && myform.get('dob')!.invalid">
+                      <div *ngIf="myform.get('dob')!.hasError('required') ">
+                          <font>DOB required</font>
+                      </div>
+                  </div>
+                  <label> Blood Group</label> <br>
+                  <mat-form-field class="example-full-width">
+                      <input matInput formControlName="bgrp">
+                  </mat-form-field>
+                  <br>
+                  <div *ngIf="myform.get('bgrp')!.touched && myform.get('bgrp')!.invalid">
+                      <div *ngIf="myform.get('bgrp')!.hasError('required') ">
+                          <font>Blood Group is required</font>
+                      </div>
+                      <div *ngIf="myform.get('bgrp')!.hasError('pattern') ">
+                          <font>Blood Group is not Valid </font>
+                      </div>
+                  </div>
+                  <button class="btn btn-success" 
+                      (click)="insertDetails(myform.value)">Insert</button>
+                  <button class="btn btn-danger" (click)="deleteDetails(myform.value)">Delete</button>
+                  <button class="btn btn-warning" (click)="updateDetails(myform.value)">Update</button>
+                  <p>{{result}}</p>
+              </form>
+          </div>
+      </div></div></div>
+      <div class="col">
+          <div id="div3">
+              <br>
+              <br>
+              <table class="table table-striped ">
+                  <thead>
+                      <tr scope="row">
+                          <th scope="col">Reg.No</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Fathername</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Board</th>
+                          <th scope="col">D.O.B</th>
+                          <th scope="col"> B.Grp</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let scl of scllist" scope="row">
+                          <td scope="col">{{scl.id}}</td>
+                          <td scope="col">{{scl.name}}</td>
+                          <td scope="col">{{scl.fathername}}</td>
+                          <td scope="col">{{scl.gender}}</td>
+                          <td scope="col">{{scl.board}}</td>
+                          <td scope="col">{{scl.dob | date}}</td>
+                          <td scope="col">{{scl.bgrp}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>

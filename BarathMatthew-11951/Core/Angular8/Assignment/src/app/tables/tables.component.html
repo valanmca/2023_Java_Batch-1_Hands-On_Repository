@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-div">
+    <div class="grid text-center">
+        <div class="one">
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[0]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[0])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="two">
+            <!-- 2 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[1]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[1])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="three">
+            <!-- 3 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[2]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[2])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="four">
+            <!-- 4 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[3]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[3])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="five">
+            <!-- 5 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[4]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[4])}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <div class="grid text-center">
+        <div class="six">
+            <!-- 6 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[5]}}</td>
+                    <td>= </td>
+                    <td>{{getMulti(c,coll[5])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="seven">
+            <!-- 7 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[6]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[6])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="eight">
+            <!-- 8 -->
+            <table>
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[7]}}</td>
+                    <td>=</td>
+                    <td>{{getMulti(c,coll[7])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <!-- 9 -->
+            <table class="nine">
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X</td>
+                    <td>{{coll[8]}}</td>
+                    <td> = </td>
+                    <td>{{getMulti(c,coll[8])}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <!-- 10 -->
+            <table class="ten">
+                <tr *ngFor="let c of coll">
+                    <td>{{c}}</td>
+                    <td>X </td>
+                    <td>{{coll[9]}}</td>
+                    <td> =</td>
+                    <td> {{getMulti(c,coll[9])}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

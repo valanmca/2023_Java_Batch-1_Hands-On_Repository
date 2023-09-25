@@ -1,0 +1,49 @@
+*{
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.ten{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.one{
+    background-color: rgb(223, 38, 6);
+}
+.two{
+    background-color: orange;
+}
+.three{
+    background-color: rgb(231, 197, 27);
+}
+.four{
+    background-color: rgb(238, 238, 46);
+}
+.five{
+    background-color: lightgreen;
+}
+.six{
+    background-color: rgb(58, 180, 58);
+}
+.seven{
+    background-color: rgb(113, 174, 194);
+}
+.eight{
+    background-color: rgb(83, 106, 236);
+}
+.nine{
+    background-color: rgb(60, 60, 225);
+}
+.ten{
+    background-color: rgb(157, 31, 157);
+}
+.main-div{
+    position: absolute;
+    left: 25%;;
+}
+td{
+    padding-bottom: 5px;
+}

@@ -1,0 +1,185 @@
+<div class="head">
+
+  <!-- <h3 style="text-align: center;"> Student Management System</h3> -->
+  <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        <span> Student Management System</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="accent" (click)="changediv1()">Add Students</button>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+        </mat-toolbar-row>
+        </mat-toolbar>
+  </p> 
+  <!-- <p>
+    
+      <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="accent" (click)="changediv1()">Add Students</button>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p> -->
+</div>
+ 
+    <div class="container" *ngIf="flag1">
+        <div class="row">
+            <div class="col" >
+ 
+ <div class="div1">
+  <form #myform="ngForm">
+    <label><b> Student Name:</b></label><br>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Student Name</mat-label>
+          <input matInput  name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]+" placeholder="studentName" aria-label="studentName" onfocus="this.placeholder=''">
+        </mat-form-field>
+  
+  <div class="input-group mb-2" >
+     <div class="col-xs-4">
+     <!-- <input type="text" class="form-control" name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]+"  aria-label="studentName" onfocus="this.placeholder=''"> -->
+ </div> 
+ </div>
+  <div *ngIf="name.touched">
+  <div *ngIf="name.errors?.['required']">
+  <font color="red">Name is required</font>
+  </div>
+  <div *ngIf="name.errors?.['pattern']">
+  <font color="red">Invalid Name </font>
+  </div>
+  </div>
+ 
+  <br>
+ 
+
+  <label ><b> Student Id:</b></label><br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Student ID</mat-label>
+      <input matInput type="number"  name="id" #id="ngModel" ngModel required pattern="[0-9]+" placeholder="studentId" aria-label="studentId" onfocus="this.placeholder=''">
+      </mat-form-field>
+  
+  <div class="input-group mb-2" >
+     <div class="col-xs-4">
+     <!-- <input type="text" class="form-control" name="id" #id="ngModel" ngModel required pattern="[0-9]+" placeholder="studentId" aria-label="studentId" onfocus="this.placeholder=''"> -->
+ </div> 
+ </div>
+  <div *ngIf="id.touched">
+  <div *ngIf="id.errors?.['required']">
+  <font color="red">Id is required</font>
+  </div>
+  <div *ngIf="id.errors?.['pattern']">
+  <font color="red">Invalid Id</font>
+  </div>
+ </div>
+ 
+ <br>
+ 
+ <label ><b> Department:</b></label><br>
+ <mat-form-field class="example-full-width">
+    <mat-label>Department</mat-label>
+    <input matInput name="dep" #dep="ngModel" ngModel required pattern="[a-zA-z, 0-9-]+"  placeholder="department" aria-label="department" onfocus="this.placeholder=''">
+    </mat-form-field>
+  
+  <div class="input-group mb-2" >
+     <div class="col-xs-4">
+     <!-- <input type="text" class="form-control" name="dep" #dep="ngModel" ngModel required pattern="[a-zA-z, 0-9-]+"  placeholder="department" aria-label="department" onfocus="this.placeholder=''"> -->
+ </div> 
+ </div>
+  <div *ngIf="dep.touched">
+  <div *ngIf="dep.errors?.['required']">
+  <font color="red">Department  is required</font>
+  </div>
+  <div *ngIf="dep.errors?.['pattern']">
+  <font color="red">Invalid Add</font>
+ </div>
+ </div><br>
+
+ <label><b>Date of Birth:</b></label>&nbsp;<br>
+ <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" name="dob" #dob="ngModel"  value="DOB" ngModel required>
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field><br><br>
+ <!-- <input type="date" name="dob" #dob="ngModel"  value="DOB" ngModel required><br><br> -->
+
+ <!-- <mat-radio-group aria-label="Select Gender">
+    <mat-radio-button value="1" name="gender" #gender="ngModel" value="male" ngModel required>Male</mat-radio-button>
+    <mat-radio-button value="2" name="gender" #gender="ngModel" value="female" ngModel required>Female</mat-radio-button>
+  </mat-radio-group><br><br> -->
+ <label><b>Gender :</b></label>&nbsp;
+ <mat-radio-group aria-label="Select Gender" name="gender" #gender="ngModel" ngModel required>
+    <mat-radio-button  name="gender" value="male">Male</mat-radio-button>
+    <mat-radio-button  name="gender" value="female">Female</mat-radio-button>
+  </mat-radio-group><br><br>
+
+
+ <!-- <input type="radio" name="gender" #gender="ngModel" value="male" ngModel required>Male&nbsp;
+ <input type="radio" name="gender" #gender="ngModel" value="female" ngModel required>Female <br><br> -->
+
+ <!-- <label>Skills</label>
+ <input type="checkbox"> -->
+
+ 
+  <button class="btn btn-success" (click)="insertStudent(myform.value)" >Insert</button>&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-info"(click)="updateStudent(myform.value)" >Update</button>&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-danger" (click)="deleteStudent(myform.value)" >Delete</button>&nbsp;&nbsp;&nbsp;<br><br>
+  <button class="btn btn-secondary" (click)="changediv()">View Details</button>
+  </form>
+   <br>
+   <mat-card class="card">
+    <mat-card-content><font color="green">{{result}}</font> </mat-card-content>
+  </mat-card>
+  <!-- &nbsp;&nbsp;<font color="green">{{result}}</font>  -->
+ </div></div></div></div>
+<div class="col" *ngIf="flag">
+  
+    
+    <table class="table table-striped">
+
+        <thead>
+        <tr scope="row">
+       
+        <th scope="col">Name </th>
+        <th scope="col">ID </th>
+        <th scope="col">Department</th>
+        <th scope="col">Date Of Birth </th>
+        <th scope="col">Gender</th>
+        
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let stu of stuList" scope="row">
+        <td scope="col">{{stu.name}}</td>
+        <td scope="col">{{stu.id}}</td>
+        <td scope="col">{{stu.dep}}</td>
+        <td scope="col">{{stu.dob|date}}</td>
+        <td scope="col">{{stu.gender}}</td>
+       
+        </tr>
+        </tbody>
+        </table>
+
+       
+     
+     
+    </div>
+
+ 
+ 

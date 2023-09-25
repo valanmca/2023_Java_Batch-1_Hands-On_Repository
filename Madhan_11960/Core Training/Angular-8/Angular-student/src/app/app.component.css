@@ -1,0 +1,38 @@
+/* .head{
+    border: 2px solid salmon;
+    height: 10%;
+    width: 90%;
+    position: absolute;
+   
+    left: 60px;
+} */
+.left{
+    /* border: 2px solid salmon; */
+    top: 12%;
+    position: absolute;
+    left: 60px;
+    right: 10%;
+    height: 80%;
+    width: 50%;
+}
+.right{
+    /* border: 2px solid salmon; */
+    top:0.5%;
+    left: 105%;
+    position: absolute;
+    height: 99%;
+    width: 70%;
+    
+}
+.div1{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.card{
+    width: 30%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

@@ -1,0 +1,47 @@
+body{
+    background-color: lightgray;
+}
+.col1{
+    background-color: white;
+    width: 16%;
+    border-radius: 8px;
+    border: 6px solid lightgray;
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+.col2{
+    background-color: white;
+    width: 16%;
+    border-radius: 8px;
+    margin-left: 10%;
+    border: 6px solid lightgray;
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+.col3{
+    background-color: white;
+    width: 16%;
+    border-radius: 8px;
+    margin-left: 10%;
+    border: 6px solid lightgray;
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+.a{
+    background-color: orange;
+    width: 72%;
+    margin-left: 10%;
+    border-radius: 5px;
+    color: white;
+    height: 30%;
+}
+.b{
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    margin-left: 27%;
+}

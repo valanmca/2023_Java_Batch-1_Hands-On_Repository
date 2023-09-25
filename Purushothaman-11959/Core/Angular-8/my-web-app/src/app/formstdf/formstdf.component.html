@@ -1,0 +1,51 @@
+<p><b>Forms: Template Driven Form (TDF)</b></p>
+<br>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+        <label>Name: </label><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z ]+">
+
+        <div *ngIf="name.touched">
+            <div *ngIf="name.errors?.['required']">
+            <font color="red"><b>Name Required</b></font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            <font color="red"><b>Invalid name</b></font>
+        </div>
+    </div><br>
+    <label>Email: </label><input type="email" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <div *ngIf="email.touched">
+        <div *ngIf="email.errors?.['required']">
+            <font color="red"><b>Email required</b></font>
+        </div>
+        <div *ngIf="email.errors?.['pattern']">
+            <font color="red"><b>Invalid email</b></font>
+        </div>
+    </div><br>
+    <label>Mobile Number: </label><input type="tel" name="mobile" #mobile="ngModel" ngModel required maxlength="10" minlength="10" >
+    <div *ngIf="mobile.touched">
+        <div *ngIf="mobile.errors?.['required']">
+            <font color="red"><b>Mobile Number required</b></font>
+        </div>
+    </div><br>
+    <label>Age: </label><input type="text" name="age" #age="ngModel" ngModel required maxlength="3" pattern="[0-9]+">
+  <div *ngIf="age.touched">
+    <div *ngIf="age.errors?.['required']">
+        <font color="red"><b>Age required</b></font>
+    </div>
+    <div *ngIf="age.touched">
+        <div *ngIf="age.errors?.['pattern']">
+            <font color="red"><b>Invalid age</b></font>
+        </div>
+    </div>
+  </div><br>
+  <label>Country: </label><select name="country" #country="ngModel" ngModel required>
+    <option value="India">India</option> <option value="China">China</option>
+  </select><br>
+  <button [disabled]="myForm.invalid">Register</button>
+    </form>
+</div><br>
+Name: {{uname}}<br>
+Email: {{uemail}}<br>
+Mobile Number: {{uphone}}<br>
+Age: {{uage}}<br>
+Country: {{ucountry}}<br>

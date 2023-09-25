@@ -1,0 +1,28 @@
+tr{
+    display: flex;
+    flex-direction: column;
+}
+.con{
+    background-color: rgba(248, 245, 245, 0.888);
+}
+h3{
+    color: red;
+    font-weight: bolder;
+    margin-left: 7%;
+}
+h4{
+    color: black;
+    font-weight: bolder;
+    margin-left: 7%;
+}
+.td1,.td3{
+    background-color: lightgray;
+    text-align: center;
+}
+.td2{
+    text-align: center;
+}
+p{
+    color: red;
+    font-weight: bold;
+}

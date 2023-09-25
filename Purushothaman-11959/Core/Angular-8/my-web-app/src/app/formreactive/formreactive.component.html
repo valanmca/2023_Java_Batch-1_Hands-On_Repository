@@ -1,0 +1,32 @@
+<p><b>Form: Reactive</b></p>
+<div>
+    <form [formGroup]="myForm1" (ngSubmit)="myFunction1(myForm1.value)">
+        <header>Registration Page</header>
+        <label>Name: </label><input type="text" formControlName="name">
+        <div *ngIf="myForm1.get('name')!.touched && myForm1.get('name')!.invalid">
+            <div *ngIf="myForm1.get('name')!.hasError('required')">
+                <font color="red"><b>Name is required</b></font>
+            </div>
+            <div *ngIf="myForm1.get('name')!.hasError('pattern')">
+                <font color="red">Invaild Name</font>
+            </div>
+        </div><br>
+        <label>Age: </label><input type="text" formControlName="age" maxlength="3">
+        <div *ngIf="myForm1.get('age')!.touched && myForm1.get('age')!.invalid">
+            <div *ngIf="myForm1.get('age')!.hasError('required')">
+                <font color="red"><b>Age is required</b></font>
+            </div>
+            <div *ngIf="myForm1.get('age')!.hasError('pattern')">
+                <font color="red">Invaild Name</font>
+            </div>
+        </div><br>
+        <label>Mobile: </label><input type="tel" formControlName="mobile" maxlength="10" minlength="10">
+        <div *ngIf="myForm1.get('mobile')!.touched && myForm1.get('mobile')!.invalid">
+            <div *ngIf="myForm1.get('mobile')!.hasError('required')">
+                <font color="red"><b>Name is required</b></font>
+            </div>
+        </div><br>
+    
+        <button [disabled]="myForm1.invalid">Register</button>
+    </form>
+</div>

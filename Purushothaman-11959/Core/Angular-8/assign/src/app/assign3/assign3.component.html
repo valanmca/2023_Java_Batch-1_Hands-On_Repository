@@ -1,0 +1,45 @@
+<p>Assignment 3</p>
+<div class="con">
+<h3>FRUIT</h3>
+<h4>NUTRITIONAL INFORMATION</h4>
+<div class="container">
+<div class="row">
+<div class="col">
+<table>
+    <tr>
+        <th>Fruit</th>
+        <td *ngFor="let frt of fruit">{{frt}}</td>
+    </tr>
+</table>
+</div>
+<div class="col">
+    <table>
+    <tr>
+        <th>Carbohydrate</th>
+        <td class="td1" *ngFor="let crb of carb">{{crb}}g</td>
+    </tr>
+</table>
+</div>
+
+<div class="col">
+    <table>
+    <tr>
+        <th>Water</th>
+        <td class="td2" *ngFor="let wtr of water">{{wtr}}%</td>
+    </tr>
+</table>
+</div>
+
+<div class="col">
+    <table>
+    <tr>
+        <th>Calories</th>
+        <td class="td3" *ngFor="let cal of calories">{{cal}}kcal</td>
+    </tr>
+</table>
+</div>
+
+
+</div>
+</div>
+</div>

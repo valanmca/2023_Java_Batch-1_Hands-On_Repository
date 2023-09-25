@@ -1,0 +1,11 @@
+p{
+    color:blueviolet;
+}
+div{
+    border: 2px solid green;
+    color: green;
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+    margin-left: 5%;
+}

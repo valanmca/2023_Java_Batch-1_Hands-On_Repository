@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="myform">
+        <table>
+          <br>
+          <br>
+          <tr><td>Id:</td><input type="text" formControlName="id">
+            <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+              <div *ngIf="myform.get('id')!.hasError('required')">
+                <font color="red">Id required</font>
+              </div>
+              <div *ngIf="myform.get('id')!.hasError('pattern')">
+                <font color="red">Invalid Id</font>
+              </div>
+            </div>
+          </tr>
+          <tr><td>Name:</td><input type="text" formControlName="name">
+            <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+              <div *ngIf="myform.get('name')!.hasError('required')">
+                <font color="red">Name required</font>
+              </div>
+              <div *ngIf="myform.get('name')!.hasError('pattern')">
+                <font color="red">Invalid Name</font>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <td><button (click)="insertdetails(myform.value)">Insert</button></td>
+            <td><button (click)="updatedetails(myform.value)">Update</button><button (click)="deletedetails(myform.value)">Delete</button></td>
+          </tr>
+          <tr><td>{{result}}</td></tr>
+        </table>
+      </form>
+    </div>
+    <div class="col">
+      <table>
+        <tr><th>Id</th><th>Name</th></tr>
+        <tr *ngFor="let clg of clgList"><td>{{clg.id}}</td><td>{{clg.name}}</td></tr>
+      </table>
+    </div>
+  </div>
+</div>

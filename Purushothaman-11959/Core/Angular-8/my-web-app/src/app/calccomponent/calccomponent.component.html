@@ -1,0 +1,15 @@
+<p><b>Calculator (One Service)</b></p>
+<p>Addition of 10 & 20: {{sum}}
+    <br>
+    Subtraction of 10 & 20: {{sub}}
+</p>
+<br>
+<table>
+<tr><td>First number:</td><td><input type="number" [(ngModel)]="num1"></td></tr>
+<tr><td>Second number:</td><td><input type="number" [(ngModel)]="num2"></td></tr> 
+<tr><td><button (click)="getAdd()">Add</button></td><td><button (click)="getSub()">Sub</button></td></tr>
+<tr><td><button (click)="getMul()">Mul</button></td><td><button (click)="getDiv()">Div</button></td></tr>
+ 
+</table>
+<br>
+<label for="">Result: {{res}}</label>

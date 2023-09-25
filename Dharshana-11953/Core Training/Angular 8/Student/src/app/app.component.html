@@ -1,0 +1,201 @@
+<div class="head">
+  <p>
+    <mat-toolbar color="primary">
+
+
+      <span>Student Management System</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button class="button" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+</div><br><br>
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+     
+      <form  #myform="ngForm" >
+
+
+        <!-- <label>Student Id:</label><br>
+  <input type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+" > <br>
+  <div *ngIf="id.touched">
+    <div *ngIf="id.errors?.['required']">
+      <font color="red">Id Required</font>
+    </div>
+    <div *ngIf="id.errors?.['pattern']">
+      <font color="red"> Invalid Id </font>
+    </div>
+  </div> -->
+        <label>Student Id:</label><br>
+        <mat-form-field class="example-full-width">
+
+
+          <input type="text" matInput name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+
+
+        </mat-form-field>
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+            <font color="red">Id Required</font>
+          </div>
+          <div *ngIf="id.errors?.['pattern']">
+            <font color="red"> Invalid Id </font>
+          </div>
+        </div>
+        <br>
+
+
+        <label>Student Name:</label><br>
+        <mat-form-field class="example-full-width">
+         
+          <input matInput placeholder="Name" type="text" name="name" #name="ngModel" ngModel required
+            pattern="[a-zA-z ]+">
+        </mat-form-field>
+        <div *ngIf="name.touched">
+          <div *ngIf="name.errors?.['required']">
+            <font color="red">Name Required</font>
+          </div>
+          <div *ngIf="name.errors?.['pattern']">
+            <font color="red"> Invalid Name</font>
+          </div>
+        </div>
+
+
+        <!-- <label>Student Name:</label><br>
+  <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]+" ><br>
+  <div *ngIf="name.touched">
+    <div *ngIf="name.errors?.['required']">
+      <font color="red">Name Required</font>
+    </div>
+    <div *ngIf="name.errors?.['pattern']">
+      <font color="red"> Invalid Name</font>
+    </div>
+  </div> -->
+        <br>
+        <label>DOB:</label><br>
+        <!-- <input type="date" name="dob" #dob="ngModel" ngModel required  > <br> -->
+        <mat-form-field class="date">
+          <mat-label>Choose date</mat-label>
+          <input matInput [matDatepicker]="picker" name="dob" #dob="ngModel" ngModel required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div *ngIf="dob.touched">
+          <div *ngIf="dob.errors?.['required']">
+            <font color="red">DOB Required</font>
+          </div>
+
+
+        </div>
+        <br><br>
+        <!-- <label >Gender</label><br>
+  <input type="radio" name="gender" value="Male"  #gender="ngModel" ngModel required>Male
+  <input type="radio" name="gender" value="Female" #gender="ngModel" ngModel required>Female <br><br> -->
+        <label>Gender:</label><br>
+        <mat-radio-group aria-label="Gender"  name="gender" #gender="ngModel"  ngModel required>
+
+
+          <mat-radio-button  type="radio"  name="gender"  value="Male" >Male</mat-radio-button>
+          <mat-radio-button  type="radio"  name="gender"  value="Female"  >Female</mat-radio-button>
+       
+        </mat-radio-group>
+        <br><br>
+
+
+
+
+        <!-- <label >Department:</label>
+  <select name="depart" #depart="ngModel" ngModel required>
+    <option value=" ">select course</option>
+    <option value="CSE">CSE</option>
+    <option value="IT">IT</option>
+    <option value="EEE">EEE</option>
+  </select> -->
+        <label>Department:</label><br>
+        <mat-form-field class="department">
+          <mat-select class="select1" name="depart" #depart="ngModel" ngModel required>
+
+
+            <mat-option value=" ">select course</mat-option>
+            <mat-option value="CSE">CSE</mat-option>
+            <mat-option value="IT">IT</mat-option>
+            <mat-option value="EEE">EEE</mat-option>
+
+
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="depart.touched ">
+          <div *ngIf="depart.errors?.['required']">
+            <font color="red">Department Required</font>
+          </div>
+        </div>
+        <br>
+        <br>
+
+
+
+
+
+
+        <button class="btn btn-danger" [disabled]="(myform.invalid )"
+          (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="update(myform.value)">update</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="delete(myform.value)">delete</button><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button  class="btn btn-danger" (click)="changeDiv()">View Details</button>
+      </form>
+      <br><br>
+      <div>
+        <font color="green">{{result}}</font>
+      </div><br><br>
+    </div>
+
+    <div class="col" *ngIf="flag">
+      <table class="table table-striped">
+
+
+        <thead>
+          <tr scope="row">
+
+
+          <th scope="col">Id </th>
+          <th scope="col">Name </th>
+          <th scope="col">DOB</th>
+          <th scope="col">Gender </th>
+          <th scope="col">Department</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stu of studentList" scope="row">
+            <td scope="col">{{stu.id}}</td>
+            <td scope="col">{{stu.name}}</td>
+            <td scope="col">{{stu.dob|date}}</td>
+            <td scope="col">{{stu.gender}}</td>
+            <td scope="col">{{stu.depart}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <li *ngFor="let stu of studentList">{{stu.id}}-{{stu.name}}-{{stu.dob|date}}-{{stu.gender}}-{{stu.depart}}</li>
+    </ul>-->
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    
+  </div>
+</div>
+
+
+
+
+ 

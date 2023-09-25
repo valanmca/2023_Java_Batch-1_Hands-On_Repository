@@ -1,0 +1,26 @@
+<p>oneway-databinding works!</p>
+<p>first-child works!</p>
+<h2><u>One way Data binding - Interpolation</u></h2>
+<h3>Component -> view = Only apply for plain text</h3>
+<b>Employeee Details:</b><br>
+ID : {{eId}}<br>
+Name : {{eName}}<br>
+Salary : {{eSalary}}<br><br>
+<b>Sum of 2 values : {{getAddition(10,10)}}</b><br><br>
+Employee Mailid : <input type="text" value="{{eMail}}"><br><br>
+Addition of 50 & 50 : <input type="text" value="{{getAddition(50,50)}}"><br>
+<img src="{{imagePath}}" height="{{imgHeight}}" width="{{imgWidth}}">
+<!-- Property Binding -->
+<h2><u>One way Data binding - Property Binding</u></h2>
+<h3>Component -> view = Only apply for html element attributes/properties</h3>
+Employee Mailid : <input type="text" [value]="eMail"><br><br>
+Addition of 50 & 50 : <input type="text" [value]="getAddition(50,50)"><br><br>
+<img [src]="imagePath" [height]="imgHeight" [width]="imgWidth">
+<!-- Event Binding -->
+<h2><u>One way Data binding - Event Binding</u></h2>
+<h3>View -> Component</h3>
+<button (click)="changeName()">Change Name</button>
+<button (click)="changeId()">Change Id</button>
+<button (click)="changeSalary()">Change Salary</button>
+<button (click)="changeImage()">Change Image</button>
+<br>

@@ -1,0 +1,54 @@
+<h1>Projects :- 4 </h1>
+<div class="assignment4"><br>
+    <h1 align="center">Multiplication Table</h1><br>
+    <div class="full table-responisve">
+        <div class="container-responsive table1" style="margin-left:150px">
+
+
+            <div style=" background-color:red; border-radius:50px ; width:200px" ><br>
+                <div style="width:40%;height:50px; margin-left:50px;" class="first" *ngFor= "let multiply of mul" >{{multiply}} * 1 = {{getMultiplication(1,multiply)}}</div>
+            </div>
+   
+            <div style="margin-left:20px; background-color:orange; border-radius:50px ; width:200px" ><br>
+                <div style="width:40%;height:50px; margin-left:50px;"  class="second" *ngFor= "let multiply of mul" >{{multiply}} * 2 = {{getMultiplication(2,multiply)}} </div>
+            </div>
+   
+            <div style="margin-left:20px;background-color:rgb(251, 185, 62); border-radius:50px ; width:200px" ><br>
+                <div style="width:40%;height:50px; margin-left:50px;"  class="three" *ngFor= "let multiply of mul">{{multiply}} * 3 = {{getMultiplication(3,multiply)}} </div>
+            </div>
+   
+            <div style="margin-left:20px; background-color: rgb(205, 153, 56); border-radius:50px ; width:200px" ><br>
+                <div style="width:40%;height:50px; margin-left:50px;"  class="four" *ngFor= "let multiply of mul">{{multiply}} * 4 = {{getMultiplication(4,multiply)}} </div>
+            </div>            
+           
+            <div style="margin-left:20px; background-color:rgb(60, 244, 60); border-radius:50px ; width:200px" ><br>
+                <div style="width:40%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" > {{multiply}} * 5 = {{getMultiplication(5,multiply)}} </div>
+            </div>          
+            <br><br>
+        </div>
+   
+            <div class="container-responsive table2" style="margin-left:150px">
+                    <div  style="background-color:green; border-radius:50px ; width:200px" ><br>
+                        <div style="width:40%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" class="six" >{{multiply}} * 6 = {{getMultiplication(6,multiply)}} </div>
+                    </div>
+   
+                    <div  style="margin-left:20px;background-color:rgb(27, 206, 255); border-radius:50px ; width:200px" ><br>
+                        <div style="width:40%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" class="seven" >{{multiply}} * 7 = {{getMultiplication(7,multiply)}} </div>
+                    </div>
+   
+                    <div style="margin-left:20px; background-color:blue; border-radius:50px ; width:200px" ><br>
+                        <div style="width:40%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" class="eight" >{{multiply}} * 8 = {{getMultiplication(8,multiply)}} </div>
+                    </div>
+   
+                    <div style="margin-left:20px;background-color:rgb(97, 97, 249); border-radius:50px ; width:200px" ><br>
+                        <div style="width:40%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" class="nine" >{{multiply}} * 9 = {{getMultiplication(9,multiply)}} </div>
+                    </div>    
+   
+                    <div style="margin-left:20px;background-color:violet; border-radius:60px ; width:228px" ><br>
+                        <div style="width:42%;height:50px; margin-left:50px;"  class="five" *ngFor= "let multiply of mul" class="ten" >{{multiply}} * 10 = {{getMultiplication(10,multiply)}} </div>
+                    </div>
+                </div>
+            <br>
+    </div>
+   
+    </div>

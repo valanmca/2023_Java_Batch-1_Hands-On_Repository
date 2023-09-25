@@ -1,0 +1,53 @@
+/*body{
+    border: 3px solid black;
+    width: 100%;
+    margin-top:100px;
+}*/
+
+.fruits{
+    display: flex;
+    position: absolute;
+}
+.veg{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.water{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.carbo{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.calorie{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+b{
+    border: 5px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+
+table{
+    width: 800px;
+    border: 15px solid black;
+    border-left: none;
+    border-right: none;
+    height: 480px;
+    margin-top:100px;
+    padding-top:100px;
+}
+.header{
+    background-color: rgb(234, 234, 234);
+    width: 800px;
+    margin-left: 25%;
+    /*height:100px;*/
+}

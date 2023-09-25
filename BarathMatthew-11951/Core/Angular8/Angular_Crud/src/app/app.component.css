@@ -1,0 +1,30 @@
+.header{
+    border: 2px solid goldenrod;
+    height: 100px;
+    width: 90%;
+    left: 60px;
+    position: absolute;
+
+
+}
+
+
+.center{
+    border: 2px solid goldenrod;
+    height: 500px;
+    width: 63%;
+    position: absolute;
+    left:60px;
+    top :130px;
+}
+
+
+.right{
+    border: 2px solid goldenrod;
+    position:absolute;
+    height: 500px;
+    width: 25%;
+    right: 66px;
+    top: 130px;
+    padding-top: 100px;
+}

@@ -1,0 +1,10 @@
+<h2>attribute-directives component works!</h2>
+<div>
+    <h1 [ngStyle]="myStyle">Attribute Directive Example - Change style </h1>
+    <button type="button" (click)="changeStyle()">Change Style</button>
+    <h1 [style.color]="myColor">Attribute Directive Example - Change color</h1>
+    <button type="button" (click)="changeColor()">Change Style</button>
+    <h1 [ngClass]="myClass">Example for ngClass1</h1>
+    <h1 [ngClass]="myClassChange">Example for ngClass2</h1>
+    <button type="button" (click)="changeClass()">Change Class</button>
+</div>

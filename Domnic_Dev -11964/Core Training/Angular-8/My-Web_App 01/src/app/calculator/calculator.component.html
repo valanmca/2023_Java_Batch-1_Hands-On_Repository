@@ -1,0 +1,31 @@
+<div id="divm">
+<div id="div1">
+    <p>calculator service</p>
+<h3>Addition :{{sum}}</h3>
+<h3>Substraction :{{sub}}</h3>
+<h3>Multiplication :{{mul}}</h3>
+<h3>Division :{{div}}</h3>
+</div>
+<br>
+
+    <table>
+        <br>
+        <tr>
+            
+            <td colspan="2">Num1:<input type="number" [(ngModel)]="num1"></td>
+
+            <td colspan="2">Num2:<input type="number" [(ngModel)]="num2"></td>
+        </tr>
+
+<tr>
+    <td colspan="4"><button (click)="getadd()" id="f_btn">Add</button><button (click)="getsub()">Sub</button><button (click)="getmul()">Mul</button><button (click)="getdiv()">Div</button></td>
+</tr>
+<tr>
+    <td colspan="4"><label for="">Res:{{res}}</label></td>
+
+</tr></table>
+<br>
+</div>
+<div id="fact">
+<h3>Factorial :{{fact}}</h3>
+</div>

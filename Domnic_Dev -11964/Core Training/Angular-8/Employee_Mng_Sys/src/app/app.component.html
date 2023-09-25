@@ -1,0 +1,62 @@
+<div id="d1">
+  <h3> Employee Management System </h3>
+</div>
+<div id="d2">
+  <form [formGroup]="myForm" >
+    <label for="id">Employee Id</label>
+    <br>
+    <input type="text" formControlName="id">
+    <div name="id" *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+      <div *ngIf="myForm.get('id')!.hasError('required')">
+        <font>Id is required</font>
+      </div>
+      <div *ngIf="myForm.get('id')!.hasError('pattern')">
+        <font>Id is invalid</font>
+      </div>
+    </div>
+     <br>
+
+    <label for="name">Employee name</label>
+    <br>
+    <input type="text" formControlName="name">
+    <div  name="name" *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+      <div *ngIf="myForm.get('name')!.hasError('required')">
+        <font>Name is required</font>
+      </div>
+      <div *ngIf="myForm.get('name')!.hasError('pattern')">
+        <font>Name is invalid</font>
+      </div>
+    </div>
+
+      <br>
+      <label for="salary">Employee Salary</label>
+      <br>
+      <input type="text" formControlName="salary">
+      <div name="salary" *ngIf="myForm.get('salary')!.touched && myForm.get('salary')!.invalid">
+        <div *ngIf="myForm.get('salary')!.hasError('required')">
+          <font>Salary is required</font>
+        </div>
+        <div *ngIf="myForm.get('salary')!.hasError('pattern')">
+          <font>Salary is invalid</font>
+        </div>
+      </div>
+      <br>
+      <br>
+      <button class="btn btn-success" [disabled]="myForm.invalid" (click)="InsertEmployee(myForm.value)">Insert</button> 
+      <button class="btn btn-danger"[disabled]="myForm.invalid" (click)="DeleteEmployee(myForm.value)">Delete</button> 
+      <button class="btn btn-primary"[disabled]="myForm.invalid" (click)="UpdateEmployee(myForm.value)" >Update</button>
+      <br>
+      <font id="result"> <b>{{result}}</b> </font>
+</form>
+
+
+</div>
+
+
+<div id="d3">
+  <br>
+  <br>
+  <ul>
+    <li *ngFor="let emp of empList"><b>{{emp.id}}-{{emp.name}}-{{emp.salary}}</b></li>
+  </ul>
+</div>

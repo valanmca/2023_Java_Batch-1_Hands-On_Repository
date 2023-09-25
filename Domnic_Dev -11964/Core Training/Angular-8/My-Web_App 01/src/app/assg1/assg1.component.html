@@ -1,0 +1,28 @@
+<p>assg1 (Factorial) </p>
+<table>
+    <tr>
+        <th>Numbers</th>
+   
+       <th>Factorial</th>
+    </tr>
+    <tr><td>1</td> <td>{{getfact(1)}}</td> </tr>
+    <tr><td>2</td> <td>{{getfact(2)}}</td> </tr>
+    <tr><td>3</td> <td>{{getfact(3)}}</td> </tr>
+    <tr><td>4</td> <td>{{getfact(4)}}</td> </tr>
+    <tr><td>5</td> <td>{{getfact(5)}}</td> </tr>
+    <tr><td>6</td> <td>{{getfact(6)}}</td> </tr>
+    <tr><td>7</td> <td>{{getfact(7)}}</td> </tr>
+    <tr><td>8</td> <td>{{getfact(8)}}</td> </tr>
+    <tr><td>9</td> <td>{{getfact(9)}}</td> </tr>
+    <tr><td>10</td><td>{{getfact(10)}}</td> </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <th>Numbers</th>
+   
+       <th>Factorial</th>
+    </tr>
+    <tr *ngFor="let Fac of Factorial">
+    <td>{{Fac}}</td> <td>{{getfact(Fac)}}</td> </tr>
+</table>

@@ -1,0 +1,12 @@
+#div1{
+    border: 2px solid red;
+    position: absolute;
+    left: 30%;
+    height: 200px;
+    width: 400px;
+    border-radius: 10%;
+}
+p{
+    align-content: center;
+    
+}

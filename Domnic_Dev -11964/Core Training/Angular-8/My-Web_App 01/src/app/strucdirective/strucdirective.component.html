@@ -1,0 +1,19 @@
+<p>strucdirective </p>
+<button (click)="changeFlag()">Show and Hide</button>
+<div *ngIf="flag" id="div1">
+
+    <p>Structure Directive </p>
+    <ul>
+        <li (click) = "setSelectedVehicle(vechiles)" *ngFor="let vechiles of vehicle"> {{vechiles}}</li>
+         </ul>
+        
+         <br>
+       <b>  You have Selected : {{ selectedVehicle }}  </b>
+<br>
+<div [ngSwitch]="selectedVehicle" >
+<font color="green" *ngSwitchCase="'Two Wheeler'"> <b>Bike</b> </font>
+<font color="green" *ngSwitchCase="'Three Wheeler'"> <b>Auto</b> </font>
+<font color="green" *ngSwitchCase="'Four Wheeler'"> <b>Car</b> </font>
+<font color="red" *ngSwitchDefault> <b>Invalid Selection</b> </font>
+</div>
+</div>

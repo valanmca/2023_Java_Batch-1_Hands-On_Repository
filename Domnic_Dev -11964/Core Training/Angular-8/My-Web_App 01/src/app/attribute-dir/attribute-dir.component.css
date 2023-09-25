@@ -1,0 +1,15 @@
+div{
+    border: 2px solid blue;
+    width: 350px;
+    margin-top: 300px;
+}
+.MyClass1{
+    color: red;
+    font-family: sans-serif;
+
+
+}
+.MyClass2{
+    color:yellowgreen;
+    font-family: sans-serif;
+}

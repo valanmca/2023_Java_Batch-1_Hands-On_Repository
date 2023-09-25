@@ -1,0 +1,33 @@
+#div1{
+    border: 1px solid black;
+    width: 35%;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 30%;
+}
+
+table{
+    border: 1px solid;
+  margin-left: 30%;
+
+}
+button{
+    margin-right: 4%;
+    margin-top: 5%;
+
+}
+#f_btn
+{
+    margin-left: 25%;
+}
+label{
+    margin-left: 45%;
+    margin-top: 15%;
+    border: 2px solid;
+}
+#fact{
+    border: 1px solid;
+    width: 20%;
+    position: absolute;
+    left: 38%;
+}

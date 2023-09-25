@@ -1,0 +1,22 @@
+<p>Forms-reactive</p>
+
+<div class="form_container">
+
+    <form [formGroup]= "myForm" (ngSubmit)= "myFunction(myForm.value)">
+        <label for="name">Enter name</label><input type="text" formControlName="name">
+        <div *ngIf ="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+            <div *ngIf ="myForm.get('name')!.hasError('required')">
+                <font>Name is required</font>
+            </div>
+            <div *ngIf ="myForm.get('name')!.hasError('pattern')">
+                <font>Name is invalid</font>
+            </div>
+
+            
+
+
+</div>
+<br>
+<button [disabled]="myForm.invalid">Register</button>
+</form>
+</div>

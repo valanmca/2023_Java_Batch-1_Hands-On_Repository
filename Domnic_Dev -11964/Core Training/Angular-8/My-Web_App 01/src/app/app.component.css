@@ -1,0 +1,12 @@
+#h1-1{
+    color: green;
+    text-align: center;
+}
+div{
+    text-align: center;
+    
+    border: 2px solid red;
+    height: 200px;
+    width: 300px;
+    border-radius: 10%;
+}

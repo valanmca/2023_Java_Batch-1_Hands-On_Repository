@@ -1,0 +1,38 @@
+body{
+    background-color: green;
+}
+.div2{
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    
+   
+}
+font{
+    color: red;
+}
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+  }
+  button{
+    background-color: limegreen;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 25%;
+  }
+  form{
+    margin-left: 5%;
+  }
+  p{
+    color: white;
+    font-weight: bolder;
+  }

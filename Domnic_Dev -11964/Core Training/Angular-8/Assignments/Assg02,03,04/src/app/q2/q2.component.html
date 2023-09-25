@@ -1,0 +1,90 @@
+
+<body style="margin-top: 2000px;">
+ 
+    <br><br>
+        <div class="div2">
+                <form [formGroup]="myform">
+                <img src="https://t3.ftcdn.net/jpg/01/69/36/46/360_F_169364673_GvrwdPmhfgxyHYPQXiZoeWCmmsLX8FSF.jpg" width="250" height="150" alt=""><br>
+                <label> FIRST NAME</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>LAST NAME</label><br>
+                <input type="text" size="14" formControlName="fname">&nbsp;&nbsp;<input type="text" size="6" formControlName="lname"><div *ngIf ="myform.get('fname')!.touched && myform.get('fname')!.invalid">
+                    <div *ngIf ="myform.get('fname')!.hasError('required')">
+                        <font >*FirstName required</font>
+                    </div>
+                    <div *ngIf ="myform.get('fname')!.hasError('pattern')">
+                        <font >*Invalid firstname</font>
+                    </div>
+                </div>
+                <div *ngIf ="myform.get('lname')!.touched && myform.get('lname')!.invalid">
+                    <div *ngIf ="myform.get('lname')!.hasError('required')">
+                        <font >*Lastname required</font>
+                    </div>
+                    <div *ngIf ="myform.get('lname')!.hasError('pattern')">
+                        <font >*Invalid lastname</font>
+                    </div>
+                </div>
+   
+     <br>
+                <label>USERNAME</label><br>
+                <input type="text" size="28" formControlName="uname">
+                <div *ngIf ="myform.get('uname')!.touched && myform.get('uname')!.invalid">
+                    <div *ngIf ="myform.get('uname')!.hasError('required')">
+                        <font >*Username required</font>
+                    </div>
+                    <div *ngIf ="myform.get('uname')!.hasError('pattern')">
+                        <font >*invalid username</font>
+                    </div>
+                </div>
+    <br>
+                <label>EMAIL</label><br>
+                <input type="text" size="28" formControlName="mail">
+                <div *ngIf ="myform.get('mail')!.touched && myform.get('mail')!.invalid">
+                    <div *ngIf ="myform.get('mail')!.hasError('required')">
+                        <font >*Email required</font>
+                    </div>
+                    <div *ngIf ="myform.get('mail')!.hasError('pattern')">
+                        <font >*invalid email</font>
+                    </div>
+                </div>
+    <br>
+                <label>PH.NUMBER</label><br>
+                <input type="text" size="28" formControlName="phnum">
+                <div *ngIf ="myform.get('phnum')!.touched && myform.get('phnum')!.invalid">
+                    <div *ngIf ="myform.get('phnum')!.hasError('required')">
+                        <font >*Phone number required</font>
+                    </div>
+                    <div *ngIf ="myform.get('phnum')!.hasError('pattern')">
+                        <font >*invalid Phonenumber</font>
+                    </div>
+                </div>
+    <br>
+                <label>PASSWORD</label><br>
+                <input type="text" size="28" formControlName="pass">
+                <div *ngIf ="myform.get('pass')!.touched && myform.get('pass')!.invalid">
+                    <div *ngIf ="myform.get('pass')!.hasError('required')">
+                        <font >*Password required</font>
+                    </div>
+                    <div *ngIf ="myform.get('pass')!.hasError('pattern')">
+                        <font >*invalid Password</font>
+                    </div>
+                </div>
+    <br>
+                <label>CONFIRM PASSWORD</label><br>
+                <input type="text" size="28" formControlName="cnpass">
+                <div *ngIf ="myform.get('cnpass')!.touched && myform.get('cnpass')!.invalid">
+                    <div *ngIf ="myform.get('cnpass')!.hasError('required')">
+                        <font >*firstName required</font>
+                    </div>
+                    <div *ngIf ="myform.get('cnpass')!.hasError('pattern')">
+                        <font >*invalid format</font>
+                    </div>
+                </div>
+    <br><br>
+                <button [disabled]="myform.invalid" class="btn btn-outline-success" (click)="register(myform.value)">SUBMIT</button>
+            </form>
+        </div>
+    <br>
+    <br>  
+    </body>
+   
+
+

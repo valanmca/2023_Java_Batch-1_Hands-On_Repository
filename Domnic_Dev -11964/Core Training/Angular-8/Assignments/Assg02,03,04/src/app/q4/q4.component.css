@@ -1,0 +1,32 @@
+/* td{
+    text-align: center;
+} */
+
+.div1{
+      position:absolute;
+      top:100px;
+      left:50px;
+    
+      
+    }
+    
+    .div2{
+        position:absolute;
+      top:650px;
+      left:50px;
+      
+      
+      
+    }
+    table{
+      width:1000px;
+      height:500px;
+      text-align: center;
+      margin-left: 100px;
+      margin-right: 40px;
+      
+    }
+    div{
+      position:absolute;
+      top:1250px;
+    }

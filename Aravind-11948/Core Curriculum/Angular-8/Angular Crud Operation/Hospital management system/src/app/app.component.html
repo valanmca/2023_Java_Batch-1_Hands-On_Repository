@@ -1,0 +1,67 @@
+<div class="head">
+
+  <h3 style="text-align: center;"> Employee Management System</h3>
+</div>
+
+
+<div class="left">
+ <div class="div1">
+  <form #myform="ngForm">
+    <label > Patient Name:</label><br>
+    <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]+">
+    <div *ngIf="name.touched">
+      <div *ngIf="name.errors?.['required']">
+        <font color="red">Name is required</font>
+      </div>
+      <div *ngIf="name.errors?.['pattern']">
+        <font color="red">Invalid Name </font>
+      </div>
+    </div>
+
+    <br><br>
+
+    <label > Patient Id:</label><br>
+    <input type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+    <div *ngIf="id.touched">
+      <div *ngIf="id.errors?.['required']">
+        <font color="red">Id is required</font>
+      </div>
+      <div *ngIf="id.errors?.['pattern']">
+        <font color="red">Invalid Id</font>
+      </div>
+    </div>
+
+    <br><br>
+
+    <label > Patient Address:</label><br>
+    <input type="text" name="add" #add="ngModel" ngModel required pattern="[0-9/]+/[a-zA-z, 0-9-]+">
+    <div *ngIf="add.touched">
+      <div *ngIf="add.errors?.['required']">
+        <font color="red">Address is required</font>
+      </div>
+      <div *ngIf="add.errors?.['pattern']">
+        <font color="red">Invalid Add</font>
+      </div>
+    </div><br><br>
+
+    <button class="btn btn-danger" (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger"(click)="update(myform.value)" >Update</button>&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger" (click)="delete(myform.value)">Delete</button>&nbsp;&nbsp;&nbsp;
+  </form>
+  <br>
+  <font color="green">{{result}}</font>
+  
+  
+
+</div>
+
+
+</div>
+
+<div class="right">
+  <ul>
+    <li *ngFor="let pat of patList">{{pat.name}}-{{pat.id}}-{{pat.address}}</li>
+  </ul>
+ 
+
+</div>

@@ -1,0 +1,163 @@
+<!-- <div class="conatiner"> -->
+  <div class="row">
+    <div class="col">
+      <!-- <p>
+        <mat-toolbar color="primary">
+         
+          <span>Student Management System</span>
+          <span class="example-spacer"></span>
+          
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+        </mat-toolbar>
+      </p> -->
+
+      <p>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <span>Stusent ManageMent System</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-toolbar  class="tool">
+          <mat-toolbar-row >
+            <span class="example-spacer"></span>
+            <span><button   class="btn btn-secondary "  (click)="changediv1()">Add Employee
+           
+            </button></span>
+            
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </p>
+    </div>
+  </div>
+<!-- </div> -->
+<br><br>
+
+
+
+<div class="conatiner">
+  <div class="row">
+    <div class="col" *ngIf="div">
+      
+      <form #myform="ngForm" >
+
+        <label >Student Id:</label> <br>
+        <mat-form-field class="example-full-width">
+         
+          <input matInput type="text" placeholder="Id"  name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+        </mat-form-field>
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+            <font color="red">Name required</font>
+          </div>
+          <div *ngIf="id.errors?.['pattern']">
+            <font color="red"> Invalid Name </font>
+          </div>
+        </div> <br>
+
+        <label >Student Name:</label> <br>
+        <mat-form-field class="example-full-width">
+         
+          <input matInput type="text" placeholder="Name"  name="name" #name="ngModel" ngModel required pattern="[a-zA-Z ]+">
+        </mat-form-field><br><br>
+
+        <label >DOB:</label> <br>
+        <mat-form-field class="dob">
+         
+          <input matInput [matDatepicker]="picker" name="dob" #dob="ngModel" ngModel required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field><br><br>
+
+        <label >Gender:</label> <br>
+        <mat-radio-group aria-label="Select an option"  name="gender" #gender="ngModel" ngModel required >
+          <mat-radio-button  type="radio" name="gender" value="Male">Male</mat-radio-button>
+          <mat-radio-button type="radio"  name="gender" value="Female">Female</mat-radio-button>
+        </mat-radio-group><br><br>
+
+        <label >Department:</label> <br>
+
+        <mat-form-field class="department">
+         
+        <mat-select name="depart" #depart="ngModel" ngModel required>
+            <mat-option value="" >Select Cource </mat-option>
+            <mat-option  value="CSE" >CSE</mat-option>
+            <mat-option  value="IT" >IT</mat-option>
+            <mat-option value="EEE" >EEE</mat-option >
+             <mat-option  value="ECE" >ECE</mat-option>
+        </mat-select>
+        </mat-form-field> <br><br>
+
+        <button class="btn btn-danger"  (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger"   (click)="update(myform.value)">update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="delete(myform.value)" >delete</button>&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+        <button class="btn btn-danger " (click)="changediv1()">View Details</button> 
+        
+        <!-- <mat-form-field>
+          
+          <select matNativeControl required>
+            <option value="">Select Cource</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="EEE">EEE</option>
+            <option value="ECE">ECE</option>
+          </select>
+        </mat-form-field> -->
+        
+ 
+
+
+      </form><br><br>
+      <font color="green"> {{result}}</font>
+      
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
+<div class="conatiner">
+  <div class="row" >
+    <div class="col" *ngIf="flag">
+      <table class="table table-striped ">
+        <thead>
+          <tr scope="row">
+            <th scope="col">Id</th>
+            <th scope="col">NAME</th>
+            <th scope="col">DOB</th>
+            <th scope="col">GENDER</th>
+            <th scope="col">DEPARTMENT</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr scope="row" *ngFor="let stu of stuList">
+            <td scope="col"> {{stu.id}}</td>
+            <td scope="col">{{stu.name}}</td>
+            <td scope="col">{{stu.dob|date}}</td>
+            <td scope="col">{{stu.gender}}</td>
+            <td scope="col">{{stu.depart}}</td>
+          </tr>
+        </thead>
+      </table>
+      
+    </div>
+  </div>
+</div>

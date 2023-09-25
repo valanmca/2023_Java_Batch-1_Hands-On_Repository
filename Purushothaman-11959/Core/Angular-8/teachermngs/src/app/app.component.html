@@ -1,0 +1,145 @@
+<div>
+  <p>
+    <mat-toolbar color="primary">
+      
+      <label>Teacher Management System</label>
+      <span class="example-spacer"></span>
+      <button mat-raised-button (click)="changediv()">ADD</button>
+
+      
+
+    </mat-toolbar>
+  </p>
+  
+</div>
+<div class="container">
+  <div class="row">
+<div class="col" *ngIf="flag">
+    <form [formGroup]="myform">
+      <table>
+        
+        <tr><td><label class="la">Teacher Id:</label></td><td> 
+          <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input type="text"
+                 placeholder="Enter Id"
+                 aria-label="Number"
+                 matInput
+                formControlName="id">
+        </mat-form-field></td><td>
+        <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+          <div *ngIf="myform.get('id')!.hasError('required')">
+            <font color="red">Id required</font>
+          </div>
+          <div *ngIf="myform.get('id')!.hasError('pattern')">
+            <font color="red">*Invalid Id number</font>
+          </div>
+        </div></td>
+        </tr>
+
+        <tr><td><label class="la">Teacher Name:</label></td><td> <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input type="text"
+                 placeholder="Enter name"
+                 aria-label="Name"
+                 matInput
+                formControlName="name">
+        </mat-form-field></td><td>
+        <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+          <div *ngIf="myform.get('name')!.hasError('required')">
+            <font color="red">*Name required</font>
+          </div>
+          <div *ngIf="myform.get('name')!.hasError('pattern')">
+            <font color="red">*Invalid Name</font>
+          </div>
+        </div></td>
+      </tr>
+
+        <tr><td><label class="la">Teacher Email:</label></td><td> <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="text"
+                 placeholder="Enter email"
+                 aria-label="email"
+                 matInput
+                formControlName="email">
+        </mat-form-field></td><td>
+          <div *ngIf="myform.get('email')!.touched && myform.get('email')!.invalid">
+            <div *ngIf="myform.get('email')!.hasError('required')">
+              <font color="red">Email required</font>
+            </div>
+            <div *ngIf="myform.get('email')!.hasError('pattern')">
+              <font color="red">*Invalid Email</font>
+            </div>
+          </div></td></tr>
+
+          <tr><td><label class="la">Teacher Qualification:</label></td><td> <mat-form-field class="example-full-width">
+            <mat-label>Qualification</mat-label>
+            <input type="text"
+                   placeholder="Enter qualification"
+                   aria-label="qualification"
+                   matInput
+                  formControlName="qualification">
+          </mat-form-field></td><td>
+            <div *ngIf="myform.get('qualification')!.touched && myform.get('qualification')!.invalid">
+              <div *ngIf="myform.get('qualification')!.hasError('required')">
+                <font color="red">Qualification required</font>
+              </div>
+            </div></td></tr>
+
+            <tr><td><label class="la">Teacher Location:</label></td><td><mat-form-field class="example-full-width">
+              <mat-label>Location</mat-label>
+              <input type="text"
+                     placeholder="Enter location"
+                     aria-label="location"
+                     matInput
+                    formControlName="location">
+            </mat-form-field> </td><td>
+              <div *ngIf="myform.get('location')!.touched && myform.get('location')!.invalid">
+                <div *ngIf="myform.get('location')!.hasError('required')">
+                  <font color="red">Location required</font>
+                </div>
+              </div></td></tr>
+  
+
+
+
+
+       
+          
+        <tr><td colspan="2">
+          <button mat-raised-button color="primary" [disabled]="myform.invalid" (click)="insertdetails(myform.value)">Insert</button>&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button (click)="updatedetails(myform.value)">Update</button>&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="warn" (click)="deletedetails(myform.value)">Delete</button></td></tr>
+         <br>
+          <tr><td colspan="3"><mat-card>
+            <mat-card-content><font color="green">{{result}}</font></mat-card-content>
+          </mat-card>
+            </td></tr>
+          
+      </table>
+      
+    </form>
+</div>
+
+<div class="col">
+  <br><br><br>
+  <h4><b>RECORDS</b></h4>
+  <table class="table table-striped">
+    <thead>
+      <tr scope="row">
+        <th scope="col">Teacher Id</th>
+        <th scope="col">Teacher Name</th>
+        <th scope="col">Teacher Email</th>
+        <th scope="col">Teacher Qualification</th>
+        <th scope="col">Teacher Location</th></tr></thead>
+    <tbody><tr *ngFor="let teacher of teacherList" scope="row">
+      <td scope="col">{{teacher.id}}</td>
+      <td scope="col">{{teacher.name}}</td>
+      <td scope="col">{{teacher.email}}</td>
+      <td scope="col">{{teacher.qualification}}</td>
+      <td scope="col">{{teacher.location}}</td></tr></tbody>
+  </table>
+    
+</div>
+</div>
+</div>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="Header"><p>Employee Management System</p></div>
+        <div class="Content">
+          <form [formGroup]="myform">
+            <table>
+
+              <tr>
+                <td><label>Employee id:</label></td>
+                <td colspan="2"><input type="text" formControlName="id"></td>
+              
+            <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+              <div *ngIf="myform.get('id')!.hasError('required')">
+                <font color="red">Employee id is required</font>
+              </div>
+              <div *ngIf="myform.get('id')!.hasError('pattern')">
+                <font color="red">Invalid Employee id</font>
+              </div>
+            </div>
+          </tr>
+
+            <tr>
+              <td><label>Employee Name:</label></td>
+              <td colspan="2"><input type="text" formControlName="name"></td>
+            
+            <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+              <div *ngIf="myform.get('name')!.hasError('required')">
+                  <font color="red">Employee Name is required</font>
+              </div>
+              <div *ngIf="myform.get('name')!.hasError('pattern')">
+                  <font color="red">Invaild Employee Name</font>
+              </div>
+          </div>
+        </tr>
+
+          <tr>
+            <td><label>Employee Salary:</label></td>
+            <td colspan="2"><input type="text" formControlName="salary"></td>
+            <div *ngIf="myform.get('salary')!.touched && myform.get('salary')!.invalid">
+              <div *ngIf="myform.get('salary')!.hasError('required')">
+                <font color="red">Employee salary is required</font>
+              </div>
+              <div *ngIf="myform.get('salary')!.hasError('pattern')">
+                <font color="red">Employee salary is invalid</font>
+              </div>
+            </div>
+          </tr>
+
+          <tr>
+            <td><button  class="btn btn-secondary" [disabled]="myform.invalid" (click)="InsertEmployee(myform.value)">Insert</button></td>
+            <td><button  class="btn btn-danger" [disabled]="myform.invalid" (click)="deleteEmployee(myform.value)">Delete</button></td>
+            <td><button  class="btn btn-warning" [disabled]="myform.invalid" (click)="updateEmployee(myform.value)">Update</button></td>
+          </tr>
+          <tr><font color="green"><b>{{result}}</b></font></tr>
+            
+          </table>
+          </form>
+          
+        </div>
+        <div class="Right">
+          <ul>
+            <li *ngFor="let emp of empList">{{emp.id}}-{{emp.name}}-{{emp.salary}}</li>
+          </ul>
+        </div>
+    </body>
+</html>

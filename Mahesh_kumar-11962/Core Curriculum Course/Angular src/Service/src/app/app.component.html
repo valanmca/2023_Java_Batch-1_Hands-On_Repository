@@ -1,0 +1,26 @@
+
+<br>
+<h1 style="text-align: center;">Service for Arithmetic Opreation</h1>
+<br><p style="text-align: center;">COMPONENT - 01 </p>
+<br>
+<div class="input-group" style="width: fit-content; margin: auto;">
+  <span class="input-group-text">First number</span>
+  <input type="number" aria-label="First no" class="form-control" [(ngModel)]="num1">
+  <span class="input-group-text">Second number</span>
+  <input type="number" aria-label="Second no" class="form-control" [(ngModel)]="num2">
+</div>
+<br>
+<button type="button" class="btn btn-success" (click)="getAdd()" style="margin:20px;margin-left: 43%;">Add</button> 
+<button type="button" class="btn btn-success" (click)="getSub()">Sub</button>
+<br>
+<br>
+<label style="text-align: center;margin-left: 46%;"> Result : {{res}} </label>
+<br>
+<hr>
+<app-comp2></app-comp2>
+<br>
+<hr>
+<app-comp3></app-comp3>
+<hr>
+<br>
+<app-pipe-concept></app-pipe-concept>

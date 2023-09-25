@@ -1,0 +1,112 @@
+<h1>Template Driven Form (TDF)</h1> <br>
+<div>
+  <form #myForm="ngForm" (ngSubmit)=" Register(myForm.value)">
+    <div class="input-group flex-nowrap" id="input_group">
+      <span class="input-group-text" id="addon-wrapping">Name </span>
+      <input type="text" class="form-control" aria-label="Username" name="name" #name="ngModel" ngModel required
+        pattern="[a-zA-Z][a-zA-Z ]+" aria-describedby="addon-wrapping">
+    </div>
+    <div *ngIf="name.touched">
+      <div *ngIf="name.errors?.['required']">
+        <font color="red"><b>Name Required</b></font>
+      </div>
+      <div *ngIf="name.errors?.['pattern']">
+        <font color="red"><b>Invalid name</b></font>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="input-group flex-nowrap" id="input_group">
+      <span class="input-group-text" id="addon-wrapping">Email</span>
+      <input type="email" class="form-control" name="email" #email="ngModel" ngModel required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="addon-wrapping">
+    </div>
+
+    <div *ngIf="email.touched">
+      <div *ngIf="email.errors?.['required']">
+        <font color="red"><b>Email required</b></font>
+      </div>
+      <div *ngIf="email.errors?.['pattern']">
+        <font color="red"><b>Invalid email</b></font>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="input-group flex-nowrap" id="input_group">
+      <span class="input-group-text" id="addon-wrapping">Mobile</span>
+      <input type="tel" class="form-control" name="mobile" #mobile="ngModel" ngModel required maxlength="10"
+        minlength="10" aria-describedby="addon-wrapping">
+    </div>
+    <div *ngIf="mobile.touched">
+      <div *ngIf="mobile.errors?.['required']">
+        <font color="red"><b>Mobile Number
+            required</b></font>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="input-group flex-nowrap" id="input_group">
+      <span class="input-group-text" id="addon-wrapping">Age</span>
+      <input type="text" class="form-control" name="age" #age="ngModel" ngModel required maxlength="2" pattern="[0-9]+"
+        aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+    <div *ngIf="age.touched">
+      <div *ngIf="age.errors?.['required']">
+        <font color="red"><b>Age required</b></font>
+      </div>
+      <div *ngIf="age.touched">
+        <div *ngIf="age.errors?.['pattern']">
+          <font color="red"><b>Invalid age</b></font>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="input-group mb-3" id="input_group">
+      <label class="input-group-text" for="inputGroupSelect01">Choose Your Workplace</label>
+      <select class="form-select" id="inputGroupSelect01"name=Location #Location="ngModel" ngModel required>
+        <option selected></option>
+        <option value="Chennai">Chennai</option>
+        <option value="Virdhunagar">Virdhunagar</option>
+        <option value="Work from Home">Work from Home</option>
+      </select>
+    </div>
+    <br>
+    <button class="btn btn-outline-success" [disabled]="myForm.invalid">Register</button>
+  </form>
+</div>
+<br>
+<hr>
+<table class="table" style="width: 50%;margin-left: 28%;">
+  <thead class=" table table-dark">
+    <tr>
+      <th scope="col"> Property</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">User Name</th>
+      <td> {{Uname}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email ID</th>
+      <td> {{Uemail}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Age</th>
+      <td> {{Uage}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td> {{Uphone}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Location</th>
+      <td> {{Ulocation}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>

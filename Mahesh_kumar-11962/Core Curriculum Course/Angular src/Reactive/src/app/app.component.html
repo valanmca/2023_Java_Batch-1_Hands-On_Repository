@@ -1,0 +1,51 @@
+<p>reactive-form works!</p>
+<div class="form-container">
+  <form [formGroup]="myForm" (ngSubmit)="Function(myForm.value)">
+    <header>Registration form</header>
+    <label>Name:</label><input type="text" formControlName="name">
+    <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+      <div *ngIf="myForm.get('name')!.hasError('required')">
+        <font color="red">Name is Required</font>
+      </div>
+      <div *ngIf="myForm.get('name')!.hasError('pattern')">
+        <font color="red">Invalid Name </font>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <label>Email:</label><input type="text" formControlName="email">
+    <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+      <div *ngIf="myForm.get('email')!.hasError('required')">
+        <font color="red">Email is Required</font>
+      </div>
+      <div *ngIf="myForm.get('email')!.hasError('pattern')">
+        <font color="red">Invalid Email </font>
+      </div>
+    </div>
+    <br>
+    <label>Age:</label><input type="text" formControlName="age">
+    <div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+      <div *ngIf="myForm.get('age')!.hasError('required')">
+        <font color="red">age is Required</font>
+      </div>
+      <div *ngIf="myForm.get('age')!.hasError('pattern')">
+        <font color="red">Invalid age </font>
+      </div>
+    </div>
+    <br>
+
+    <label>Phone no:</label><input type="text" formControlName="phone">
+    <div *ngIf="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+      <div *ngIf="myForm.get('phone')!.hasError('required')">
+        <font color="red">phone no is Required</font>
+      </div>
+      <div *ngIf="myForm.get('phone')!.hasError('pattern')">
+        <font color="red">Invalid phone no </font>
+      </div>
+    </div>
+    <br>
+
+
+    <button [disabled]="myForm.invalid">register</button>
+  </form>

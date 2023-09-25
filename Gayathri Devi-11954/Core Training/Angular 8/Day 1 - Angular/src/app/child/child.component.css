@@ -1,0 +1,10 @@
+.childbox{
+    border: 3px solid green;
+    border-radius: 10px;
+    height:40px;
+    width: 80%; 
+    padding-top: 40px;   
+    margin-left: 50px;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<div matDialogTitle> Employee Form</div>
+
+<form [formGroup]="employeeForm" (ngSubmit)= "onSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input type="number" matInput placeholder="Id" formControlName = "id">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput placeholder="Name" formControlName = "name">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Company</mat-label>
+                <input type="text" matInput placeholder="Company" formControlName = "company">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName = "role" >
+                  <mat-option *ngFor="let role of roles" [value]="role">
+                    {{role}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">{{data ? 'Update' : 'Save'}}</button>
+</div>
+</form>

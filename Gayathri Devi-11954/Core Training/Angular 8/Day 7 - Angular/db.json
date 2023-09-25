@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 11954,
+      "name": "Raj",
+      "salary": "222222"
+    },
+    {
+      "id": "11958",
+      "name": "Naveen",
+      "salary": "800000"
+    },
+    {
+      "id": "01",
+      "name": "Pravin Raj",
+      "salary": "50000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,43 @@
+.header{
+    border: 2px solid navy;
+    height:80px;
+    /* left:10px; */
+    width: 100%;
+    /* right:50px; */
+    position: absolute;
+}
+.left{
+    border: 2px solid navy;
+    height:600px;
+    width : 63%;    
+    position: absolute;
+    top: 95px;
+    /* left:10px; */
+}
+.right{
+    border: 2px solid navy;
+    height:600px;
+    width: 35%;
+    right : 5px;
+    top: 95px;
+    position: absolute;
+}
+.cntnt{
+    /* border: 2px solid navy; */
+    left : 10%;
+    width : 62%;  
+    top : 20%;
+    position: absolute;
+}
+input[type=text]{
+    width: 100%;
+    height:40px;
+}
+.ans{
+    /* border : 2px solid green; */
+    height: 50px;
+    width: 400px;
+    left : 150px;
+    bottom :20px;
+    position: absolute;
+}

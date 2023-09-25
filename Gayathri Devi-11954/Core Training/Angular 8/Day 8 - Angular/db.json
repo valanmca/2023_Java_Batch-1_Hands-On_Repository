@@ -1,0 +1,59 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "Category": "Fruites",
+      "freshness": "Brand New",
+      "price": 100000,
+      "comment": "idhpwoecnverigy39pw",
+      "date": "2023-09-02T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "orange",
+      "Category": "Vegetables",
+      "freshness": "Second Hand",
+      "price": 60,
+      "comment": "nil",
+      "date": "2023-09-16T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "grapes",
+      "Category": "Fruites",
+      "freshness": "Refuribished",
+      "price": 24,
+      "comment": "ghijfokadpsl",
+      "date": "2023-09-29T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "computer",
+      "Category": "Electronics",
+      "freshness": "Second Hand",
+      "price": 90000,
+      "comment": "ssss",
+      "date": "2023-09-23T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "mobile",
+      "Category": "Electronics",
+      "freshness": "Second Hand",
+      "price": 78956,
+      "comment": "nil",
+      "date": "2023-09-13T18:30:00.000Z",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

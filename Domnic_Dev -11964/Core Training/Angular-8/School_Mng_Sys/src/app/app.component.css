@@ -1,0 +1,41 @@
+
+/* 
+#div2{
+   
+    position: absolute;
+    height: 75%;
+    width: 60%;
+    top: 23%;
+} */
+.heading {
+    flex: 1 1 auto;
+  }
+font{
+    color: red;
+}
+/* #div3{
+   
+    position: absolute;
+    height: 75%;
+    width:37%;
+    top: 23%;
+    left: 62%;
+} */
+#heading{
+    text-align: center;
+}
+button{
+    margin: 4px;
+    color: antiquewhite;
+}
+form{
+    margin-left: 20%;
+   
+   
+}
+.dob,.example-full-width{
+    height: 60px;
+    width: 250px;
+    /* position: absolute; */
+}
+

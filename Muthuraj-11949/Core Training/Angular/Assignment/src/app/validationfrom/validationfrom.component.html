@@ -1,0 +1,32 @@
+<p>validationfrom works!</p>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" />
+    <div *ngIf="myForm.get('name').hasError('required') && myForm.get('name').touched">
+      Name is required.
+    </div>
+    <div *ngIf="myForm.get('name').hasError('minlength') && myForm.get('name').touched">
+      Name must be at least 3 characters long.
+    </div>
+
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+    <div *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched">
+      Email is required.
+    </div>
+    <div *ngIf="myForm.get('email').hasError('email') && myForm.get('email').touched">
+      Please enter a valid email address.
+    </div>
+  
+    <label for="age">Age:</label>
+    <input type="number" id="age" formControlName="age" />
+    <div *ngIf="myForm.get('age').hasError('required') && myForm.get('age').touched">
+      Age is required.
+    </div>
+    <div *ngIf="myForm.get('age').hasError('min') && myForm.get('age').touched">
+      Age must be at least 18.
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>

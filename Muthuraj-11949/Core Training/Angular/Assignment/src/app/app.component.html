@@ -1,0 +1,39 @@
+<h1><p>Assignment1</p></h1>
+<div class="div1">
+  <table>
+    <tr *ngFor="let b of a" cellspecign="100px">
+      <td style="background-color: red;color: antiquewhite;">{{b}}x{{a1}}={{getfactorial(a1,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;
+      <td style="background-color: red;color: antiquewhite;">{{b}}x2={{getfactorial(2,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;<td style="background-color: red;color: antiquewhite;">{{b}}x3={{getfactorial(3,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;<td style="background-color: red;color: antiquewhite;">{{b}}x4={{getfactorial(4,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <td style="background-color: red;color: antiquewhite;">{{b}}x5={{getfactorial(5,b)}}
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="div2">
+  <table>
+    <tr *ngFor="let b of a" >
+      <td style="background-color: rgb(4,85,14);color: antiquewhite;">{{b}}*{{6}}={{getfactorial(6,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;
+      <td style="background-color: rgb(16, 192, 154);color: antiquewhite;">{{b}}x7={{getfactorial(7,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;<td style="background-color: rgb(13, 22, 105);color: antiquewhite;">{{b}}x8={{getfactorial(8,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;<td style="background-color: rgb(252, 12, 200);color: antiquewhite;">{{b}}x9={{getfactorial(9,b)}}
+      </td>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <td style="background-color: rgb(194, 54, 84);color: antiquewhite;">{{b}}x10={{getfactorial(10,b)}}
+      </td>
+    </tr>
+  </table>
+</div>
+<app-nutrition></app-nutrition>
+<app-validationfrom></app-validationfrom>

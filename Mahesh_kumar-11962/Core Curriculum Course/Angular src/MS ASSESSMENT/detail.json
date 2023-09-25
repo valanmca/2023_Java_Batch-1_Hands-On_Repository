@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": "23",
+      "name": "mahesh",
+      "mail": "mahesh@gmail.com",
+      "phone": "8976564534",
+      "location": "45,Sivan mada veethi,sivakasi"
+    },
+    {
+      "id": "34",
+      "name": "hari",
+      "mail": "hari@gmail.com",
+      "phone": "8080989687",
+      "location": "67,tyghhb,chenai"
+    },
+    {
+      "id": "45",
+      "name": "muthu",
+      "mail": "muthu@gmail.com",
+      "phone": "5587877789",
+      "location": "45,thenkasi road,sankaran kovil"
+    },
+    {
+      "id": "67",
+      "name": "ganesh",
+      "mail": "ganesh@gmail.com",
+      "phone": "6778990900",
+      "location": "34,Main road,Madurai"
+    },
+    {
+      "id": "89",
+      "name": "ragu",
+      "mail": "ragu@gmail.com",
+      "phone": "8980798789",
+      "location": "43,north car street"
+    },
+    {
+      "id": "09",
+      "name": "joel",
+      "mail": "joe@gmail.com",
+      "phone": "4677878667",
+      "location": "78,Town cal str,svks"
+    },
+    {
+      "id": "899",
+      "name": "sivasankar",
+      "mail": "siva@gmail.com",
+      "phone": "9898898989",
+      "location": "68/A, North car str,Madurai."
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

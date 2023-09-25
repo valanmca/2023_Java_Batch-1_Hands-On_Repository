@@ -1,0 +1,13 @@
+div{
+    border: 3px solid green;
+    border-radius: 2%;
+    height: 30%;
+    width: 50%;
+     margin-top: 2%;
+    margin-left: 2%;
+
+}
+p{
+    color: green;
+    margin-left: 2%;
+}

@@ -1,0 +1,15 @@
+h1{
+    color: blueviolet;
+    text-align: center;
+}
+
+div{
+    height: 50%;
+    width: 55%;
+    border: 3px solid red; 
+    border-radius: 5px;
+}
+p{
+    color: red;
+    margin-left: 2%;
+}

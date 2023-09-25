@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": "11964",
+      "name": "Domnic",
+      "salary": "16000"
+    },
+    {
+      "id": "11963",
+      "name": "jebanIgnesh",
+      "salary": "15000"
+    },
+    {
+      "id": "6234",
+      "name": "naga",
+      "salary": "43215"
+    },
+    {
+      "id": "234",
+      "name": "DomnicDev",
+      "salary": "34567"
+    },
+    {
+      "id": "11961",
+      "name": "Naga",
+      "salary": "15000"
+    },
+    {
+      "id": "32",
+      "name": "Domnic",
+      "salary": "23456"
+    },
+    {
+      "id": "11968",
+      "name": "Shajiram",
+      "salary": "56809"
+    },
+    {
+      "id": "90",
+      "name": "Mahes",
+      "salary": "31000"
+    },
+    {
+      "id": "11922",
+      "name": "Rajesh",
+      "salary": "40000"
+    },
+    {
+      "id": "8980",
+      "name": "kamal",
+      "salary": "23980"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

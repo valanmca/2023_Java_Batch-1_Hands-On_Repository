@@ -1,0 +1,193 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>person</mat-icon>
+  </button>
+  <span>CUSTOMER MANAGEMENT SYSTEM</span>
+  <span class="example-spacer"></span>
+
+</mat-toolbar>
+
+
+<table class="table">
+  <tr class="row">
+    <td>
+
+    </td>
+    <!--result-->
+    <td>
+
+    </td>
+  </tr>
+</table>
+
+<form [formGroup]="myform">
+
+  <!--Customer id required-->
+
+
+  <div style="margin-left: 20%;padding-top: 5%;">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Customer ID</mat-label>
+      <input matInput type="text" formControlName="id">
+      <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+        <div *ngIf="myform.get('id')!.hasError('required')">
+
+          <font color="red" style="margin-left: 20%;">ID Required</font>
+        </div>
+        <div *ngIf="myform.get('id')!.hasError('pattern')">
+
+          <font color="red">Invalid ID </font>
+        </div>
+      </div>
+    </mat-form-field>
+
+    <br>
+    <!-- Customer Name-->
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Customer Name</mat-label>
+      <input matInput type="text" formControlName="name">
+      <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+        <div *ngIf="myform.get('name')!.hasError('required')">
+
+          <font color="red" style="margin-left: 20%;">Name Required</font>
+        </div>
+        <div *ngIf="myform.get('name')!.hasError('pattern')">
+
+          <font color="red">Invalid Name</font>
+        </div>
+      </div>
+    </mat-form-field>
+
+    <br>
+
+    <!--Customer Email id-->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Customer Email ID</mat-label>
+      <input matInput type="text" formControlName="mail">
+      <div *ngIf="myform.get('mail')!.touched && myform.get('mail')!.invalid">
+        <div *ngIf="myform.get('mail')!.hasError('required')">
+
+          <font color="red" style="margin-left: 20%;">Mail ID Required</font>
+        </div>
+        <div *ngIf="myform.get('mail')!.hasError('pattern')">
+
+          <font color="red">Invalid Mail ID</font>
+        </div>
+      </div>
+    </mat-form-field>
+
+    <br>
+
+    <!--Customer Phone Number-->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Customer Phone no</mat-label>
+      <input matInput type="text" formControlName="phone" maxlength="10" minlength="10">
+      <div *ngIf="myform.get('phone')!.touched && myform.get('phone')!.invalid">
+        <div *ngIf="myform.get('phone')!.hasError('required')">
+
+          <font color="red" style="margin-left: 20%;">Phone no Required</font>
+        </div>
+        <div *ngIf="myform.get('phone')!.hasError('pattern')">
+
+          <font color="red">Invalid Phone no</font>
+        </div>
+      </div>
+    </mat-form-field>
+
+    <br>
+
+    <!--Customer location-->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Address with location</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St,chennai" formControlName="location">
+      <div *ngIf="myform.get('location')!.touched">
+        <div *ngIf="myform.get('location')!.hasError('required')">
+          <font color="red" style="margin-left: 20%;">Customer location is Required</font>
+        </div>
+      </div>
+    </textarea>
+    </mat-form-field>
+
+  </div>
+
+
+  <br>
+  <br>
+  <button style="margin-left: 15%;" mat-fab extended color="primary" (click)="InsertCustomer(myform.value)"
+    [disabled]="myform.invalid">
+    <mat-icon>add</mat-icon>
+    Insert
+  </button>
+  <button mat-fab extended color="accent" (click)="UpdateCustomer(myform.value)" [disabled]="myform.invalid">
+    <mat-icon>edit</mat-icon>
+    Update
+  </button>
+  <button mat-fab extended color="warn" (click)="DeleteCustomer(myform.value)">
+    <mat-icon>edit</mat-icon>
+    Delete
+  </button>
+
+
+  <!-- <button (click)="InsertCustomer(myform.value)" [disabled]="myform.invalid">Insert</button> 
+  <button (click)="UpdateCustomer(myform.value)" [disabled]="myform.invalid">Update</button>
+  <button (click)="DeleteCustomer(myform.value)">Delete</button>
+-->
+</form>
+
+<br>
+
+
+
+<div *ngIf="flag">
+  <div class="alert alert-success" role="alert" style="width: 50%; text-align: center;margin-left: 20%;">
+    {{result}}
+  </div>
+</div>
+
+
+
+<!--result-->
+
+<table class="table table-striped" style="width: 90%;margin-left:5%;">
+
+  <tbody>
+    <tr class="row  table-dark ">
+      <td class="col" style="text-align: center;font-weight: bolder;">CUSTOMER ID</td>
+      <td class="col" style="text-align: center;font-weight: bolder;">CUSTOMER NAME</td>
+      <td class="col" style="text-align: center;font-weight: bolder;">CUSTOMER MAIL</td>
+      <td class="col" style="text-align: center;font-weight: bolder;">CUSTOMER PHONE</td>
+      <td class="col" style="text-align: center;font-weight: bolder;">CUSTOMER LOCATION</td>
+    </tr>
+    <tr class="row" *ngFor="let Customer of cusList">
+      <td class="col" style="text-align: center;">{{Customer.id}}</td>
+      <td class="col" style="text-align: center;">{{Customer.name}}</td>
+      <td class="col" style="text-align: center;">{{Customer.mail}}</td>
+      <td class="col" style="text-align: center;">{{Customer.phone}}</td>
+      <td class="col" style="text-align: center;">{{Customer.location}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+<!----
+    <ul>
+  
+      <a *ngFor="let Customer of cusList">
+  
+      
+        <table>
+          <tr class="row">
+            <td class="col-4" style="text-align: center;">{{Customer.id}}</td>
+            <td class="col-4" style="text-align: center;">{{Customer.name}}</td>
+            <td class="col-4" style="text-align: center;">{{Customer.mail}}</td>
+            <td class="col-4" style="text-align: center;">{{Customer.phone}}</td>
+            <td class="col-4" style="text-align: center;">{{Customer.location}}</td>
+          </tr>
+        </table>
+        </a>
+    </ul>
+  </td>
+  </tr>
+</table>
+-->

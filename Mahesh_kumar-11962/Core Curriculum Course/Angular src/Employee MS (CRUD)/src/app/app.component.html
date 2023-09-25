@@ -1,0 +1,122 @@
+<!--heading window-->
+<div class="top">
+  <h4>Employee Management System</h4>
+</div>
+
+<table class="table table-striped">
+  <tr class="row">
+    <!--left window-->
+    <td class="col-8">
+
+      <form [formGroup]="myForm">
+        <div class="inputs">
+
+          <div class="input-group flex-nowrap" style="margin-top: 20%;width: 50%;margin-left: 20%;">
+            <span class="input-group-text" id="addon-wrapping" style="width: 150px;">Employee Id</span>
+            <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="id">
+
+
+            <div *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+              <div *ngIf="myForm.get('id')!.hasError('required')">
+
+                <font color="red" style="margin-left: 20%;">Employee ID is Required</font>
+              </div>
+              <div *ngIf="myForm.get('id')!.hasError('pattern')">
+
+                <font color="red">Invalid Employee ID </font>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="input-group flex-nowrap" style="width: 50%;margin-left: 20%;margin-top: 1%;">
+            <span class="input-group-text" id="addon-wrapping" style="width: 150px;">Employee Name</span>
+            <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="name">
+
+            <br>
+            <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+              <div *ngIf="myForm.get('name')!.hasError('required')">
+                <font color="red">Employee Name is Required</font>
+              </div>
+              <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                <font color="red">Invalid Employee Name </font>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="input-group flex-nowrap" style="width: 50%;margin-left: 20%;margin-top: 1%;">
+            <span class="input-group-text" id="addon-wrapping" style="width: 150px;">Employee Salary</span>
+            <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="salary">
+            <br>
+            <div *ngIf="myForm.get('salary')!.touched && myForm.get('salary')!.invalid">
+              <div *ngIf="myForm.get('salary')!.hasError('required')">
+                <font color="red">Employee Salary is Required</font>
+              </div>
+              <div *ngIf="myForm.get('salary')!.hasError('pattern')">
+                <font color="red">Invalid Employee salary Format </font>
+              </div>
+            </div>
+
+          </div>
+          <br>
+
+          <button class="btn btn-success" style="margin-left: 30%;" (click)="InsertEmployee(myForm.value)"
+            [disabled]="myForm.invalid">Insert</button>
+          <button class="btn btn-danger" style="margin: 2%;" (click)="DeleteEmployee(myForm.value)">Delete</button>
+          <button class="btn btn-primary" [disabled]="myForm.invalid"
+            (click)="UpdateEmployee(myForm.value)">Update</button>
+
+          <div *ngIf="flag">
+            <div class="alert alert-success" role="alert" style="width: 50%; text-align: center;margin-left: 20%;">
+              {{result}}
+            </div>
+          </div>
+
+
+          <div *ngIf="flag_del">
+            <div class="alert alert-danger" role="alert" style="width: 50%; text-align: center;margin-left: 20%;">
+              &#9888;{{result}}
+            </div>
+          </div>
+
+          <div *ngIf="flag_update">
+            <div class="alert alert-primary" role="alert" style="width: 50%; text-align: center;margin-left: 20%;">
+              {{result}}
+            </div>
+
+          </div>
+
+        </div>
+        <br>
+      </form>
+
+
+    </td>
+
+    <!--right window-->
+    <td class="col-4">
+      <div class="right">Result :
+        <br><br>
+
+
+        <ul>
+
+          <a *ngFor="let emp of empList">
+
+            <table id="tableid" class="table table-striped">
+
+              <tr class="row">
+                <td id="td" class="col-4" style="text-align: justify;"> {{emp.id}}</td>
+                <td id="td" class="col-4" style="text-align: justify;">{{emp.name}}</td>
+                <td id="td" class="col-4" style="text-align: justify;">{{emp.salary}}</td>
+              </tr>
+            </table>
+
+          </a>
+        </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>

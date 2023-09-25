@@ -1,0 +1,36 @@
+.top{
+
+    height: 40%;
+    width: 97.5%;
+    border: 2px solid goldenrod;
+   margin-left: 10px;
+    margin-top: 2%;
+}
+.inputs{
+    height: 80%;
+    width: 70%;
+    border: 2px solid goldenrod;
+    margin-top: 1%;
+    position: absolute;
+}
+.right{
+
+        height: 80%;
+        width: 27%;
+        border: 2px solid goldenrod;
+        margin-top: 1.5%;
+        left: 70%;
+        margin-left: 1%;
+        position: absolute;
+    }
+h4{
+    text-align: center;
+   
+}
+#td
+{
+    border:  2px solid goldenrod;
+}
+#tableid{
+    width: 80%;
+}

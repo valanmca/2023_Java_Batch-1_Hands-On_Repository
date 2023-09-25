@@ -1,0 +1,27 @@
+.col-12 {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    left: 0%;
+    
+}
+
+
+h1 {
+    text-align: center;
+    color: darkblue
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-full-width{
+    width:250px;
+    height:70px;
+}
+
+.blood{
+    width:250px;
+    height:70px;
+}

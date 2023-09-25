@@ -1,0 +1,41 @@
+<div class="Div1">
+    <h1>Hospital Management System</h1>
+</div>
+<div class="Div2">
+    <h3>Patient Details:</h3>
+    <table>
+        <form #myform="ngForm">
+            <label><b>Patient Name</b></label>
+            <br>
+            <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]">
+            <div *ngIf="name.touched">
+                <div *ngIf="name.errors?.['required']">
+                    <font color="red">Name Required</font>
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                    <font color="red">Name Invalid</font>
+                </div>
+            </div>
+            <label><b>Age</b></label>
+            <br>
+
+            <input type="number" name="age" #age="ngModel" ngModel required pattern="[0-9]+" maxlength="3">
+            <div *ngIf="age.touched">
+                <div *ngIf="age.errors?.['required']">
+                    <font color="red">Age Required</font>
+                </div>
+                <div *ngIf="age.errors?.['pattern']">
+                    <font color="red">Age Invalid</font>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-danger btn-sm" (click)="InsertPatient(myform.value)">Insert</button>&nbsp;
+            <button class="btn btn-danger btn-sm" >Delete</button>&nbsp;
+            <button class="btn btn-danger btn-sm" >Update</button>
+        </form>
+    </table>
+</div>
+<div class="Div3">
+
+</div>

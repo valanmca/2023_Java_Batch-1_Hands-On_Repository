@@ -1,0 +1,21 @@
+<h3>One way Binding - Event Binding</h3>
+
+<h3>
+  EMP ID {{empid}}
+  <br>
+  EMP NAME {{empname}}
+  <br>
+  EMP SALARY {{empsalary}}
+
+</h3>
+<br>
+
+<table align="center" style="width: 600px;">
+  <tr> <img [src]="Logo" [height]="img_height" [width]="img_width" alt=""></tr>
+  <tr>
+    <button class="btn btn-primary" (click)="changeUserId()">Change ID</button>
+    <button class="btn btn-primary" (click)="changeUserName()">Change Name</button>
+    <button class="btn btn-primary" (click)="changeUserSalary()">Change Salary</button>
+    <button class="btn btn-primary" (click)="changeImg()">Change Image</button>
+  </tr>
+</table>

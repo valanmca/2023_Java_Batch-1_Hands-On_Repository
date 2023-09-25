@@ -1,0 +1,26 @@
+<button (click)="changeFlag()">Hide & Seek</button>
+<br>
+<div class="div1" *ngIf="flag">
+    <p style="text-align: center;font-weight: bold">Structure Directives</p>
+    <ol type="a">
+        <li *ngFor="let wheels of vechicle" (click)="info(wheels)">{{wheels}}</li>
+    </ol>
+
+    <br>
+    <p style="margin-left: 5px;">You selected : {{Vehicletype}}</p>
+
+    <br>
+    <div [ngSwitch]="Vehicletype">
+        <font color="green" *ngSwitchCase="'Two wheeler'">
+            <img src="https://m.media-amazon.com/images/I/51iqUpjrX+L.jpg" style="height: 100px;width: 100px;"  alt="">
+        </font>
+        <font color="green" *ngSwitchCase="'Three wheeler'">
+            <img src="https://m.media-amazon.com/images/I/51uB7i1cw+L.jpg" style="height: 100px;width: 100px;"  alt="">
+        </font>
+        <font color="green" *ngSwitchCase="'Four wheeler'">
+            <img src="https://m.media-amazon.com/images/I/41azSxUt15L._QL92_SH45_SS200_.jpg" style="height: 100px;width: 100px;"  alt="">
+        </font>
+        <font color="red" *ngSwitchDefault>Invalid Selection</font>
+
+    </div>
+</div>

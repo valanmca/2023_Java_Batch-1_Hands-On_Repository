@@ -1,0 +1,64 @@
+<form [formGroup]="P_details" (ngSubmit)="message(P_details.value)">
+    <table>
+
+        <tr>
+            <td>
+                <h1 mat-dialog-title> Patient Details</h1>
+                <mat-form-field appearance="outline" style="padding-top: 20px;padding-left: 50px;">
+                    <mat-label>Patient Id</mat-label>
+                    <input matInput type="number" formControlName="id">
+                    <div *ngIf="P_details.get('id')!.touched">
+                        <div *ngIf="P_details.get('id')!.hasError('required')">
+                            <p style="color: brown;">Patient Id Required</p>
+                        </div>
+                    </div>
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field appearance="outline" style="padding-left: 50px;">
+                    <mat-label>Patient Name</mat-label>
+                    <input matInput type="text" formControlName="name">
+                    <div *ngIf="P_details.get('name')!.touched">
+                        <div *ngIf="P_details.get('name')!.hasError('required')">
+                            <p style="color: brown;">Patient Name Required</p>
+                        </div>
+                    </div>
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field appearance="outline" style="padding-left: 50px;">
+                    <mat-label>Patient Age</mat-label>
+                    <input matInput type="number" formControlName="age">
+                    <div *ngIf="P_details.get('age')!.touched">
+                        <div *ngIf="P_details.get('age')!.hasError('required')">
+                            <p style="color: brown;">Patient age Required</p>
+                        </div>
+                    </div>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <br>
+<div style="padding-left: 50px;">
+
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="insertdata(P_details.value)">Insert</mat-button-toggle>
+        <mat-button-toggle (click)="updatedata(P_details.value) ">Update</mat-button-toggle>
+        <mat-button-toggle (click)="deletedata(P_details.value)">Delete</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+    <!--
+    <button  mat-raised-button (click)="insertdata(P_details.value)">Insert </button>
+    <button  mat-raised-button (click)="updatedata(P_details.value) ">Update</button>
+    <button   mat-raised-button (click)="deletedata(P_details.value)" class="fbutton">Delete</button>
+    -->
+</form>
+<br>
+<h4 style="color: green;text-align: center;">{{result}}</h4>
+<br>

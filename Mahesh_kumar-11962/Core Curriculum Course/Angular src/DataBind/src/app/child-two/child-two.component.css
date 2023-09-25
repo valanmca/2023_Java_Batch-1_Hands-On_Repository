@@ -1,0 +1,25 @@
+h1,h3{
+    text-align: center;
+    color: cornflowerblue;
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 200px;
+    margin-left: 40%;
+    padding: auto;
+    box-sizing: border-box;
+    border-width: 4px;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    border: 3px solid black;
+    border-radius: 6px;
+    height: 30px;
+    width: 200px;
+    margin-left: 40%;
+    margin-top: 1%;
+    text-align: justify;
+}

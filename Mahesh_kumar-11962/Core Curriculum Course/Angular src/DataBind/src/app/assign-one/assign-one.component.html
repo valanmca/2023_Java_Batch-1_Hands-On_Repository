@@ -1,0 +1,62 @@
+<table border="1px solid black" align="center">
+    <tr style="border: 1px solid black;">
+        <th style="width: 100px;">NO</th>
+        <th style="width: 100px;">Fact</th>
+    </tr>
+    <tr>
+        <td style="width: 100px;">1</td>
+        <td style="width: 100px;">{{factorial(1)}} </td>
+    </tr>
+    <tr>
+        <td style="width: 100px;">2</td>
+        <td style="width: 100px;">{{factorial(2)}} </td>
+    </tr>
+    <tr>
+        <td style="width: 100px;">3</td>
+        <td style="width: 100px;">{{factorial(3)}} </td>
+    </tr>
+    <tr>
+        <td style="width: 100px;">4</td>
+        <td style="width: 100px;">{{factorial(4)}} </td>
+    </tr>
+    <tr>
+        <td style="width: 100px;">5</td>
+        <td style="width: 100px;">{{factorial(5)}} </td>
+    </tr>
+</table>
+
+<div class="form-group" style="height: 200px;">
+    <label for="exampleFormControlSelect1">Factorial List</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+    <option> no | Fact</option>
+      <option>1 &emsp;&emsp; | &emsp;&emsp; {{factorial(1)}}</option>
+      <option>2 &emsp;&emsp; | &emsp;&emsp; {{factorial(2)}}</option>
+      <option>3 &emsp;&emsp; | &emsp;&emsp; {{factorial(3)}}</option>
+      <option>4 &emsp;&emsp; | &emsp;&emsp; {{factorial(4)}}</option>
+      <option>5 &emsp;&emsp; | &emsp;&emsp; {{factorial(5)}}</option>
+    </select>
+  </div>
+
+
+
+
+  <div class="tab">
+
+
+  <table class="table table-bordered">
+    <thead> 
+       <tr>
+            <th  class="col-4">No</th>
+            <th class="col-4">Fact</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+            <tr *ngFor="let fac_obj of values">
+            <th class="col-4">{{fac_obj}}</th>
+            <td  class="col-4">{{factorial(fac_obj)}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+

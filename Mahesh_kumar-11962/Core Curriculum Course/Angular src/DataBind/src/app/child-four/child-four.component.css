@@ -1,0 +1,35 @@
+h1,
+h3 {
+    text-align: center;
+    color: cornflowerblue;
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 200px;
+    margin-left: 20%;
+    padding: auto;
+    box-sizing: border-box;
+    border-width: 4px;
+    width: 50%;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    border: 3px solid black;
+    border-radius: 6px;
+    height: 30px;
+    width: 200px;
+    margin-left: 10%;
+    margin-top: 1%;
+    text-align: justify;
+}
+
+.EntryButton {
+    margin-left: 35%;
+}
+
+button {
+    margin-right: 1%;
+}

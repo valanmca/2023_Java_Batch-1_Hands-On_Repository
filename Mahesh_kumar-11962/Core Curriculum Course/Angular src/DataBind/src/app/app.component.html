@@ -1,0 +1,38 @@
+<h1>One Way Data Binding</h1>
+<br>
+
+<h3>
+    EMP ID {{empid}}
+    <br>
+    EMP NAME {{empname}}
+    <br>
+    EMP SALARY {{empsalary}}
+
+</h3>
+<br>
+
+<h3>Fact value : {{ factorial(6)}}</h3>
+
+<hr>
+
+<table>
+    <tr>
+        <td> <app-child-one></app-child-one></td>
+        <td> <app-child-two></app-child-two></td>
+        <td><app-child-three></app-child-three></td>
+
+    </tr>
+</table><hr>
+<app-child-four></app-child-four>
+<hr>
+<h1>Two Way Data Binding</h1>
+<br>
+<input type="text" [(ngModel)]="MyName" placeholder="Pls enter Ur name">
+<br>
+<h3>Welcome {{MyName}}</h3>
+<br>
+<hr>
+<app-footer></app-footer>
+<hr>
+<app-atb-dir></app-atb-dir>
+<app-assign-one></app-assign-one>

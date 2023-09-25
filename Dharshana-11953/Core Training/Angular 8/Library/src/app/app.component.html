@@ -1,0 +1,27 @@
+<div class="top">
+
+  <div class="header">
+    <h1>Library Management System</h1>
+
+  </div>
+
+  <div class="left">
+    <form #myForm="ngForm" ngSubmit="myFunction(myForm.value)">
+      <div class="bid">
+        <label class="form-label">Book Id</label>
+        <input type="number" class="form-control" name="id" placeholder="Enter book id" #id="ngModel" ngModel required
+          pattern="[0-9]">
+      </div>
+
+      <div class="bname">
+        <label class="form-label">Book Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter book name" #name="ngModel" ngModel
+          required pattern="[a-zA-Z]">
+      </div>
+    </form>
+  </div>
+
+  <div class="right">
+
+  </div>
+</div>

@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
+
     table{
         background-color: #041E42;
         border-radius: 15% ;
         border: aliceblue;
+        text-align: center;
         
     }
     a{
@@ -25,7 +27,7 @@
         border-style: solid;
         color: black;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 15;
+        font-size: 1rem;
         background-color: aliceblue;
         height: 1cm;
         width: 5cm;
@@ -36,33 +38,51 @@
     button{
         height: 1cm;
         width: 5cm;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
         border-radius: 5cm;
     }
        
     </style>
 
     <script>
-      
+          function validateform(){  
+        
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+
+        if (name==null || name==""){  
+        alert("Name can't be blank");  
+        return false; }
+
+        else if(password.length<6){  
+        alert("Password must be at least 6 characters long.");  
+        return false; } 
+        
+        else{
+        alert("Successfully Logged In")
+        }
+    }
     </script>
 </head>
-<body style="padding-top: 15px; background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);">
+<body style="padding-top: 15px; background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);" >
     <div class="login">
    
-    <form style="text-align: center; padding-top: 10%;">
+    <form name="myform" style="text-align: center; padding-top: 10%;" >
        
         
-        <table align="center" style="text-align: center;" >
+        <table align="center">
         <tr><th colspan="2"><h3 style="color: aliceblue;"> User Login</h3></th></tr>
 
         <tr><td colspan="2"><label for="name">
-            <input type="text" placeholder="Username" id="Uname" ><br><br>
+            <input type="text" name="name" placeholder="Username" id="Uname"><br><br>
         </label></td></tr>
 
         <tr><td colspan="2"><label for="Password">
-            <input type="password" name="pwd" id="pwd" placeholder="Password" ><br><br>
+            <input type="password" name="password" id="pwd" placeholder="Password" ><br><br>
         </label></td></tr>
 
-        <tr><td colspan="2"><button>Login</button><br><br></td></tr>
+        <tr><td colspan="2"><button onclick="validateform()">Login</button><br><br></td></tr>
 
     </div>
 

@@ -1,0 +1,19 @@
+.split {
+    height: 30%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 30;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    
+  }
+  
+  .right {
+    right: 0;
+    
+  }

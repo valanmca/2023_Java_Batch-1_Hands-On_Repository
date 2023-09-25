@@ -1,0 +1,91 @@
+<h2>template-driven-form works!</h2>
+<div class="split left">
+    <div>
+        <form #myForm="ngForm" (ngSubmit)="formFunction(myForm.value)">
+        <table [cellPadding]="5" [cellSpacing]="5"><tr><td><label>Name</label></td>
+            <!-- name -->
+        <td><input type="text" name="name" #name="ngModel" ngModel required pattern="[A-Za-z]+[a-zA-Z]" /></td>
+    <td><div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+            <font color="red"><strong>Name is required.</strong></font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            <font color="red"><strong>Invalid Name</strong></font>
+        </div>
+        <div *ngIf="name.valid">
+            <font color="green"><strong>Valid Name</strong></font>
+        </div>
+    </div></td></tr>
+    <!-- Email -->
+    <tr><td><label>Email</label></td>
+        <td><input type="email" name="email" #email="ngModel" ngModel required pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" /></td>
+        <td><div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+                <font color="red"><strong>Email is required</strong></font>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+                <font color="red"><strong>Invalid email</strong></font>
+            </div>
+            <div *ngIf="email.valid">
+                <font color="green"><strong>Valid email</strong></font>
+            </div>
+        </div>
+        </td></tr>
+    <!-- Age -->
+    <tr><td><label>Age</label></td>
+        <td><input type="text" name="age" #age="ngModel" ngModel required pattern="[0-9]{2}" maxlength="2"></td>
+        <td><div *ngIf="age.touched">
+            <div *ngIf="age.errors?.['required']">
+                <font color="red"><strong>Age is Required</strong></font>
+            </div>
+            <div *ngIf="age.errors?.['pattern']">
+                <font color="red"><strong>Invalid Age</strong></font>
+            </div>
+            <div *ngIf="age.valid">
+                <font color="green"><strong>Valid Age</strong></font>
+            </div>
+        </div></td>
+        </tr>
+    <!-- Phone no -->
+    <tr><td><label>Phone Number</label></td>
+        <td><input type="text" name="phone" #phone="ngModel" ngModel required pattern="[0-9]{10}" maxlength="10" minlength="10"></td>
+        <td><div *ngIf="phone.touched">
+            <div *ngIf="phone.errors?.['required']">
+                <font color="red"><strong>Phone Number is Required</strong></font>
+            </div>
+            <div *ngIf="phone.errors?.['pattern']">
+                <font color="red"><strong>Invalid Phone number</strong></font>
+            </div>
+            <div *ngIf="phone.valid">
+                <font color="green"><strong>Valid Pnone Number</strong></font>
+            </div>
+        </div></td></tr>
+    <!-- Country -->
+    <tr><td><label>Country</label></td>
+        <td><select name="cntry" #cntry="ngModel" ngModel required>
+            <option value="India">India</option>
+            <option value="America">America</option>
+        </select></td>
+        <td><div *ngIf="cntry.touched">
+            <div *ngIf="cntry.errors?.['required']">
+                <font color="red"><strong>Country is Required</strong></font>
+            </div>
+            <div *ngIf="cntry.valid">
+                <font color="green"><strong>Valid Country</strong></font>
+            </div>
+            </div></td></tr>
+    <tr><td colspan="3"><button [disabled]="myForm.invalid">Register</button></td></tr></table></form>
+    </div>
+</div>
+<div class="split right">
+    <h3><u>Output</u></h3>
+<table [cellPadding]="5" [cellSpacing]="5">
+    <tr><td><b>Name</b></td><td>{{fname}}</td></tr>
+    <tr><td><b>Email</b></td><td>{{femail}}</td></tr>
+    <tr><td><b>Age</b></td><td>{{fage}}</td></tr>
+    <tr><td><b>Phone</b></td><td>{{fphone}}</td></tr>
+    <tr><td><b>Country</b></td><td>{{fcntry}}</td></tr>
+</table>
+</div>
+
+

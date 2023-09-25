@@ -1,0 +1,99 @@
+<div class="split left">
+    <h2>reactive-form works!</h2>  
+    <div class="form-container">
+        <form [formGroup]="myForm" (ngSubmit)="registerFunction(myForm.value)">
+            <table [cellPadding]="5" [cellSpacing]="5" style="text-align: left;">
+                <tr><th>Name</th><td> <input type="text" formControlName="name"></td>
+                    <th><div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+                        <div *ngIf="myForm.get('name')!.hasError('required')">
+                            <font color="red">Name is required</font>
+                        </div>
+                        <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                            <font color="red">Invalid name</font>
+                        </div>
+                    </div></th></tr>
+                <tr><th>Email</th><td> <input type="text" formControlName="email"></td>
+                    <th>
+                        <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+                            <div *ngIf="myForm.get('email')!.hasError('required')">
+                                <font color="red">Email is required</font>
+                            </div>
+                            <div *ngIf="myForm.get('email')!.hasError('pattern')">
+                                <font color="red">Invalid Email</font>
+                            </div>
+                        </div>
+                    </th></tr>
+                <tr><th>Age</th><td> <input type="text" formControlName="age" maxlength="2"></td>
+                    <th><div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+                        <div *ngIf="myForm.get('age')!.hasError('required')">
+                            <font color="red">Age is required</font>
+                        </div>
+                        <div *ngIf="myForm.get('age')!.hasError('pattern')">
+                            <font color="red">Invalid Age</font>
+                        </div>
+                    </div></th></tr>
+                <tr><th>Phone Number</th><td> <input type="text" formControlName="phone" maxlength="10" minlength="10"></td>
+                    <th><div *ngIf="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+                        <div *ngIf="myForm.get('phone')!.hasError('required')">
+                            <font color="red">Phone Number is required</font>
+                        </div>
+                        <div *ngIf="myForm.get('phone')!.hasError('pattern')">
+                            <font color="red">Invalid phone Number</font>
+                        </div>
+                    </div></th></tr>
+              
+            </table>           
+            <button [disabled] = "myForm.invalid" >Register</button>
+        </form>
+    </div> 
+    <!-- <div class="form-container">
+        <form [formGroup]="myForm" (ngSubmit)="registerFunction(myForm.value)">
+   <header>Registration form</header>
+   <label >Name:</label><input type="text" formControlName="name">
+   <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+    <div *ngIf="myForm.get('name')!.hasError('required')">
+    <font color="red">Name is Required</font>
+    </div>
+    <div *ngIf="myForm.get('name')!.hasError('pattern')">
+    <font color="red">Invalid Name </font>
+    </div>
+   </div>
+   <br>
+   <br>
+   
+   <label >Email:</label><input type="text" formControlName="email">
+   <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+   <div *ngIf="myForm.get('email')!.hasError('required')">
+    <font color="red">Email is Required</font>
+    </div>
+    <div *ngIf="myForm.get('email')!.hasError('pattern')">
+     <font color="red">Invalid Email </font>
+       </div>
+      </div>
+      <br>
+      <label >Age:</label><input type="text" formControlName="age">
+      <div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+        <div *ngIf="myForm.get('age')!.hasError('required')">
+           <font color="red">age is Required</font>
+       </div>
+       <div *ngIf="myForm.get('age')!.hasError('pattern')">
+           <font color="red">Invalid age </font>
+       </div>
+      </div>
+      <br>
+      
+      <button [disabled]="myForm.invalid">register</button>
+       </form>  
+</div> -->
+<div class="split right">
+    <h3><u>Output</u></h3>
+<table [cellPadding]="5" [cellSpacing]="5">
+    <tr><td><b>Name</b></td><td>{{fname}}</td></tr>
+    <tr><td><b>Email</b></td><td>{{femail}}</td></tr>
+    <tr><td><b>Age</b></td><td>{{fage}}</td></tr>
+    <tr><td><b>Phone</b></td><td>{{fphone}}</td></tr>
+    
+</table>
+</div>
+
+

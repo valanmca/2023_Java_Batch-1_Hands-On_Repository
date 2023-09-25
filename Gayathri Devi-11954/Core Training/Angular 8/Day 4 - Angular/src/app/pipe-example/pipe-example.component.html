@@ -1,0 +1,21 @@
+<h1>pipe-example works!</h1>
+<h3>Normal Output</h3>
+{{name}}<br>{{date}}
+<h3>Predefined Pipes Output</h3>
+<div>
+<table cellpadding="10" cellspacing="10" border="1" style="border-collapse: collapse;text-align:left;">
+    <!-- <tr><th> </th><td>{{name | uppercase}}</td></tr>   -->
+    <tr><th>Normal Output </th><td>{{name}}</td></tr>    
+    <tr><th>Pipe - Upper Case</th><td>{{name | uppercase}}</td></tr>
+    <tr><th>Pipe - Lower Case</th><td>{{name | lowercase}}</td></tr>
+    <tr><th>Pipe - Title Case</th><td>{{name | titlecase}}</td></tr>
+    <tr><th>Default Date</th><td>{{date}}</td></tr>
+    <tr><th>Pipe - Date</th><td>{{date | date:'dd/MM/yyyy'}}</td></tr>
+    <tr><th>Pipe - Date</th><td>{{date | date:'dd/MM/yy'}}</td></tr>
+    <tr><th>Pipe - Full Date</th><td>{{date | date:'fullDate'}}</td></tr>
+    <tr><th>Chain Pipe - Full Date & Uppercase</th><td>{{date | date:'fullDate'|uppercase}}</td></tr>    
+    <tr><th>Pipe - Time</th><td>{{date | date:'shortTime'}}</td></tr>
+    <tr><th>Pipe - Percent </th><td>{{00.54565|percent}}</td></tr>
+    <tr><th>Pipe - Current</th><td>{{6589.23|currency:"USD"}}</td></tr>
+</table></div>
+{{ 00.54565 | percent }}

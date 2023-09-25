@@ -1,0 +1,71 @@
+<h3 style="text-align:center;margin-left: 1%;background-color: aquamarine;">Task -04</h3>
+
+<table>
+
+    <div class="div1" style="margin-left: 30%;">
+
+        <tr *ngFor="let num of Digits" style="height: 40px;">
+            <td class="table_01" style="background-color:red">
+                {{num}} x 1 = {{getMultiplicationTable(num,1)}}
+            </td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_02" style="background-color:orange">
+                {{num}} x 2 = {{getMultiplicationTable(num,2)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_03" style="background-color:darkgoldenrod">
+                {{num}} x 3 = {{getMultiplicationTable(num,3)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+            <td class="table_04" style="background-color:yellow">
+                {{num}} x 4 = {{getMultiplicationTable(num,4)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_05" style="background-color:yellowgreen">
+                {{num}} x 5 = {{getMultiplicationTable(num,5)}}
+            </td>
+        </tr>
+
+    </div>
+
+    <br><br>
+    <br>
+
+    <div class="div2" style="margin-left: 30%;">
+
+        <tr *ngFor="let num of Digits" style="height: 40px;">
+            <td class="table_01" style="background-color: green">
+                {{num}} x 6 = {{getMultiplicationTable(num,6)}}
+            </td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_02" style="background-color:skyblue">
+                {{num}} x 7 = {{getMultiplicationTable(num,7)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_03" style="background-color:blue">
+                {{num}} x 8 = {{getMultiplicationTable(num,8)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_04" style="background-color:rgb(89, 0, 255)">
+                {{num}} x 9 = {{getMultiplicationTable(num,9)}}
+            </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <td class="table_05" style="background-color:blueviolet">
+                {{num}} x 10 = {{getMultiplicationTable(num,10)}}
+            </td>
+        </tr>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</table>

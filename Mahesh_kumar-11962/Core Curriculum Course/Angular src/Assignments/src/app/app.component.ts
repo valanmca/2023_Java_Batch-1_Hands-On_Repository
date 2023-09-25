@@ -1,9 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PatientService } from './patient.service';
-import { Patient } from './model/patient';
-import { MatDialog } from '@angular/material/dialog';
-import { FormDataComponent } from './form-data/form-data.component';
 
 
 @Component({
@@ -12,18 +7,5 @@ import { FormDataComponent } from './form-data/form-data.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-
-
-constructor( private _dialogwindow : MatDialog)
-{
-
+  title = 'Assignments';
 }
-open_window()
-{
-  this._dialogwindow.open(FormDataComponent);
-}
-}
-
-
-

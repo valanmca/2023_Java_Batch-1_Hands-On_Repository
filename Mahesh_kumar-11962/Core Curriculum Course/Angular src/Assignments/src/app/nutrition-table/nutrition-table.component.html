@@ -1,0 +1,30 @@
+<h1 style="color: brown;font-weight: bolder; margin-left:1%;">FRUIT</h1>
+<h2 style="font-weight: bolder; margin-left: 1%;">NUTRITIONAL INFORMATION</h2>
+<div style="margin-left: 2%;">
+    <table class="table table-light">
+        <div id="list_tab">
+
+            <tr id="data" class="row">
+                <th style="width: 200px;"><b>Fruit</b></th>
+                <td style="width: 200px;" *ngFor="let list of fruits">{{list}}</td>
+            </tr>
+            <tr id="data" class="row">
+                <th style="width: 200px;"><b>Carbohydrate</b></th>
+                <td style="width: 200px;" *ngFor="let carblist of carb">{{carblist}}g</td>
+            </tr>
+
+            <tr id="data" class="row">
+                <th style="width: 200px;"><b>Water</b></th>
+                <td style="width: 200px;" *ngFor="let liquid of water">{{liquid | percent }}</td>
+            </tr>
+            <tr id="data" class="row">
+                <th style="width: 200px;"><b>Calories</b></th>
+                <td style="width: 200px;" *ngFor="let fat of calories ">{{fat}} Kcal</td>
+            </tr>
+
+        </div>
+    </table>
+</div>
+<p style="margin-left: 2%;color: red;">
+    All serving sizes 100g,apart from fruit juice,nobody only drinks 100ml!
+</p>

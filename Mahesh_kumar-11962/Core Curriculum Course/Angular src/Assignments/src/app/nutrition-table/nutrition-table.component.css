@@ -1,0 +1,25 @@
+#data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+
+}
+
+#list_tab {
+    display: flex;
+    position: absolute; 
+}
+
+table {
+    border: 11px solid black;
+    width: 730px;
+    height: 426px;
+    border-left: none;
+    border-right: none;
+    border-bottom: 11px solid black;
+}
+
+tr {
+    display: flex;
+    flex-direction: column;
+}

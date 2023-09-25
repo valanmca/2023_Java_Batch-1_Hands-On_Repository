@@ -3,37 +3,44 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableComponent } from './table/table.component';
+import { NutritionTableComponent } from './nutrition-table/nutrition-table.component';
+import { FruitsAdComponent } from './fruits-ad/fruits-ad.component';
+import { MatrialRegisterFormComponent } from './matrial-register-form/matrial-register-form.component';
+import {MatCommonModule} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card'
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input'
+import { MatGridListModule } from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormDataComponent } from './form-data/form-data.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
-    FormDataComponent
+    TableComponent,
+    NutritionTableComponent,
+    FruitsAdComponent,
+    MatrialRegisterFormComponent,
+
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule,
-    MatToolbarModule, 
-    MatButtonModule, 
-    MatIconModule,
-    MatButtonToggleModule, 
-    MatFormFieldModule, 
+    MatCommonModule,
+    MatCardModule,
+    MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatGridListModule,
+    MatIconModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

@@ -1,0 +1,32 @@
+
+
+.card-responsive{
+    margin-top: 15px;
+    width:350px;
+    height: 900px;
+    margin-left: 100px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.img{
+    margin-top: 15px;
+}
+font{
+    font-size: small;
+}
+
+
+.card-footer{
+    margin-top: 50px;
+    text-align: center;
+}
+.icon{
+    text-align: center;
+    margin-top: 50px;
+}
+.card-header{
+    height:150px;
+    width: 100%;
+    background-color: #E2675E;
+    border-radius: 30px;
+}

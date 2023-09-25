@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+<h1 matDialogTitle>Add Student Details</h1><br>
+<div mat-dialog-content>
+  <form [formGroup]="studentForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Name</mat-label>
+      <input matInput placeholder="Name" [formControl]="name" required>
+      <!-- <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+      <mat-label>Enter Register Number</mat-label>
+      <input matInput placeholder="Roll No" [formControl]="number" required>
+      <mat-error *ngIf="number.invalid">{{getRollErrorMessage()}}</mat-error>
+    </mat-form-field>
+  
+    <label id="example-radio-group-label" >Select Gender</label>
+<mat-radio-group  aria-labelledby="example-radio-group-label"  class="example-radio-group" formControlName="genradio"  required>
+  <mat-radio-button class="example-radio-button"   *ngFor="let gen of gender" [value]="gen">{{gen}}</mat-radio-button>    
+  <mat-error *ngIf="genradio.invalid"></mat-error>
+    <!-- {{getGenRadioErrorMessage()}} -->
+</mat-radio-group>
+
+<mat-form-field appearance="outline">
+        <mat-label>Enter Course</mat-label>
+        <mat-select  placeholder="Course" formControlName="course" required>
+          <mat-option *ngFor="let crse of course" [value]="crse.value">{{crse.viewValue}} 
+    </mat-option>
+          </mat-select>
+          <!-- <mat-error *ngIf="course.invalid"></mat-error> -->
+            <!-- {{getCourseErrorMessage()}} -->
+        </mat-form-field>
+      
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Date of Birth</mat-label> <mat-hint>MM/DD/YYYY</mat-hint>
+            <input matInput [matDatepicker]="picker" formControlName="dob" required> 
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="number.invalid"></mat-error>
+              <!-- {{getDateErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+
+          <mat-form-field  appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+          </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Phone number</mat-label>
+    <input matInput placeholder="9876543210" [formControl]="phone" maxlength="10" required>
+    <mat-error *ngIf="phone.invalid">{{getPhoneErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+</form>
+</div>
+<div mat-dialog-actions align='end'>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" >{{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>    
+</div>
+
+</div></div></div>

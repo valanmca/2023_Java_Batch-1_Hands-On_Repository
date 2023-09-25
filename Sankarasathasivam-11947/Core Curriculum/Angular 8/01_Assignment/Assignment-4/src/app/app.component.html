@@ -1,0 +1,114 @@
+<body>
+ 
+  <mat-grid-list cols="1" rowHeight="900px">
+    <mat-grid-tile>
+      <mat-card class="card">
+
+
+        <form style="width:100%" [formGroup]= "myForm" (ngSubmit)= "register(myForm.value)">
+
+
+          <div class="register-container"  >
+            <img src="./assets/1.jpg"  class="width-100"><br>
+   
+            <mat-form-field appearance="outline" class="width-50" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>First Name</b></mat-label>
+              <input formControlName ="fName" matInput>
+              <div *ngIf ="myForm.get('fName')!.touched && myForm.get('fName')!.invalid">
+                <div *ngIf ="myForm.get('fName')!.hasError('required')">
+                    <font >*firstName required</font>
+                </div>
+                <div *ngIf ="myForm.get('fName')!.hasError('pattern')">
+                    <font >*invalid format</font>
+                </div>
+            </div>
+            </mat-form-field>
+       
+            <mat-form-field appearance="outline"  class="width-50 ml-2" style="margin-left:10px">
+              <mat-label style="font-size:x-small"> <b>LAST NAME</b></mat-label>
+              <input matInput formControlName="lName" >
+              <div *ngIf ="myForm.get('lName')!.touched && myForm.get('lName')!.invalid">
+                <div *ngIf ="myForm.get('lName')!.hasError('required')">
+                    <font >*lastName required</font>
+                </div>
+                <div *ngIf ="myForm.get('lName')!.hasError('pattern')">
+                    <font >*invalid format</font>
+                </div>
+            </div>
+            </mat-form-field>
+            <br>
+   
+            <mat-form-field appearance="outline" class="width-100" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>USER NAME</b></mat-label>
+              <input matInput formControlName="uName">
+              <div *ngIf ="myForm.get('uName')!.touched && myForm.get('uName')!.invalid">
+                <div *ngIf ="myForm.get('uName')!.hasError('required')">
+                    <font >*userName required</font>
+                </div>
+                <div *ngIf ="myForm.get('uName')!.hasError('pattern')">
+                    <font >*invalid format</font>
+                </div>
+            </div>
+
+
+            </mat-form-field>
+ 
+            <mat-form-field appearance="outline" class="width-100" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>EMAIL ADDRESS</b></mat-label>
+              <input matInput formControlName="email">
+              <div *ngIf ="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+                <div *ngIf ="myForm.get('email')!.hasError('required')">
+                    <font >*email required</font>
+                </div>
+                <div *ngIf ="myForm.get('email')!.hasError('pattern')">
+                    <font >*invalid format</font>
+                </div>
+            </div>
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" class="width-100" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>PH - NUMBER</b></mat-label>
+              <input type="phone" matInput formControlName ="phone">
+              <div *ngIf ="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+                <div *ngIf ="myForm.get('phone')!.hasError('required')">
+                    <font >*phoneNo required</font>
+                </div>
+            </div>
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" class="width-100" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>PASSWORD</b> </mat-label>
+              <input type="password" matInput formControlName= "password">
+              <div *ngIf ="myForm.get('password')!.touched && myForm.get('password')!.invalid">
+                <div *ngIf ="myForm.get('password')!.hasError('required')">
+                    <font >*password required</font>
+                </div>
+               
+            </div>
+           
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" class="width-100" style="margin-left:10px">
+              <mat-label style="font-size:x-small"><b>CONFIRM PASSWORD</b></mat-label>
+              <input type="password" matInput formControlName="cPwd">
+              <div *ngIf ="myForm.get('cPwd')!.touched && myForm.get('cPwd')!.invalid">
+                <div *ngIf ="myForm.get('cPwd')!.hasError('required')">
+                    <font >*phone number is required</font>
+                </div>
+            </div>
+            </mat-form-field>
+
+
+            <button style="font-size:x-small" class="btn" mat-button > <b>SUBMIT</b> </button>
+
+
+          </div>
+         
+        </form>
+       
+      </mat-card>
+     
+       
+        </mat-grid-tile>
+        </mat-grid-list>
+</body>

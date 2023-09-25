@@ -1,0 +1,76 @@
+<h1>Template Driven Form</h1>
+<br>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+        <label>Name</label><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z ]+">
+
+        <div *ngIf="name.touched">
+            <div *ngIf="name.errors?.['required']">
+                <font color="red"><b>Name is Required</b></font>
+            </div>
+            <div *ngIf="name.errors?.['pattern']">
+                <font color="red"><b>Invalid Name</b></font>
+            </div>
+        </div>
+
+        <br><br>
+
+        <label>Email</label><input type="text" name="email" #email="ngModel" ngModel required
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$+">
+
+        <div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+                <font color="red"><b>Email is Required</b></font>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+                <font color="red"><b>Invalid EmailId</b></font>
+            </div>
+        </div>
+
+        <br><br>
+
+        <label>Age</label><input type="text" name="age" #age="ngModel" ngModel required pattern="[0-9]+">
+
+        <div *ngIf="age.touched">
+            <div *ngIf="age.errors?.['required']">
+                <font color="red"><b>Age is Required</b></font>
+            </div>
+            <div *ngIf="age.errors?.['pattern']">
+                <font color="red"><b>Invalid Age</b></font>
+            </div>
+        </div>
+
+        <br><br>
+
+        <label>Contact</label><input type="phone" name="contact" #contact="ngModel" ngModel required pattern="[0-9]+"
+            maxlength="10" minlength="10">
+
+        <div *ngIf="contact.touched">
+            <div *ngIf="contact.errors?.['required']">
+                <font color="red"><b>Contact is Required</b></font>
+            </div>
+            <div *ngIf="contact.errors?.['pattern']">
+                <font color="red"><b>Invalid Contact Number</b></font>
+            </div>
+        </div>
+
+        <br><br>
+
+        <label>Country</label> <select name="country" #country="ngModel" ngModel required pattern="">
+            <option value="India">India</option>
+            <option value="China">China</option>
+        </select>
+
+        <br><br>
+        <button [disabled]="myForm.invalid">Register</button>
+        <br>
+        Name :{{uname}}<br><br>
+        EmailId :{{uemail}}<br><br>
+        Age :{{uage}}<br><br>
+        Contact:{{ucontact}}<br><br>
+        Country:{{ucountry}}
+    </form>
+
+
+
+</div>

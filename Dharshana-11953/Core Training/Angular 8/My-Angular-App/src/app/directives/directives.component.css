@@ -1,0 +1,16 @@
+.MyDiv {
+    position: absolute;
+    left: 100px;
+    top: 1100px;
+    width: 400px;
+    height: 300px;
+    border: 3px solid green;
+    border-radius: 20px;
+}
+.MyClass1{
+    color: blue;
+}
+
+.MyClass2{
+    color: red;
+}

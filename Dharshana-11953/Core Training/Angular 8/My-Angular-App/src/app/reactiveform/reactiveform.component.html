@@ -1,0 +1,50 @@
+<h1>Reactive Form</h1>
+<div class="form_container">
+    <form [formGroup]="myForm" (ngSubmit)="myFunction(myForm.value)">
+        <header>Registration Page</header>
+        <label>Name</label><input type="text" formControlName="name">
+        <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+            <div *ngIf="myForm.get('name')!.hasError('required')">
+                <font color="red"><i>Name is Required</i></font>
+            </div>
+            <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                <font color="red"><i>Invaild Name</i></font>
+            </div>
+
+
+            <label>Email</label><input type="email" formControlName="email">
+            <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+                <div *ngIf="myForm.get('email')!.hasError('required')">
+                    <font color="red"><i>Email is Required</i></font>
+                </div>
+                <div *ngIf="myForm.get('email')!.hasError('pattern')">
+                    <font color="red"><i>Invaild Email</i></font>
+                </div>
+
+
+                <label>Age</label><input type="number" formControlName="age">
+                <div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+                    <div *ngIf="myForm.get('age')!.hasError('required')">
+                        <font color="red"><i>Age is Required</i></font>
+                    </div>
+                    <div *ngIf="myForm.get('age')!.hasError('pattern')">
+                        <font color="red"><i>Invaild age</i></font>
+                    </div>
+
+
+                    <label>Mobile No</label><input type="phone" formControlName="phone">
+                    <div *ngIf="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+                        <div *ngIf="myForm.get('phone')!.hasError('required')">
+                            <font color="red"><i>Mobile No is Required</i></font>
+                        </div>
+                        <div *ngIf="myForm.get('phone')!.hasError('pattern')">
+                            <font color="red"><i>Invaild Mobile No</i></font>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

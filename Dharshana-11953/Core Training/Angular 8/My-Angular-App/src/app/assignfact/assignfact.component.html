@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <table border="2%">
+        <tr>
+            <th>Number</th>
+            <th>Factorial</th>
+        </tr>
+        <tr *ngFor="let fact of factorial">
+            <td>{{fact}}</td>
+            <td>{{getFact(fact)}}</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

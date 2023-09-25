@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+  <div class="outline">
+  <h1>I am a Root Component</h1>
+  <br>
+  <app-child></app-child>
+  <br>
+  <br>
+</div>
+<h4>
+EmployeIid={{empid}}<br>
+EmployeeName={{empname}}<br>
+EmployeeSalary={{empsalary}}<br></h4>
+<input type="text" value="{{email}}"><br>
+<br>
+Addition of two number<input type="text" value="{{getaddition(4,2)}}">
+<h2>Property Binding</h2>
+<input type="text" [value]="email"><br>
+<h2>Addition </h2>
+{{getaddition(4,2)}}
+<br><br>
+<h2>Factorial</h2>
+
+{{getfactorial(5)}}
+
+<br>
+<img [src]="imagepath" [width]="imgwidth" [height]="imgheight">
+
+<h2>Event Binding</h2>
+<button (click) ="changeName()" value="name">Change name</button>
+<button (click) ="changeEmail()" value="name">Change Email</button>
+<button (click) ="changeImage()" value="name">Change Image</button>
+<br><br>
+Enter Your Name<input type="text" [(ngModel)]="name">
+<br>
+<app-directives></app-directives>
+<app-assignfact></app-assignfact>
+<app-service></app-service>
+<app-pipe></app-pipe>
+<app-tempdrivform></app-tempdrivform>
+<app-reactiveform></app-reactiveform>
+<br><br><br>
+<app-assign4></app-assign4>
+
+<app-fruits></app-fruits>
+
+  
+  <app-assign2></app-assign2>
+  
+
+
+</body>
+</html>

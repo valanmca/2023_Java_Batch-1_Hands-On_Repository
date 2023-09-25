@@ -1,0 +1,29 @@
+
+<div class="fruit">
+    <h1>Assignment 3-Fruits</h1>
+    <body><br><br><br>
+        <h1 style="color:red">FRUITS</h1>
+        <h1>NUTRITIONAL INFORMATION</h1>
+        <table class="table table-light">
+            <div class="fruits">
+                <tr class="veg"><b>Fruits</b>
+                    <td *ngFor="let a of fruit"> {{a}}</td>
+                </tr>
+                <tr class="carbo"><b>Carbohydrate</b>
+                    <td *ngFor="let b of carbohydrate"> {{b}}</td>
+                </tr>
+                <tr class="water"><b>Water</b>
+                    <td *ngFor="let c of water"> {{c}}</td>
+                </tr>
+                <tr class="calorie"><b>Calories</b>
+                    <td *ngFor="let d of calories"> {{d}}</td>
+                </tr>
+            </div>
+        </table>
+        <font color="red">All serving sizes 100g,apart from fruit juice,nobody only drinks 100ml</font>
+        <br>
+        <br>
+        <br>
+
+    </body>
+</div>

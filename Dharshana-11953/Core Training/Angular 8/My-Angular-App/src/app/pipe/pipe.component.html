@@ -1,0 +1,66 @@
+<div>
+    <table width="50%">
+        <tr>
+            <td>UpperCase Pipe</td>
+            <td>{{ name | uppercase }}</td>
+        </tr>
+        <tr>
+            <td>LowerCase Pipe</td>
+            <td>{{ name | lowercase }}</td>
+        </tr>
+        <tr>
+            <td>TitleCase Pipe</td>
+            <td>{{ name | titlecase }}</td>
+        </tr>
+    </table>
+    <hr><br>
+    <table width="100%">
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date }}</td>
+        </tr>
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date | date: 'dd/MMM/YYYY'}}</td>
+        </tr>
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date | date: 'dd-MM-YY'}}</td>
+        </tr>
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date | date: 'fullDate'}}</td>
+        </tr>
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date | date: 'fullDate' | uppercase}}</td>
+        </tr>
+        <tr>
+            <td>Date Pipe</td>
+            <td>{{ date | date: 'shortTime'}}</td>
+        </tr>
+    </table>
+    <hr><br>
+    <table width="80%">
+        <tr>
+            <td>Percent Pipe</td>
+            <td>{{00.54565 | percent}}</td>
+        </tr>
+        <tr>
+            <td>Currency Pipe</td>
+            <td>{{6589.23 | currency:"USD"}}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <br>{{arr1}}
+    <br><br>{{ arr1 | sort:'reverse'}}
+    <br><br>{{ arr1 | sort:'ascending'}}
+    <br><br>{{ arr1 | sort:'descending'}}
+    <hr />
+    <br>{{arr2}}
+    <br><br>{{ arr2 | sort:'reverse'}}
+    <br><br>{{ arr2 | sort:'ascending'}}
+    <br><br>{{ arr2 | sort:'descending'}}
+
+</div>

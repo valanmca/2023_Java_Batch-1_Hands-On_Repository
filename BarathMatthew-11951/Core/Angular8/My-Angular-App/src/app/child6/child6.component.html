@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Template Driven Form [TDF]</h1>
+    <br>
+
+    <div>
+        <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+            <label>Name</label>
+            <input type="text" name="name" #name="ngModel" ngModel required pattern="[A-Za-z]+">
+
+            <div *ngIf = "name.touched">
+                <div *ngIf = "name.errors?.['required']">
+                    <font color="red"><b>Name Required.</b></font>
+                </div>
+                <div *ngIf = "name.errors?.['pattern']">
+                    <font color="red"><b>Invalid Name.</b></font>
+                </div>
+            </div>
+            <br>
+            <label>Email</label>
+            <input type="email" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+
+            <div *ngIf = "email.touched">
+                <div *ngIf = "email.errors?.['required']">
+                    <font color = 'red'><b>Email required</b></font>
+                </div>
+                <div *ngIf = "email.errors?.['pattern']">
+                    <font color = 'red'><b>Invalid Email</b></font>
+                </div>
+            </div>
+            <br>
+            <label>PhNo</label>
+            <input type="text" name="phno" #phno="ngModel" ngModel required pattern="[0-9]{10}$">
+            <div *ngIf = "phno.touched">
+                <div *ngIf = "phno.errors?.['required']">
+                    <font color = 'red'><b>PhNo required</b></font>
+                </div>
+                <div *ngIf = "phno.errors?.['pattern']">
+                    <font color = 'red'><b>Invalid PhNo</b></font>
+                </div>
+            </div>
+            <br>
+            <label>Age</label>
+            <input type="text" name="age" #age="ngModel" ngModel required pattern="[0-9]{0,3}$">
+            <div *ngIf = "age.touched">
+                <div *ngIf = "age.errors?.['required']">
+                    <font color = 'red'><b>age required</b></font>
+                </div>
+                <div *ngIf = "age.errors?.['pattern']">
+                    <font color = 'red'><b>Invalid age</b></font>
+                </div>
+            </div>
+            <br>
+            <tr>
+                <label>Country</label>
+                <td><select name="country" id="" #country="ngModel" ngModel required pattern="">
+                <option value="India">India</option> <option value="China">China</option>         
+                </select></td>
+            </tr>
+
+            <div *ngIf = "country.touched">
+                <div *ngIf = "country.errors?.['required']">
+                    <font color = 'red'><b>Select any one Country</b></font>
+                </div>
+            </div>
+            <br>
+            <button [disabled]="myForm.invalid" (click)="changeFlag()">Register</button>
+        </form>
+    </div>
+<br>
+<div *ngIf="flag">
+    <table>
+        <tr>
+            <td>Name : </td>
+            <td>{{tname}}</td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td>{{temail}}</td>
+        </tr>
+        <tr>
+            <td>PhNO : </td>
+            <td>{{tphno}}</td>
+        </tr>
+        <tr>
+            <td>Age : </td>
+            <td>{{tage}}</td>
+        </tr>
+        <tr>
+            <td>Country : </td>
+            <td>{{tcountry}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

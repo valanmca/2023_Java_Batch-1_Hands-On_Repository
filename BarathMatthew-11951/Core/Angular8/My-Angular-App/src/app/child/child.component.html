@@ -1,0 +1,58 @@
+eid : {{eid}} <br>
+ename : {{ename}} <br>
+esalary : {{esalary}} <br>
+Addition : {{getAddition(10,20)}} <br>
+Factorila : {{getFactorial(5)}}
+<br>
+<!-- interpolation -->
+<input type="text" value="{{email}}"> <br> <br>
+Addition of 10 and 20 is : <input type="text" value="{{getAddition(10,20)}}">
+
+<!-- property binding -->
+
+<h3>Property binding</h3>
+
+<input type="text" [value]="email"> <br> <br>
+Addition of 10 and 20 is : <input type="text" [value]="getAddition(10,20)">
+
+<br>
+<img [src]="imgPath" alt=""  [width]="imgWidth" [height]="imgHeight" />
+
+<!-- Event binding -->
+
+  <br>
+<button (click) = changeName()>Change Name</button>
+<br>
+
+<button (click) = changeEmail()>Change Email</button>
+
+<br>
+
+<button (click) = changeImg()>Change Image</button>
+
+<!-- Two way binding -->
+
+Enter your Name : <input type="text" [(ngModel)]="name"/>
+<br>
+Welcome{{name}}
+
+<br>
+
+<!-- calc -->
+<h3>Addition Calc</h3>
+
+num1 : <input type="number" [(ngModel)]="num1"> <br>
+
+num2 : <input type="number" [(ngModel)]="num2"><br>
+
+<!-- result : <input type="number" value="{{getAddition(num1,num2)}}"> -->
+
+result2 : <input type="number" value="{{result}}">
+
+<br>
+<button (click) =  disAddition(num1,num2)>Add</button>
+<button (click) =  disSub(num1,num2)>Sub</button>
+<button (click) =  disMul(num1,num2)>Mul</button>
+<button (click) =  disDiv(num1,num2)>Div</button>
+<button (click) = valueReset() >Reset</button>
+

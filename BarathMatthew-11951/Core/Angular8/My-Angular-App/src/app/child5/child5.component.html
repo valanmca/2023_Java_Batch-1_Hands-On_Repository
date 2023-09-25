@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table width="80%">
+            <tr>
+                <td>Upper Case Pipe</td>
+                <td>{{name | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>Lower Case Pipe</td>
+                <td>{{name | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>Title Case Pipe</td>
+                <td>{{name | titlecase}}</td>
+            </tr>
+        </table>
+        <hr>
+    <br>
+    <table width =" 100%">
+        <tr>
+            <td>Data Pipe</td>
+            <td>{{date}}</td>
+        </tr>
+        <tr>
+            <td>Data Pipe</td>
+            <td>{{date | date: 'dd/MMM/yyyy'}}</td>
+        </tr>
+        <tr>
+            <td>Data Pipe</td>
+            <td>{{date | date: 'dd-MM-yy'}}</td>
+        </tr><tr>
+            <td>Data Pipe</td>
+            <td>{{date | date:'fullDate'}}</td>
+        </tr>
+        <tr>
+            <td>Data Pipe</td>
+            <td>{{date | date:'fullDate' | uppercase}}</td>
+        </tr>
+        <tr>
+            <td>Data Pipe</td>
+            <td>{{date | date:'shortTime'}}</td>
+        </tr>
+    </table>
+    <hr>
+    <br>
+    <table width="80%">
+        <tr>
+            <td>Percent Pipe</td>
+            <td>{{00.54565 | percent}}</td>
+        </tr>
+        <tr>
+            <td>Currency Pipe</td>
+            <td>{{6589.23 | currency:"USD"}}</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

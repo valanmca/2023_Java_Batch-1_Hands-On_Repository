@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="form_container">
+        <form [formGroup]= "myForm" (ngSubmit)= "myFunction(myForm.value)">
+            <header>Registraion Page</header>
+            <label>Name</label>
+            <input type="text" formControlName="name"/>
+            <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+                <div *ngIf ="myForm.get('name')!.hasError('required')">
+                    <font>*name is required</font>
+                </div>             
+                <div *ngIf ="myForm.get('name')!.hasError('pattern')">
+                    <font>*name is invalid</font>
+                </div>
+                            
+                <button [disabled]="myForm.invalid">Register</button>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

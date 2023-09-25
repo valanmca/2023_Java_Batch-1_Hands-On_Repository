@@ -1,0 +1,62 @@
+<div class="header">
+  <h3>Employee Management System</h3>
+
+</div>
+<div class="row">
+  <div class="col-9">
+    <form [formGroup]="myForm" (ngSubmit)="register(myForm.value)">
+
+      <!-- Id -->
+      <label>Employee Id</label> <br>
+
+      <input type="text" formControlName="id"><br>
+      <div *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+        <div *ngIf="myForm.get('id')!.hasError('required')">
+          <font color="red">*id is required</font>
+        </div>
+        <div *ngIf="myForm.get('id')!.hasError('pattern')">
+          <font color="red">*id is invalid</font>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <label>Employee Name</label> <br>
+
+      <input type="text" formControlName="name"><br>
+      <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+        <div *ngIf="myForm.get('name')!.hasError('required')">
+          <font color="red">*name is required</font>
+        </div>
+        <div *ngIf="myForm.get('name')!.hasError('pattern')">
+          <font color="red">*name is invalid</font>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <label>Employee Salary</label> <br>
+
+      <input type="text" formControlName="salary"><br>
+      <div *ngIf="myForm.get('salary')!.touched && myForm.get('salary')!.invalid">
+        <div *ngIf="myForm.get('salary')!.hasError('required')">
+          <font color="red">*salary is required</font>
+        </div>
+        <div *ngIf="myForm.get('salary')!.hasError('pattern')">
+          <font color="red">*salary is invalid</font>
+        </div>
+      </div><br>
+
+      <button class="btn btn-danger" (click)="insertemployee(myForm.value)"
+        [disabled]="myForm.invalid">insert</button>&nbsp;
+      <button class="btn btn-danger" (click)="deleteemployee(myForm.value)">Delete</button>&nbsp;
+      <button class="btn btn-danger" (click)="updateemployee(myForm.value)">Update</button>&nbsp;
+    </form>
+    <font color="green"><b>{{result}}</b></font>
+  </div>
+
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let emp of empList"> <b> {{emp.id}}- {{emp.name}} - {{emp.salary}}</b></li>
+    </ul>
+  </div>
+
+</div>

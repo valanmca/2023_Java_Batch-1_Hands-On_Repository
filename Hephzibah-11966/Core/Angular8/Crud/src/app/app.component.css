@@ -1,0 +1,26 @@
+.header{
+ border: 3px solid coral;
+ height: 100px;
+ width: 95%;
+ margin-left: 45px;
+ text-align: center;
+}
+
+.col-9{
+border: 3px solid coral;
+ height: 400px;
+ margin-left: 45px;
+ margin-top: 20px;
+width: 65%;
+
+}
+.col-3{
+border: 3px solid coral;
+ height: 400px;
+ margin-left: 15px;
+ margin-top: 20px;
+width: 30%;
+}
+h3{
+    margin-top: 30px;
+}

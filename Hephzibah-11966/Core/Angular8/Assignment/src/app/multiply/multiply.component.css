@@ -1,0 +1,62 @@
+.table1{
+      display: flex;
+    }
+    .table2{
+      display: flex;
+      margin-top: 15px;
+    }
+    
+    .assignment4{
+      border: 3px solid black;
+      height: 1200px;
+    }
+    .first{
+      background-color: red;
+      color: white;  
+    }
+    
+    .second{
+      background-color: orange;
+      color:white;
+      
+    }
+    
+    .three{
+      background-color: rgb(251, 185, 62);
+      color:white
+    }
+    
+    .four{
+      background-color: rgb(205, 153, 56);
+      color:white
+    }
+    
+    .five{
+      background-color: rgb(60, 244, 60);
+      color:white
+    }
+    
+    .six{
+      background-color: green;
+      color:white
+    }
+    
+    .seven{
+      background-color: rgb(27, 206, 255);
+      color:white
+    }
+    
+    .eight{
+      background-color: blue;
+      color:white
+    }
+    
+    .nine{
+      background-color: rgb(97, 97, 249);
+      color:white
+    }
+    
+    .ten{
+      background-color: violet;
+      color:white
+    }

@@ -1,0 +1,62 @@
+<div>
+    <form #myForm="ngForm" (ngSubmit)="register(myForm.value)">
+        <label>Name</label>
+        <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z]+">
+
+        <div *ngIf="name.touched">
+            <div *ngIf="name.errors?.['required']">
+             <font color="red"><b>Name required</b></font>   
+            </div>
+            <div *ngIf="name.errors?.['pattern']">
+            <font color="red">Invalid Name</font>
+            </div>
+        </div><br>
+
+        <label>Email</label>
+        <input type="text" name="email" #email="ngModel" ngModel required pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$">
+
+        <div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+             <font color="red"><b>Email required</b></font>   
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+            <font color="red">Invalid Email</font>
+            </div>
+        </div><br>
+
+        <label>Enter a age</label>
+        <input type="text" name="age" #age="ngModel" ngModel required minlength="1" maxlength="2">
+
+        <div *ngIf="age.touched">
+            <div *ngIf="age.errors?.['required']">
+             <font color="red"><b>age required</b></font>   
+            </div>
+        </div><br>
+
+        <label>Phone number</label>
+        <input type="text" name="phone" #phone="ngModel" ngModel required minlength="10" maxlength="10">
+
+        <div *ngIf="phone.touched">
+            <div *ngIf="phone.errors?.['required']">
+             <font color="red"><b>Phone Number required</b></font>   
+            </div>
+            <div *ngIf="phone.errors?.['pattern']">
+            <font color="red">Invalid Email</font>
+            </div>
+        </div><br>
+
+        <label>Country</label>
+        <select  name="country" #country="ngModel" ngModel required>
+        <option value="Ind">India</option>
+        </select>
+     <button [disabled]="myForm.invalid">Register</button><br><br>
+     <table table.hover>
+        <tr><td>Name</td><td>{{uname}}</td></tr>
+        <tr><td>Email</td><td>{{uemail}}</td></tr>
+        <tr><td>Age</td><td>{{uage}}</td></tr>
+        <tr><td>Phone</td><td>{{uphone}}</td></tr>
+        <tr><td>Country</td><td>{{ucountry}}</td></tr>
+     </table>
+     
+    </form>
+</div>

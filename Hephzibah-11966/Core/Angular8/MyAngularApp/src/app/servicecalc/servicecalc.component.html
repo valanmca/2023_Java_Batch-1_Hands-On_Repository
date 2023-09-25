@@ -1,0 +1,15 @@
+<div>
+    <span>Enter a number</span>
+    <input type="number" name="num1" [(ngModel)]="num1"><br>
+    <span>Enter a number</span>
+    <input type="number" name="num2" [(ngModel)]="num2">
+    The result is {{result}}
+
+    <button (click)="getAdd()" value="Addition">Add</button>
+    <button (click)="getSub()" value="Sutraction">Sub</button>
+    <button (click)="getMult()" value="Multiplication">Mult</button>
+    <button (click)="getDiv()" value="Division" >Div</button> <br>
+
+    Factorial of 5 is {{factorial}}
+
+</div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  
+  <div class="root">
+    <h2>root component</h2>
+    <app-child></app-child> 
+</div>
+<div>
+
+</div>
+
+<div>
+  <br>
+  <div></div>
+  empid={{empid}}<br>
+  empname={{empname}} <br>
+  empsalary={{empsalary}} <br>
+  email id <input type="text" value="{{email}}"><br>
+  Addition of 10 and 30 is <input type="text" value="{{getaddition(10,30)}}"><br><br>
+
+   <h2>Property binding</h2>
+  email id <input type="text" [value]="email"><br> 
+  Addition of 10 and 30 is <input type="text" [value]="getaddition(10,30)"><br>
+  getfactorial={{getfactorial(5)}}<br>  
+  image <img [src]="image" [width] ="imgwidth" [height]="imgheight"/> <br>
+
+  <h2>Event binding</h2>
+  
+  <button (click)="changename()" value="name">change name</button>
+  <button (click)="changeemail()" value="email">change email</button>
+  <button (click)="changeimage()" value="image">change image</button><br>
+
+  <h2>Two Way binding</h2>
+  Enter your name<input type="text" [(ngModel)]="name"/><br>
+  Welcome {{name}}
+
+</div>
+  
+</body>
+</html>
+
+<app-directives></app-directives><br><br><br> <br><br>  <br><br> <br><br><br><br> <br><br>
+<app-servicecalc></app-servicecalc>
+<app-assign-fact></app-assign-fact><br>
+<app-pipe></app-pipe><br>
+<app-custompipe></app-custompipe>
+<app-templatedrive></app-templatedrive>
+<app-reactiveform></app-reactiveform>
+<div class="MyDiv">
+  <table width="100%"[cellSpacing]="15"[cellPadding]="10">
+    <tr>
+      <td><a routerLink="home">Home</a></td>
+      <td><a routerLink="contact">Contact</a></td>
+      <td><a routerLink="about">Home</a></td>
+    </tr>
+  </table>
+  <hr/>
+  <div>
+    This is the space for New component.
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<hr/>

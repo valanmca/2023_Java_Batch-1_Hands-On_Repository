@@ -1,0 +1,24 @@
+.Mydiv {
+    position: absolute;
+    left: 100px;
+    top: 810px;
+    width: 400px;
+    height: 150px;
+    border: 3px solid green;
+    border-radius: 20px;
+}
+.button{
+    position: absolute;
+    left: 60px;
+    top: 900px;
+}
+.attribute{
+    position: absolute;
+    left: 80px;
+}
+.MyClass1{
+    color:blue;
+}
+.MyClass2{
+    color:red;
+}

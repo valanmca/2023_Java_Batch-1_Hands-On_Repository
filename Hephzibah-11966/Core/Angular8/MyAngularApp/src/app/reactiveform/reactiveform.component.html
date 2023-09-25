@@ -1,0 +1,68 @@
+<body>
+      <h1>Reactive Form</h1>
+      <form [formGroup]= "myForm" (ngSubmit)= "register(myForm.value)">
+        
+        <!-- Name -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Enter name</span>
+          </div>
+          <input type="text" class="form-control" formControlName ="name" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          <div *ngIf ="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+            <div *ngIf ="myForm.get('name')!.hasError('required')">
+              <font color="red">*name is required</font>
+            </div>
+            <div *ngIf ="myForm.get('name')!.hasError('pattern')">
+              <font color="red">*name is invalid</font>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Email Id -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Enter Email</span>
+          </div>
+          <input type="email" class="form-control" formControlName ="email" placeholder="Email Id" aria-label="Username" aria-describedby="basic-addon1">
+          <div *ngIf ="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+            <div *ngIf ="myForm.get('email')!.hasError('required')">
+              <font color="red">*email is required</font>
+            </div>
+            <div *ngIf ="myForm.get('email')!.hasError('pattern')">
+              <font>*email is invalid</font>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Age -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Enter age</span>
+          </div>
+          <input type="text" formControlName ="age" class="form-control" placeholder="Age" aria-label="Username" aria-describedby="basic-addon1">
+          <div *ngIf ="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+            <div *ngIf ="myForm.get('age')!.hasError('required')">
+              <font color="red">*age is required</font>
+            </div>
+            <div *ngIf ="myForm.get('age')!.hasError('pattern')">
+              <font color="red">*age is invalid</font>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phone number -->
+        <div class="input-group mb-3" style="width:30%;margin-left:35%">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Enter phone Number</span>
+          </div>
+          <input type="phone" formControlName ="phone" class="form-control" placeholder="Phone Number" aria-label="Username" aria-describedby="basic-addon1">
+          <div *ngIf ="myForm.get('phone')!.touched && myForm.get('phone')!.invalid">
+            <div *ngIf ="myForm.get('phone')!.hasError('required')">
+              <font color="red">*phone number is required</font>
+            </div>
+          </div>
+        </div>    
+          <button class="btn btn-outline-dark" [disabled]="myForm.invalid">Register</button> 
+      </form>
+      <br>
+    </body>

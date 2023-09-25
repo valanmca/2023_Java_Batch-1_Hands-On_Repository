@@ -1,0 +1,11 @@
+h2{
+    padding-left: 20px;
+}
+.root{
+    
+    border-radius: 10px;
+    border: 2px solid red;
+    color: red;
+    width:30%;
+    height:200px;
+}

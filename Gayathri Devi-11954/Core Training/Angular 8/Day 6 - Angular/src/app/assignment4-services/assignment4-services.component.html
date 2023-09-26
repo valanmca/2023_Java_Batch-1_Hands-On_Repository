@@ -1,0 +1,21 @@
+
+
+<table [cellPadding]="5" [cellSpacing]="5">
+    <tr *ngFor="let b of n">
+        <td>{{b}} * {{1}} = {{getMultipli(1,b)}}</td>
+        <td>{{b}} * {{2}} = {{getMultipli(2,b)}}</td>
+        <td>{{b}} * {{3}} = {{getMultipli(3,b)}}</td>
+        <td>{{b}} * {{4}} = {{getMultipli(4,b)}}</td>
+        <td>{{b}} * {{5}} = {{getMultipli(5,b)}}</td></tr>
+       <tr *ngFor="let b of n"> <td>{{b}} * {{6}} = {{getMultipli(6,b)}}</td>
+        <td>{{b}} * {{7}} = {{getMultipli(7,b)}}</td>
+        <td>{{b}} * {{8}} = {{getMultipli(8,b)}}</td>
+        <td>{{b}} * {{9}} = {{getMultipli(9,b)}}</td>
+        <td>{{b}} * {{10}} = {{getMultipli(10,b)}}</td>
+    </tr></table> 
+<!-- <table *ngFor="let row of table1">
+    <tr><td *ngFor = "let cell of row">{{cell}}</td></tr>
+</table> -->
+<!-- 
+<ul><li *ngFor = "let result of multiplicationTable">
+    {{result}}</li></ul> -->

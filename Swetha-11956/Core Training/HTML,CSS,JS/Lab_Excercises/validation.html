@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    .log{
+        border: 2px solid blue;
+        position:absolute;
+        width: 40%;
+        height: 40%;
+        left : 20%;
+    }
+</style>
+    <script>
+        function check() {
+            var username = document.getElementById("l1").value;
+            var password = document.getElementById("l2").value;
+            if (username == "swetha" && password == "11956") {
+                alert("Login successfully");
+            }
+            if (username != "swetha" && password != "11956") {
+                alert("Login Failed");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="log">
+        <br><br>
+        <center><h3> Login form</h3></center>
+    &emsp13;&emsp13;<label>Enter email address: </label>
+    <input type="text" id="l1"><br><br>
+
+    &emsp13;&emsp13;<label>Enter password: </label>
+    <input type="password" id="l2"><br><br>
+
+    &emsp13;&emsp13;<button onclick="check()">login</button>
+    <button onclick="check()">signup</button>
+</div>
+
+
+
+</body>
+
+</html>

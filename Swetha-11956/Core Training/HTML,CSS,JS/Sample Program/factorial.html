@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .fac{
+            border: 3px solid green;
+            width: 40%;
+            height: 30%;
+            position:absolute;
+            left:30%;
+            top: 30%;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+        function fact(){
+            num=document.getElementById("num").value;
+            var fact=1;
+            for(i=1;i<=num;i++){
+                fact=fact*i;
+            }
+            document.getElementById("res").value=fact;
+
+        }
+    </script>
+</head>
+<body>
+    <div class="fac">
+        <center><h3>Factorial</h3></center>
+    &emsp;&emsp;&emsp;<label>Enter the number:</label>
+    <input type="number" id="num" name="Num"><br><br>
+    &emsp;&emsp;&emsp;&emsp;<button onclick="fact()">Submit</button><br>
+        <br>
+        &emsp;&emsp;&emsp;<label>The factorial is :</label>
+    <input type="number" id="res">
+</div>
+    
+</body>
+</html>

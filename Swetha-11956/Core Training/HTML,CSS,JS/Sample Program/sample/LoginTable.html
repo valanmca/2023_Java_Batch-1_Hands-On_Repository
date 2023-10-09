@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .LoginDiv{
+            border:none;
+            top:10%;
+            height:330px;
+            width:550px;
+            left:20%;
+            position:absolute;
+            
+            background-color: blanchedalmond;
+
+        }
+        th{
+            color:crimson;
+            font-size: 25px;
+            font-style:oblique;
+        }
+        .textbox{
+            width:300px;
+            height:30px;
+            border-radius:4px;
+            border-color:rgb(247, 232, 228);
+        }
+        button{
+            border:none;
+            background-color:rgb(238, 156, 136);
+            border-radius:20px;
+            width:120px;
+            height:30px;
+            font-weight: bold;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color:white;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+
+        
+    </style>
+    <script>
+        function check() {
+            var userRegEx='^[A-Z a-z]+$';
+            var userpwdRegEx='^[0-9]+$';
+            var username = document.getElementById("l1").value;
+            var password = document.getElementById("l2").value;
+            
+            if(username==""){
+                alert
+            }
+            if(!username.match(userRegEx)){
+                alert("Invalid username");
+            }
+            if(!password.match(userpwdRegEx)){
+                alert("Invalid password");
+            }
+            if (username=="swetha" || password=="11956") {
+                alert("Login successfully"); 
+            }
+            if (username!="swetha" && password !="11956") {
+                alert("Login Failed");
+            }
+            
+        }
+    </script>
+    
+</head>
+<body>
+<div class="LoginDiv">
+
+    <form>
+        <table align="center">
+            <tr colspan="2" align="center"><th><br>Login page<br><br></th></tr>
+            <tr><td><b>Username : </b><input class="textbox" onfocus="this.value=' '" id="l1" type="text" placeholder="  Enter username"><br><br></td></tr>
+            <tr><td><b>Password : </b><input  class="textbox" id="l2" type="password" placeholder="  Enter password"><br><br></td></tr>
+            <tr><td colspan="2" align="center"><button onclick="check()">Login</button></td>
+            <tr><td colspan="2" align="center"><button ><a href="RegistrationPage.html">New user</a></button><br><br></td></tr>
+            <tr><td colspan="2" align="center">Forgot password?<a href="">Click here</a> </td>
+            
+        </table>
+    </form>
+</div>
+</body>
+</html>

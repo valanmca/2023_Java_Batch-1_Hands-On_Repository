@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration page</title>
+    <style>
+        .reg {
+
+            border: 1px solid burlywood;
+            left: 50px;
+            width: 60%;
+            height: 600px;
+            position: absolute;
+            left: 20%;
+            background-color:burlywood;
+
+        }
+
+        .tb {
+            width: 150px;
+            height: 25px;
+        }
+
+        button {
+
+            width: 150px;
+            height: 40px;
+            font-size:18px;
+            background-color:khaki;
+            border-radius:4px;
+
+        }
+    </style>
+    <script>
+        function check(){
+            
+            var UsernameReqEx="^[a-zA-Z@]+$"; 
+            var passwordReqEx="^[0-9]+$" ;
+                   
+            var userName= document.getElementById("email").value;
+            var password = document.getElementById("pwd").value;
+            var mobile = document.getElementById("mbno").value;
+            if (userName==""){
+                alert("Field cannot be empty");
+            }
+            if(!userName.match(UsernameReqEx)){
+                alert("Your username is invalid");
+            }
+
+            
+            if(password==""){
+                alert("Password is invalid");
+            }
+            if(!password.match(passwordReqEx)){
+                alert("invalid password");
+            }
+            if(mobile.length!=10){
+                alert("Mobile no is invalid");
+            }
+        }
+
+    </script>
+</head>
+<div class="reg">
+
+    <body>
+        <table align="center">
+            <th>
+                <h1>Registration page</h1>
+            </th>
+            <tr>
+                <td><b><label for="fname"> First Name &emsp;</label></b></td>
+                <td><input type="text" placeholder=" First name" id="fname" class="tb"></td>
+            </tr>
+
+            <tr>
+                <td><b> <label for="lname"> Last Name &emsp;</label></b></td>
+                <td><input type="text" placeholder=" Lastname" id="lname" class="tb"></td>
+            </tr>
+
+            <tr>
+                <td><b> <label for="email"> E-mail &emsp;&emsp;</label></b></td>
+                <td><input type="email" placeholder=" Enter your email" id="email" class="tb"></td>
+            </tr>
+
+
+            <tr>
+                <td><b><label for="password">Password &emsp;</label></b></td>
+                <td><input type="password" placeholder=" Enter your password" id="pwd" class="tb"></td>
+            </tr>
+
+            <tr>
+                <td><b><label for="phone">Mobile No &emsp;</label></b></td>
+                <td><input type="text" placeholder=" Enter your Mobile no" id="mbno" class="tb"></td>
+            </tr>
+
+            <tr>
+                <td><b><label for="gender"> Gender &emsp;</label></b></td>
+                <td><input type="radio" name="gender" value="male" >Male
+                    <input type="radio" name="gender" value="female" > Female
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><b><label for="lang"><br>Languages known </label></b></td>
+                <td><input type="checkbox">English
+                    <input type="checkbox">Tamil
+                    <input type="checkbox">Hindi
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Address</b></td>
+                <td><textarea id="tarea" rows="4" cols="25"> </textarea></td>
+            </tr>
+            <tr>
+                <td><b>Date of birth </b></td>
+                <td><input type="date" class="tb"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dis"><b>Choose district </b></label></td>
+                <td><select name="district" id="dis" class="tb">
+                        <option value="sel">Select district</option>
+                        <option value="villupuram">Villupuram</option>
+                        <option value="trichy">Trichy</option>
+                        <option value="madurai">Madurai</option>
+                    </select></td>
+            </tr>
+
+            <tr>
+                <td align="center"><br><button onclick="check()">Submit</button></td>
+            </tr>
+        </table>
+    </body>
+</div>
+
+</html>

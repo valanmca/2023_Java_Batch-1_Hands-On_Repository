@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <style>
+        .cal {
+            border: 3px solid black;
+            width: 500px;
+            height: 250px;
+            left: 150px;
+            position: absolute;
+            background-color: blanchedalmond;
+            top: 60px;
+
+        }
+
+        }
+
+        button {
+            height: 40px;
+            width: 70px;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function addition(){
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var sum = parseInt(a )+ parseInt(b);
+            document.getElementById("result").value =  sum ;
+        }
+        function subraction(){
+            var a= document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var sub= parseInt(a)- parseInt(b);
+            document.getElementById("result").value= sub ;
+        }
+        function Multiplication(){
+            var a= document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var mul= parseInt(a)* parseInt(b);
+            document.getElementById("result").value= mul ;
+            }
+            function Division(){
+            var a= document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var div = parseInt(a)/ parseInt(b);
+            document.getElementById("result").value = div;
+            }
+    </script>
+</head>
+<div class="cal">
+
+    <body>
+        
+            <center>
+                <h2>Calculator</h2>
+            </center>
+           
+                <label><b>Enter the First Number: </b></label>
+                <input type="number" id="first"><br><br>
+           
+                <label><b>Enter the Second Number: </b></label>
+                <input type="number"id="second"><br><br>
+           
+                <button onclick="addition()">Add</button>
+                <button onclick="subraction()">Sub</button>
+                <button onclick="Multiplication()">Mul</button>
+                <button onclick="Division()">Div</button>
+                <br><br>
+                <label><b>Result: </b></label>
+                <input type="number" id="result">
+           
+    </body>
+</div>
+
+</html>

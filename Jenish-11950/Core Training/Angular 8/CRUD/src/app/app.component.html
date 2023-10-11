@@ -1,0 +1,68 @@
+<div class="header">
+  <h2>Employee Management System</h2>
+</div>
+<div class="left">
+  <h3>Left Content</h3>
+  <form #myForm="ngForm" ngSubmit="myFunction(myForm.value)">
+    <div class="mb-3">
+      <label class="form-label"><b>Employee ID</b></label>
+      <input type="text" class="form-control" placeholder="Enter Id" name="id" #id="ngModel" ngModel required
+        pattern="[0-9]+">
+      <div *ngIf="id.touched">
+        <div *ngIf="id.errors?.['required']">
+          <font color="red"><b>ID Required*</b></font>
+        </div>
+        <div *ngIf="id.errors?.['pattern']">
+          <font color="red"><b>Invalid ID<i class="fa fa-close"></i></b></font>
+        </div>
+        <div *ngIf="id.valid">
+          <font color="green"><b>Valid ID<i class="fa fa-check"></i></b></font>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label"><b>Employee Name</b></label>
+      <input type="text" class="form-control" placeholder="Enter name" name="name" #name="ngModel" ngModel required
+        pattern="[A-Z a-z]+">
+      <div *ngIf="name.touched">
+        <div *ngIf="name.errors?.['required']">
+          <font color="red"><b>Name Required*</b></font>
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+          <font color="red"><b>Invalid name<i class="fa fa-close"></i></b></font>
+        </div>
+        <div *ngIf="name.valid">
+          <font color="green"><b>Valid name<i class="fa fa-check"></i></b></font>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label"><b>Employee Salary</b></label>
+      <input type="text" class="form-control" placeholder="Enter name" name="salary" #salary="ngModel" ngModel required
+        pattern="[0-9]+">
+      <div *ngIf="salary.touched">
+        <div *ngIf="salary.errors?.['required']">
+          <font color="red"><b>Salary Required*</b></font>
+        </div>
+        <div *ngIf="salary.errors?.['pattern']">
+          <font color="red"><b>Invalid Salary<i class="fa fa-close"></i></b></font>
+        </div>
+        <div *ngIf="salary.valid">
+          <font color="green"><b>Valid Salary<i class="fa fa-check"></i></b></font>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary"(click)="InsertEmployee(myForm.value)">Insert</button> &nbsp;
+    <button type="button" class="btn btn-danger" (click)="DeleteEmployee(myForm.value)">Delete</button> &nbsp;
+    <button type="button" class="btn btn-success" (click)="UpdateEmployee(myForm.value)">Update</button> &nbsp;
+  </form>
+  <font color="green"><b>{{ result }}</b></font>
+</div>
+<div class="right">
+  <h3>Data Inserted</h3>
+  <br><br>
+  <ul>
+    <li *ngFor="let emp of empList"><b>{{emp.id}} - {{emp.name}} - {{emp.salary}} </b></li>
+  </ul>
+  
+</div>

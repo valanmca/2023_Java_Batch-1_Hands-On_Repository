@@ -1,0 +1,11 @@
+.myDiv{
+    color: darkcyan;
+}
+table{
+    border: 4px black;
+    background-color: darkorange;
+}
+a{
+    cursor: hover;
+    color: black;
+}

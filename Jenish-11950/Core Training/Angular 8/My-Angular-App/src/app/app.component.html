@@ -1,0 +1,64 @@
+<b>
+  Employee id: {{ eid }}
+  <br>
+  Employee Name : {{ ename }}
+  <br>
+  Employee Salary : {{ esalary }}
+  <br>
+  sum={{ getAddition(4,5) }}
+  <br>
+  Fact={{ getFactorial(5) }}
+  <br>
+  <input type="email" value="{{email}}" />
+  <br>
+  <input type="email" [value]="email" />
+  <br>
+  Addition of 10 and 20 is: <input type="email" value="{{getAddition(10,20)}}" />
+  <br>
+  Factorial of 5 is: <input type="email" value="{{getFactorial(5)}}" />
+  <br>
+  <img [src]="imagepath" [width]="width" [height]="height" />
+  <br>
+  <h3>Event Binding</h3>
+  <button (click)="changeName()" value="ename">Changename</button>
+  <button (click)="changeEmail()" value="email">Changeemail</button>
+  <button (click)="changeImage()" value="imagepath">Changeimage</button>
+  <br>
+  <h3>Two way Binding</h3>
+  Enter your Name <input type="text" [(ngModel)]="name" />
+  <br>
+  Welcome {{ name }}
+  <br>
+  <app-directives></app-directives>
+  <br>
+  <br>
+  <app-assignfact></app-assignfact>
+  <br>
+  <br>
+  <app-calculator></app-calculator>
+  <br>
+  <br>
+  <app-service></app-service>
+  <br>
+  <br>
+  <app-pipe></app-pipe>
+
+  <br><br>
+  <app-tempdrivform></app-tempdrivform>
+  <br><hr/>
+  <app-reactiveform></app-reactiveform>
+<hr/>
+<app-assign4></app-assign4><br><br>
+<br><br>
+<br><br><br><br><br>
+<br><br><br>
+<br><br><br>
+<br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br>
+<app-fruits></app-fruits><br><br>
+<app-assign2></app-assign2><br><br>
+</b>

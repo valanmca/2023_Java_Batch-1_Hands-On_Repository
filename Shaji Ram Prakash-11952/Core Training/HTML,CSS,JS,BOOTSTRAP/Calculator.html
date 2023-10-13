@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login-Page</title>
+    <script>
+        function addition() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var sum = parseInt(a) + parseInt(b);
+            document.getElementById("result").value = sum;
+        }
+        function subtraction() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var sum = parseInt(a) - parseInt(b);
+            document.getElementById("result").value = sum;
+        }
+        function multiplication() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var sum = parseInt(a) * parseInt(b);
+            document.getElementById("result").value = sum;
+        }
+        function division() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var sum = parseInt(a) / parseInt(b);
+            document.getElementById("result").value = sum;
+        }
+    </script>
+</head>
+
+<body style="padding: 100px;">
+    <center>
+        <fieldset style="height: 30%; width: 30%;">
+            <h2>Calculator</h2><br><br>
+            <label>Number1 :</label>
+            <input type="number" name="number1" id="n1" placeholder="num1"><br><br>
+            <label>Number2 :</label>
+            <input type="number" name="number2" id="n2" placeholder="num2"><br><br>
+            &emsp;&emsp;<button onclick="addition()">Add</button>
+            &emsp;<button onclick="subtraction()">Sub</button>
+            &emsp;<button onclick="multiplication()">Multiply</button>
+            &emsp;<button onclick="division()">Divide</button><br><br>
+            <label>Result :</label>
+            <input type="number"  id="result" placeholder="Answer"><br><br>
+        </fieldset>
+    </center>
+
+</body>
+
+</html>

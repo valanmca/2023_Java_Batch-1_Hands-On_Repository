@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login-Page</title>
+    <style>
+        .username {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: blueviolet;
+            cursor: pointer;
+            color: whitesmoke;
+            border: none;
+            border-radius: 20px;
+            width: 75px;
+            height: 30px;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        .newuser {
+            text-decoration: none;
+            background-color: blueviolet;
+            cursor: pointer;
+            color: whitesmoke;
+            border: none;
+            border-radius: 20px;
+            width: 75px;
+            height: 30px;
+        }
+
+        .newuser:hover {
+            background-color: blue;
+        }
+
+        .ref {
+            text-decoration: none;
+        }
+
+        .ref:hover {
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function check() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if ( username == "shaji" && password == "11952") {
+                alert("Login successfully");
+            }
+            if ( username != "shaji" && password != "11952") {
+                alert("Login Failed");
+            }
+        }
+    </script>
+</head>
+
+<body style="padding: 100px;">
+    <center>
+        <fieldset style="height: 30%; width: 40%; border-radius: 20px; border-color: blueviolet;">
+            <h2>
+                <font color="blueviolet">Login</font>
+            </h2><br>
+            <label for="username"><b>Username :</b></label>
+            <input class="username" type="text" id="username" placeholder="Username"><br><br>
+            <label for="password"><b>Password :</b></label>
+            <input class="password" type="password" id="password" placeholder="**********"><br><br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<button onclick="check()">Login</button>
+            &emsp;<button><a href="Register-Page.html" class="newuser">New user</a></button><br><br>
+            &emsp;Forgot password <a href="#" class="ref">Click here!</a><br><br>
+        </fieldset>
+    </center>
+</body>
+
+</html>

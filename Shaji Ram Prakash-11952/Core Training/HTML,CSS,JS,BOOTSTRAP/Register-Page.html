@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Register-Page</title>
+    <style>
+        body{
+            background-color: rgb(0, 191, 255);
+        }
+
+        .outline {
+            border: 2px solid blueviolet;
+            border-radius: 20px;
+            height: 60%;
+            width: 40%;
+        }
+
+        button {
+            background-color: blueviolet;
+            cursor: pointer;
+            color: whitesmoke;
+            border: none;
+            border-radius: 20px;
+            width: 75px;
+            height: 30px;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body style="padding: 100px;">
+    <center>
+        <form>
+            <div class="outline">
+                <table>
+                    <tr>
+                        <th colspan="4">
+                            <h2>
+                                <font color="white">Registration</font>
+                            </h2><br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><br><label for="Phnum"><b>Account Number :</b></label></td>
+                        <td><br><input type="phonenumber" id="phnum" placeholder="eg:(********1020)"></td>
+                    </tr>
+                    <tr>
+                        <td><br><label for="Phnum"><b>Phone Number :</b></label></td>
+                        <td><br><input type="phonenumber" id="phnum" placeholder="+91"></td>
+                    </tr>
+                    <tr>
+                        <td><br><label for="username"><b>Username :</b></td>
+                        <td><br><input type="text" id="username" placeholder="Username"></td>
+                    </tr>
+                        <td><br><label for="password"><b>Password :</b></label></td>
+                        <td><br><input type="password" id="password" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><br><label for="confirm-pass"><b>Confirm Password :</b></label></td>
+                        <td><br><input type="confirm-pass" id="confirm-pass" placeholder="Confirm password"></td>
+                    </tr>
+                </table>
+                <br><br><button onclick="test()">Submit</button><br><br><br>
+            </div>
+        </form>
+    </center>
+</body>
+<script>
+    function test() {
+        var username = document.getElementById("username").value;
+        var usernameReqEx = '^[A-Z a-z 0-9]+$'
+        var phnum = document.getElementById("phnum").value;
+        var ph_num = /^\d{10}$/;
+        var email = document.getElementById("email").value;
+
+        if (username == "" || phnum == "") {
+            alert("Field can't be empty")
+            return false;
+        }
+        if (!username.match(usernameReqEx)) {
+            alert("Usernmae must have alphabet and number only")
+            return false;
+        }
+        if (phnum.length != 10) {
+            alert("Enter 10 Digit Only!");
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <style>
+        .outline {
+            border: 2px solid whitesmoke;
+            border-radius: 20px;
+            height: 100%;
+            width: 30%;
+        }
+
+        #textarea {
+            text-align: right;
+            height: 100px;
+            width: 99%;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        ::placeholder{
+            color: rgb(83, 83, 83);
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 30px;
+            font-weight:bold;
+            color:rgb(99, 98, 98);
+        }
+    </style>
+</head>
+
+<body style="padding: 100px;">
+    <center>
+        <div class="outline">
+                <input type="text" id="textarea" placeholder="0&ensp;">
+            <div class="button">
+                <br><button>7</button>
+                &ensp;<button>8</button>
+                &ensp;<button>9</button>
+                &ensp;<button>+</button><br><br>
+                <button>4</button>
+                &ensp;<button>5</button>
+                &ensp;<button>6</button>
+                &ensp;<button>-</button><br><br>
+                <button>1</button>
+                &ensp;<button>2</button>
+                &ensp;<button>3</button>
+                &ensp;<button>*</button><br><br>
+                <button>0</button>
+                &ensp;<button>.</button>
+                &ensp;<button>/</button>
+                &ensp;<button style="background-color: red;"><font color="whitesmoke">=</font></button>
+                <br><br>
+            </div>
+        </div>
+        <br><br><iframe src="https://webdevtrick.com/wp-content/uploads/html-css-javascript-calculator.jpg" width="600" height="600" title="sample"></iframe>
+    </center>
+</body>
+
+</html>

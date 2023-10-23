@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+        * {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbarSupportedContent a {
+            font-weight: 100;
+            border-bottom: transparent;
+
+        }
+
+        #navbarSupportedContent a:hover {
+            border-bottom: 2px solid;
+            color: rgb(247, 8, 99)
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            padding: .5rem 5rem;
+
+        }
+
+        .navbar .navbar-brand {
+            font-weight: 200;
+            font-size: 25px;
+            color: rgb(247, 8, 99) !important;
+
+        }
+
+        #navbarSupportedContent button {
+            background: rgb(247, 8, 99);
+            width: 150px;
+        }
+
+        section {
+            width: 100%;
+            display: flex;
+            /* justify-content:center;
+            
+            min-height:90vh;
+            border:10px solid green; */
+        }
+
+
+        #home {
+            background-position: center;
+            background-position: center;
+        }
+
+        .w3-content {
+            padding-left: 30%;
+            margin-left: 40px;
+
+        }
+
+        .w3-opacity {
+            padding-left: 35%;
+        }
+        footer{
+            background-color: black;
+            padding-left: 40%;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">KOLORS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Childrens</a>
+                    </li>
+
+                </ul>
+                <button class="btn">Sign in</button>
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- <div class="first">
+        <img src="https://www.nakshatrakids.com/wp-content/uploads/2023/05/Summer-Sale.jpg">
+    </div> -->
+
+    <section>
+        <img class="mySlides" src="https://www.nakshatrakids.com/wp-content/uploads/2023/05/Summer-Sale.jpg"
+            style="width:200%">
+        <!-- <img class="mySlides" src="https://www.nakshatrakids.com/wp-content/uploads/2023/05/Summer-Sale.jpg" style="width:100%">
+        <img class="mySlides" src="https://www.nakshatrakids.com/wp-content/uploads/2023/05/Summer-Sale.jpg" style="width:100%"> -->
+    </section>
+    <br><br>
+    <section class="w3-container w3-center w3-content" style="max-width:1400px">
+
+        <h3>
+            <p><i>We love FASHION</i></p>
+        </h3>
+    </section>
+    <section class="w3-container w3-content w3-center" style="max-width:1000px">
+        <p class="w3-justify">
+            Fashion matters. To the economy, to society and to each of us personally. Faster than anything else, what we
+            wear tells the story of who we are – or who we want to be.</p>
+    </section>
+
+    <section class="w3-row-padding w3-center w3-light-grey">
+        <article class="w3-third">
+
+            <img src="https://i.pinimg.com/564x/bf/b4/da/bfb4da58665aeab6c832dab231fc2ce8.jpg" alt="Random Name"
+                style="width:100%">
+            <p>Sue is the smartest.</p>
+        </article>
+        <article class="w3-third">
+
+            <img src="https://i.pinimg.com/564x/bf/b4/da/bfb4da58665aeab6c832dab231fc2ce8.jpg" alt="Random Name"
+                style="width:100%">
+            <p>Sue is the prettiest.</p>
+        </article>
+        <article class="w3-third">
+
+            <img src="https://i.pinimg.com/564x/bf/b4/da/bfb4da58665aeab6c832dab231fc2ce8.jpg" alt="Random Name"
+                style="width:100%">
+            <p>Sue is the funniest.</p>
+        </article>
+    </section>
+    <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+        <a href="#"><i class="fa fa-facebook-official"></i></a>&emsp;&emsp;
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>&emsp;&emsp;
+        <a href="#"><i class="fa fa-twitter"></i></a>&emsp;&emsp;
+        <a href="#"><i class="fa fa-flickr"></i></a>&emsp;&emsp;
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p class="medium">
+            <br>&emsp;&emsp;Powered by <a href="#" target="_blank">Kolors</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

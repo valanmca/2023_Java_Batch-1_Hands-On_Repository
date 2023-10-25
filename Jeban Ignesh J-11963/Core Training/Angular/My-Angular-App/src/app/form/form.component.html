@@ -1,0 +1,88 @@
+<div>
+    <h1>Template Driven Form[TDF]</h1>
+    <form #myform="ngForm" (ngSubmit)="myFunction(myform.value)">
+        <table>
+            <tr>
+                <td> Name:</td>
+                <td><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z]+" /></td>
+            </tr>
+
+            <div *ngIf="name.touched">
+                <div *ngIf="name.errors?.['required']">
+                    <font color="red"><b>Name Required</b></font>
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                    <font color="red"><b>Invalid Name</b></font>
+                </div>
+
+            </div>
+            <br><br>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" #email="ngModel" ngModel required
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$+" /></td>
+            </tr>
+
+            <div *ngIf="email.touched">
+                <div *ngIf="email.errors?.['required']">
+                    <font color="red"><b>Email Required</b></font>
+                </div>
+                <div *ngIf="email.errors?.['pattern']">
+                    <font color="red"><b>Invalid Email</b></font>
+                </div>
+            </div>
+            <br><br>
+
+            <tr>
+                <td> Age:</td>
+                <td><input type="text" name="age" #age="ngModel" ngModel required pattern="[0-9]+" maxlength="2" /></td>
+            </tr>
+
+            <div *ngIf="age.touched">
+                <div *ngIf="age.errors?.['required']">
+                    <font color="red"><b>Age Required</b></font>
+                </div>
+                <div *ngIf="age.errors?.['pattern']">
+                    <font color="red"><b>Invalid Age</b></font>
+                </div>
+
+            </div>
+            <br><br>
+
+            <tr>
+                <td>Mobile No:</td>
+                <td><input type="text" name="mobileno" #Mobileno="ngModel" ngModel required pattern="[0-9]+"
+                        maxlength="10" minlength="10" /></td>
+            </tr>
+
+            <div *ngIf="Mobileno.touched">
+                <div *ngIf="Mobileno.errors?.['required']">
+                    <font color="red"><b>Mobileno Required</b></font>
+                </div>
+                <div *ngIf="Mobileno.errors?.['pattern']">
+                    <font color="red"><b>Invalid Mobileno</b></font>
+                </div>
+
+            </div><br><br>
+            <tr>
+                <td> Country:</td>
+                <td> <select name="country" #country="ngModel" ngModel required>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                    </select></td>
+            </tr><br>
+            <button [disabled]="myform.invalid">Register</button>
+        </table>
+        <b>Name:{{yname}}<br><br>
+            Email:{{yemail}}<br><br>
+            Age:{{yage}}<br><br>
+            Mobile No:{{ymobileno}}<br><br>
+            Country:{{ycountry}}</b>
+
+
+
+
+    </form>
+
+</div>

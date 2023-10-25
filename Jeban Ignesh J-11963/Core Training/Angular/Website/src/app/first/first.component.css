@@ -1,0 +1,36 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+form {
+  margin: 4%;
+  position: absolute;
+  margin-left: 8%;
+  
+}
+
+button {
+  margin: 4%;
+}
+.back{
+  background-color: black;
+}
+
+#J2 {
+
+ 
+  position: absolute;
+  height: 80%;
+  width: 40%;
+  margin-left: 55%;
+  margin-top: 2%;
+}
+mat-drawer{
+  background-color:#d4156e ;
+}

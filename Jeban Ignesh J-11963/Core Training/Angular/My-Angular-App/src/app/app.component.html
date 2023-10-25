@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <h1>Welcome To Angular</h1>
+  <div id="J1">
+
+    <h2>Root Component</h2>
+    <br>
+    <app-child></app-child><br>
+
+  </div>
+
+  <h3>
+    emid={{emid}}
+    <br>
+    emname={{emname}}
+    <br>
+    emsalary={{emsalary}}
+  </h3>
+  <h3>
+    Addition:{{getaddition(10,20)}}
+    <br>
+    Multiplication:{{getmutiplication(10,20)}}
+    <br>
+    Subtraction:{{getsub(10,5)}}
+    <br>
+    Division:{{getdiv(10,70)}}
+    <br>
+    Factorial:{{getfactorial(10)}}
+    <br>
+    <h2>Interpolation Binding</h2>
+    Email:<input type="text" value="{{ ememail }}" /><br>
+    Addition of 10 and 20 is :<input type="text" value="{{ getaddition(10,20)}}" />
+  </h3>
+  <h2>Property Binding</h2>
+  Email:<input type="text" [value]=" ememail" /><br>
+  Addition of 10 and 20 is :<input type="text" [value]="getaddition(10,20)" /><br><br>
+  <img [src]="imagePath" [height]="imagehight" [width]="imagewidth"/><br>
+
+  <h2>Event Binding</h2>
+  <button (click)="changeName()">Change Name</button>
+  <button (click)="changeEmail()">Change Email</button>
+  <button (click)="changeImage()">Change Image</button>
+  <h2>Two Way Binding</h2>
+  Enter Your Name :<input type="text" [(ngModel)]="name"/>
+  <br>
+  Welcome {{name}}
+  <hr>
+  <app-jeban></app-jeban>
+  
+  <br>
+  <app-ignesh></app-ignesh>
+  <hr>
+  <br>
+  <app-factorial></app-factorial><hr><br>
+  <app-services></app-services><hr><br>
+  <app-sevices1></app-sevices1><hr><br>
+  <app-pipes></app-pipes><hr><br>
+  <app-form></app-form>
+  
+  
+  
+  
+ 
+</body>
+
+</html>

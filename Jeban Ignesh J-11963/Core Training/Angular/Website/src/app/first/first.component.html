@@ -1,0 +1,104 @@
+<div>
+<mat-drawer-container class="example-container" >
+    <mat-drawer mode="side" opened>
+        <div class="example-button-col">
+            <br><br><br><br><br><br>
+            <button mat-raised-button color="primary"
+                (click)="InsertTravel(myform.value)">Insert</button><br><br><br><br>
+            <button mat-raised-button color="primary"
+                (click)="DeleteTravel(myform.value)">Delete</button><br><br><br><br>
+            <button mat-raised-button color="primary" (click)="UpdateTravel(myform.value)">Update</button>
+
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <div class="back">
+            <form class="example-form" #myform="ngForm">
+                <mat-form-field class="example-full-width">
+                    <div class="mb-3">
+                        <mat-label>Ticket Number</mat-label>
+                        <input matInput placeholder="Id" name="id" #id="ngModel" ngModel required pattern="[0-9]+"
+                            maxlength="8" />
+                        <div *ngIf="id.touched">
+                            <div *ngIf="id.errors?.['required']">
+                                <font color="red"><b>Id Required</b></font>
+                            </div>
+                            <div *ngIf="id.errors?.['pattern']">
+                                <font color="red"><b>Invalid Id</b></font>
+                            </div>
+                        </div>
+                    </div>
+                </mat-form-field><br><br>
+                <mat-form-field class="example-full-width">
+                    <div class="mb-3">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Name" name="Name" #Name="ngModel" ngModel required
+                            pattern="[a-zA-Z ]+" />
+                        <div *ngIf="Name.touched">
+                            <div *ngIf="Name.errors?.['required']">
+                                <font color="red"><b>Name Required</b></font>
+                            </div>
+                            <div *ngIf="Name.errors?.['pattern']">
+                                <font color="red"><b>Invalid name</b></font>
+                            </div>
+                        </div>
+                    </div>
+                </mat-form-field><br><br>
+
+                <mat-form-field class="example-full-width">
+                    <div class="mb-3">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" name="Email" #Email="ngModel" ngModel required>
+                        <div *ngIf="Email.touched">
+                            <div *ngIf="Email.errors?.['required']">
+                                <font color="red"><b>Email Required</b></font>
+                            </div>
+                            <div *ngIf="Email.errors?.['pattern']">
+                                <font color="red"><b>Invalid Email</b></font>
+                            </div>
+                        </div>
+                    </div>
+                </mat-form-field><br><br><br>
+                <mat-form-field class="example-full-width">
+                    <div class="mb-3">
+                        <mat-label>Mobile Number</mat-label>
+                        <input matInput placeholder="Mno" name="Mobilenumber" #Mobilenumber="ngModel" ngModel required
+                            pattern="[0-9]+" maxlength="10" minlength="10" />
+                        <div *ngIf=" Mobilenumber.touched">
+                            <div *ngIf="Mobilenumber.errors?.['required']">
+                                <font color="red"><b>Mobile Number Required</b></font>
+                            </div>
+                            <div *ngIf=" Mobilenumber.errors?.['pattern']">
+                                <font color="red"><b>Invalid Mobile Number </b></font>
+                            </div>
+                        </div>
+                    </div>
+                </mat-form-field><br><br><br>
+
+
+
+            </form>
+            <div class="col-4" id="J2">
+
+
+                <table class="table" *ngFor="let tra of traList">
+                    
+                    <tbody>
+                        <tr>
+                            <td>{{tra.id}}</td>
+                            <td>{{tra.Name}}</td>
+                            <td>{{tra.Email}}</td>
+                            <td>{{tra.Mobilenumber}}</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>

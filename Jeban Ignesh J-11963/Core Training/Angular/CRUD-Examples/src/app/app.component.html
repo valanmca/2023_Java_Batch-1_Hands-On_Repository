@@ -1,0 +1,57 @@
+<div id="head">
+  <h2>Employee Management System</h2>
+</div>
+<div id="left">
+  <form #myform="ngForm" (ngSubmit)="myfunction(myform.value)">
+    <div class="mb-3">
+      <label class="form-label">Employee Id</label>
+      <input type="text" class="form-control" name="id" #id="ngModel" ngModel required pattern="[0-9]+" maxlength="5" />
+      <div *ngIf="id.touched">
+        <div *ngIf="id.errors?.['required']">
+          <font color="red"><b>Id Required</b></font>
+        </div>
+        <div *ngIf="id.errors?.['pattern']">
+          <font color="red"><b>Invalid Id</b></font>
+        </div>
+      </div>
+
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Employee Name</label>
+      <input type="text" class="form-control" name="name" #Ename="ngModel" ngModel required pattern="[a-zA-z]+" />
+      <div *ngIf="Ename.touched">
+        <div *ngIf="Ename.errors?.['required']">
+          <font color="red"><b>Employee name Required</b></font>
+        </div>
+        <div *ngIf="Ename.errors?.['pattern']">
+          <font color="red"><b>Invalid employee name</b></font>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Employee Salary</label>
+      <input type="number" class="form-control" name="Salary" #Salary="ngModel" ngModel required pattern="[0-9]+" />
+      <div *ngIf="Salary.touched">
+        <div *ngIf="Salary.errors?.['required']">
+          <font color="red"><b>salary Required</b></font>
+        </div>
+        <div *ngIf="Salary.errors?.['pattern']">
+          <font color="red"><b>Invalid salary</b></font>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="insertEmployee(myform.value)">Insert</button>
+    <button type="submit" class="btn btn-danger" (click)="deleteEmployee(myform.value)">Delete</button>
+    <button type="submit" class="btn btn-warning" (click)="updateEmployee(myform.value)">Update</button>
+  </form>
+  <font class="display">{{result}}</font>
+</div>
+
+<div id="right">
+  <br><br>
+  <ul>
+    <li *ngFor="let emp of empList"><b>{{emp.id}}-{{emp.Name}}-{{emp.Salary}}</b></li>
+  </ul>
+
+</div>

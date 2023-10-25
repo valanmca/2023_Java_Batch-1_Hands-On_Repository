@@ -1,0 +1,17 @@
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="myFunction(myForm.value)">
+        <header>Registration Page</header>
+        Name:<input type="text" name="name" formControlName="name" />
+
+
+        <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+            <div *ngIf="myForm.get('name')!.hasError('required')">
+                <font>*name is required</font>
+            </div>
+            <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                <font>*name is invalid</font>
+            </div>
+
+        </div>
+    </form>
+</div>

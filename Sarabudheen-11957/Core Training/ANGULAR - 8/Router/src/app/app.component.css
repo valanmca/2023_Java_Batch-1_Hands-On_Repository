@@ -1,0 +1,17 @@
+td{
+    height: 1cm;
+    width: 3cm;
+    background-color: blue;
+    color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+body{
+    text-align: center;
+}

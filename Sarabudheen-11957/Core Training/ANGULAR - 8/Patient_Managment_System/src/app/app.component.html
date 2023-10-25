@@ -1,0 +1,134 @@
+<div class="header"> 
+  <mat-toolbar style="background-color: antiquewhite;color: maroon;text-align: center;">
+    <span>PATIENT MANAGEMENT SYSTEM</span>
+  </mat-toolbar>
+</div>
+
+<div class="container-fluid left">  
+  <div class="row">
+    <div class="col">
+      <form #myform="ngForm">
+      
+          <mat-form-field appearance="outline">
+            <mat-label>Patient ID</mat-label>
+            <input matInput placeholder="Enter Patient ID" name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+          </mat-form-field>
+          <div *ngIf="id.touched">
+            <div *ngIf="id.errors?.['required']">
+              <font color="red">Id Required</font>
+            </div>
+            <div *ngIf="id.errors?.['pattern']">
+              <font color="red"> Invalid Id </font>
+            </div>
+          </div>
+          <br>
+  
+      
+
+        
+          <mat-form-field appearance="outline">
+            <mat-label>PATIENT NAME</mat-label>
+            <input matInput placeholder="Enter Book Name" name="name" #name="ngModel" ngModel required
+            pattern="[a-zA-z ]+">
+          </mat-form-field>
+          <div *ngIf="name.touched">
+            <div *ngIf="name.errors?.['required']">
+              <font color="red">Name Required</font>
+            </div>
+            <div *ngIf="name.errors?.['pattern']">
+              <font color="red"> Invalid Name</font>
+            </div></div><br>
+  
+      
+
+      
+          <mat-form-field appearance="outline">
+            <mat-label>AGE</mat-label>
+            <input matInput placeholder="Enter Author Name" name="age" #age="ngModel" ngModel required
+            pattern="[0-9]+">
+          </mat-form-field>
+          <div *ngIf="age.touched">
+            <div *ngIf="age.errors?.['required']">
+              <font color="red">Age Required</font>
+            </div>
+            <div *ngIf="age.errors?.['pattern']">
+              <font color="red"> Invalid Age</font>
+            </div></div><br>
+
+        
+          <mat-form-field appearance="outline">
+            <mat-label>EMAIL</mat-label>
+            <input matInput placeholder="Enter The Year" type="email" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </mat-form-field>
+          <div *ngIf="email.touched">
+            <div *ngIf="email.errors?.['required']">
+              <font color="red">Email Required</font>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+              <font color="red"> Invalid Email </font>
+            </div>
+          </div><br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>BLOOD GROUP</mat-label>
+            <input matInput placeholder="Enter Book Name" name="blood" #blood="ngModel" ngModel required
+            pattern="[a-zA-z ]+">
+          </mat-form-field>
+          <div *ngIf="blood.touched">
+            <div *ngIf="blood.errors?.['required']">
+              <font color="red">Blood Group Required</font>
+            </div>
+            <div *ngIf="name.errors?.['pattern']">
+              <font color="red"> Invalid Blood Group</font>
+            </div></div><br>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Locatiion</mat-label>
+              <input matInput placeholder="Enter Book Name" name="location" #location="ngModel" ngModel required
+              pattern="[0-9] [a-zA-z ]+">
+            </mat-form-field>
+            <div *ngIf="location.touched">
+              <div *ngIf="location.errors?.['required']">
+                <font color="red">Location Required</font>
+              </div>
+              <div *ngIf="location.errors?.['pattern']">
+                <font color="red"> Invalid Location</font>
+              </div></div><br>
+      
+
+        <button mat-fab extended style="background-color: lawngreen;">
+          INSERT
+        </button>
+        <button mat-fab extended color="warn">
+          DELETE
+        </button>
+        <button mat-fab extended color="primary">
+          UPDATE
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid right">
+  <div class="row">
+    <div class="col">
+      <div class="table">
+        <thead>
+          <tr scope="row">
+            <th scope="col">PATIENT ID</th>
+            <th scope="col">PATIENT NAME</th>
+            <th scope="col">AGE</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">BLOOD GROUP</th>
+            <th scope="col">LOACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </div>
+    </div>
+  </div>
+</div>

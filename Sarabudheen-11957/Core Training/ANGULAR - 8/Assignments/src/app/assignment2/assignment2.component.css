@@ -1,0 +1,21 @@
+h2{
+    background-color: black;
+    color: aliceblue;
+}
+body{
+    background-color: green;
+}
+
+.form{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+input{
+    border: none;
+}

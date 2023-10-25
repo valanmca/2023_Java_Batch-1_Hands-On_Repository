@@ -1,0 +1,62 @@
+<div class="header">
+  <b>Employee Management System</b>
+</div>
+<br>
+
+<div class="left">
+  <br>
+  <form #myForm="ngForm">
+  Employee Id <br>
+  <input type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+"><br>
+        <div *ngIf = "id.touched">
+            <div *ngIf = "id.errors?.['required']">
+                <font color="red"><b>Employee ID is Required.</b></font>
+            </div>
+            <div *ngIf = "id.errors?.['pattern']">
+                <font color="red"><b>Invalid Employee ID</b></font>
+            </div>
+
+        </div><br><br>
+
+
+  Employee Name <br>
+  <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z ]+"> <br>
+
+        <div *ngIf = "name.touched">
+            <div *ngIf = "name.errors?.['required']">
+                <font color="red"><b>Name is Required.</b></font>
+            </div>
+            <div *ngIf = "name.errors?.['pattern']">
+                <font color="red"><b>Invalid Name</b></font>
+            </div>
+
+           
+        </div><br><br>
+
+  Employee Salary <br>
+
+  <input type="text" name="salary" #salary="ngModel" ngModel required pattern="[0-9]+"><br>
+        <div *ngIf = "salary.touched">
+            <div *ngIf = "salary.errors?.['required']">
+                <font color="red"><b>Employee Salary is Required.</b></font>
+            </div>
+            <div *ngIf = "salary.errors?.['pattern']">
+                <font color="red"><b>Invalid Employee Salary</b></font>
+            </div>
+
+        </div>
+
+  <br><br>
+  <button type="button" class="btn btn-success" (click)="InsertEmployee(myForm.value)">Insert</button>
+  <button type="button" class="btn btn-danger" (click)="DeleteEmployee(myForm.value)">Delete</button>
+  <button type="button" class="btn btn-primary" (click)="UpdateEmployee(myForm.value)">Update</button>
+</form>
+<font color="green"><b>{{result}}</b></font>
+</div>
+
+<div class="right">
+<br><br><ul>
+    <li *ngFor="let emp of empList">{{emp.id}}-{{emp.name}}-{{emp.salary}}</li>
+</ul>
+</div>
+

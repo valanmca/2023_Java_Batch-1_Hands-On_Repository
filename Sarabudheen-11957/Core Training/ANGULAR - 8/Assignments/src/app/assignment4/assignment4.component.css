@@ -1,0 +1,51 @@
+
+td{
+padding-left: 2cm;
+padding-top: 2cm;
+text-align: center;
+}
+h1{
+    background-color: black;
+    color: aliceblue;
+}
+.one{
+    background-color: red;
+    color: aliceblue;
+   }
+   .two{
+    background-color: orange;
+    color: aliceblue;
+    text-align: center;
+   }
+   .three{
+    background-color: gold;
+    color: aliceblue;
+   }
+   .four{
+    background-color: yellow;
+    color: aliceblue;
+   }
+   .five{
+    background-color: yellowgreen;
+    color: aliceblue;
+   }
+   .six{
+    background-color: green;
+    color: aliceblue;
+   }
+   .seven{
+    background-color: skyblue;
+    color: aliceblue;
+   }
+   .eight{
+    background-color: blue;
+    color: aliceblue;
+   }
+   .nine{
+    background-color: darkblue;
+    color: aliceblue;
+   }
+   .ten{
+    background-color: violet;
+    color: aliceblue;
+   }

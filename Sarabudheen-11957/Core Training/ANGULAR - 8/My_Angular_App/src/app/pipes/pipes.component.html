@@ -1,0 +1,132 @@
+<div>
+    <table>
+        <tr>
+            <td>
+                Upper Case Pipe
+            </td>
+            <td></td>
+            <td>
+                {{name| uppercase}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Lower Case Pipe
+            </td>
+            <td></td>
+            <td>
+                {{name| lowercase}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Title Case Pipe
+            </td>
+            <td></td>
+            <td>
+                {{name| titlecase}}
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <table>
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date | date:'dd/MMM/yyyy'}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date | date:'dd-MM-yy'}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date | date:'fullDate'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date | date:'fullDate'| uppercase}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Date Pipe
+            </td>
+            <td> </td>
+            <td>
+                {{date | date:'shortTime'}}
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <table>
+        <tr>
+            <td>Percent Pipe</td>
+            <td> </td>
+            <td>
+                {{00.54565 | percent}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>Currency Pipe</td>
+            <td> </td>
+            <td>
+                {{6589.23 | currency:"USD"}}
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+       <tr><td colspan="3"><h4>Custom Pipe</h4></td></tr>
+        <tr>
+            <td>DigitCount</td>
+            <td> </td>
+            <td>{{digit | digitcount}}</td>
+        </tr>
+        <tr><td>{{arr1}}</td></tr>
+        <tr><td>{{arr1 | sort:'reverse' }}</td></tr>
+        <tr><td>{{arr1 | sort:'ascending' }}</td></tr>
+        <tr><td>{{arr1 | sort:'descending' }}</td></tr>
+
+        <tr><td>{{arr2}}</td></tr>
+        <tr><td>{{arr2 | sort:'reverse' }}</td></tr>
+        <tr><td>{{arr2 | sort:'ascending' }}</td></tr>
+        <tr><td>{{arr2 | sort:'descending' }}</td></tr>
+    </table>
+</div>

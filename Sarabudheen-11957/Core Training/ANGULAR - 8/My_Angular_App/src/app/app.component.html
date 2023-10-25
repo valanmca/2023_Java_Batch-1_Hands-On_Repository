@@ -1,0 +1,44 @@
+<div>
+  <p>Root component</p>
+  <app-child></app-child>
+  <app-child-interpolation></app-child-interpolation>
+  <app-attribute-derectives></app-attribute-derectives>
+  <app-factorial-table></app-factorial-table>
+  <app-services></app-services>
+  <app-pipes></app-pipes>
+  <app-forms></app-forms>
+  <app-directives></app-directives>
+
+</div>
+<hr>
+
+Employee id : {{empid}}
+<br>
+Employee Name : {{empname}}
+<br>
+Employee Salary : {{empsalary}}
+<br>
+<hr>
+{{getaddition(2,5)}} <br>
+<hr>
+{{getfactorial(5)}} <br>
+<hr>
+empemail = <input type="text" value="{{empemail}}">
+<br>
+<hr>
+Addition of 10 and 20 is : <input type="text" value="{{getaddition(10,20)}}">
+<br>
+<hr>
+<input type="text" [value]="empemail" />
+<br>
+<hr>
+Addition of 10 and 20 is : <input type="text" [value]="getaddition(10,20)" />
+<hr>
+<img [src]="imagePath" />
+<br>
+<hr>
+<button (click)="changeName()">Change Name</button> <br>
+<button (click)="changeEmail()">Change Mail</button> <br>
+<button (click)="changeImage()">Change Image</button> <br>
+
+<hr>

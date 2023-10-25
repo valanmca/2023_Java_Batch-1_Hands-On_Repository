@@ -1,0 +1,9 @@
+div{
+    color : black;
+    border : 2px solid black;
+    text-align: center;
+    border-radius: 20%;
+    height: 8cm;
+    width: 8cm;
+    background-color: gray;
+}

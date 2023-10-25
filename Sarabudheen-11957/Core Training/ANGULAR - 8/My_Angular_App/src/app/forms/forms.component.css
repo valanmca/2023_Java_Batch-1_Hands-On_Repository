@@ -1,0 +1,20 @@
+div{
+    color:  black;
+    background-color: gray;
+    text-align: center;
+    height: 12cm;
+    width: 10cm;
+}
+h1{
+    color:  black;
+    background-color: gray;
+    text-align: center;
+}
+table,td{
+    text-align: center;
+}
+button{
+    height: 1cm;
+    width: 9.9cm;
+   
+}

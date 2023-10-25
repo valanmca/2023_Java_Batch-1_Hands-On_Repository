@@ -1,0 +1,11 @@
+div{
+    color: black;
+    background-color: gray;
+}
+table,td{
+    height: 1cm;
+    width: 10cm;
+}
+h4{
+    text-align: center;
+}

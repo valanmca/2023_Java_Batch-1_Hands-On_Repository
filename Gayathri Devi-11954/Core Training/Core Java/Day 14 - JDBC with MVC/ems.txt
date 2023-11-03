@@ -1,9 +1,0 @@
-Step 1:
----------
-	- bean class same as tables.
-	- In bean package, create Employee class without main and declare the variable as same as our my database tables variables.
-	- create setter& getter, constructor using fields, constructor using super class.
-	
-Step -2:
------------
-	- 

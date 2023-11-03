@@ -1,5 +1,0 @@
-//Databasemetadata - provide information about database
-		DatabaseMetaData dbdata = con.getMetaData();
-		System.out.println("SQL Keywords : "+dbdata.getSQLKeywords());
-		System.out.println("URL : "+dbdata.getURL());
-		System.out.println("User name : "+dbdata.getUserName());

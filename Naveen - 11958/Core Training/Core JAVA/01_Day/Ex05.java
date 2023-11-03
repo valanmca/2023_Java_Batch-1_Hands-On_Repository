@@ -1,0 +1,20 @@
+package com.naveen.day1;
+
+/*Factorial program*/
+import java.util.Scanner;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number to process factorial : ");
+		int n = sc.nextInt();
+		
+		int fact = 1;
+		for(int i=1; i<=n; i++) {
+			fact = fact * i;
+		}
+		System.out.println("The factorial of " +n+" is :" +fact);
+	}
+
+}

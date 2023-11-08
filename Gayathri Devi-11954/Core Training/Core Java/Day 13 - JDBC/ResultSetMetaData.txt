@@ -1,0 +1,6 @@
+//ResultMetaData = get the information about result set.
+	ResultSetMetaData data = rs.getMetaData();
+	System.out.println("Total columns in the table : "+data.getColumnCount());
+	for(int i=1;i<=data.getColumnCount();i++) {
+		System.out.println(i+ " - column name : "+ data.getColumnName(i)+" class name : "+data.getColumnClassName(i));
+	}

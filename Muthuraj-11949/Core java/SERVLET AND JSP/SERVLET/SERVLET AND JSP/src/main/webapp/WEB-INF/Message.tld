@@ -1,0 +1,11 @@
+<taglib>
+<tlib-version>0.0</tlib-version>
+<jsp-version>1.1</jsp-version>
+<tag>
+<name>
+Msg</name>
+
+<tag-class>com.Example.DisplayMessage</tag-class>
+<body-content>empty</body-content>
+</tag>
+</taglib>

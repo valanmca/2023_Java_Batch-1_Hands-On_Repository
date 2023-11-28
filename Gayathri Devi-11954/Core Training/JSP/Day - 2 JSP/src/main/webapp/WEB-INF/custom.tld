@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>4.0</jsp-version>
+	<short-name>Custom Tag TLD</short-name>
+
+	<tag>
+		<name>First</name>
+		<tag-class>com.jsp.customtag.CusTag</tag-class>
+		<body-content>Empty</body-content>
+	</tag>
+
+	<tag>
+		<name>Second</name>
+		<tag-class>com.jsp.customtag.CusTag2</tag-class>
+		<body-content>Empty</body-content>
+	</tag>
+
+	<tag>
+		<name>Third</name>
+		<tag-class>com.jsp.customtag.CusTag3</tag-class>
+		<body-content>Empty</body-content>
+	</tag>
+
+	<tag>
+		<name>AttributeTag</name>
+		<tag-class>com.jsp.customtag.CusTagAttribute</tag-class>
+		<body-content>Empty</body-content>
+		<attribute>
+			<name>message</name>
+		</attribute>
+	</tag>
+
+
+</taglib>

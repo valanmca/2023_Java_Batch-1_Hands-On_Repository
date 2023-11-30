@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!--Setter Injection Method-->
+    <bean id="employee" class="com.spring.Employee" autowire="byName"><!--autowire="byType"-->
+        <property name="id" value="101"></property>
+        <property name="name" value="PravinKumar"></property>
+        <property name="salary" value="40000"></property>
+        <property name="placesVisited">
+        <list value-type="java.lang.String">
+        <value>Chennai</value>
+        <value>Bengaluru</value>
+        <value>Tirunelveli</value>
+        <value>Karnataka</value>
+        </list>
+        </property>
+        <property name="map">
+        <map>
+        <entry key="Work Location" value="Chennai"></entry>
+        <entry key="Work Type" value="Office"></entry>
+        </map>
+        </property>
+        <property name="education">
+        <set>
+        <value>10</value>
+        <value>12</value>
+        <value>Engineering</value>
+        </set>
+        </property>
+        <property name="address" ref="address"></property>
+    </bean>
+    
+    <bean id="employee1" class="com.spring.Employee">
+        <property name="id" value="104"></property>
+        <property name="name" value="RajaSahayam"></property>
+        <property name="salary" value="50000"></property>
+        <property name="address" ref="address1"></property>
+        <property name="placesVisited">
+        <list value-type="java.lang.String">
+        <value>Chennai</value>
+        <value>Bengaluru</value>
+        <value>Tirunelveli</value>
+        <value>Karnataka</value>
+        </list>
+        </property>
+        <property name="map">
+        <map>
+        <entry key="Work Location" value="Chennai"></entry>
+        <entry key="Work Type" value="Home"></entry>
+        </map>
+        </property>
+        <property name="education">
+        <set>
+        <value>10</value>
+        <value>12</value>
+        <value>Art</value>
+        </set>
+        </property>
+    </bean>
+    
+     <bean id="address" class="com.spring.Address">
+        <property name="city" value="Thoothukudi"></property>
+        <property name="state" value="TamilNadu"></property>
+    </bean>
+    
+     <bean id="address1" class="com.spring.Address">
+        <property name="city" value="Bengaluru"></property>
+        <property name="state" value="Karnataka"></property>
+    </bean>
+    
+    <!--Constructor Injection Method-->
+    
+    <bean id="employee4" class="com.spring.Employee" autowire="byName">
+    <constructor-arg index="0" value="106"></constructor-arg>
+    <constructor-arg index="1" value="PravinKumar"></constructor-arg>
+    <constructor-arg index="2" value="32500"></constructor-arg>
+    <constructor-arg index="3" ref="address4"></constructor-arg>
+    <constructor-arg index="4">
+        <list value-type="java.lang.String">
+        <value>Chennai</value>
+        <value>Bengaluru</value>
+        <value>Tirunelveli</value>
+        <value>Karnataka</value>
+        </list>
+        </constructor-arg>
+        <constructor-arg index="5">
+        <map>
+        <entry key="Work Location" value="Chennai"></entry>
+        <entry key="Work Type" value="Hybird"></entry>
+        </map>
+        </constructor-arg>
+        <constructor-arg index="6">
+        <set>
+        <value>10</value>
+        <value>12</value>
+        <value>B.E</value>
+        </set>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="address4" class="com.spring.Address">
+    <constructor-arg index="0" value="chennai"></constructor-arg>
+    <constructor-arg index="1" value="Tamilnadu"></constructor-arg>
+    </bean>
+
+<bean id="book1" class="com.spring.Book" autowire="byName">
+<property name="id" value="105"></property>
+<property name="name" value="BasicCodingBook"></property>
+<property name="author">
+<list value-type="java.lang.String">
+<ref bean="author1"/>
+</list>
+</property>
+</bean>
+
+<bean id="author1" class="com.spring.Author">
+<property name="name" value="PravinKumar"></property>
+<property name="location" value="Chennai"></property>
+</bean>
+
+<bean id="book2" class="com.spring.Book" autowire="byName">
+<property name="id" value="108"></property>
+<property name="name" value="IntermediateCodingBook"></property>
+<property name="author">
+<list value-type="java.lang.String">
+<ref bean="author2"/>
+</list>
+</property>
+</bean>
+
+<bean id="author2" class="com.spring.Author">
+<property name="name" value="Raja"></property>
+<property name="location" value="Kerala"></property>
+</bean>
+
+<bean id="book3" class="com.spring.Book" autowire="byName">
+<constructor-arg index="0" value="106"></constructor-arg>
+    <constructor-arg index="1" value="AdvancedCodingBook"></constructor-arg>
+    <constructor-arg index="2">
+    <list value-type="java.lang.String">
+<ref bean="author3"/>
+</list>
+    </constructor-arg>
+</bean>
+
+<bean id="author3" class="com.spring.Author">
+<constructor-arg index="0" value="Sahayam"></constructor-arg>
+<constructor-arg index="1" value="Karnataka"></constructor-arg>
+</bean>
+
+</beans>

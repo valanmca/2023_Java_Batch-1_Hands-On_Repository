@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	 <jsp-version>2.0</jsp-version>
+	 <short-name>Our first custom tag</short-name>
+	 <tag>
+	 <name>OwnTag</name>
+	 <tag-class>com.bean.DisplayMessage</tag-class>
+	 <body-content>Empty</body-content>
+	 </tag>
+	</taglib>

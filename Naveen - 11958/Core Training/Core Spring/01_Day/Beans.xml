@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean id="employee" class="com.naveen.Employee" autowire="byName"> -->
+	<!-- <bean id="employee" class="com.naveen.Employee" autowire="byType"> -->
+	<!-- <property name="id" value="101"></property> -->
+	<!-- <property name="name" value="Valan"></property> -->
+	<!-- <property name="salary" value="2000"></property> -->
+	<!-- <property name="address" ref="address"></property> -->
+	<!-- </bean> -->
+
+	<!-- Constructor Injection -->
+	<bean id="employee" class="com.naveen.Employee" autowire="byName">
+		<constructor-arg index="0" value="101"></constructor-arg>         <!-- Primitive type Injection -->
+		<constructor-arg index="1" value="Valan"></constructor-arg>       <!--String type Injection -->
+		<constructor-arg index="2" value="2000"></constructor-arg>
+		<constructor-arg index="3">
+
+			<list value-type="java.lang.String">
+				<value>Chennai</value>											  <!--Collection type Injection -->
+				<value>Banglore</value>
+				<value>Delhi</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg index="4">
+			<map>
+				<entry key="Java" value="developer"></entry>
+			</map>
+		</constructor-arg>
+
+		<constructor-arg index="5">
+			<set>
+				<value>BSc</value>
+				<value>MCA</value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg index="6" ref="address"></constructor-arg>		  <!--Non-Primitive type Injection -->
+	</bean>
+
+	<!-- Setter Injection -->
+	<bean id="employee1" class="com.naveen.Employee">
+		<property name="id" value="102"></property>
+		<property name="name" value="Naveen"></property>
+		<property name="salary" value="3000"></property>
+		
+		<property name="placesVisited">
+			<list value-type="java.lang.String">
+				<value>Italy</value>
+				<value>Rome</value>
+				<value>Switzerland</value>
+			</list>
+		</property>
+		
+		<property name="map">
+			<map>
+				<entry key="Java" value="developer"></entry>
+			</map>
+		</property>
+		
+		<property name="qualification">
+			<set>
+				<value>B.Tech</value>
+				<value>M.Tech</value>
+			</set>
+		</property>
+		
+		<property name="address" ref="address1"></property>
+	</bean>
+
+	<!-- <bean id="address" class="com.naveen.Address"> -->
+	<!-- <property name="city" value="Virudhunagar"></property> -->
+	<!-- <property name="state" value="TamilNadu"></property> -->
+	<!-- </bean> -->
+
+	<bean id="address" class="com.naveen.Address">
+		<constructor-arg index="0" value="Viruthunagar"></constructor-arg>
+		<constructor-arg index="1" value="TamilNadu"></constructor-arg>
+	</bean>
+
+	<bean id="address1" class="com.naveen.Address">
+		<property name="city" value="Chennai"></property>
+		<property name="state" value="TamilNadu"></property>
+	</bean>
+</beans>
+

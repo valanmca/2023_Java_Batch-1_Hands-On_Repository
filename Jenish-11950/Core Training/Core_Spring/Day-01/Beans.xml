@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="employee" class="com.jenish.Employee" autowire="byName">
+		<constructor-arg index="0" value="101"></constructor-arg>
+		<constructor-arg index="1" value="Jenish"></constructor-arg>
+		<constructor-arg index="2" value="2000"></constructor-arg>
+		<constructor-arg index="3">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Hosur</value>
+				<value>Trichy</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="4">
+			<map>
+				<entry key="Java" value="Developer"></entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg index="5">
+			<set value-type="java.lang.String">
+				<value>600001</value>
+				<value>635109</value>
+				<value>620001</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg index="6" ref="address"></constructor-arg>
+	</bean>
+
+	<bean id="address" class="com.jenish.Address">
+		<constructor-arg index="0" value="Chennai"></constructor-arg>
+		<constructor-arg index="1" value="Tamilnadu"></constructor-arg>
+	</bean>
+
+	<bean id="employee1" class="com.jenish.Employee">
+		<constructor-arg index="0" value="101"></constructor-arg>
+		<constructor-arg index="1" value="Jenish"></constructor-arg>
+		<constructor-arg index="2" value="2000"></constructor-arg>
+		<constructor-arg index="3">
+			<list value-type="java.lang.String">
+				<value>Tenkasi</value>
+				<value>Sivakasi</value>
+				<value>Madurai</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="4">
+			<map>
+				<entry key="Python" value="Developer"></entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg index="5">
+			<set value-type="java.lang.String">
+				<value>627803</value>
+				<value>626123</value>
+				<value>625001</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg index="6" ref="address1"></constructor-arg>
+	</bean>
+
+	<bean id="address1" class="com.jenish.Address">
+		<property name="city" value="Sivakasi"></property>
+		<property name="state" value="Tamilnadu"></property>
+	</bean>
+</beans>

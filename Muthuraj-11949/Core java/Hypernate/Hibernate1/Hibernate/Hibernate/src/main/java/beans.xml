@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   
+   
+    <bean id="employee" class="com.muthu.Employee" autowire="byName">
+    <constructor-arg index="1" value="101 "></constructor-arg>
+    <constructor-arg index="0" value="muthu "></constructor-arg>
+    <constructor-arg index="2" value="2000 "></constructor-arg>
+    <constructor-arg index="3"> 
+    <list value-type="java.lang.String">
+    <value>Chennai</value>
+    <value>Thrichy</value>
+    <value>Tenkasi</value>
+    </list></constructor-arg> 
+    
+    <constructor-arg index="4">
+    <map>
+    <entry key="mobile" value="9999967891"/>
+    <entry key="landline" value="080789345"/>
+    </map>
+    </constructor-arg >
+    <constructor-arg name="address" index="5" ref="address" ></constructor-arg>
+    </bean>
+
+
+
+
+
+
+       <bean id="employee1" class="com.muthu.Employee">
+        <property name="id"  value="102"></property>
+        <property name="name"   value="Raja"></property>
+        <property name="salary"   value="3000"></property>
+    
+      <property name="plcaesVister">
+      <list value-type="java.lang.String">
+      <value>Chennai</value>
+      <value>Thrichy</value>
+      <value>Tenkasi</value>
+      </list></property>
+     <property name="phoneNos">  
+    <map>
+    <entry key="mobile" value="9999967891"/>
+    <entry key="landline" value="080789345"/>
+    </map>
+    </property>
+    <property name="address" ref="address1" ></property>
+    </bean>
+    
+    
+    
+    
+    <bean id="address" class="com.muthu.Address" autowire="byName">
+        <property name="Street" value="South Street"></property>
+        <property name="city" value="Alangulam"></property>
+        <property name="state" value="Tenkasi"></property>
+    </bean> 
+    
+    
+     <bean id="address1" class="com.muthu.Address">
+        <property name="Street" value="South Street"></property>
+        <property name="city" value="Alangulam"></property>
+        <property name="state" value="Tenkasi"></property>
+    </bean> 
+
+</beans>

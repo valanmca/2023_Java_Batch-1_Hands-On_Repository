@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style> 
+nav{
+background-color: lightblue}
+.navbar-brand{
+font-family: "Times New Roman", Times, serif;
+font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light ">
+		<div class="container  justify-content-center">
+			<h1 class="navbar-brand">STUDENT MANAGEMENT SYSTEM</h1>
+		</div>
+
+	</nav>
+</body>
+</html>

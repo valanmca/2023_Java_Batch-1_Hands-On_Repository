@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Setter Injection -->
+
+	<bean id="employee" class="com.spring.day01.Employee"
+		autowire="byName">
+		<property name="id" value="11947"></property>
+		<property name="name" value="Shiva"></property>
+		<property name="salary" value="2000"></property>
+
+		<!-- Using List Setter -->
+
+		<property name="placesVisited">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Bangalore</value>
+			</list>
+		</property>
+		<property name="address" ref="address"></property>
+
+		<!-- Using Map in Setter -->
+
+		<property name="phoneNo">
+			<map>
+				<entry key="Mobile" value="9876452310"></entry>
+				<entry key="Landline" value="8790564322"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="address" class="com.spring.day01.Address">
+		<property name="city" value="Madurai"></property>
+		<property name="state" value="Tamil Nadu"></property>
+	</bean>
+
+
+	<!-- Using Constructor Injection -->
+
+	<bean id="employee1" class="com.spring.day01.Employee">
+		<constructor-arg index="0" name="id" value="11"></constructor-arg>
+		<constructor-arg index="1" name="name" value="Sankar"></constructor-arg>
+		<constructor-arg index="2" name="salary" value="2000"></constructor-arg>
+		<constructor-arg index="3">
+			<list value-type="java.lang.String">
+				<value>Coimbatore</value>
+				<value>Trichy</value>
+				<value>Chennai</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="4" ref="address1"></constructor-arg>
+
+		<!-- Using Map in Constructor -->
+
+		<constructor-arg>
+			<map>
+				<entry key="Mobile" value="7890654322"></entry>
+				<entry key="Landline" value="9988667733"></entry>
+			</map>
+		</constructor-arg>
+
+	</bean>
+
+	<bean id="address1" class="com.spring.day01.Address">
+		<constructor-arg index="0" value="Trichy"></constructor-arg>
+		<constructor-arg index="1" value="Tamil Nadu"></constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: sankarasathasivam.m
+Build-Jdk: 17.0.7
+Implementation-Title: HW Spring Boot Example
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javatpoint
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-ex
+ ample/
+Created-By: Maven Integration for Eclipse
+

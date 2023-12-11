@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+      <bean id="employee" class="com.madhan.Employee" autowire="byName">
+        <constructor-arg index="0" value="101"></constructor-arg>
+        <constructor-arg index="1" value="Madhan"></constructor-arg>
+        <constructor-arg index="2" value="10000"></constructor-arg>
+        <constructor-arg index="3" ref="address"></constructor-arg>
+         <constructor-arg index="4">
+           <list value-type="java.lang.String">
+           		<value> Madras</value>
+           		<value> Singapore</value>
+           		<value> Malaysia</value>
+           </list>
+         </constructor-arg>
+         <constructor-arg>
+         <map>
+         <entry key="1" value="Java"></entry>
+         <entry key="2" value="MySql"></entry>
+         </map>
+         </constructor-arg>
+    </bean>
+    
+    <bean id="employee1" class="com.madhan.Employee">
+        <property name="id" value="102"></property>
+        <property name="name" value="Hephzi"></property>
+        <property name="salary" value="150000"></property>
+         <property name="address" ref="address1"></property>
+         <property name="placesVisited">
+           <list value-type="java.lang.String">
+           		<value> Madras</value>
+           		<value> Singapore</value>
+           		<value> Malaysia</value>
+           </list>
+         </property>
+         <property name="skills">
+         <map>
+         <entry key="1" value="Python"></entry>
+         <entry key="2" value=".Net"></entry>
+         <entry key="3" value="Spring"></entry>
+         </map>
+         </property>
+    </bean>
+    
+       <bean id="address" class="com.madhan.Address">
+        <constructor-arg index="0" value="Chennai"></constructor-arg>
+        <constructor-arg index="1" value="TamilNadu"></constructor-arg>
+        
+    </bean> 
+    
+     <bean id="address1" class="com.madhan.Address">
+        <property name="city" value="Virudhunagar"></property>
+        <property name="state" value="TamilNadu"></property>
+       
+    </bean>
+    
+</beans>

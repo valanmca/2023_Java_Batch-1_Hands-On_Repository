@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect
+		</property>
+
+		<property name="connection.url">jdbc:mysql://localhost:3306/Sara</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin123</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+
+		
+		
+
+		<!-- <mapping resource="Hibernate.hbm.xml" /> -->
+
+		<mapping class="com.sara.HibernateProject.Employee" />
+	</session-factory>
+</hibernate-configuration>

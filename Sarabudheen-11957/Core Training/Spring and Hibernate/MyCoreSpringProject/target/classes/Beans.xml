@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="employee1" class="com.sara.CoreSpring.Employee"
+		autowire="byName">
+		<property name="id" value="101"></property>
+		<property name="name" value="Sara"></property>
+		<property name="salary" value="20000"></property>
+		<property name="placesVisited">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Bangalore</value>
+				<value>Mumbai</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="1" value="Kolkata"></entry>
+				<entry key="2" value="Delhi"></entry>
+				<entry key="3" value="Hydrabad"></entry>
+			</map>
+		</property>
+		<property name="address" ref="address1"></property> <!-- Setter Injection -->
+	</bean>
+
+	<bean id="employee2" class="com.sara.CoreSpring.Employee"
+		autowire="byName">
+		<constructor-arg index="0" value="102"></constructor-arg>
+		<constructor-arg index="1" value="Virat"></constructor-arg>
+		<constructor-arg index="2" value="20000"></constructor-arg>
+
+		<constructor-arg index="3" >
+			<list>
+				<value>Chennai</value>
+				<value>Bangalore</value>
+				<value>Mumbai</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg index="4">
+			<map>
+				<entry key="1" value="Kolkata"></entry>
+				<entry key="2" value="Delhi"></entry>
+				<entry key="3" value="Hydrabad"></entry>
+			</map>
+		</constructor-arg>
+
+		<constructor-arg index="5" ref="address2"></constructor-arg> <!-- Constructor Injection -->
+	</bean>
+	
+	
+	
+
+	<bean id="address1" class="com.sara.CoreSpring.Address" >
+		<property name="city" value="Cuddalore"></property>
+		<property name="state" value="TamilNadu"></property>
+	</bean>
+
+	<bean id="address2" class="com.sara.CoreSpring.Address">
+		<constructor-arg index="0" value="Bangalore"></constructor-arg>
+		<constructor-arg index="1" value="Karnataka"></constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,86 @@
+.Header
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    text-align : center ;
+        display: flex;
+        justify-content: center;
+      
+}
+.Lefter
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    /*text-align : center ;*/
+    width : 750px ;
+    height : 500px ;
+    /*display: flex;
+        justify-content: center;*/
+
+}
+.Righter
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    text-align : center ;
+    width : 557.5px ;
+    height : 500px ;
+margin-top : -523.5px ;
+margin-left : 760px ;
+/*display: flex;
+        justify-content: center;*/
+}
+.list
+{
+    margin-top : -69px;
+}
+.table
+{
+    width : 400px;
+    margin-left : 80px;
+}
+input
+{
+margin-left : 100px;
+}
+.s
+{
+    margin-left : 71.5px;
+}
+.a
+{
+    margin-left : 25px;
+}
+/*.b
+{
+    margin-left : 10px ;
+    left :  10px ;
+}*/
+/*td{
+    left  : 10px ;
+    margin-left : 10px ;
+    padding-left : 10px ;
+}*/
+/*.colors
+{
+    color  : red ;
+    background-color : red ;
+}
+button{
+    color : red ;
+}
+classes
+{
+    color : darkred ;
+}
+*/
+/*form{
+    display: flex;
+        justify-content: center;
+
+}*/
+/*li{
+     display: flex;
+        justify-content: center;
+
+}*/

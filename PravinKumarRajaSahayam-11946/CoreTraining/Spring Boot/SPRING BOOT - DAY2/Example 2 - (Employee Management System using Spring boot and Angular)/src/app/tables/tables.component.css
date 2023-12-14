@@ -1,0 +1,60 @@
+.Header
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    text-align : center ;
+        display: flex;
+        justify-content: center;
+      
+}
+.Lefter
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    /*text-align : center ;*/
+    width : 750px ;
+    height : 500px ;
+    /*display: flex;
+        justify-content: center;*/
+
+}
+.Righter
+{
+    border-style : 1px solid gold ;
+    border : 1px solid gold ;
+    text-align : center ;
+    width : 523px ;
+    height : 500px ;
+margin-top : -523px ;
+margin-left : 780px ;
+/*display: flex;
+        justify-content: center;*/
+}
+/*.b
+{
+    margin-left : 10px ;
+    left :  10px ;
+}*/
+/*td{
+    left  : 10px ;
+    margin-left : 10px ;
+    padding-left : 10px ;
+}*/
+/*.colors
+{
+    color  : red ;
+    background-color : red ;
+}
+button{
+    color : red ;
+}
+classes
+{
+    color : darkred ;
+}
+*/
+/*form{
+    display: flex;
+        justify-content: center;
+
+}*/

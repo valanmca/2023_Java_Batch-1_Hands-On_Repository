@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 101,
+      "name": "Valan",
+      "salary": "40000"
+    },
+    {
+      "id": "123",
+      "name": "Valan",
+      "salary": "2000"
+    },
+    {
+      "id": "102",
+      "name": "Gayathri",
+      "salary": "400"
+    },
+    {
+      "id": "103",
+      "name": "pravin",
+      "salary": "5000"
+    },
+    {
+      "id": "420",
+      "name": "D",
+      "salary": "4200"
+    },
+    {
+      "id": "105",
+      "name": "Naveen",
+      "salary": "40000"
+    },
+    {
+      "id": "1054",
+      "name": "bitmock",
+      "salary": "2145445"
+    },
+    {
+      "id": "201",
+      "name": "Raj",
+      "salary": "5000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

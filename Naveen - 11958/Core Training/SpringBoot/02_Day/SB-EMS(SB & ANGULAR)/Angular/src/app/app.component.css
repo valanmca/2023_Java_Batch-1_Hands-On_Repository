@@ -1,0 +1,34 @@
+.myDiv1{
+   border: 3px solid goldenrod;
+   text-align: center;
+}
+.myDiv2{
+    border: 3px solid goldenrod;
+    height: 70%;
+    width: 64.5%;
+    top: 8%;
+    position: absolute;   
+} 
+.myDiv3{
+    border: 3px solid goldenrod;
+    height: 70%;
+    width: 35%;
+    top: 8%;
+    float: right;
+    right: 0px;
+    position: absolute;
+}
+.myDiv4{
+    padding: 70px;
+}
+input[type=text]{
+    width: 100%;
+}
+.success{
+    background-color: rgb(21, 170, 120);
+}
+.info{
+    background-color: antiquewhite;
+}
+
+

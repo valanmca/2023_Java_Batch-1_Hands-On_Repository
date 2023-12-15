@@ -1,0 +1,141 @@
+<div class="head">
+  <p>
+    <mat-toolbar color="primary">
+      <mat-icon>directions_car</mat-icon>&nbsp;
+      <span>Vehicle Management System</span>
+    </mat-toolbar>
+  </p>
+</div><br><br>
+
+<div class="container-fluid">
+
+  <div class="row">
+    
+    <div class="col">
+      <h1 style="color: indigo; font-size: 30px;"><b><u>Add Details:</u></b></h1>
+
+      <form #myform="ngForm">
+        <!-- Vehicle id -->
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter Vehicle Id</mat-label>
+          <input type="text" matInput name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+        </mat-form-field>
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+            <font color="red">Id Required</font>
+          </div>
+          <div *ngIf="id.errors?.['pattern']">
+            <font color="red"> Invalid Id&nbsp;<i class="fa fa-close"></i></font>
+          </div>
+          <div *ngIf="id.valid">
+            <font color="green">Valid Id&nbsp;<i class="fa fa-check"></i></font>
+          </div>
+        </div>
+        <br>
+        <!-- vehicle Type-->
+        <label style="font-style: normal;">Vehicle Type:</label><br>
+        <mat-radio-group class="example-radio-group" aria-label="VehicleType" name="vehicleType" #vehicleType="ngModel"
+          ngModel required>
+          <mat-radio-button type="radio" name="vehicle" value="bike">Bike</mat-radio-button>
+          <mat-radio-button type="radio" name="vehicle" value="car">Car</mat-radio-button>
+          <mat-radio-button type="radio" name="vehicle" value="bus">Bus</mat-radio-button>
+          <mat-radio-button type="radio" name="vehicle" value="truck">Truck</mat-radio-button>
+        </mat-radio-group>
+        <div *ngIf="vehicleType.touched ">
+          <div *ngIf="vehicleType.errors?.['required']">
+            <font color="red">Vehicle Type Required*</font>
+          </div>
+        </div><br>
+        <br>
+        <!-- vehicle Name-->
+        <mat-form-field appearance="outline" class="vehicleType">
+          <mat-label>Vehicle Name</mat-label>
+          <mat-select class="select1" name="vehicleName" #vehicleName="ngModel" ngModel required>
+            <mat-option value="suzuki">Suzuki</mat-option>
+            <mat-option value="benz">Benz</mat-option>
+            <mat-option value="honda">Honda</mat-option>
+            <mat-option value="ashokLeyland">AshokLeyland</mat-option>
+            <mat-option value="hyundai">Hyundai</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="vehicleName.touched ">
+          <div *ngIf="vehicleName.errors?.['required']">
+            <font color="red">Vehicle Name Required*</font>
+          </div>
+        </div>
+        <br>
+        <!-- vehicle Number-->
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter Vehicle Number</mat-label>
+          <input type="text" matInput name="number1" #number1="ngModel" ngModel required pattern="[0-9]+" maxlength="4"
+            minlength="4">
+        </mat-form-field>
+        <div *ngIf="number1.touched">
+          <div *ngIf="number1.errors?.['required']">
+            <font color="red">Id Required</font>
+          </div>
+          <div *ngIf="number1.errors?.['pattern']">
+            <font color="red"> Invalid Id&nbsp;<i class="fa fa-close"></i></font>
+          </div>
+          <div *ngIf="number1.valid">
+            <font color="green">Valid Id&nbsp;<i class="fa fa-check"></i></font>
+          </div>
+        </div>
+        <br>
+        <!-- Owner Name-->
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Owner Name</mat-label>
+          <input matInput type="text" name="name" #name="ngModel" ngModel required pattern="[a-z A-z]+">
+        </mat-form-field>
+        <div *ngIf="name.touched">
+          <div *ngIf="name.errors?.['required']">
+            <font color="red">Name Required*</font>
+          </div>
+          <div *ngIf="name.errors?.['pattern']">
+            <font color="red"> Invalid Name&nbsp;<i class="fa fa-close"></i></font>
+          </div>
+          <div *ngIf="name.valid">
+            <font color="green">Valid Name&nbsp;<i class="fa fa-check"></i></font>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-success" [disabled]="(myform.invalid )"
+          (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;
+        <button class="btn btn-primary" [disabled]="(myform.invalid )"
+          (click)="update(myform.value)">update</button>&nbsp;&nbsp;
+        <button class="btn btn-danger"
+          (click)="delete(myform.value)">delete</button><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+      </form>
+      <button class="btn btn-warning" (click)="changeDiv()">View Details</button>
+
+      <div>
+        <font color="green">{{result}}</font>
+      </div>
+
+    </div>
+    <div class="col" *ngIf="flag">
+      <h1 style="color: indigo; font-size: 30px;"><b><u>Details:</u></b></h1>
+      <table class="table table-striped">
+        <thead>
+          <tr scope="row">
+            <th scope="col">Vehicle Id </th>
+            <th scope="col">Vehicle Type </th>
+            <th scope="col">Vehicle name</th>
+            <th scope="col">Vehicle Number</th>
+            <th scope="col">Owner name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vec of vehicleList" scope="row">
+            <td scope="col">{{vec.id}}</td>
+            <td scope="col">{{vec.vehicleType}}</td>
+            <td scope="col">{{vec.vehicleName}}</td>
+            <td scope="col">{{vec.number1}}</td>
+            <td scope="col">{{vec.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

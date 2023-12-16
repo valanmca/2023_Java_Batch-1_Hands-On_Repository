@@ -1,0 +1,68 @@
+
+<div class="head">
+  <div class="top">
+    <h4>Employee Management System</h4>
+  </div>
+  </div>
+  <br>
+
+  <div class="container">
+  <div class="card" class="col-md-5"  >
+    <div class="card-body">
+     <div class="left">
+    <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+      <div class="mb-3">
+        <label class="form-label">Employee ID</label>
+        <input type="text" class="form-control" name="id" #id="ngModel" ngModel required pattern="[0-9]+" maxlength="5"/>
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+              <font color="red">*ID is Required...</font>
+          </div>
+          <div *ngIf="id.errors?.['pattern']">
+              <font color="red">*Invalid ID...</font>
+          </div>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Employee Name</label>
+        <input type="text" class="form-control" name="name" #name="ngModel" ngModel required pattern="[a-z A-Z][a-z A-z]+">
+        <div *ngIf="name.touched">
+          <div *ngIf="name.errors?.['required']">
+              <font color="red">*Name is Required...</font>
+          </div>
+          <div *ngIf="name.errors?.['pattern']">
+              <font color="red">*Invalid Name...</font>
+          </div>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Employee Salary</label>
+        <input type="text" class="form-control" name="salary" #salary="ngModel" ngModel required pattern="[0-9]+">
+        <div *ngIf="salary.touched">
+          <div *ngIf="salary.errors?.['required']">
+              <font color="red">*Salary is Required...</font>
+          </div>
+          <div *ngIf="salary.errors?.['pattern']">
+              <font color="red">*Invalid Salary...</font>
+          </div>
+      </div>
+      </div>
+      <button class="btn btn-primary" (click)="InsertEmployee(myForm.value)">Insert</button>
+      <button class="btn btn-danger" (click)="DeleteEmployee(myForm.value)">Delete</button>
+      <button class="btn btn-warning" (click)="UpdateEmployee(myForm.value)">Update</button>
+      <button class="btn btn-warning" (click)="getAllEmployee">FindAll</button>
+    </form>
+    <font color="green" style="margin: 10%;"> {{result}}</font>
+  </div>
+  <div class="right">
+    <br><br>
+    <ul>
+    <li *ngFor="let emp of emplist"><b>{{emp.id}}-{{emp.name}}-{{emp.salary}}</b></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+
+<img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/03/Employee-and-Staff-Management2--1-.jpg"  width="500" height="180">
+

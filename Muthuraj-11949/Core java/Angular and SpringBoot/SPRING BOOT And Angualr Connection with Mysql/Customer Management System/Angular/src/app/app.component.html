@@ -1,0 +1,191 @@
+<div class="Customer">
+  <div>
+    <!--HEADER-->
+    <div class="header">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <h4>Customer Management System</h4>
+          </a>
+
+          <div class="btn">
+            <a class="nav-link active  btn btn-secondary" aria-current="page"   (click)="InsertCustomer(myForm.value)" target="content"> <svg
+                xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-person-add"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                <path
+                  d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+              </svg> Insert</a>
+          </div>
+
+
+          <div class="btn">
+            <a class="nav-link active  btn btn-warning" aria-current="page" target="content"><svg
+                xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-pencil"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+              </svg> Update</a>
+          </div>
+
+
+          <div class="btn">
+            <a class="nav-link active   btn btn-danger" target="content"><svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path
+                  d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                <path
+                  d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+              </svg>Delete</a>
+          </div>
+
+
+          <div class="btn">
+            <a class="nav-link active   btn btn-primary" target="content"><svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="30" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                <path
+                  d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z" />
+              </svg> View All</a>
+          </div>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <!--BODY  -->
+    <div class="body">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-md-4 cardr">
+            <div class="card">
+              <form #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+                <div class="card-body card-center ">
+                  <h5 class="text-center">Add Customer Record</h5>
+
+                  <div class="mb-1">
+                    <label class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" name="cusID" #cusID="ngModel" ngModel required
+                      pattern="[0-9]+" maxlength="5" />
+                    <div *ngIf="cusID.touched">
+                      <div *ngIf="cusID.errors?.['required']">
+                        <font color="red">*ID is Required...</font>
+                      </div>
+                      <div *ngIf="cusID.errors?.['pattern']">
+                        <font color="red">*Invalid ID...</font>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-1">
+                    <label class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" name="cusname" #cusname="ngModel" ngModel required
+                      pattern="[a-z A-Z]+">
+                    <div *ngIf="cusname.touched">
+                      <div *ngIf="cusname.errors?.['required']">
+                        <font color="red">*Name is Required...</font>
+                      </div>
+                      <div *ngIf="cusname.errors?.['pattern']">
+                        <font color="red">*Invalid Name...</font>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-1">
+                    <label class="form-label">Customer Email</label>
+                    <input type="text" class="form-control" name="cusEmail" #cusEmail="ngModel" ngModel required
+                      pattern="^[a-z0-9._%+-]+@gmail.com" />
+                    <div *ngIf="cusEmail.touched">
+                      <div *ngIf="cusEmail.errors?.['required']">
+                        <font color="red">*Email is Required...</font>
+                      </div>
+                      <div *ngIf="cusEmail.errors?.['pattern']">
+                        <font color="red">*Invalid Email...</font>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="mb-1">
+                    <label class="form-label">Customer PhoneNumber</label>
+                    <input type="text" class="form-control" name="cusContactNumber" #cusContactNumber="ngModel" ngModel
+                      required pattern="[0-9]+" maxlength="15" />
+                    <div *ngIf="cusContactNumber.touched">
+                      <div *ngIf="cusContactNumber.errors?.['required']">
+                        <font color="red">*PhoneNumber is Required...</font>
+                      </div>
+                      <div *ngIf="cusContactNumber.errors?.['pattern']">
+                        <font color="red">*Invalid PhoneNumber...</font>
+                      </div>
+                    </div>
+                    </div>
+
+                  <div class="mb-1">
+                    <label class="form-label">Customer Location</label>
+                    <input type="text" class="form-control" name="cusLocation" #cusLocation="ngModel" ngModel
+                      required pattern="^[0-9._%+-]+[a-zA-Z.- ]+" />
+                    <div *ngIf="cusLocation.touched">
+                      <div *ngIf="cusLocation.errors?.['required']">
+                        <font color="red">*Location is Required...</font>
+                      </div>
+                      <div *ngIf="cusLocation.errors?.['pattern']">
+                        <font color="red">*Invalid Location...</font>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" (click)="InsertCustomer(myForm.value)">Insert</button>
+                  <button class="btn btn-danger" (click)="DeleteCustomer(myForm.value)">Delete</button>
+                  <button class="btn btn-warning" (click)="UpdateCustomer(myForm.value)">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--View All-->
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-4 cardr">
+          <div class="card" id="ignesh">
+            <div class="card-body">
+              <p class="fs-3 text-center">Find All Customer Details</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="text-center">Customer ID</th>
+                    <th class="text-center">Customer Name</th>
+                    <th class="text-center">Customer Email</th>
+                    <th class="text-center">Customer Contact</th>
+                    <th class="text-center">Customer Location</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of cmslist">
+                    <td class="text-center">{{c.cusID}}</td>
+                    <td class="text-center">{{c.cusname}}</td>
+                    <td class="text-center">{{c.cusEmail}}</td>
+                    <td class="text-center">{{c.cusContactNumber}}</td>
+                    <td class="text-center">{{c.cusLocation}}</td>
+                    <td class="text-center"><a class="btn btn-warning" (click)="UpdateCustomer(myForm.value)" target="content"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-pencil" viewBox="0 0 16 16">
+                          <path
+                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                        </svg>Edit</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<div matDialogTitle>
+    <h1 style="color:rgb(255, 0, 162)">Add Movie</h1> 
+</div>
+
+<form [formGroup]= "movieForm" (ngSubmit) = "onSubmit()">
+    <div class="content">
+        <mat-dialog-content >
+            <div class="row">
+
+                <!-- Movie Id -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Movie Id</mat-label>
+                    <input type="number" matInput placeholder="Eg. 101" formControlName = "id">
+                        <div *ngIf ="movieForm.get('id')!.touched && movieForm.get('id')!.invalid">
+                            <div *ngIf ="movieForm.get('id')!.hasError('required')">
+                                <font color="red">id required*</font>
+                            </div>
+                            <div *ngIf ="movieForm.get('id')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Movie Name -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Movie Name</mat-label>
+                    <input type="text" matInput placeholder="Eg. Naveen" formControlName = "name">
+                        <div *ngIf ="movieForm.get('name')!.touched && movieForm.get('name')!.invalid">
+                            <div *ngIf ="movieForm.get('name')!.hasError('required')">
+                                <font color="red">Movie Name required*</font>
+                            </div>
+                            <div *ngIf ="movieForm.get('name')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Movie Type -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Movie Type</mat-label>
+                    <mat-select formControlName = "type">
+                      <mat-option *ngFor="let movie of movieType" [value]="movie">
+                        {{movie}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                
+                
+
+                <!-- Movie Language -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Movie Language</mat-label>
+                    <input type="text" matInput placeholder="Eg. Tamil" formControlName = "language">
+                        <div *ngIf ="movieForm.get('language')!.touched && movieForm.get('language')!.invalid">
+                            <div *ngIf ="movieForm.get('language')!.hasError('required')">
+                                <font color="red">Language required*</font>
+                            </div>
+                            <div *ngIf ="movieForm.get('language')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <!-- Movie Duration -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Duration</mat-label>
+                    <input type="text" matInput placeholder="Eg. 2.5 hrs" formControlName = "duration">
+                        <div *ngIf ="movieForm.get('duration')!.touched && movieForm.get('duration')!.invalid">
+                            <div *ngIf ="movieForm.get('duration')!.hasError('required')">
+                                <font color="red">Duration required*</font>
+                            </div>
+                            <div *ngIf ="movieForm.get('duration')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </div>
+    
+    <div class="action">
+        <mat-dialog-actions style="justify-content: end;">
+            <!-- Cancel -->
+            <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+
+            <!-- Submit -->
+            <button mat-raised-button type="submit" color="primary">{{data ? 'Update': 'Save'}}</button>
+        </mat-dialog-actions>
+    </div>
+</form>

@@ -1,0 +1,57 @@
+<div class="header">
+  <br>
+  <h2>Employee Management System</h2>
+</div>
+
+<div class="row">
+  <div class="col-8">
+    <form [formGroup]="myForm" (ngSubmit)="register(myForm.value)">
+
+      <label>Employee Id</label><br>
+      <input type="text" formControlName="id" />
+      <div *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+        <div *ngIf="myForm.get('id')!.hasError('required')">
+          <font color="red">*Id is required</font>
+        </div>
+        <div *ngIf="myForm.get('id')!.hasError('pattern')">
+          <font color="red">*Id is Invalid</font>
+        </div>
+      </div><br>
+
+      <label>Employee Name</label><br>
+      <input type="text" formControlName="name" />
+      <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+        <div *ngIf="myForm.get('name')!.hasError('required')">
+          <font color="red">*name is required</font>
+        </div>
+        <div *ngIf="myForm.get('name')!.hasError('pattern')">
+          <font color="red">*name is Invalid</font>
+        </div>
+      </div><br>
+
+      <label>Employee Salary</label><br>
+      <input type="text" formControlName="salary" />
+      <div *ngIf="myForm.get('salary')!.touched && myForm.get('salary')!.invalid">
+        <div *ngIf="myForm.get('salary')!.hasError('required')">
+          <font color="red">*salary is required</font>
+        </div>
+        <div *ngIf="myForm.get('salary')!.hasError('pattern')">
+          <font color="red">*salary is Invalid</font>
+        </div>
+      </div><br><br>
+      <button class="btn btn-danger" (click)="insertemployee(myForm.value)">Insert</button>&nbsp;
+      <button class="btn btn-danger" (click)="deleteemployee(myForm.value)">Delete</button>&nbsp;
+      <button class="btn btn-danger" (click)="updateemployee(myForm.value)" >Update</button>&nbsp;
+    </form>
+
+    {{result}}
+    <br>
+
+  </div>
+  <div class="col-4">
+    <br>
+    <ul>
+      <li *ngFor="let emp of empList"><b>{{emp.id}}-{{emp.name}}-{{emp.salary}}</b></li>
+    </ul>
+  </div>
+</div>

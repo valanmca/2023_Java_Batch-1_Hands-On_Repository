@@ -1,0 +1,24 @@
+.header{
+    border:2px solid blue;
+    height:100px;
+    margin-top: 10px;
+    margin-left:40px;
+    margin-right: 60px;
+    text-align:center;
+}
+.col-8{
+    border: 2px solid blue;
+    height: 500px;
+    width: 60%;
+    margin-top: 1%;
+    margin-left:50px;
+    padding-left:100px;
+    padding-top:40px;
+}
+.col-4{
+    border: 2px solid blue;
+    height:500px;
+    margin-top: 1%;
+   margin-left:16px;
+    width: 30%;
+}

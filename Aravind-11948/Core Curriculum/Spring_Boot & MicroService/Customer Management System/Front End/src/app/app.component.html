@@ -1,0 +1,547 @@
+<p>
+  <mat-toolbar class="tool">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title-center"> CUSTOMER MANAGEMENT SYSTEM</span>
+    <span class="example-spacer"></span>
+    <button class="btn btn-primary">LOG IN</button>&nbsp;&nbsp;
+    <button class="btn btn-primary">LOG OUT</button>
+  </mat-toolbar>
+</p>
+
+<mat-tab-group dynamicHeight>
+
+
+  <mat-tab label="Insert">
+    <div class="example-large-box mat-elevation-z4">
+      <div class="row">
+        <div class="col" id="left">
+          <div>
+
+
+            <form #myform="ngForm">
+              <table>
+                <tr>
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Id</mat-label>
+                      <input matInput type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+"
+                        placeholder="Enter Customer Id" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="id.touched ">
+                      <div *ngIf="id.errors?.['required']">
+                        <font color="red">*ID required</font>
+                      </div>
+
+
+                      <div *ngIf="id.errors?.['pattern']">
+                        <font color="red">*Invalid ID </font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Name</mat-label>
+
+                      <input matInput type="text" name="name" #name="ngModel" ngModel required pattern="[A-Z a-z]+"
+                        placeholder="Enter  Customer name" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+                  </td>
+
+
+                  <td>
+
+
+                    <div *ngIf="name.touched ">
+
+
+                      <div *ngIf="name.errors?.['required']">
+                        <font color="red">*Name required</font>
+                      </div>
+
+
+                      <div *ngIf="name.errors?.['pattern']">
+                        <font color="red">*Invalid Name </font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Email</mat-label>
+
+                      <input matInput type="text" name="email" #email="ngModel" ngModel required
+                        pattern="[a-z0-9_\-\.]+@[a-z]+\.[a-z]{2,3}" placeholder="Enter  Customer email"
+                        onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="email.touched ">
+                      <div *ngIf="email.errors?.['required']">
+                        <font color="red">*Email required</font>
+                      </div>
+
+
+                      <div *ngIf="email.errors?.['pattern']">
+                        <font color="red">*Invalid Email </font>
+                      </div>
+
+                    </div>
+
+                  </td>
+                </tr>
+
+
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Number</mat-label>
+                      <input matInput type="text" name="no" #no="ngModel" ngModel required pattern="[6789][0-9]{9}"
+                        placeholder="Enter Customer no" onfocus="this.placeholder='' " maxlength="10">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="no.touched ">
+                      <div *ngIf="no.errors?.['required']">
+                        <font color="red">*Contact no required</font>
+                      </div>
+
+
+                      <div *ngIf="no.errors?.['pattern']">
+                        <font color="red">*Invalid contact number</font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Location</mat-label>
+
+                      <input matInput type="text" name="location" #location="ngModel" ngModel required
+                        pattern="[A-z a-z]+" placeholder="Enter  Customer location" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+                    <div *ngIf="location.touched ">
+                      <div *ngIf="location.errors?.['required']">
+                        <font color="red">*Location required</font>
+                      </div>
+
+
+                      <div *ngIf="location.errors?.['pattern']">
+                        <font color="red">*Invalid Location </font>
+                      </div>
+
+                    </div>
+
+
+                  </td>
+                </tr>
+
+
+
+
+              </table>
+
+              <button mat-raised-button matTooltip="Used to Insert the Value"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+              <button type="button" class="btn btn-success" [disabled]="myform.invalid"
+                (click)="insert(myform.value)">Insert</button>
+
+
+
+
+
+            </form>
+
+            <mat-card class="card">
+              <mat-card-content class="cdetail">{{result}}</mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+
+
+  <!--Update-->
+  <mat-tab label="Update">
+    <div class="example-large-box mat-elevation-z4">
+      <div class="row">
+        <div class="col" id="left">
+          <div>
+
+
+            <form #myform1="ngForm">
+              <table>
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Id</mat-label>
+                      <input matInput type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+"
+                        placeholder="Enter Customer Id" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="id.touched ">
+                      <div *ngIf="id.errors?.['required']">
+                        <font color="red">*ID required</font>
+                      </div>
+
+
+                      <div *ngIf="id.errors?.['pattern']">
+                        <font color="red">*Invalid ID </font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Name</mat-label>
+
+                      <input matInput type="text" name="name" #name="ngModel" ngModel required pattern="[A-Z a-z]+"
+                        placeholder="Enter  Customer name" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+                  </td>
+
+
+                  <td>
+
+
+                    <div *ngIf="name.touched ">
+
+
+                      <div *ngIf="name.errors?.['required']">
+                        <font color="red">*Name required</font>
+                      </div>
+
+
+                      <div *ngIf="name.errors?.['pattern']">
+                        <font color="red">*Invalid Name </font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+
+
+
+
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Email</mat-label>
+
+                      <input matInput type="text" name="email" #email="ngModel" ngModel required
+                        pattern="[a-z0-9_\-\.]+@[a-z]+\.[a-z]{2,3}" placeholder="Enter  Customer email"
+                        onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="email.touched ">
+                      <div *ngIf="email.errors?.['required']">
+                        <font color="red">*Email required</font>
+                      </div>
+
+
+                      <div *ngIf="email.errors?.['pattern']">
+                        <font color="red">*Invalid Email </font>
+                      </div>
+
+                    </div>
+
+                  </td>
+                </tr>
+
+
+                <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Number</mat-label>
+                      <input matInput type="text" name="no" #no="ngModel" ngModel required pattern="[6789][0-9]{9}"
+                        placeholder="Enter Customer no" onfocus="this.placeholder='' " maxlength="10">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="no.touched ">
+                      <div *ngIf="no.errors?.['required']">
+                        <font color="red">*Contact no required</font>
+                      </div>
+
+
+                      <div *ngIf="no.errors?.['pattern']">
+                        <font color="red">*Invalid contact number</font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+                 <tr>
+
+
+
+                  <td>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Location</mat-label>
+
+                      <input matInput type="text" name="location" #location="ngModel" ngModel required
+                        pattern="[A-z a-z]+" placeholder="Enter  Customer location" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+                    <div *ngIf="location.touched ">
+                      <div *ngIf="location.errors?.['required']">
+                        <font color="red">*Location required</font>
+                      </div>
+
+
+                      <div *ngIf="location.errors?.['pattern']">
+                        <font color="red">*Invalid Location </font>
+                      </div>
+
+                    </div>
+
+
+                  </td>
+                </tr>
+
+
+
+
+              </table>
+
+              <button mat-raised-button matTooltip="Used to Insert the Value"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+              <button type="button" class="btn btn-success" [disabled]="myform1.invalid"
+                (click)="update(myform1.value)">Update</button>
+
+
+
+
+
+            </form>
+
+            <mat-card class="card">
+              <mat-card-content class="cdetail">{{result}}</mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+
+  <!--Delete-->
+
+  <mat-tab label="Delete">
+    <div class="example-large-box mat-elevation-z4">
+      <div class="row">
+        <div class="col" id="left">
+          <div>
+
+
+            <form #myform2="ngForm">
+              <table>
+                <tr>
+
+
+
+                  <td>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Customer Id</mat-label>
+                      <input matInput type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+"
+                        placeholder="Enter Customer Id" onfocus="this.placeholder='' ">
+                    </mat-form-field>
+
+
+                  </td>
+                  <td>
+
+
+                    <div *ngIf="id.touched ">
+                      <div *ngIf="id.errors?.['required']">
+                        <font color="red">ID required</font>
+                      </div>
+
+
+                      <div *ngIf="id.errors?.['pattern']">
+                        <font color="red">Invalid ID </font>
+                      </div>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+
+
+
+
+
+              </table>
+
+              <button mat-raised-button matTooltip="Used to delete the Value"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+
+
+              <button type="button" class="btn btn-danger" [disabled]="myform2.invalid"
+                (click)="delete(myform2.value)">Delete</button>
+
+
+
+
+
+            </form><br><br>
+            <mat-card class="card">
+              <mat-card-content class="cdetail">{{result}}</mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+
+  <!--Find all-->
+
+  <mat-tab label="Table-Detail">
+    <div class="example-large-box mat-elevation-z4">
+      <div class="row">
+        <div class="col" id="left">
+          <div>
+            <table class="table table-striped table-bordered">
+              <thead>
+
+                <tr scope="row">
+
+                  <td scope="col">Customer Id</td>
+                  <td scope="col">Customer Name</td>
+                  <td scope="col">Customer Email</td>
+                  <td scope="col">Customer Number</td>
+
+                  <td scope="col">Customer Location</td>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngFor="let cus of cusList" scope="row">
+
+                  <td scope="col">{{cus.id}}</td>
+                  <td scope="col">{{cus.name}}</td>
+                  <td scope="col">{{cus.email}}</td>
+                  <td scope="col">{{cus.no}}</td>
+
+
+                  <td scope="col">{{cus.location}}</td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

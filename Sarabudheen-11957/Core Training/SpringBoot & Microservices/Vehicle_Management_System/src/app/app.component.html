@@ -1,0 +1,131 @@
+<div class="header">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="tittle">Vehicle Management System</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</div>
+
+<div class="Content">
+  <mat-tab-group>
+    <mat-tab label="CRUD Operations"> <form  #myform="ngForm">
+      <table class="insertion">
+        <tr><br><br></tr>
+        <tr>
+          <mat-form-field appearance="outline">
+            <mat-label>vehicle ID</mat-label>
+            <input matInput placeholder="Ex.101" type="text" name="vehicleId" #vehicleId="ngModel" ngModel  required pattern="[0-9]+">
+          </mat-form-field>
+        </tr>
+        <div *ngIf = "vehicleId.touched">
+          <div *ngIf = "vehicleId.errors?.['required']">
+            <mat-error>Vehicle ID is Required.</mat-error>
+          </div>
+          <div *ngIf = "vehicleId.errors?.['pattern']">
+            <mat-error>Invalid Vehicle ID</mat-error>
+          </div>
+        
+        </div>
+  
+        <tr>
+          <mat-form-field appearance="outline">
+            <mat-label>vehicle Type</mat-label>
+            <input matInput placeholder="Ex.2 Wheelers or 3 wheelers"type="text" name="vehicleType"  #vehicleType="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z ]+">
+          </mat-form-field>
+        </tr>
+      <div *ngIf = "vehicleType.touched">
+        <div *ngIf = "vehicleType.errors?.['required']">
+          <mat-error>Vehicle Type is Required.</mat-error>
+        </div>
+        <div *ngIf = "vehicleType.errors?.['pattern']">
+          <mat-error>Invalid Vehicle Type</mat-error>
+        </div>
+
+</div>
+
+        <tr>
+          <mat-form-field appearance="outline">
+            <mat-label>vehicle Name</mat-label>
+            <input matInput placeholder="Bike or Car"type="text" name="vehicleName"  #vehicleName="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z ]+">
+          </mat-form-field>
+        </tr>
+        <div *ngIf = "vehicleName.touched">
+          <div *ngIf = "vehicleName.errors?.['required']">
+            <mat-error>Vehicle Name is Required.</mat-error>
+          </div>
+          <div *ngIf = "vehicleName.errors?.['pattern']">
+            <mat-error>Invalid Vehicle Name</mat-error>
+          </div>
+  
+  </div>
+
+        <tr>
+          <mat-form-field appearance="outline">
+            <mat-label>vehicle Number</mat-label>
+            <input matInput placeholder="TN31AS3218"type="text" name="vehicleNumber"  #vehicleNumber="ngModel" ngModel required pattern="[A-Z]{2}[0-9]{2}[A-Z\\s]{2}[0-9]{4}+">
+          </mat-form-field>
+        </tr>
+        <div *ngIf = "vehicleNumber.touched">
+          <div *ngIf = "vehicleNumber.errors?.['required']">
+            <mat-error>Vehicle Number is Required.</mat-error>
+          </div>
+          <div *ngIf = "vehicleNumber.errors?.['pattern']">
+            <mat-error>Invalid Vehicle Number</mat-error>
+          </div>
+  
+  </div>
+
+        
+        <tr>
+          <mat-form-field appearance="outline">
+            <mat-label>Owner Name</mat-label>
+            <input matInput placeholder="Ex.Sara"type="text" name="ownerName"  #ownerName="ngModel"  ngModel required pattern="[a-zA-Z][a-zA-Z ]+">
+          </mat-form-field>
+        </tr>
+
+        <div *ngIf = "ownerName.touched">
+          <div *ngIf = "ownerName.errors?.['required']">
+            <mat-error>Owner Name is Required.</mat-error>
+          </div>
+          <div *ngIf = "ownerName.errors?.['pattern']">
+            <mat-error>Invalid Vehicle Owner Name</mat-error>
+          </div>
+          </div>
+
+          <tr><button (click)="insertVehicle(myform.value)" class="btn btn-success">insert</button>
+           <button (click)="updateVehicle(myform.value)" class="btn btn-warning">update</button>
+           <button (click)="deleteVehicle(myform.value)" class="btn btn-danger">delete</button></tr>
+      </table>
+    </form>
+    <font id="result" align="center"><b>{{result}}</b></font>
+   
+  </mat-tab>
+
+    <mat-tab label="ViewAll vehicles"> 
+      <table class="table table-bordered table-hover " >
+      <tr class="output">
+      <th>Vehicle ID</th>
+      <th>Vehicle Type</th>
+      <th>Vehicle Name</th>
+      <th>Vehicle Number</th>
+      <th>Owner Name</th>
+     </tr> 
+     <tr *ngFor="let vehicle of vehicleList">
+      <td>{{vehicle.vehicleId}}</td>
+      <td>{{vehicle.vehicleType}}</td>
+      <td>{{vehicle.vehicleName}}</td>
+      <td>{{vehicle.vehicleNumber}}</td>
+      <td>{{vehicle.ownerName}}</td>
+     </tr>
+    </table>
+  </mat-tab>
+  </mat-tab-group>
+  
+
+  
+ 
+ 
+</div>
+<div></div>

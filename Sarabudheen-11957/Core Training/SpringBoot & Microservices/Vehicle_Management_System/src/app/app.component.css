@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .insertion{
+    border: 2px solid black;
+    text-align: center;
+    height: 70%;
+    width: 50%;
+    margin: auto;
+    margin-top: 1cm;
+    border-radius: 10px;
+  }
+  font{
+    text-align: center;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .tittle{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .Content{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  button{
+    border: 1px solid black;
+    border-radius: 10px;
+  }

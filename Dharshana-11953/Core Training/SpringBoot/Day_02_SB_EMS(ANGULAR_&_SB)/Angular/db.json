@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "employeee": [
+    {
+      "firstName": "Kavi",
+      "lastName": "Alagar",
+      "email": "kavi@gmail",
+      "dob": "2017-01-16T18:30:00.000Z",
+      "gender": "female",
+      "education": "Diploma",
+      "company": "Rz",
+      "experience": 3,
+      "package": "3",
+      "id": 1
+    },
+    {
+      "firstName": "Dharshu",
+      "lastName": "Minion",
+      "email": "dharshuminion2301@gmail.com",
+      "dob": "2023-09-21T18:30:00.000Z",
+      "gender": "",
+      "education": "UG",
+      "company": "RZ",
+      "experience": 6,
+      "package": "10",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

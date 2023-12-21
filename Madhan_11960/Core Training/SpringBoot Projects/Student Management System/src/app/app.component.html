@@ -1,0 +1,50 @@
+
+<div class="head">
+  <h1 style="text-align: center;">Student Management System </h1>
+ </div>
+ 
+ <div class="left" >
+   <div class="div1">
+   <form #details="ngForm" (ngSubmit)="details.form.valid && crud()">
+   <label>Student Id </label><br>
+   <input type="number"  ngModel required pattern="[0-9]+" placeholder="Enter Student ID" [(ngModel)]="form1.id" name="id" #id="ngModel" required maxlength="6" [ngClass]="{error : id.errors && id.touched}" onfocus="this.placeholder=' '"><br>
+   <div *ngIf="id.errors && id.touched">
+     <small class="text-danger" *ngIf="id.errors['required']">Student Id is required</small>
+      <div *ngIf="id.errors?.['pattern']">
+       <font color="red">Invalid ID </font>
+       </div>
+     </div>
+ 
+   <label>Student Name </label><br>
+   <input type="text" ngModel required pattern="[a-zA-Z]+" placeholder="Enter Student Name" [(ngModel)]="form1.name" name="name" #empName="ngModel" required maxlength="32" onfocus="this.placeholder=' '"><br>
+   <div *ngIf="empName.errors && empName.touched">
+     <small class="text-danger" *ngIf="empName.errors['required']">Student name is required</small>
+      <div *ngIf="empName.errors?.['pattern']">
+       <font color="red">Invalid name </font>
+       </div>
+     </div>
+ 
+   <label>Student Department </label><br>
+   <input type="text"   required pattern="[a-zA-Z]+" placeholder="Enter Employee Department" [(ngModel)]="form1.department" name="department" #empSal="ngModel" required maxlength="6" onfocus="this.placeholder=' '"><br>
+   <div *ngIf="empSal.errors && empSal.touched">
+     <small class="text-danger" *ngIf="empSal.errors['required']">Student department is required</small>
+      <div *ngIf="empSal.errors?.['pattern']">
+       <font color="red">Invalid department </font>
+       </div>
+     </div>
+   <br>
+   <button type="button" class="btn btn-danger" (click)="insertStudent(details.value)">Insert</button>&nbsp;
+   <button type="button" class="btn btn-danger" (click)="deleteStudent(details.value)">Delete</button>&nbsp;
+   <button type="button" class="btn btn-danger" (click)="updateStudent(details.value)">Update</button>&nbsp;
+ </form>
+ </div>
+ <br>
+ &nbsp;&nbsp;<font color="green"><b>{{result}}</b></font>
+ 
+ <div class="right">
+  <br>
+  <ul>
+   <li *ngFor="let stu of stuList"><b>{{stu.id}} - {{stu.name}} - {{stu.department}}</b></li>
+  </ul>
+ </div>
+   </div>

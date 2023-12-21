@@ -1,0 +1,30 @@
+.head{
+    border: 2px solid  violet;
+    height: 10%;
+    width: 90%;
+    position: absolute;
+   
+    left: 60px;
+}
+.left{
+    border: 2px solid violet;
+    top: 12%;
+    position: absolute;
+    left: 60px;
+    right: 10px;
+    height: 80%;
+    width: 60%;
+}
+.right{
+    border: 2px solid violet;
+    top:0.5%;
+    left: 105%;
+    position: absolute;
+    height: 99%;
+    width: 45%;
+    
+}
+.div1{
+    margin-top: 10%;
+    margin-left: 5%;
+}

@@ -1,0 +1,78 @@
+<div matDialogTitle>
+    <h1 style="color:blue">Add mobile</h1> 
+</div>
+
+<form [formGroup]= "mobileForm" (ngSubmit) = "onSubmit()">
+    <div class="content">
+        <mat-dialog-content >
+            <div class="row">
+
+                <!-- Mobile Id -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile Id</mat-label>
+                    <input type="number" matInput placeholder="Eg.. 11" formControlName = "id">
+                        <div *ngIf ="mobileForm.get('id')!.touched && mobileForm.get('id')!.invalid">
+                            <div *ngIf ="mobileForm.get('id')!.hasError('required')">
+                                <font color="red">*id required</font>
+                            </div>
+                            <div *ngIf ="mobileForm.get('id')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Mobile Brand -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile Brand</mat-label>
+                    <mat-select formControlName = "brand">
+                      <mat-option *ngFor="let mobile of mobileBrand" [value]="mobile">
+                        {{mobile}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                
+                <!-- Mobile Model Name -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile model Name</mat-label>
+                    <input type="text" matInput  formControlName = "model">
+                        <div *ngIf ="mobileForm.get('model')!.touched && mobileForm.get('model')!.invalid">
+                            <div *ngIf ="mobileForm.get('model')!.hasError('required')">
+                                <font color="red">*mobile Name required</font>
+                            </div>
+                            <div *ngIf ="mobileForm.get('model')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Mobile Price -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile Price</mat-label>
+                    <input type="number" matInput placeholder="Eg.. 18000" formControlName = "price">
+                        <div *ngIf ="mobileForm.get('price')!.touched && mobileForm.get('price')!.invalid">
+                            <div *ngIf ="mobileForm.get('price')!.hasError('required')">
+                                <font color="red">*mobile price required</font>
+                            </div>
+                            <div *ngIf ="mobileForm.get('price')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </div>
+    
+    
+    <div class="action">
+        <mat-dialog-actions style="justify-content: end;">
+            <!-- Cancel -->
+            <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+
+            <!-- Submit -->
+            <button mat-raised-button type="submit" color="primary">{{data ? 'Update': 'Save'}}</button>
+        </mat-dialog-actions>
+    </div>
+</form>

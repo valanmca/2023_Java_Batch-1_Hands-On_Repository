@@ -1,0 +1,67 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span ><b>Mobile Management System</b></span>
+  <span class="space"></span>
+  
+  <button mat-raised-button (click)="addMobile()"color="warn" >
+    Add Mobile
+  </button>
+  </mat-toolbar>
+  
+  
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      
+    
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+      
+      <!-- Mobile brand Column -->
+      <ng-container matColumnDef="brand">
+        <th mat-header-cell *matHeaderCellDef> Mobile Brand </th>
+        <td mat-cell *matCellDef="let row"> {{row.brand}} </td>
+      </ng-container>  
+    
+      <!-- Mobile model Name Column -->
+      <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef> Mobile model </th>
+        <td mat-cell *matCellDef="let row"> {{row.model}} </td>
+      </ng-container>
+    
+      <!-- Mobile price Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Mobile price </th>
+        <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+      </ng-container>
+    
+      
+    
+      <!-- Action buttons -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let row"> 
+        <button mat-button color="primary" (click)="updateMobile(row)">
+          <mat-icon>edit</mat-icon>
+        </button>  
+        <button mat-button color="warn" (click)="deleteMobile(row.id)">
+          <mat-icon >delete</mat-icon>
+        </button>
+        </td>
+      </ng-container>
+    
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,71 @@
+
+<div class="head">
+  <h1 style="text-align: center;">Hospital Management System </h1>
+ </div>
+ <div class="left">
+  <div class="div1">
+   <form #myform="ngForm">
+ <label > Patient Name:</label><br>
+ <div class="input-group mb-2" >
+    <div class="col-xs-4">
+    <input type="text" class="form-control" name="name" #name="ngModel" ngModel required pattern="[a-zA-z ]+" placeholder="PatientName" aria-label="PatientName" onfocus="this.placeholder=''">
+</div> 
+</div>
+ <div *ngIf="name.touched">
+ <div *ngIf="name.errors?.['required']">
+ <font color="red">Name is required</font>
+ </div>
+ <div *ngIf="name.errors?.['pattern']">
+ <font color="red">Invalid Name </font>
+ </div>
+ </div>
+
+ <br>
+
+ <label > Patient Id:</label><br>
+ <div class="input-group mb-2" >
+    <div class="col-xs-4">
+    <input type="text" class="form-control" name="id" #id="ngModel" ngModel required pattern="[0-9]+" placeholder="PatientId" aria-label="PatientId" onfocus="this.placeholder=''">
+</div> 
+</div>
+ <div *ngIf="id.touched">
+ <div *ngIf="id.errors?.['required']">
+ <font color="red">Id is required</font>
+ </div>
+ <div *ngIf="id.errors?.['pattern']">
+ <font color="red">Invalid Id</font>
+ </div>
+</div>
+
+<br>
+
+ <label > Patient Address:</label><br>
+ <div class="input-group mb-2" >
+    <div class="col-xs-4">
+    <input type="text" class="form-control" name="add" #add="ngModel" ngModel required pattern="[0-9/]+/[a-zA-z, 0-9-]+"  placeholder="PatientId" aria-label="PatientId" onfocus="this.placeholder=''">
+</div> 
+</div>
+ <div *ngIf="add.touched">
+ <div *ngIf="add.errors?.['required']">
+ <font color="red">Address is required</font>
+ </div>
+ <div *ngIf="add.errors?.['pattern']">
+ <font color="red">Invalid Add</font>
+</div>
+</div><br><br>
+
+   <button type="button" class="btn btn-danger">Insert</button>&nbsp;
+   <button type="button" class="btn btn-danger" >Delete</button>&nbsp;
+   <button type="button" class="btn btn-danger" >Update</button>&nbsp;
+ </form>
+ </div>
+ <!-- <br>
+ &nbsp;&nbsp;<font color="green"><b>{{result}}</b></font> -->
+ 
+ <div class="right">
+  <br>
+  <!-- <ul>
+   <li *ngFor="let emp of empList"><b>{{emp.age}} - {{emp.name}} - {{emp.contact}}</b></li>
+  </ul> -->
+ </div>
+   </div>

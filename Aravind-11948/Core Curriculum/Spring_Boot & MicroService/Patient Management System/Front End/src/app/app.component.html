@@ -1,0 +1,625 @@
+
+
+<p>
+    <mat-toolbar class="tool">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="title-center"> PATIENT MANAGEMENT SYSTEM</span>
+        <span class="example-spacer"></span>
+        <button class="btn btn-primary">LOG IN</button>&nbsp;&nbsp;
+        <button class="btn btn-primary">LOG OUT</button>
+    </mat-toolbar>
+</p>
+
+
+<mat-tab-group dynamicHeight>
+
+
+    <mat-tab label="Insert">
+        <div class="example-large-box mat-elevation-z4">
+            <div class="row">
+                <div class="col" id="left">
+                    <div>
+
+
+                        <form #myform="ngForm">
+                            <table>
+                                <tr>
+
+                                    
+
+                                    <td>
+                                      
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Id</mat-label>
+                                            <input matInput type="text" name="id" #id="ngModel" ngModel required
+                                                pattern="[0-9]+" placeholder="Enter Patient Id"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+
+                                        <div *ngIf="id.touched ">
+                                            <div *ngIf="id.errors?.['required']">
+                                                <font color="red">*ID required</font>
+                                            </div>
+
+
+                                            <div *ngIf="id.errors?.['pattern']">
+                                                <font color="red">*Invalid ID </font>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    
+                                    
+
+                                    <td> 
+                                       
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Name</mat-label>
+
+                                            <input matInput type="text" name="name" #name="ngModel" ngModel required
+                                                pattern="[A-Z a-z]+" placeholder="Enter  patient name"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+                                    </td>
+
+
+                                    <td>
+
+
+                                        <div *ngIf="name.touched ">
+
+
+                                            <div *ngIf="name.errors?.['required']">
+                                                <font color="red">*Name required</font>
+                                            </div>
+
+
+                                            <div *ngIf="name.errors?.['pattern']">
+                                                <font color="red">*Invalid Name </font>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                    
+
+                                    <td>
+                                       
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Age</mat-label>
+
+                                            <input matInput type="text" name="age" #age="ngModel" ngModel required
+                                                pattern="^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$" placeholder="Enter  patient age"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+                                    </td>
+
+                                    <td>
+                                        <div *ngIf="age.touched ">
+                                            <div *ngIf="age.errors?.['required']">
+                                                <font color="red">*Age required</font>
+                                            </div>
+
+
+                                            <div *ngIf="age.errors?.['pattern']">
+                                                <font color="red">*Invalid Age </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                   
+
+                                    <td>
+                                        
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Email</mat-label>
+
+                                            <input matInput type="text" name="email" #email="ngModel" ngModel required
+                                                pattern="[a-z0-9_\-\.]+@[a-z]+\.[a-z]{2,3}" placeholder="Enter  patient email"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+
+                                        <div *ngIf="email.touched ">
+                                            <div *ngIf="email.errors?.['required']">
+                                                <font color="red">*Email required</font>
+                                            </div>
+
+
+                                            <div *ngIf="email.errors?.['pattern']">
+                                                <font color="red">*Invalid Email </font>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                  
+
+
+
+                                    <td>
+
+                                        
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Bloodgroup</mat-label>
+
+                                            <input matInput type="text" name="bgroup" #bgroup="ngModel" ngModel required
+                                                pattern="([AaBbOo]|[Aa][Bb])[\+-]" placeholder="Enter  patient Blood Group"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+                                        <div *ngIf="bgroup.touched ">
+                                            <div *ngIf="bgroup.errors?.['required']">
+                                                <font color="red">*Blood group required</font>
+                                            </div>
+
+
+                                            <div *ngIf="bgroup.errors?.['pattern']">
+                                                <font color="red">*Invalid Blood group </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+
+                                    
+
+                                    <td>
+                                        
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Location</mat-label>
+
+                                            <input matInput type="text" name="location" #location="ngModel" ngModel
+                                                required pattern="[A-z a-z]+" placeholder="Enter  patient location"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+                                        <div *ngIf="location.touched ">
+                                            <div *ngIf="location.errors?.['required']">
+                                                <font color="red">*Location required</font>
+                                            </div>
+
+
+                                            <div *ngIf="location.errors?.['pattern']">
+                                                <font color="red">*Invalid Location </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+
+
+                            </table>
+
+                            <button mat-raised-button matTooltip="Used to Insert the Value"
+                                aria-label="Button that displays a tooltip when focused or hovered over">
+                                Action
+                            </button>
+                            <button type="button" class="btn btn-success" [disabled]="myform.invalid"
+                                (click)="insert(myform.value)">Insert</button>
+
+
+
+                                
+                            
+                        </form>
+
+                        <mat-card class="card">
+                            <mat-card-content class="cdetail">{{result}}</mat-card-content>
+                          </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+
+    <!--update-->
+
+    <mat-tab label="Update">
+        <div class="example-large-box mat-elevation-z4">
+            <div class="row">
+                <div class="col" id="left">
+                    <div>
+
+
+                        <form #myform1="ngForm">
+                            <table>
+                                <tr>
+                                    
+
+
+
+                                    <td>
+                                        
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Id</mat-label>
+                                            <input matInput type="text" name="id" #id="ngModel" ngModel required
+                                                pattern="[0-9]+" placeholder="Enter Patient Id"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+
+                                        <div *ngIf="id.touched ">
+                                            <div *ngIf="id.errors?.['required']">
+                                                <font color="red">*ID required</font>
+                                            </div>
+
+
+                                            <div *ngIf="id.errors?.['pattern']">
+                                                <font color="red">*Invalid ID </font>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                    <td> <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Name</mat-label>
+
+                                            <input matInput type="text" name="name" #name="ngModel" ngModel required
+                                                pattern="[A-Z a-z0-9]+" placeholder="Enter  patient name"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+                                    </td>
+
+
+                                    <td>
+
+
+                                        <div *ngIf="name.touched ">
+
+
+                                            <div *ngIf="name.errors?.['required']">
+                                                <font color="red">*Name required</font>
+                                            </div>
+
+
+                                            <div *ngIf="name.errors?.['pattern']">
+                                                <font color="red">*Invalid Name </font>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Age</mat-label>
+
+                                            <input matInput type="text" name="age" #age="ngModel" ngModel required
+                                                pattern="(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$" placeholder="Enter  patient age"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+                                    </td>
+
+                                    <td>
+                                        &nbsp;<div *ngIf="age.touched ">
+                                            <div *ngIf="age.errors?.['required']">
+                                                <font color="red">*Age required</font>
+                                            </div>
+
+
+                                            <div *ngIf="age.errors?.['pattern']">
+                                                <font color="red">*Invalid Age </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Email</mat-label>
+
+                                            <input matInput type="text" name="email" #email="ngModel" ngModel required
+                                                pattern="^[a-z0-9_\-\.]+@[a-z]+\.[a-z]{2,3}$" placeholder="Enter  patient email"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+
+                                        <div *ngIf="email.touched ">
+                                            <div *ngIf="email.errors?.['required']">
+                                                <font color="red">*Email required</font>
+                                            </div>
+
+
+                                            <div *ngIf="email.errors?.['pattern']">
+                                                <font color="red">*Invalid Email </font>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+
+
+                                    <td>
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Bloodgroup</mat-label>
+
+                                            <input matInput type="text" name="bgroup" #bgroup="ngModel" ngModel required
+                                                pattern="([AaBbOo]|[Aa][Bb])[\+-]" placeholder="Enter  patient Blood Group"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+                                        <div *ngIf="bgroup.touched ">
+                                            <div *ngIf="bgroup.errors?.['required']">
+                                                <font color="red">*Blood group required</font>
+                                            </div>
+
+
+                                            <div *ngIf="bgroup.errors?.['pattern']">
+                                                <font color="red">*Invalid Blood group </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+
+
+
+                                    <td>
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Location</mat-label>
+
+                                            <input matInput type="text" name="location" #location="ngModel" ngModel
+                                                required pattern="[A-z a-z]+" placeholder="Enter  patient location"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+                                        <div *ngIf="location.touched ">
+                                            <div *ngIf="location.errors?.['required']">
+                                                <font color="red">*Location required</font>
+                                            </div>
+
+
+                                            <div *ngIf="location.errors?.['pattern']">
+                                                <font color="red">*Invalid Location </font>
+                                            </div>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+
+
+                            </table>
+
+                            <button mat-raised-button matTooltip="Used to Insert the Value"
+                                aria-label="Button that displays a tooltip when focused or hovered over">
+                                Action
+                            </button>
+
+
+                            <button type="button" class="btn btn-success" [disabled]="myform1.invalid"
+                                (click)="update(myform1.value)">update</button>
+
+
+
+
+                         </form>
+                        <mat-card class="card">
+                            <mat-card-content  class="cdetail" align="center">{{result}}</mat-card-content>
+                          </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+
+    <!--Delete-->
+
+    <mat-tab label="Delete">
+        <div class="example-large-box mat-elevation-z4">
+            <div class="row">
+                <div class="col" id="left">
+                    <div>
+
+
+                        <form #myform2="ngForm">
+                            <table>
+                                <tr>
+
+
+
+                                    <td>
+
+                                        <mat-form-field class="example-full-width" appearance="outline">
+                                            <mat-label>Patient Id</mat-label>
+                                            <input matInput type="text" name="id" #id="ngModel" ngModel required
+                                                pattern="[0-9]+" placeholder="Enter Patient Id"
+                                                onfocus="this.placeholder='' ">
+                                        </mat-form-field>
+
+
+                                    </td>
+                                    <td>
+
+
+                                        <div *ngIf="id.touched ">
+                                            <div *ngIf="id.errors?.['required']">
+                                                <font color="red">ID required</font>
+                                            </div>
+
+
+                                            <div *ngIf="id.errors?.['pattern']">
+                                                <font color="red">Invalid ID </font>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+                            </table>
+
+                            <button mat-raised-button matTooltip="Used to delete the Value"
+                                aria-label="Button that displays a tooltip when focused or hovered over">
+                                Action
+                            </button>
+
+
+                            <button type="button" class="btn btn-danger" [disabled]="myform2.invalid"
+                                (click)="delete(myform2.value)">Delete</button>
+
+
+
+
+                           
+                        </form><br><br>
+                        <mat-card class="card">
+                            <mat-card-content  class="cdetail" >{{result}}</mat-card-content>
+                          </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+
+    <!--Find all-->
+
+    <mat-tab label="Table-Detail">
+        <div class="example-large-box mat-elevation-z4">
+            <div class="row">
+                <div class="col" id="left">
+                    <div>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+
+                                <tr scope="row">
+
+                                    <td scope="col">Patient Id</td>
+                                    <td scope="col">Patient Name</td>
+                                    <td scope="col">Patient Age</td>
+                                    <td scope="col">Patient Email</td>
+                                    <td scope="col">Patient Blood Group</td>
+                                    <td scope="col">Patient Location</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let pat of patList" scope="row">
+
+                                    <td scope="col">{{pat.id}}</td>
+                                    <td scope="col">{{pat.name}}</td>
+                                    <td scope="col">{{pat.age}}</td>
+                                    <td scope="col">{{pat.email}}</td>
+                                    <td scope="col">{{pat.bgroup}}</td>
+                                    <td scope="col">{{pat.location}}</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

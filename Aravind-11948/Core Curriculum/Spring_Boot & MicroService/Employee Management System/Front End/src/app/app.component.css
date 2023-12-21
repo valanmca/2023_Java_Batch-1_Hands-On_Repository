@@ -1,0 +1,33 @@
+.head{
+    border:2px solid rgb(238, 133, 13);
+    height:10%;
+    width:100%;
+    position:absolute;
+    text-align: center;
+}
+.left{
+    border:2px solid rgb(238, 133, 13);
+   top:15%;
+    position:absolute;
+    height:75%;
+    width:73%;
+    
+}
+.right{
+    border:2px solid rgb(238, 133, 13);
+   top:15%;
+    position:absolute;
+    height:75%;
+    width:25%;
+    left:74%;
+}
+/* table{
+    margin-top:20%;
+    position:absolute;
+} */
+
+.div1{
+    margin-top:10%;
+    margin-left:5%;
+    
+}

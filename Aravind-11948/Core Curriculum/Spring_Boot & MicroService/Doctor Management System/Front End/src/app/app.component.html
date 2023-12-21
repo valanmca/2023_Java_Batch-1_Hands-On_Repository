@@ -1,0 +1,121 @@
+<div class="head">
+
+  <h3 style="text-align: center;"> Doctor Management System</h3>
+</div>
+
+<div class="left">
+  <div class="div1">
+    <form #myform="ngForm">
+      <label><b>Doctor Id</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="dID" #dID="ngModel" ngModel required pattern="[0-9]+" placeholder="Enter Id"
+          onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+       <div *ngIf="dID.touched ">
+
+        <div *ngIf="dID.errors?.['required']">
+          <font color="red">ID required</font>
+        </div>
+
+        <div *ngIf="dID.errors?.['pattern']">
+          <font color="red">Invalid ID </font>
+        </div>
+
+      </div>
+      <br>
+
+
+      <label><b>Doctor Name</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="dName" #dName="ngModel" ngModel required pattern="[A-Z a-z]+"
+          placeholder="Enter name" onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+
+
+      <div *ngIf="dName.touched ">
+
+        <div *ngIf="dName.errors?.['required']">
+          <font color="red">Name required</font>
+        </div>
+
+        <div *ngIf="dName.errors?.['pattern']">
+          <font color="red">Invalid Name </font>
+        </div>
+
+      </div>
+      <br>
+
+      <label><b>Doctor Department</b></label><br>
+
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="dDept" #dDept="ngModel" ngModel required pattern="[A-Z a-z]+"
+          placeholder="Enter department" onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+
+
+      <div *ngIf="dDept.touched ">
+
+        <div *ngIf="dDept.errors?.['required']">
+          <font color="red">Department required</font>
+        </div>
+
+        <div *ngIf="dDept.errors?.['pattern']">
+          <font color="red">Invalid Department </font>
+        </div>
+
+      </div>
+
+      <br>
+
+      <label><b>Doctor Salary</b></label><br>
+
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="dSalary" #dSalary="ngModel" ngModel required pattern="[0-9]+" placeholder="Enter Salary"
+          onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+      
+
+      <div *ngIf="dSalary.touched ">
+
+        <div *ngIf="dSalary.errors?.['required']">
+          <font color="red">Salary required</font>
+        </div>
+
+        <div *ngIf="dSalary.errors?.['pattern']">
+          <font color="red">Invalid salary</font>
+        </div>
+
+      </div>
+      <br>
+      <br>
+
+      <button type="button" class="btn btn-danger" (click)="insertDoctor(myform.value)">insert</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger" (click)="deleteDoctor(myform.value)">Delete</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger" (click)="updateDoctor(myform.value)">Update</button>&nbsp;&nbsp;
+
+    </form>
+    <font color="green">{{result}}</font>
+
+  </div>
+</div>
+
+<div class="right">
+  <br>
+  <br>
+  <ul>
+    <li *ngFor="let doc of docList"> {{doc.dID}}-{{doc.dName}}-{{doc.dSalary}}--{{doc.dDept}}</li>
+  </ul>
+
+</div>

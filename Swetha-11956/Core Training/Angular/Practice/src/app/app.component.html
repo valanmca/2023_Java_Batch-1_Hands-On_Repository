@@ -1,0 +1,92 @@
+<mat-toolbar color="primary">
+  
+  <span>Student Management System</span>
+  <span class="example-spacer"></span>
+  
+  <button mat-raised-button >
+   Add Employee
+  </button>
+</mat-toolbar>
+<div class="divv">
+  <div class="head">
+    <br>
+    <h1 style="text-align: center;">Student management system</h1>
+  </div>
+  <div class="divv1">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi">
+      </mat-form-field>
+    
+      
+    </form>
+    
+  </div>
+
+<hr>
+  <div class="left">
+    <form #form1="ngForm" (ngSubmit)="myFunction(form1.value)">
+      <div class="mb-3">
+        <label class="form-label">Student Roll-No</label>
+        <input type="text" class="form-control" id="rno" name="srno" #srno="ngModel" ngModel required pattern="[0-9]+"
+          maxlength="6" />
+        <div *ngIf="srno.touched">
+          <div *ngIf="srno.errors?.['required']">
+            <font color="red">*Roll no is required</font>
+          </div>
+          <div *ngIf="srno.errors?.['pattern']">
+            <font color="red">*Roll no is Invalid</font>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Student Name</label>
+        <input type="text" class="form-control" id="name" name="sname" #sname="ngModel" ngModel required
+          pattern="[a-z A-Z][a-z A-z]+">
+        <div *ngIf="sname.touched">
+          <div *ngIf="sname.errors?.['required']">
+            <font color="red">*Name is required</font>
+          </div>
+          <div *ngIf="sname.errors?.['pattern']">
+            <font color="red">*Name is Invalid</font>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="mb-3 form-check">
+        <input type="" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+      <div class="mb-3">
+        <label class="form-label">Student Department</label>
+        <select class="form-select" name="opt" #opt="ngModel" ngModel required>
+          <option selected>Select department</option>
+          <option value="1">CSE</option>
+          <option value="2">ECE</option>
+          <option value="3">Mech</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Student course</label>
+        <input type="text" class="form-control" id="course" name="cours" #cours="ngModel" ngModel required
+          pattern="[a-z A-Z][a-z A-z]+">
+        <div *ngIf="cours.touched">
+          <div *ngIf="cours.errors?.['required']">
+            <font color="red">*Course is required</font>
+          </div>
+          <div *ngIf="cours.errors?.['pattern']">
+            <font color="red">*Course is Invalid</font>
+          </div>
+        </div>
+
+        <br><br>
+        <button class="btn btn-danger" (click)="insertStudent(form1.value)">Insert</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="updateStudent(form1.value)">Update</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="deleteStudent(form1.value)">Delete</button>&nbsp;&nbsp;
+      </div>
+    </form>
+  </div>
+  <div class="right">
+
+  </div>
+</div>

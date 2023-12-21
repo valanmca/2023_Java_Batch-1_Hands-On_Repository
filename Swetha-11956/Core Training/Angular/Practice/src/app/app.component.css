@@ -1,0 +1,42 @@
+.head{
+    border: 1px solid green;
+    position:absolute;
+    width: 1150px;
+    height: 90px;
+    left: 5%;
+    top: 3%;
+    
+    
+}
+.left{
+    border: 1px solid green;
+    position:absolute;
+    width: 620px;
+    height: 490px;
+    left:5%;
+    top:20%;
+    padding-left: 80px;
+    padding-top: 30px;
+}
+.right{
+    border: 1px solid rgb(34, 0, 128);
+    position:absolute; 
+    width: 500px;
+    height: 490px;
+    left: 53%;
+    top:20%
+}
+.form-control,.form-select{
+ width: 70%;
+}
+.divv{
+    position:absolute;
+    border:3px solid yellow;
+    top: 50%;
+    width: 1200px;
+    
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+

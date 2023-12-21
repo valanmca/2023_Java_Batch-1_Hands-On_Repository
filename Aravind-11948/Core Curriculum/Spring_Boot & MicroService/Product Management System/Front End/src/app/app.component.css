@@ -1,0 +1,61 @@
+.head{
+   
+    height:10%;
+    width:100%;
+    position:absolute;
+    text-align: center;
+}
+
+
+
+
+/* table{
+    margin-top:20%;
+    position:absolute;
+} */
+
+.table table-striped{
+  text-align: center;
+}
+.div1{
+    margin-top:5%;
+    margin-left:5%;
+   
+    
+}
+
+
+  .title-center {
+    flex: 1 1 auto;
+    text-align: center;
+
+    
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    color: antiquewhite;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .example-full-width{
+    height:70px;
+    width:250px;
+  }
+  
+  form{
+    margin-left:10%;
+    
+  }
+  .size{
+    width:50%;
+    height:10%;
+    background-color: aqua;
+  }
+  .tool{
+    background-color: rgb(47, 118, 141);
+    color: antiquewhite;
+  }
+
+
+  
+  
+  

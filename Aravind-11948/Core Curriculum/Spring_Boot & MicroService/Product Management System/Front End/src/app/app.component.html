@@ -1,0 +1,167 @@
+<!-- <div class="head">
+
+  <h3 style="text-align: center;"> Product Management System</h3>
+</div>-->
+
+
+<p>
+  <mat-toolbar class="tool">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title-center" > PRODUCT MANAGEMENT
+      SYSTEM</span>
+
+    <span class="example-spacer"></span>
+
+    <button class="btn btn-primary">LOG IN</button>&nbsp;&nbsp;
+    <button class="btn btn-primary">LOG OUT</button>
+  </mat-toolbar>
+</p>
+
+<div class="container">
+
+  <div class="row">
+  <div class="col">
+    <br>
+
+    <form #myform="ngForm">
+
+
+      <label><b>Product Id</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="pId" #pId="ngModel" ngModel required pattern="[0-9]+" placeholder="Enter Id"
+          onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+      <div *ngIf="pId.touched ">
+
+        <div *ngIf="pId.errors?.['required']">
+          <font color="red">ID required</font>
+        </div>
+
+        <div *ngIf="pId.errors?.['pattern']">
+          <font color="red">Invalid ID </font>
+        </div>
+
+      </div>
+      <br>
+
+
+      <label><b>Product Name</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="pName" #pName="ngModel" ngModel required pattern="[A-Z a-z]+"
+          placeholder="Enter name" onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+
+
+      <div *ngIf="pName.touched ">
+
+        <div *ngIf="pName.errors?.['required']">
+          <font color="red">Name required</font>
+        </div>
+
+        <div *ngIf="pName.errors?.['pattern']">
+          <font color="red">Invalid Name </font>
+        </div>
+
+      </div>
+      <br>
+
+      <label><b>Product Quantity</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="pQuantity" #pQuantity="ngModel" ngModel required pattern="[0-9]+"
+          placeholder="Enter Quantity" onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+      <div *ngIf="pQuantity.touched ">
+
+        <div *ngIf="pQuantity.errors?.['required']">
+          <font color="red">Quantity required</font>
+        </div>
+
+        <div *ngIf="pQuantity.errors?.['pattern']">
+          <font color="red">Invalid Quantity </font>
+        </div>
+
+      </div>
+      <br>
+
+
+      <label><b>Product Price</b></label><br>
+
+      <mat-form-field class="example-full-width">
+
+        <input matInput type="text" name="pPrice" #pPrice="ngModel" ngModel required pattern="[0-9]+"
+          placeholder="Enter price" onfocus="this.placeholder='' ">
+      </mat-form-field><br>
+
+      <div *ngIf="pPrice.touched ">
+
+        <div *ngIf="pPrice.errors?.['required']">
+          <font color="red">Price required</font>
+        </div>
+
+        <div *ngIf="pPrice.errors?.['pattern']">
+          <font color="red">Invalid Price </font>
+        </div>
+
+      </div>
+      <br>
+
+      <button type="button" class="btn btn-success"  [disabled]="(myform.invalid )" (click)="insertProduct(myform.value)">insert</button>&nbsp;&nbsp;
+      
+      <button type="button" class="btn btn-primary"  [disabled]="(myform.invalid )"(click)="updateProduct(myform.value)">Update</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger" (click)="deleteProduct(myform.value)">Delete</button>&nbsp;&nbsp;
+      <br><br>
+
+
+      <mat-card class="size">
+        <mat-card-content ><font color="green">{{result}}</font></mat-card-content>
+      </mat-card>
+    </form>
+
+    
+    
+
+
+  </div>
+
+
+
+
+<div class="col">
+  <br>
+  <br>
+
+  <table class="table table-hover">
+    <thead  >
+      <tr scope="row">
+        <th class="text-center" scope="col">ID</th>
+        <th  class="text-center"scope="col">NAME</th>
+        <th class="text-center" scope="col">QUANTITY</th>
+        <th  class="text-center"scope="col">PRICE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr   class="text-center"scope="row" *ngFor="let pro of proList">
+        <td   class="text-center"scope="col">{{pro.pId}}</td>
+        <td   class="text-center"scope="col">{{pro.pName}}</td>
+        <td   class="text-center"scope="col">{{pro.pQuantity}}</td>
+        <td   class="text-center"scope="col">{{pro.pPrice}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+</div>

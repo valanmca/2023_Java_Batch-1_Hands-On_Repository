@@ -1,0 +1,51 @@
+<div class="header">
+  <b>Student Management System</b>
+</div>
+<br>
+
+
+<div class="left">
+<form #myForm="ngForm" >
+  <table align="center">
+    <tr>
+      <td>Student Id</td>
+      <td>:</td>
+      <td><input type="text" name="id" #id="ngModel" ngModel required pattern="[0-9]+"></td></tr>
+      <div *ngIf = "id.touched">
+        <div *ngIf = "id.errors?.['required']">
+            <font color="red"><b>Employee ID is Required.</b></font>
+        </div>
+        <div *ngIf = "id.errors?.['pattern']">
+            <font color="red"><b>Invalid Employee ID</b></font>
+        </div>
+
+    </div><br><br>
+    
+    <tr>
+      <td>Student Name</td>
+      <td>:</td>
+      <td><input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z ]+"></td>
+    </tr> <div *ngIf = "name.touched">
+      <div *ngIf = "name.errors?.['required']">
+          <font color="red"><b>Name is Required.</b></font>
+      </div>
+      <div *ngIf = "name.errors?.['pattern']">
+          <font color="red"><b>Invalid Name</b></font>
+      </div>
+
+     
+  </div><br><br>
+
+    <tr><td><button  (click)="InsertStudent(myForm.value)">Insert</button></td>
+    <td><button  (click)="DeleteStudent(myForm.value)">Delete</button></td>
+    <td><button  (click)="UpdateStudent(myForm.value)">Update</button></td></tr>
+  </table>
+</form>
+<font color="green"><b>{{result}}</b></font>
+</div>
+  
+<div class="right">
+  <br><br><ol>
+    <li *ngFor="let student of studentList">{{student.id}}-{{student.name}}</li>
+</ol>
+</div>

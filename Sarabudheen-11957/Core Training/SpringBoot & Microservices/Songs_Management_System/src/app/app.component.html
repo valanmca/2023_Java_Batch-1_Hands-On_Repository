@@ -1,0 +1,58 @@
+<div class="header">
+  Songs Management System
+</div>
+
+<div class="left">
+  <form #myform="ngForm">
+<table>
+  
+  <tr>
+    <td>Song ID</td>
+    <td>:</td>
+    <td><input type="text" name="id" #id="ngModel" ngModel></td>
+  </tr>
+ 
+
+  <tr>
+    <td>Song Name</td>
+    <td>:</td>
+    <td><input type="text" name="songName" #songName="ngModel" ngModel></td>
+  </tr>
+
+  <tr>
+    <td>Movie Name</td>
+    <td>:</td>
+    <td><input type="text" name="movieName" #movieName="ngModel" ngModel></td>
+  </tr>
+
+  <tr>
+    <td>Singers</td>
+    <td>:</td>
+    <td><input type="text" name="singers" #singers="ngModel"ngModel ></td>
+  </tr>
+
+  <tr>
+    <td>Lyricist</td>
+    <td>:</td>
+    <td><input type="text" name="lyricist" #lyricist="ngModel" ngModel></td>
+  </tr>
+
+  <tr>
+    <button (click)="insertSong(myform.value)" class="btn btn-success">Insert</button>
+    <button  (click)="deleteSong(myform.value)">Delete</button>
+    <button  (click)="updateSong(myform.value)">Update</button>
+  </tr>
+
+
+</table>
+
+  </form>
+  <font id="result"><b>{{result}}</b></font>
+
+</div>
+
+<div class="right">
+<br><br><ul>
+  <li *ngFor="let song of songsList" > {{song.id}}-{{song.songName}}-{{song.movieName}}-{{song.singers}}-{{song.lyricist}}</li>
+</ul>
+</div>

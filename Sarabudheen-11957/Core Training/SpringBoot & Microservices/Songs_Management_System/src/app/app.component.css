@@ -1,0 +1,34 @@
+.header{
+    text-align: center;
+    border: 3px solid black;
+    height: 2cm;
+    width: 39cm;
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+.left{
+    border: 3px solid black;
+    height: 15cm;
+    width: 25cm;
+    position: absolute;
+    
+   
+}
+.right{
+    border: 3px solid black;
+    height: 15cm;
+    width: 13cm;
+    margin-left: 26cm;   
+    position: absolute; 
+}
+
+input{
+    height: 1cm;
+    width: 10cm;
+}
+button{
+    height: 1cm;
+    width: 2cm;
+}

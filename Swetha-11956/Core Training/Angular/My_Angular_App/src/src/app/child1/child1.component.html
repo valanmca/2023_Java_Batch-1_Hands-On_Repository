@@ -1,0 +1,33 @@
+<button (click)="changeFlag()"> show and hide</button>
+<div class="Mydiv" *ngIf="flag">
+    <!-- <ul>
+        <li *ngFor="let v of vehicles">{{v}}</li>
+    </ul> -->
+    <ul>
+         <li (click)="setSelectedVehicle(vec)" *ngFor="let vec of vehicles"> {{vec}}</li>
+    </ul>
+    <br>
+        You have Selectd {{ selectedVehicle }}
+    <br>
+    <div [ngSwitch]="selectedVehicle">
+        <font color="green" *ngSwitchCase="'Two wheeler'"><b>Bike</b></font>
+        <font color="green" *ngSwitchCase="'Three wheeler'"><b>Auto</b></font>
+        <font color="green" *ngSwitchCase="'Four wheeler'"><b>Car</b></font>
+        <font color="red" *ngSwitchDefault><b>Invalid selection</b></font>
+    </div>
+
+
+</div>
+
+<div class="MyDiv1">
+    <hr>
+    <h3>Attribute directive</h3>
+   
+    
+    <h1 [style.color]="myColor">Example for ngStyle</h1>
+    <br>
+    <button (click)="ButtonChangeStyle()">Change style</button>
+    <h1 [ngClass]="myClass">Example for ng class</h1>
+
+    <button (click)="ButtonChangeColor()">Change color</button>
+</div>

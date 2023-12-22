@@ -1,0 +1,20 @@
+.Mydiv {
+    position: absolute;
+    left: 30%;
+    top: 180%;
+    width: 400px;
+    height: 300px;
+    border: 3px solid green;
+    border-radius: 20px;
+}
+.MyDiv1{
+    position:absolute;
+    top:300%;
+    
+}
+.myClass1{
+    color:blue;
+}
+.myClass2{
+    color:yellow;
+}

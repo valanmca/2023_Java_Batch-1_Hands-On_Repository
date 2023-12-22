@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+  <h1 >Root component</h1>
+<app-child></app-child>
+<br>
+</div><br>
+Empid= {{empid}}
+<br>
+Empname= {{empname}}
+<br>
+Empsalary= {{empsalary}}
+<br>
+<input type="text" value="{{email}}">
+<br>
+ Addition is {{getaddition(4,3)}}
+<br>
+ Factorial is {{getfactorial(5)}}
+ <br>
+
+ <h3>property binding</h3>
+ Addition Interpolation : 
+ <input type="text" value="{{getaddition(10,20)}}">
+ <br>
+ <input type="text" [value]="getaddition(10,30)"/>
+ <br>
+ <img [src]="image" [width]="imgwidth" [height]="imgheight"/>
+ <br>
+ <h3>Event binding</h3><br>
+ <button (click)="changeName()" [value]="empname">change name</button>  
+ <br>
+ <button (click)="changeEmail()" [value]="email">change email</button>
+ <br>
+<button (click)="changeImage()" [value]="image"> change image</button>
+<br>
+<h3>Two way binding</h3>
+Enter your name <input type="text" [(ngModel)]="name"/>
+Welcome {{name}}
+<br>
+
+</body>
+</html>
+<app-child1></app-child1>
+<br><br>
+<app-fact></app-fact>
+<br><br>
+<app-service></app-service>
+<br><br>
+<app-service1></app-service1><br>
+<app-pipe></app-pipe><br>
+<app-custompipe></app-custompipe><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<app-templatedrive></app-templatedrive>
+<br><br><br><br><br><br><br><br>
+<app-reactiveform></app-reactiveform>
+
+<div class="mydiv">
+  <table width="100%"[cellSpacing]="15" cellPadding="10"]>
+      <tr>
+        <td><a routerLink="home">Home</a></td>
+        <td><a routerLink="contact">Contact</a></td>
+        <td><a routerLink="about">About</a></td>
+      </tr>
+  </table>
+<hr/>
+<div>
+  This is the space for new component
+  <router-outlet></router-outlet>
+</div>
+</div>

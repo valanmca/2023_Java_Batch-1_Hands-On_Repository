@@ -1,0 +1,27 @@
+<p>fact works!</p>
+Factorial {{getFactorial(5)}};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3> Factorial</h3>
+    <table border="3px" >
+        <tr>
+            <th>Number</th>
+            <th>Factorial</th>
+        </tr>
+        <tr *ngFor ="let fac of factorial">
+            <td >{{fac}}</td>
+            <td>{{getFactorial(fac)}}</td>
+        </tr>
+    
+    </table>
+</div>
+</body>
+
+</html>

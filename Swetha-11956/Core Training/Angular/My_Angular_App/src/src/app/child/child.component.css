@@ -1,0 +1,11 @@
+div{
+    border:2px solid green;
+    border-radius: 10px;
+    width: 50%;
+    height:50%;
+    margin-left: 25%;
+}
+p{
+    color: green;
+    text-align: center;
+}

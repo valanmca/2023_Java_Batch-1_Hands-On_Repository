@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employee": [
+    {
+      "firstname": "Jenish",
+      "lastname": "J",
+      "email": "jenish@gmail.com",
+      "dob": "2001-04-17T18:30:00.000Z",
+      "gender": "male",
+      "education": "HSC",
+      "company": "RZ",
+      "package": "12",
+      "id": 1
+    },
+    {
+      "firstname": "Jeni",
+      "lastname": "J",
+      "email": "jeni@gmail.com",
+      "dob": "2001-04-17T18:30:00.000Z",
+      "gender": "male",
+      "education": "SSLC",
+      "company": "RTZ",
+      "package": "6",
+      "id": 2
+    },
+    {
+      "firstname": "Delotie",
+      "lastname": "Jeni",
+      "email": "delotiejeni@gmail.com",
+      "dob": "2002-05-13T18:30:00.000Z",
+      "gender": "male",
+      "education": "HSC",
+      "company": "GOwebez",
+      "package": "3",
+      "id": 3
+    }
+  ]
+}

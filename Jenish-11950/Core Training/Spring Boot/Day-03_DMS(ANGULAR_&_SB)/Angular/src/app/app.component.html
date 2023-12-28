@@ -1,0 +1,189 @@
+<!--Tool Bar-->
+
+<div class="head">
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>&nbsp;&nbsp;
+      <span>Doctor Management System</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button color="accent">Login</button> &nbsp;
+      <button mat-raised-button color="accent">Sign up</button>
+    </mat-toolbar>
+  </p>
+</div><br><br>
+
+<!--Form-->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+      <form #myform="ngForm">
+        <label><b>Doctor Id:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text" matInput name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+        </mat-form-field>
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+            <font color="red">Doctor Id Required</font>
+          </div>
+          <div *ngIf="id.errors?.['pattern']">
+            <font color="red"> Invalid Id </font>
+          </div>
+        </div>
+        <br>
+
+        <!--Vehicle Name-->
+
+        <label><b>Doctor Name:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+
+          <input matInput placeholder=" Doctor Name" type="text" name="name" #name="ngModel" ngModel required
+            pattern="[a-zA-z ]+">
+        </mat-form-field>
+        <div *ngIf="name.touched">
+          <div *ngIf="name.errors?.['required']">
+            <font color="red">Vehicle Name Required</font>
+          </div>
+          <div *ngIf="name.errors?.['pattern']">
+            <font color="red"> Invalid Name</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Doctor Age-->
+
+        <label><b>Doctor Age:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+
+          <input matInput placeholder=" Doctor Age" type="text" name="age" #age="ngModel" ngModel required
+            pattern="[0-9]+">
+        </mat-form-field>
+        <div *ngIf="age.touched">
+          <div *ngIf="age.errors?.['required']">
+            <font color="red">Age Required</font>
+          </div>
+          <div *ngIf="age.errors?.['pattern']">
+            <font color="red"> Invalid Name</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Doctor Email-->
+
+        <label><b>Doctor Email:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+
+          <input matInput placeholder=" Doctor Email" type="text" name="email" #email="ngModel" ngModel required
+            pattern="^[a-z0-9._%+-]+@gmail.com+">
+        </mat-form-field>
+        <div *ngIf="email.touched">
+          <div *ngIf="email.errors?.['required']">
+            <font color="red">Email Required</font>
+          </div>
+          <div *ngIf="email.errors?.['pattern']">
+            <font color="red"> Invalid email</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Vehicle Type-->
+
+        <label><b>Doctor Specilist:</b></label><br>
+        <mat-form-field class="doctors" appearance="outline">
+          <mat-select class="select1" name="doctor" #doctor="ngModel" ngModel required>
+            <mat-option value="lung">Lung</mat-option>
+            <mat-option value="heart">Heart</mat-option>
+            <mat-option value="neuro">Neuro</mat-option>
+            <mat-option value="eye">Eye</mat-option>
+            <mat-option value="ortho">Ortho</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="doctor.touched ">
+          <div *ngIf="doctor.errors?.['required']">
+            <font color="red">Doctor Type Required</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Doctor Contact-->
+
+        <label><b>Doctor Contact:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+
+          <input matInput placeholder="Phone No" type="text" name="number" #number="ngModel" ngModel required
+            pattern="[0-9]+">
+        </mat-form-field>
+        <div *ngIf="number.touched">
+          <div *ngIf="number.errors?.['required']">
+            <font color="red">Doctor Number Required</font>
+          </div>
+          <div *ngIf="number.errors?.['pattern']">
+            <font color="red"> Invalid Doctor Number</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Location Name-->
+
+        <label><b>Location:</b></label><br>
+        <mat-form-field class="example-full-width" appearance="outline">
+
+          <input matInput placeholder="Location" type="text" name="location" #location="ngModel" ngModel required
+            pattern="[a-zA-z ]+">
+        </mat-form-field>
+        <div *ngIf="location.touched">
+          <div *ngIf="location.errors?.['required']">
+            <font color="red">Location Required</font>
+          </div>
+          <div *ngIf="location.errors?.['pattern']">
+            <font color="red"> Location</font>
+          </div>
+        </div>
+        <br>
+
+        <!--Buttons-->
+
+        <button mat-raised-button color="primary" [disabled]="(myform.invalid )"
+          (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" (click)="update(myform.value)">Update</button>&nbsp;&nbsp;
+        <button mat-raised-button color="warn"
+          (click)="delete(myform.value)">Delete</button><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="accent" (click)="changeDiv()">View Details</button><br><br>
+        <!--Display Message-->
+        <div>
+          <font color="green"><b><i>{{result}}</i></b></font>
+        </div><br><br>
+      </form>
+
+
+      <!--Table Content-->
+
+      <div class="col" *ngIf="flag">
+        <table class="table table-striped">
+          <thead>
+            <tr scope="row">
+              <th scope="col">Doctor Id </th>
+              <th scope="col">Doctor Name </th>
+              <th scope="col">Doctor Age</th>
+              <th scope="col">Doctor Email </th>
+              <th scope="col">Doctor Specialist </th>
+              <th scope="col">Doctor Contact</th>
+              <th scope="col">Doctor Location </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let doc of doctorList" scope="row">
+              <td scope="col">{{doc.id}}</td>
+              <td scope="col">{{doc.name}}</td>
+              <td scope="col">{{doc.age}}</td>
+              <td scope="col">{{doc.email}}</td>
+              <td scope="col">{{doc.specialized}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

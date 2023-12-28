@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="employee" class="com.jeban.Employee" autowire="byType">
+		<property name="id" value="101"></property>
+		<property name="name" value="Ignesh"></property>
+		<property name="salary" value="2000"></property>
+		<property name="placevisited">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Pondichery</value>
+				<value>Trichy</value>
+				<value>Goa</value>
+			</list>
+		</property>
+		<property name="department">
+			<map>
+				<entry key="1" value="Testing"></entry>
+				<entry key="2" value="Devoloping"></entry>
+				<entry key="3" value="HR"></entry>
+			</map>
+		</property>
+		<property name="experience">
+			<set value-type="java.lang.Integer">
+				<value>12</value>
+				<value>15</value>
+				<value>18</value>
+
+			</set>
+		</property>
+
+		<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address" class="com.jeban.Address">
+		<property name="street" value="Anna Street"></property>
+		<property name="city" value="Pudukkottai"></property>
+		<property name="state" value="Tamilnadu"></property>
+	</bean>
+
+
+	<!-- Constructor Dependency -->
+
+	<bean id="employee1" class="com.jeban.Employee">
+		<constructor-arg index="0" value="102"></constructor-arg>
+		<constructor-arg index="1" value="Domnic"></constructor-arg>
+		<constructor-arg index="2" value="400000"></constructor-arg>
+		<constructor-arg index="4">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Pondichery</value>
+				<value>Trichy</value>
+				<value>Goa</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="5">
+			<map>
+				<entry key="1" value="Testing"></entry>
+				<entry key="2" value="Devoloping"></entry>
+				<entry key="3" value="HR"></entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg index="6">
+			<set value-type="java.lang.Integer">
+				<value>12</value>
+				<value>15</value>
+				<value>18</value>
+
+			</set>
+		</constructor-arg>
+		<constructor-arg index="3" ref="address1"></constructor-arg>
+	</bean>
+
+
+
+	<bean id="address1" class="com.jeban.Address">
+		<constructor-arg index="0" value="Central"></constructor-arg>
+		<constructor-arg index="1" value="Trichy"></constructor-arg>
+		<constructor-arg index="2" value="Tamilnadu"></constructor-arg>
+	</bean>
+
+
+</beans>

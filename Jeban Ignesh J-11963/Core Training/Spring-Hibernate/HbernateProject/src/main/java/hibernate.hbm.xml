@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jeban.hb.Employee" table="tbl_emp">
+		<id name="id" column="Empid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="name" column="Empname"></property>
+		<property name="salary" column="Empsalary"></property>
+		<property name="dno" column="Empdno"></property>
+	</class>
+</hibernate-mapping>

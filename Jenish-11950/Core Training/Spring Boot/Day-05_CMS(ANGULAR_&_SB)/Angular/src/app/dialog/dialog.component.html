@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add Customer Form</h1><br>
+<div mat-dialog-content>
+    <form [formGroup]="customerForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Customer id</mat-label>
+        <input formControlName="id" matInput placeholder="Customer Id">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Customer name</mat-label>
+        <input formControlName="name" matInput placeholder="Customer Name">
+    </mat-form-field>
+
+
+   
+    <mat-form-field appearance="outline">
+        <mat-label>Customer Email</mat-label>
+        <input formControlName="email" matInput placeholder="Customer Email">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Customer Contact</mat-label>
+        <input formControlName="contact" matInput placeholder="Customer Contact">
+    </mat-form-field>
+
+
+   
+    <mat-form-field appearance="outline">
+        <mat-label>Customer Location</mat-label>
+        <textarea formControlName="location" matInput placeholder="Customer Location"></textarea>
+    </mat-form-field></form>
+</div>
+<div mat-dialog-actions align='end'>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addCustomer()">{{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>    
+</div>

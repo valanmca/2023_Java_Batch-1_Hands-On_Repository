@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Add Teacher Details</h1><br>
+<div mat-dialog-content>
+    <form [formGroup]="teacherForm">
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Teacher ID</mat-label>
+            <input formControlName="id" matInput placeholder="Ex.101">
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+        <mat-label>Teacher Name</mat-label>
+        <input formControlName="name" matInput placeholder="Ex.Gayathri">
+    </mat-form-field>
+
+    <label for=""><h1>Gender</h1></label>
+    <mat-radio-group formControlName="gender" class="example-radio-group"> 
+      <mat-radio-button matInput *ngFor="let gen of gender" [value]="gen" class="example-radio-button">
+          {{gen}}
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="text" placeholder="EX. xyz@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Qualification</mat-label>
+        <input formControlName="qualification" matInput type="text" placeholder="EX. BCA">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Taking Subject</mat-label>
+        <mat-select formControlName="subject" placeholder="Taking Subject">
+            <mat-option value="Tamil">Tamil</mat-option>
+            <mat-option value="English">English</mat-option>
+            <mat-option value="Maths">Maths</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input formControlName="date" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+     
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input formControlName="phone" matInput type="text" placeholder="EX. 1234567890">
+    </mat-form-field>
+    
+  <!--   <mat-form-field appearance="outline">
+        <mat-label>Comment</mat-label>
+        <textarea formControlName="comment" matInput></textarea>
+    </mat-form-field> -->
+
+</form>
+</div>
+<div mat-dialog-actions align='end'>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addTeacher()">{{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>    
+</div>

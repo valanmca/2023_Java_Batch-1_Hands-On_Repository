@@ -1,0 +1,93 @@
+<div matDialogTitle>
+    <h1 style="color:blue">Add vehicle</h1> 
+</div>
+
+<form [formGroup]= "vehicleForm" (ngSubmit) = "onSubmit()">
+    <div class="content">
+        <mat-dialog-content >
+            <div class="row">
+
+                <!-- Vehicle Id -->
+                <mat-form-field appearance="outline">
+                    <mat-label>vehicle Id</mat-label>
+                    <input type="number" matInput placeholder="Eg.. 11" formControlName = "id">
+                        <div *ngIf ="vehicleForm.get('id')!.touched && vehicleForm.get('id')!.invalid">
+                            <div *ngIf ="vehicleForm.get('id')!.hasError('required')">
+                                <font color="red">*id required</font>
+                            </div>
+                            <div *ngIf ="vehicleForm.get('id')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Vehicle Type -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Vehicle Type</mat-label>
+                    <mat-select formControlName = "type">
+                      <mat-option *ngFor="let vehicle of vehicleType" [value]="vehicle">
+                        {{vehicle}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                
+                <!-- Vehicle Name -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Vehicle Name</mat-label>
+                    <input type="text" matInput  formControlName = "name">
+                        <div *ngIf ="vehicleForm.get('name')!.touched && vehicleForm.get('name')!.invalid">
+                            <div *ngIf ="vehicleForm.get('name')!.hasError('required')">
+                                <font color="red">*vehicle Name required</font>
+                            </div>
+                            <div *ngIf ="vehicleForm.get('name')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Vehicle Number -->
+                <mat-form-field appearance="outline">
+                    <mat-label>vehicle Number</mat-label>
+                    <input type="text" matInput placeholder="Eg.. TN84 k 6427" formControlName = "number">
+                        <div *ngIf ="vehicleForm.get('number')!.touched && vehicleForm.get('number')!.invalid">
+                            <div *ngIf ="vehicleForm.get('number')!.hasError('required')">
+                                <font color="red">*vehicle Number required</font>
+                            </div>
+                            <div *ngIf ="vehicleForm.get('number')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <!-- Vehicle Owner -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Owner Name</mat-label>
+                    <input type="text" matInput placeholder="Eg.. Raja" formControlName = "owner">
+                        <div *ngIf ="vehicleForm.get('owner')!.touched && vehicleForm.get('owner')!.invalid">
+                            <div *ngIf ="vehicleForm.get('owner')!.hasError('required')">
+                                <font color="red">*Owner Name required</font>
+                            </div>
+                            <div *ngIf ="vehicleForm.get('owner')!.hasError('pattern')">
+                                <font color="red">*invalid format</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </div>
+    
+    <div class="action">
+        <mat-dialog-actions style="justify-content: end;">
+            <!-- Cancel -->
+            <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+
+            <!-- Submit -->
+            <button mat-raised-button type="submit" color="primary">{{data ? 'Update': 'Save'}}</button>
+        </mat-dialog-actions>
+    </div>
+</form>

@@ -1,0 +1,7 @@
+
+public class Product {
+	
+	Product(){
+		
+	}
+}

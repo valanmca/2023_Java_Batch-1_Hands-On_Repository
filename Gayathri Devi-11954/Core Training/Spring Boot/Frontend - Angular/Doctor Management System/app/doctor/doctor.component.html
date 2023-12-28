@@ -1,0 +1,120 @@
+<div matDialogTitle>
+    <h1 style="color:rgb(53, 7, 234)">Add Doctor</h1> 
+</div>
+
+<form [formGroup]= "doctorForm" (ngSubmit) = "onSubmit()">
+    <div class="content">
+        <mat-dialog-content >
+            <div class="row">
+
+                <!-- Doctor Id -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Doctor Id</mat-label>
+                    <input type="number" matInput placeholder="Eg. 101" formControlName = "id">
+                        <div *ngIf ="doctorForm.get('id')!.touched && doctorForm.get('id')!.invalid">
+                            <div *ngIf ="doctorForm.get('id')!.hasError('required')">
+                                <font color="red">id required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('id')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Doctor Name -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Doctor Name</mat-label>
+                    <input type="text" matInput placeholder="Eg. Gayathri" formControlName = "name">
+                        <div *ngIf ="doctorForm.get('name')!.touched && doctorForm.get('name')!.invalid">
+                            <div *ngIf ="doctorForm.get('name')!.hasError('required')">
+                                <font color="red">Doctor Name required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('name')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                 <!-- Doctor Age -->
+                 <mat-form-field appearance="outline">
+                    <mat-label>Doctor Age</mat-label>
+                    <input type="number" matInput placeholder="Eg. 101" formControlName = "age">
+                        <div *ngIf ="doctorForm.get('age')!.touched && doctorForm.get('age')!.invalid">
+                            <div *ngIf ="doctorForm.get('age')!.hasError('required')">
+                                <font color="red">Age required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('id')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                 <!-- Doctor Name -->
+                 <mat-form-field appearance="outline">
+                    <mat-label>Doctor Email ID</mat-label>
+                    <input type="text" matInput placeholder="Eg. abc@gmail.com" formControlName = "email">
+                        <div *ngIf ="doctorForm.get('email')!.touched && doctorForm.get('email')!.invalid">
+                            <div *ngIf ="doctorForm.get('email')!.hasError('required')">
+                                <font color="red">Doctor email required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('email')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+
+                <!-- Doctor Special -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Doctor Special</mat-label>
+                    <mat-select formControlName = "special">
+                      <mat-option *ngFor="let Doctor of doctorType" [value]="Doctor">
+                        {{Doctor}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <!-- Doctor contact -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Doctor Contact</mat-label>
+                    <input type="text" matInput placeholder="Eg. 1234567890" formControlName = "contact">
+                        <div *ngIf ="doctorForm.get('contact')!.touched && doctorForm.get('contact')!.invalid">
+                            <div *ngIf ="doctorForm.get('contact')!.hasError('required')">
+                                <font color="red">contact required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('contact')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <!-- Doctor Duration -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Location</mat-label>
+                    <input type="text" matInput placeholder="Eg.Sivakasi" formControlName = "location">
+                        <div *ngIf ="doctorForm.get('location')!.touched && doctorForm.get('location')!.invalid">
+                            <div *ngIf ="doctorForm.get('location')!.hasError('required')">
+                                <font color="red">location required*</font>
+                            </div>
+                            <div *ngIf ="doctorForm.get('location')!.hasError('pattern')">
+                                <font color="red">invalid format*</font>
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </div>
+    
+    <div class="action">
+        <mat-dialog-actions style="justify-content: end;">
+            <!-- Cancel -->
+            <button mat-raised-button type="button" [matDialogClose] = "false">Cancel</button>
+
+            <!-- Submit -->
+            <button mat-raised-button type="submit" color="primary">{{data ? 'Update': 'Save'}}</button>
+        </mat-dialog-actions>
+    </div>
+</form>

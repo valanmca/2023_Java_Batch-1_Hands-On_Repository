@@ -1,0 +1,151 @@
+<div class="head">
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with movie icon">
+        <mat-icon>movie</mat-icon>
+      </button>
+      <span>Movie Management System</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+
+      <button class="button" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon menu-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+</div><br><br>
+<div class="container">
+       <form  #myform="ngForm" >
+        
+            
+            <div class="row"><h1 align="center" style="font-size: xx-large;">Add Movie Details</h1> <br><br>
+              <div class="col-sm-6" style="padding-left: 30%;">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Movie ID</mat-label>
+                  <input type="text" matInput name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+                </mat-form-field>
+                <div *ngIf="id.touched">
+                  <div *ngIf="id.errors?.['required']">
+                      <font color="red">Movie Id is required.</font>
+                  </div>
+                  <div *ngIf="id.errors?.['pattern']">
+                      <font color="red">Invalid Movie Id.</font>
+                  </div>
+                  <div *ngIf="id.valid">
+                      <font color="green">Valid Movie Id.</font>
+                  </div>
+              </div>
+                <br>
+        
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Movie Name</mat-label>         
+                  <input matInput type="text" name="name" #name="ngModel" ngModel required
+                    pattern="[a-z A-z]+">
+                </mat-form-field>
+                <div *ngIf="name.touched">
+                  <div *ngIf="name.errors?.['required']">
+                      <font color="red">Movie Name is required.</font>
+                  </div>
+                  <div *ngIf="name.errors?.['pattern']">
+                      <font color="red">Invalid Movie Name.</font>
+                  </div>
+                  <div *ngIf="name.valid">
+                      <font color="green">Valid Movie Name.</font>
+                  </div>
+              </div>
+                <br>
+                <mat-form-field appearance="outline" class="department">
+                  <mat-label>Movie Type</mat-label>
+                  <mat-select class="select1" name="depart" #depart="ngModel" ngModel required>
+                    <mat-option value=" ">select Type</mat-option>
+                    <mat-option value="Actoin">Action</mat-option>
+                    <mat-option value="Romance">Romance</mat-option>
+                    <mat-option value="Thriller">Thirller</mat-option>
+                    <mat-option value="Comedy">Comedy</mat-option>
+                    <mat-option value="Drama">Drama</mat-option>
+                    </mat-select>
+                    </mat-form-field>        
+                <div *ngIf="depart.touched ">
+                  <div *ngIf="depart.errors?.['required']">
+                    <font color="red">Movie Type Required</font>
+                  </div>
+                </div>
+                <br>
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Movie Duration</mat-label>
+                  <input type="text" matInput name="dur" #dur="ngModel" ngModel required pattern="[0-9]+ [a-z A-z]+">
+                </mat-form-field>
+                <div *ngIf="dur.touched">
+                  <div *ngIf="dur.errors?.['required']">
+                      <font color="red">Movie Duration is required.</font>
+                  </div>
+                  <div *ngIf="dur.errors?.['pattern']">
+                      <font color="red">Invalid Movie Duration.</font>
+                  </div>
+                  <div *ngIf="dur.valid">
+                      <font color="green">Valid Movie Duration.</font>
+                  </div>
+              </div>
+                    <br>
+                    
+              </div>
+              <div class="col-sm-6" style="padding-left: 5%;">
+                          <label for="">Movie Language</label><br>
+          <mat-radio-group aria-label="type"  name="type" #type="ngModel"  class="example-radio-group" ngModel required>
+            <mat-radio-button class="example-radio-button"  type="radio"  name="type"  value="Tamil" >Tamil</mat-radio-button>
+            <mat-radio-button class="example-radio-button" type="radio"  name="type"  value="English"  >English</mat-radio-button>   
+            <mat-radio-button class="example-radio-button" type="radio"  name="type"  value="Hindi"  >Hindi</mat-radio-button>   
+            <mat-radio-button class="example-radio-button" type="radio"  name="type"  value="Malayalam"  >Malayalam</mat-radio-button>   
+            <mat-radio-button class="example-radio-button" type="radio"  name="type"  value="Kannada"  >Kannada</mat-radio-button>   
+          </mat-radio-group>
+      <br></div>
+      <div class="row">
+        <div class="col-sm-12" align="center">                
+          <button style="color:black;" class="btn btn-success btn-lg" [disabled]="(myform.invalid )" (click)="insert(myform.value)">Insert</button>&nbsp;&nbsp;&nbsp;
+          <button style="color:black;" class="btn btn-info btn-lg" (click)="update(myform.value)">Update</button>&nbsp;&nbsp;&nbsp;
+          <button style="color:black;" class="btn btn-danger btn-lg" (click)="delete(myform.value)">Delete</button>&nbsp;&nbsp;&nbsp;
+          
+          <button style="color:black;" class="btn btn-warning btn-lg" (click)="changeDiv()">View Details</button>
+        </div></div> 
+    </div></form></div>
+      <br>
+    
+<div class="container">
+  <div class="row">
+    <div class="col" *ngIf="flag">
+      <table class="table table-striped">
+
+
+        <thead>
+          <tr scope="row">
+          <th scope="col">Movie Id </th>
+          <th scope="col">Movie Name </th>
+          <th scope="col">Movie Type </th>
+          <th scope="col">Movie Language </th>
+          <th scope="col">Movie Duration </th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mvu of movieeList" scope="row">
+            <td scope="col">{{mvu.id}}</td>
+            <td scope="col">{{mvu.name}}</td>
+            <td scope="col">{{mvu.depart}}</td>
+            <td scope="col">{{mvu.type}}</td>
+            <td scope="col">{{mvu.dur}}</td>           
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+ 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    
+     <!-- Property is setter injection -->
+    
+   <!-- BY using auto wire we can achieve dependencies.
+   If we don't  assign it will default set to byName-->
+   
+   <!-- 
+    <bean id="employee" class="com.Matthew.Employee" autowire = "byName">
+        <property name="id" value="101"></property>
+        <property name="name" value="Matthew"></property>
+        <property name="salary" value="2000"></property>
+        <property name="placeVisited">
+        	<list value-type="java.lang.String">
+        		<value>Chennai</value>
+        		<value>Bangalore</value>
+        		<value>Delhi</value>
+        	</list>
+        </property>
+    </bean>
+    
+     -->
+    
+    <!-- byType we have to set by using autowire-->
+    
+    <!-- 
+    <bean id="employee1" class="com.Matthew.Employee" autowire = "byType">
+        <property name="id" value="103"></property>
+        <property name="name" value="Matthew"></property>
+        <property name="salary" value="8000"></property>
+        <property name="address" ref="address1"></property>
+    </bean>
+  
+    
+     <bean id="address" class="com.Matthew.Address">
+        <property name="city" value="Tenkasi"></property>
+        <property name="state" value="Tamil Nadu"></property>
+    </bean>
+    
+    
+    <bean id="address1" class="com.Matthew.Address">
+        <property name="city" value="Tirunelveli"></property>
+        <property name="state" value="Tamil Nadu"></property>
+    </bean>
+     -->
+	 
+   
+   <!-- constructor is constructor injection -->
+   
+   <!-- We can use name or value -->
+   <!--  
+  <bean id="address" class="com.Matthew.Address">
+  		
+        <constructor-arg name="city" value="Tenkasi"></constructor-arg>
+        <constructor-arg index="1" value="Tamil Nadu"></constructor-arg>
+    </bean>
+    
+    <bean id="employee" class="com.Matthew.Employee">
+        <constructor-arg index = "0" value="1"></constructor-arg>
+        <constructor-arg index = "1" value="Matthew"></constructor-arg>
+        <constructor-arg name="salary" value="400000"></constructor-arg>
+        <constructor-arg name = "placeVisited">
+        <list value-type="java.lang.String">
+        	<value>Goa</value>
+        	<value>Kerala</value>
+        	<value>Madurai</value>
+        </list>
+        </constructor-arg>
+    </bean>
+    
+      -->
+      
+       <bean id="address" class="com.Matthew.Address">
+  		
+        <property name="city" value="Tenkasi"></property>
+        <property name="state" value="Tamil Nadu"></property>
+    </bean>
+    
+    <bean id="employee" class="com.Matthew.Employee">
+        <property name="id" value="1"></property>
+        <property name = "name" value="Matthew"></property>
+        <property name="salary" value="400000"></property>
+        <property name = "map">
+        <map value-type="java.lang.String">
+        	<entry key="a" value ="GOA"></entry>
+        </map>
+        </property>
+    </bean>
+    
+</beans>
+

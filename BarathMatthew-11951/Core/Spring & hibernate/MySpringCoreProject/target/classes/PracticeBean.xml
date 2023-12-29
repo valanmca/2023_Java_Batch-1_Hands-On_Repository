@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+ 
+	<bean id="address" class = "com.practice.Address">
+		
+		<property name="city" value="Tenkasi"></property>
+		<property name="state" value="TamilNadu"></property>
+	</bean>
+
+ <!--  
+	<bean id ="author" class="com.practice.Author">
+		<property name="authorName" value="Robert"></property>
+		<property name="bookName" value ="Rich dad Poor dad"></property>
+	</bean>
+	-->
+	 
+	<bean id = "book" class="com.practice.Book">
+		<property name="id" value = "101"></property>
+		<property name="address" ref="address"></property>
+		<property name="map">
+			<map>
+				<entry key-ref ="author" value ="Matthew"></entry>
+			</map>
+		</property>
+		<property name="coll" >
+			<list value-type="java.lang.String">
+				<value>Dark</value>
+				<value>Harry Potter</value>
+			</list>
+		</property>
+	</bean>
+</beans>

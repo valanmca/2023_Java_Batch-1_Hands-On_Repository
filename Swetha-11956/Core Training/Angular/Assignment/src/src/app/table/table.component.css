@@ -1,0 +1,9 @@
+table{
+    border-radius:20px;
+    width: 100px;
+    height:220px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.grid{
+    padding-left:27%;
+}

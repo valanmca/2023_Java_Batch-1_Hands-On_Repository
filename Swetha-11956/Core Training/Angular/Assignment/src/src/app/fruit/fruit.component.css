@@ -1,0 +1,52 @@
+.mydiv{
+    position:absolute;
+    margin-left: 80px;
+}
+.div1{
+    border:1px solid black;
+    background-color:black;
+    position:absolute;
+    width: 184%;
+    height: 12px;
+    top: 62%;
+   
+}
+ .div2{
+    border:1px solid black;
+    background-color:black;
+    position:absolute;
+    width: 184%;
+    height: 5px;
+    top: 85%;
+}
+.fruits{
+    position:absolute;
+    display:flex;
+}
+.veg{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+}
+.carbo{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#car{
+    background-color: rgb(202, 200, 200);
+}
+.water{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.calorie{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#cal{
+    background-color: rgb(179, 177, 177);
+}
+

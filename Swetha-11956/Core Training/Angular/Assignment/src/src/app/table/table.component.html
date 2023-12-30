@@ -1,0 +1,63 @@
+    <h1 style="text-align: center;">Multiplication Table</h1>
+   
+<div class="grid text-center">
+    <table style="background-color:crimson;color:white;">
+        <tr *ngFor="let m of table">
+            <td>1x{{m}}={{getMul(m,1)}}</td>
+        </tr>
+    </table>
+
+    <table style="background-color:rgb(255, 138, 5); color:white;">
+        <tr *ngFor=" let m of table">
+        <td> 2x{{m}}={{getMul(m,2)}}</td>
+        </tr>
+    </table>
+
+    <table style="background-color:rgb(255, 208, 80);color:white;">
+        <tr *ngFor="let m of table">
+            <td>3x{{m}}={{getMul(m,3)}}</td>
+        </tr>
+    </table>
+    <table style="background-color:rgb(236, 233, 40);color:white;">
+        <tr *ngFor="let m of table">
+            <td>4x{{m}}={{getMul(m,4)}}</td>
+        </tr>
+    </table>
+    <table style="background-color:rgb(133, 243, 112);color:white;">
+        <tr *ngFor="let m of table">
+            <td>5x{{m}}={{getMul(m,5)}}</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="grid text-center">
+    <table style="background-color:rgb(75, 201, 81);color:white;">
+        <tr *ngFor="let m of table">
+            <td>6x{{m}}={{getMul(m,6)}}</td>
+        </tr>
+    </table>
+    <table style="background-color:rgb(20, 255, 216);color:white;">
+        <tr *ngFor="let m of table">
+            <td>7x{{m}}={{getMul(m,7)}}</td>
+        </tr>
+    </table>
+    <table style="background-color:rgb(125, 168, 207);color:white;">
+        <tr *ngFor="let m of table">
+            <td>8x{{m}}={{getMul(m,8)}}</td>
+        </tr>
+    </table>
+    <table style="background-color:rgb(36, 59, 134);color:white;">
+       
+        <tr *ngFor="let m of table">
+            <td>9x{{m}}={{getMul(m,9)}}</td>
+        </tr>
+        
+    </table>
+    <table style="background-color:rgb(64, 28, 97);color:white;">
+       
+        <tr *ngFor="let m of table">
+            <td>10x{{m}}={{getMul(m,10)}}</td>
+            
+        </tr>
+    </table>
+</div>

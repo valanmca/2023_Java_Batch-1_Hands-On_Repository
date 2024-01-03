@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Injecting list ,set collection using constructor -->
+
+	<bean id="employee" class="com.swetha.Employee" autowire="byName">
+		<constructor-arg index="0" value="101"></constructor-arg>
+		<constructor-arg index="1" value="Swetha"></constructor-arg>
+		<constructor-arg index="2" value="200000"></constructor-arg>
+		<constructor-arg index="3">
+
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Bangalore</value>
+				<value>Mumbai</value>
+			</list>
+
+		</constructor-arg>
+
+		<constructor-arg index="4">
+
+			<set value-type="java.lang.String">
+				<value>English</value>
+				<value>Tamil</value>
+				<value>Telugu</value>
+			</set>
+
+		</constructor-arg>
+		
+		<constructor-arg index="5">
+		<map>
+		<entry key="1" value="India"></entry>
+		<entry key="2" value="America"></entry>
+		<entry key="3" value="London"></entry>
+		</map>
+		</constructor-arg>
+		<constructor-arg index="6">
+		<props>
+		<prop key="one" >India</prop>
+		<prop key="Two" >America</prop>
+		<prop key="Three" >NewZealand</prop>
+		</props>
+		</constructor-arg>
+		<constructor-arg index="7" ref="address"></constructor-arg>
+	</bean>
+	
+	
+
+	<!-- Injecting list collection by using setter method -->
+
+	<bean id="employee1" class="com.swetha.Employee">
+		<property name="id" value="102"></property>
+		<property name="name" value="Arun"></property>
+		<property name="salary" value="300000"></property>
+		<property name="placeVisited">
+			<list value-type="java.lang.String">
+				<value>Chennai</value>
+				<value>Bangalore</value>
+				<value>Mumbai</value>
+				<value>Mumbai</value>
+			</list>
+		</property>
+
+		<property name="knownLang">
+			<set value-type="java.lang.String">
+				<value>English</value>
+				<value>Tamil</value>
+				<value>Telugu</value>
+				<value>Telugu</value>
+			</set>
+		</property>
+		<property name="countries">
+		<map >
+		<entry key="1" value="India"></entry>
+		<entry key="2" value="America"></entry>
+		<entry key="3" value="London"></entry>
+		
+		</map>
+		</property>
+		
+		<property name="props">
+		<props>
+		<prop key="one" >India</prop>
+		<prop key="Two" >America</prop>
+		<prop key="Three" >NewZealand</prop>
+		</props>
+		</property>
+		
+
+		<property name="address" ref="address1"></property>
+	</bean>
+	
+	
+
+	
+	<bean id="address" class="com.swetha.EmpAddress">
+		<constructor-arg index="0" value="Chennai"></constructor-arg>
+		<constructor-arg index="1" value="Tamilnadu"></constructor-arg>
+	</bean>
+
+
+	<bean id="address1" class="com.swetha.EmpAddress">
+		<property name="city" value="Villupuram"></property>
+		<property name="state" value="Tamilnadu"></property>
+	</bean>
+
+
+
+</beans>

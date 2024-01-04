@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- Setter injection -->
+	<!-- <bean id="employee" class="com.jeyandhan.day01.Employee" autowire="byName">
+		
+		
+		<property name="id" value="11"></property>
+		<property name="name" value="Jeyandhan"></property>
+		<property name="salary" value="5000"></property>
+		<property name="address" ref="address"></property>
+	</bean> -->
+	
+	<!-- Constructor injection -->
+	<!-- <bean id="employee" class="com.jeyandhan.day01.Employee" autowire="byName">
+		
+		
+		<constructor-arg index="0" value="11"></constructor-arg>
+		<constructor-arg index="1" value="Jeyandhan"></constructor-arg>
+		<constructor-arg index="2" value="5000"></constructor-arg>
+		<constructor-arg index="3" ref="address"></constructor-arg>
+		
+	</bean> -->
+	<!-- collection injection using setter -->
+	<!-- <bean id="employee" class="com.jeyandhan.day01.Employee" autowire="byName">
+		
+		
+		<property name="id" value="11"></property>
+		<property name="name" value="Jeyandhan"></property>
+		<property name="salary" value="5000"></property>
+		<property name="placesVisited">
+			<list value-type="java.lang.String">
+				<value>Rajapalayam</value>
+				<value>Sivakasi</value>
+			</list>
+		</property>
+	</bean> -->
+	
+	<!-- collection injection using constructor -->
+	<bean id="employee" class="com.jeyandhan.day01.Employee" autowire="byName">
+		
+		
+		<constructor-arg index="0" value="11"></constructor-arg>
+		<constructor-arg index="1" value="Jeyandhan"></constructor-arg>
+		<constructor-arg index="2" value="5000"></constructor-arg>
+		<constructor-arg index="3" ref="address"></constructor-arg>
+		<constructor-arg index="4">
+			<list value-type="java.lang.String">
+				<value>Rajapalayam</value>
+				<value>Sivakasi</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	
+	<bean id="employee1" class="com.jeyandhan.day01.Employee">
+		<property name="id" value="12"></property>
+		<property name="name" value="Mahesh"></property>
+		<property name="salary" value="4000"></property>
+		<property name="address" ref="address1"></property>
+	</bean>
+	
+	<bean id="address" class="com.jeyandhan.day01.Address">
+	<!-- Setter injection -->
+	<!-- <property name="city" value="Rajapalayam"></property>
+		<property name="state" value="Tamilnadu"></property> -->
+		
+		<!-- Constructor injection -->
+		<constructor-arg index="0" value="Rajapalayam"></constructor-arg>
+		<constructor-arg index="1" value="Tamil Nadu"></constructor-arg>
+		
+	</bean>
+	
+	<bean id="address1" class="com.jeyandhan.day01.Address">
+		<property name="city" value="Sivakasi"></property>
+		<property name="state" value="Tamilnadu"></property>
+	</bean>
+
+</beans>

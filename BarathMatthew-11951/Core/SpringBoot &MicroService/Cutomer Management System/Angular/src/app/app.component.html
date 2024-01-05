@@ -1,0 +1,115 @@
+<mat-toolbar color="primary">
+  <span>Customer Management System </span>
+</mat-toolbar>
+<div class="coll-container">
+  <div class="left-container">
+    <div mat-dialog-content class="content">
+      <form [formGroup]="myForm">
+        <div class="row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Customer ID</mat-label>
+            <input type="text" name="cId" formControlName="cId" matInput>
+          </mat-form-field>
+
+          <div *ngIf="myForm.get('cId')!.touched && myForm.get('cId')!.invalid">
+            <div *ngIf="myForm.get('cId')!.hasError('required')">
+
+              <font color="red">Customer ID is Required</font>
+            </div>
+            <div *ngIf="myForm.get('cId')!.hasError('pattern')">
+
+              <font color="red">Invalid Customer ID </font>
+            </div>
+          </div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Customer Name </mat-label>
+            <input type="text" name="cName" formControlName="cName" matInput>
+          </mat-form-field>
+
+          <div *ngIf="myForm.get('cName')!.touched && myForm.get('cName')!.invalid">
+            <div *ngIf="myForm.get('cName')!.hasError('required')">
+              <font color="red">Customer Name is Required</font>
+            </div>
+            <div *ngIf="myForm.get('cName')!.hasError('pattern')">
+              <font color="red">Invalid Customer Name </font>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Customer Email</mat-label>
+            <input type="text" name="cEmail" formControlName="cEmail" matInput>
+          </mat-form-field>
+
+          <div *ngIf="myForm.get('cEmail')!.touched && myForm.get('cEmail')!.invalid">
+            <div *ngIf="myForm.get('cEmail')!.hasError('required')">
+              <font color="red">Customer Email Required</font>
+            </div>
+            <div *ngIf="myForm.get('cEmail')!.hasError('pattern')">
+              <font color="red">Invalid Customer Email</font>
+            </div>
+          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Customer Number </mat-label>
+            <input type="text" name="cNum" formControlName="cNum" matInput>
+          </mat-form-field>
+
+          <div *ngIf="myForm.get('cNum')!.touched && myForm.get('cNum')!.invalid">
+            <div *ngIf="myForm.get('cNum')!.hasError('required')">
+              <font color="red">Customer Number Required</font>
+            </div>
+            <div *ngIf="myForm.get('cNum')!.hasError('pattern')">
+              <font color="red">Invalid Number</font>
+            </div>
+          </div>
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Customer Location</mat-label>
+            <input type="text" name="cLoc" formControlName="cLoc" matInput>
+          </mat-form-field>
+
+          <div *ngIf="myForm.get('cLoc')!.touched && myForm.get('cLoc')!.invalid">
+            <div *ngIf="myForm.get('cLoc')!.hasError('required')">
+              <font color="red">Customer Location Required</font>
+            </div>
+            <div *ngIf="myForm.get('cLoc')!.hasError('pattern')">
+              <font color="red">Invalid Customer Location</font>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button type="submit" value="Insert Customer" name="cms_button" (click)="InsertCustomer(myForm.value)"
+        mat-raised-button color="primary">Insert Customer</button>
+        <button type="submit" value="Update Customer" name="cms_button" (click)="UpdateCustomer(myForm.value)"
+        mat-raised-button color="primary">Update Customer</button>
+        <button type="submit" value="Delete Customer" name="cms_button" (click)="DeleteCustomer(myForm.value)"
+        mat-raised-button color="primary">Delete Customer</button>
+    </div>
+  </div>
+  <div class="right-container">
+    <table class="table table-striped table-bordered">
+
+      <tr class="">
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Customer Email</th>
+        <th>Contact Number</th>
+        <th>Customer Location</th>
+      </tr>
+
+      <tr *ngFor="let cus of cusList">
+        <td id="td" class="col-4" style="text-align: justify;">{{cus.cId}}</td>
+        <td id="td" class="col-4" style="text-align: justify;">{{cus.cName}}</td>
+        <td id="td" class="col-4" style="text-align: justify;">{{cus.cEmail}}</td>
+        <td id="td" class="col-4" style="text-align: justify;">{{cus.cNum}}</td>
+        <td id="td" class="col-4" style="text-align: justify;">{{cus.cLoc}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

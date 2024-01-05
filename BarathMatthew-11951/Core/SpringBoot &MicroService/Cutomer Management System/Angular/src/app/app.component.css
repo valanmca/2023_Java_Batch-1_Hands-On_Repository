@@ -1,0 +1,47 @@
+.row{
+    /* display: flex; */
+    gap: 10px;
+}
+.content{
+    padding-top: 10px;
+    width: 100%;
+}
+mat-form-field{
+    width: 100%;
+}
+.right-container {
+  padding-top: 20px;
+  
+    height: 50%;
+    width: 50%;
+    padding-bottom: 20%;
+  }
+  .left-container{
+    padding-left: 10px;
+    width: 40%;
+    margin-right: 2%;
+  }
+  .coll-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  tr:nth-child(even) {
+    background-color: #8a97a0;
+    color: #ffffff;
+    }
+
+   tr:nth-child(odd) {
+    background-color: #e8eeef;
+    color: #000000;
+    }
+
+    th {
+       background-color: #4bc970;
+       color: #000000;
+    }
+
+    .action{
+      display: flex;
+      
+    }

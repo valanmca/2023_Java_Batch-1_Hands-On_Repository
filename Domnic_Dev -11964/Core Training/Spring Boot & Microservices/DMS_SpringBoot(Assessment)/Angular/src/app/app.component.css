@@ -1,0 +1,51 @@
+
+mat-toolbar {
+    background-color: crimson;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+.example-small-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 5%;
+    width: 90%;
+
+
+
+}
+
+.example-large-box {
+
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 5%;
+    width: 90%;
+
+}
+
+
+
+mat-form-field {
+    height: 63px;
+    width: 200px;
+}
+
+mat-label {
+
+    font-size: smaller;
+}

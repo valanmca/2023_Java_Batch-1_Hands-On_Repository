@@ -1,0 +1,150 @@
+<div id="top">
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+        </button>
+        <span>Student Management System</span>
+        <span class="toolbar"></span>
+
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col" id="left">
+            <div>
+
+                <form [formGroup]="myform">
+                    <table>
+                        <tr>
+                            <td><label>Register Number</label></td>
+                            <td> <mat-form-field class="input">
+                                 <input matInput formControlName="id">
+                                 </mat-form-field></td>
+                            <td>
+                                <div *ngIf="myform.get('id')!.touched && myform.get('id')!.invalid">
+                                    <div *ngIf="myform.get('id')!.hasError('required') ">
+                                        <font>Register Number is required</font>
+                                    </div>
+                                    <div *ngIf="myform.get('id')!.hasError('pattern') ">
+                                        <font>Register Number is not Valid </font>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Name</label></td>
+                            <td>   <mat-form-field class="input">
+                                <input matInput formControlName="name">
+                                </mat-form-field></td>
+                            <td>
+                                <div *ngIf="myform.get('name')!.touched && myform.get('name')!.invalid">
+                                    <div *ngIf="myform.get('name')!.hasError('required') ">
+                                        <font>Name is required</font>
+                                    </div>
+                                    <div *ngIf="myform.get('name')!.hasError('pattern') ">
+                                        <font>Name is not Valid </font>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Student Email</label></td>
+                            <td><mat-form-field class="input">
+                                <input matInput formControlName="email">
+                                </mat-form-field></td>
+                            <td>
+                                <div *ngIf="myform.get('email')!.touched && myform.get('email')!.invalid">
+                                    <div *ngIf="myform.get('email')!.hasError('required') ">
+                                        <font>Email is required</font>
+                                    </div>
+                                    <div *ngIf="myform.get('email')!.hasError('pattern') ">
+                                        <font>Email is not Valid </font>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Standard</label></td>
+                            <mat-form-field>
+                                <mat-label>Select</mat-label>
+                                <mat-select formControlName="standard">
+                                  <mat-option value="I">I</mat-option>
+                                  <mat-option value="II">II</mat-option>
+                                  <mat-option value="III">III</mat-option>
+                                  <mat-option value="IV">IV</mat-option>
+                                  <mat-option value="V">V</mat-option>
+                                  <mat-option value="VI">VI</mat-option>
+                                  <mat-option value="VII">VII</mat-option>
+                                  <mat-option value="VIII">VIII</mat-option>
+                                  <mat-option value="IX">IX</mat-option>
+                                  <mat-option value="X">X</mat-option>
+                                  <mat-option value="XI">XI</mat-option>
+                                  <mat-option value="XII">XII</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </tr>
+                        <td>
+                        <div *ngIf="myform.get('standard')!.touched && myform.get('standard')!.invalid">
+                            <div *ngIf="myform.get('standard')!.hasError('standard') ">
+                                <font>Standard is required</font>
+                            </div>
+                        </div></td>
+                        <tr>
+                            <td><label>Location</label></td>
+                            <td><mat-form-field class="input">
+                                <input matInput formControlName="location">
+                                </mat-form-field></td>
+                            <td>
+                                <div *ngIf="myform.get('location')!.touched && myform.get('location')!.invalid">
+                                    <div *ngIf="myform.get('location')!.hasError('required') ">
+                                        <font>Location is required</font>
+                                    </div>
+                                    <div *ngIf="myform.get('location')!.hasError('pattern') ">
+                                        <font>Location is not Valid </font>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <button class="btn btn-success" [disabled]="myform.invalid"
+                        (click)="insertDetails(myform.value)">Insert</button>
+                    <button class="btn btn-danger" (click)="deleteDetails(myform.value)">Delete</button>
+                    <button class="btn btn-warning" (click)="updateDetails(myform.value)">Update</button>
+                    <p>{{result}}</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="col" id="right">
+            <div>
+              
+                <table class="table table-striped table-bordered" >
+                <thead>
+                    <tr scope="row">
+                    <th scope="col">Register Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Standard</th>
+                    <th scope="col">Location</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row" *ngFor="let std of stdlist">
+                    <td scope="col">{{std.id}}</td>
+                    <td scope="col">{{std.name}}</td>
+                    <td scope="col">{{std.email}}</td>
+                    <td scope="col">{{std.standard}}</td>
+                    <td scope="col">{{std.location}}</td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.head{
+    height:10%;
+    width:100%;
+    position:absolute;
+    text-align: center;
+}
+
+/* table{
+    margin-top:20%;
+    position:absolute;
+} */
+
+button{
+    margin: 4px;
+    color: antiquewhite;
+}
+.navbar{
+
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+.example-small-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 5%;
+
+  }
+
+  .example-large-box {
+    
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 5%;
+  }
+  
+  .example-small-box {
+    height: 95%;
+    width: 90%;
+  }
+  
+  .example-large-box {
+    height: 95%;
+    width: 90%;
+  }

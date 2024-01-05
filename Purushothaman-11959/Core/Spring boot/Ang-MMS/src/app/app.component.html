@@ -1,0 +1,168 @@
+<div>
+  <mat-toolbar>
+    <span class="title-center">Movie Management System</span>
+  </mat-toolbar>
+</div>
+
+<div *ngIf="flag2" align="left">
+<button mat-raised-button (click)="changediv1()">Crud Operations</button>
+</div>
+
+<div *ngIf="flag3" align="right">
+<button mat-raised-button (click)="changediv()">Movie Details</button>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+<div class="col" *ngIf="flag" align="center">
+  
+  <p align="center"><b>CRUD Operations</b></p>
+  
+  <mat-card class="example-card">
+    <mat-card-content>
+    <form [formGroup]="myform">
+      <table>
+          <tr><td><label class="la">Movie Id</label></td><td> <mat-form-field class="example-full-width">
+          <mat-label>Movie Id</mat-label>
+          <input type="text"
+                 placeholder="Enter Movie Id"
+                 aria-label="Number"
+                 matInput
+                formControlName="movieId">
+        </mat-form-field><br>
+        <div *ngIf="myform.get('movieId')!.touched && myform.get('movieId')!.invalid">
+          <div *ngIf="myform.get('movieId')!.hasError('required')">
+            <font color="red">*Movie Id is required</font>
+          </div>
+          <div *ngIf="myform.get('movieId')!.hasError('pattern')">
+            <font color="red">*Invalid Movie Id</font>
+          </div>
+        </div></td>
+        </tr>
+    
+        <tr><td><label class="la">Movie Name</label></td><td> <mat-form-field class="example-full-width">
+          <mat-label>Movie Name</mat-label>
+          <input type="text"
+                 placeholder="Enter Movie Name"
+                 aria-label="Name"
+                 matInput
+                formControlName="movieName">
+        </mat-form-field><br>
+        <div *ngIf="myform.get('movieName')!.touched && myform.get('movieName')!.invalid">
+          <div *ngIf="myform.get('movieName')!.hasError('required')">
+            <font color="red">*Movie Name required</font>
+          </div>
+          <div *ngIf="myform.get('movieName')!.hasError('pattern')">
+            <font color="red">*Invalid Movie Name</font>
+          </div>
+        </div></td>
+      </tr>
+
+      <tr><td><label class="la">Movie Type</label></td><td> <mat-form-field class="example-full-width">
+        <mat-label>Movie Type</mat-label>
+        <input type="text"
+               placeholder="Enter Movie Type"
+               aria-label="Name"
+               matInput
+              formControlName="movieType">
+      </mat-form-field><br>
+      <div *ngIf="myform.get('movieType')!.touched && myform.get('movieType')!.invalid">
+        <div *ngIf="myform.get('movieType')!.hasError('required')">
+          <font color="red">*Movie Type required</font>
+        </div>
+        <div *ngIf="myform.get('movieType')!.hasError('pattern')">
+          <font color="red">*Invalid Movie Type</font>
+        </div>
+      </div></td>
+    </tr>
+
+    <tr><td><label class="la">Movie Language&nbsp;&nbsp;</label></td><td> <mat-form-field class="example-full-width">
+      <mat-label>Movie Language</mat-label>
+      <input type="text"
+             placeholder="Enter Movie Language"
+             aria-label="Name"
+             matInput
+            formControlName="movieLanguage">
+    </mat-form-field><br>
+    <div *ngIf="myform.get('movieLanguage')!.touched && myform.get('movieLanguage')!.invalid">
+      <div *ngIf="myform.get('movieLanguage')!.hasError('required')">
+        <font color="red">*Movie Language required</font>
+      </div>
+      <div *ngIf="myform.get('movieLanguage')!.hasError('pattern')">
+        <font color="red">*Invalid Movie Language</font>
+      </div>
+    </div></td>
+  </tr>
+
+  <tr><td><label class="la">Movie Duration</label></td><td> <mat-form-field class="example-full-width">
+    <mat-label>Movie Duration</mat-label>
+    <input type="text"
+           placeholder="Enter Movie Duration"
+           aria-label="Name"
+           matInput
+          formControlName="movieDuration">
+  </mat-form-field><br>
+  <div *ngIf="myform.get('movieDuration')!.touched && myform.get('movieDuration')!.invalid">
+    <div *ngIf="myform.get('movieDuration')!.hasError('required')">
+      <font color="red">*Movie Duration required</font>
+    </div>
+    <div *ngIf="myform.get('movieName')!.hasError('pattern')">
+      <font color="red">*Invalid Movie Duration</font>
+    </div>
+  </div></td>
+</tr>
+
+       
+
+        <tr><td colspan="2">
+          <button mat-raised-button color="primary" [disabled]="myform.invalid" (click)="insertMovieDetails(myform.value)" (click)="changediv2()">Insert</button>&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button [disabled]="myform.invalid" (click)="updateMovieDetails(myform.value)" (click)="changediv2()">Update</button>&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="warn" (click)="deleteMovieDetails(myform.value)" (click)="changediv2()">Delete</button></td></tr>
+         <br>
+      </table>
+    </form>
+    <div *ngIf="flag4"><mat-card class="card">
+      <mat-card-content><font color="green">{{result}}</font></mat-card-content>
+    </mat-card></div>
+    </mat-card-content>
+    </mat-card>
+  </div>
+
+
+
+    
+
+
+
+
+<div class="col"  *ngIf="flag1" align="center">
+  <br><br>
+  <p align="center"><b>Movie Details</b></p>
+  <br>
+  <mat-card class="card1">
+    <mat-card-content>
+  <table class="table table-striped text-center">
+    <thead>
+      <tr scope="row">
+        <th scope="col">Movie Id</th>
+        <th scope="col">Movie Name</th>
+        <th scope="col">Movie Type</th>
+        <th scope="col">Movie Language</th>
+        <th scope="col">Movie Duration</th></tr></thead>
+    <tbody>
+      <tr *ngFor="let mov of movList" scope="row">
+      <td scope="col">{{mov.movieId}}</td>
+      <td scope="col">{{mov.movieName}}</td>
+      <td scope="col">{{mov.movieType}}</td>
+      <td scope="col">{{mov.movieLanguage}}</td>
+      <td scope="col">{{mov.movieDuration}}</td></tr>
+    </tbody></table>
+    </mat-card-content>
+    </mat-card>
+
+    
+</div>
+</div>
+</div>

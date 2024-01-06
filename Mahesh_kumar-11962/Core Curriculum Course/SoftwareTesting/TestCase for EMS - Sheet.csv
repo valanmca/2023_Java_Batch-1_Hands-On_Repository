@@ -1,0 +1,298 @@
+,,,,,,,,,,
+,,,,,,,,,,
+Project Name :,,,Employee Management System,,,,,,,
+Module Name :,,,Inserting Employee Details,,,,,,,
+Reference Document :,,,,,,,,,,
+Created by :,,,Mahesh kumar A,,,,,,,
+Date of creation :,,,15/09/2023,,,,,,,
+Date of review :,,,05/01/2023,,,,,,,
+,,,,,,,,,,
+TEST CASE NO,TEST CASE ID,TEST SCENARIO,TEST CASE,PRE-CONDITION,TEST STEPS,TEST DATA,"EXPECTED
+ RESULT","POST 
+CONDITION","ACTUAL
+ RESULT","STATUS 
+(PASS/ FAIL)"
+,,,,,,,,,,
+1,TC_RUN_001,Verify the project Run,Angular run on http://localhost:4200/,"Angular and
+ RestAPI must be
+ run.","lanch the angular by using
+ ng-serve command 
+in terminal","paste the
+ local host link 
+has given by 
+terminal into 
+the browser","Angular project 
+run/work on 
+localhost:4200","Employee 
+Management 
+system run
+ on localhost:4200","Angular project
+ run/work 
+on localhost:4200",pass
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+2,TC_RUN_001,Verify the project Run,Angular run on http://localhost:4200/,"Angular and
+ RestAPI must be
+ run.","lanch the angular by using
+ f5 key",,"Html will run 
+but Angular will
+ not working","EMS html page
+ only run on browser","Html will run 
+but Angular will
+ not working",pass
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+3,TC_INSERT_001,"Verify the insert of
+EMS without passing 
+null values",Click the Insert button ,Need a valid ,1.  Enter Employee Id,<null>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<null>,,,,
+,,,,,3. Enter Employee Salary,<null>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+4,TC_INSERT_001,"Verify the insert of
+EMS with passing
+ valid inputs except 
+ passing
+ Employee id  as null",Enter valid employee details without employee id,Need a valid ,1.  Enter Employee Id,<null>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+5,TC_INSERT_001,"Verify the insert of
+EMS with passing
+ valid inputs except
+ passing
+ Employee name as null ",Enter valid employee details without employee name,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<null>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+6,TC_INSERT_001,"Verify the insert of
+EMS with passing
+ valid inputs except 
+ passing
+ Employee salary as null",Enter valid employee details without employee salary,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<null>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+7,TC_INSERT_001,"Verify the insert of
+EMS only passing
+ valid employee id  and passing
+ Employee salary & Employee name as null",Enter valid employee details only passing employee id,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<null>,,,,
+,,,,,3. Enter Employee Salary,<null>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+8,TC_INSERT_001,"Verify the insert of
+EMS only passing
+ valid employee name  
+and with
+ passing
+ Employee salary & Employee id as null",Enter valid employee details only passing employee id,Need a valid ,1.  Enter Employee Id,<null>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<null>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+9,TC_INSERT_001,"Verify the insert of
+EMS only passing
+ valid employee salary  
+and passing
+ Employee id & 
+Employee name as null",Enter valid employee details only passing employee id,Need a valid ,1.  Enter Employee Id,<null>,"Insert Button is
+Disable stage","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button in
+Disable stage",pass
+,,,,,2. Enter Employee Name,<null>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+10,TC_INSERT_001,"Verify the insert of
+EMS only passing
+ all Invalid values",Enter invalid employee details only passing invalid values,Need a valid ,1.  Enter Employee Id,<Invalid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all respective fields",pass
+,,,,,2. Enter Employee Name,<Invalid employee name>,,,,
+,,,,,3. Enter Employee Salary,<Invalid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+11,TC_INSERT_001,"Verify the insert of
+EMS only passing
+ all Invalid value except employee id",Enter invalid employee details only passing in the input field except employee id,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+respective fields",pass
+,,,,,2. Enter Employee Name,<Invalid employee name>,,,,
+,,,,,3. Enter Employee Salary,<Invalid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+13,TC_INSERT_001,"Verify the insert of
+EMS only passing
+Invalid employee id and
+ Invalid employee salary 
+except employee name",Enter employee details only passing the valid name and passing Invalid id and salary,Need a valid ,1.  Enter Employee Id,<Invalid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ respective fields",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<Invalid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+14,TC_INSERT_001,"Verify the insert of
+EMS only passing
+Invalid employee id and Invalid employee name except employee salary",Enter employee details only passing the valid name and passing Invalid id and salary,Need a valid ,1.  Enter Employee Id,<Invalid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+respective fields",pass
+,,,,,2. Enter Employee Name,<Invalid employee name>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+15,TC_INSERT_001,"Verify the insert of
+EMS only passing
+Invalid employee id except employee name and employee salary",Enter employee details only passing the invalid id and passing valid name and salary,Need a valid ,1.  Enter Employee Id,<Invalid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+respective fields",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+16,TC_INSERT_001,"Verify the insert of
+EMS only passing
+Invalid employee name except employee id and employee salary",Enter employee details only passing the invalid name and passing valid id and salary,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ respective fields",pass
+,,,,,2. Enter Employee Name,<Invalid employee name>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+17,TC_INSERT_001,"Verify the insert of
+EMS only passing
+Invalid employee salary except employee id and employee name",Enter employee details only passing the invalid salary and passing valid id and name,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ all fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+Disable stage &
+ Invalid msg will
+ be shown for
+ respective fields",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<Invalid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+18,TC_INSERT_001,"Verify the insert of
+EMS only passing
+All valid employee details",Enter employee details passing the valid details only,Need a valid ,1.  Enter Employee Id,<valid employee id>,"Insert Button is
+enable stage &
+ valid data  will
+ be stored for
+ all table fields","Employee 
+Management 
+system run
+ on localhost:4200","Insert Button is
+enable stage &
+ valid data  will
+ be stored in the 
+respected table 
+and that
+ particular field",pass
+,,,,,2. Enter Employee Name,<valid employee name>,,,,
+,,,,,3. Enter Employee Salary,<valid employee salary>,,,,
+,,,,,"4. Click ""Insert"" button",,,,,

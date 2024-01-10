@@ -1,0 +1,82 @@
+{
+  "id": "3a5e2236-7c52-40c6-8cc9-f2a934da0f2c",
+  "version": "2.0",
+  "name": "SeleniumUnitTestingProject 1",
+  "url": "https://www.google.com/",
+  "tests": [{
+    "id": "7b2beda7-1ff3-4f10-84e8-876b9f297844",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "df2109a7-7740-4d43-8775-dee032994532",
+    "name": "Java_Tutorial_Search_Test",
+    "commands": [{
+      "id": "1f3a7f99-7315-476a-9296-7246d5d7cbf5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/search?q=Java+Tutorial&sca_esv=597118812&source=hp&ei=YCieZYmlGryOseMPxoy_6AU&iflsig=ANes7DEAAAAAZZ42cInHzv7LibG0dq5F3cauInkoyr5v&ved=0ahUKEwiJ1eXciNKDAxU8R2wGHUbGD10Q4dUDCAo&uact=5&oq=Java+Tutorial&gs_lp=Egdnd3Mtd2l6Ig1KYXZhIFR1dG9yaWFsMgsQABiABBixAxiDATIFEAAYgAQyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjRIFAAWOIccAB4AJABAZgBxQKgAfsLqgEHNy41LjAuMbgBA8gBAPgBAcICBRAuGIAEwgIIEC4YgAQYsQPCAg4QLhiABBiKBRixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIREC4YgAQYsQMYgwEYxwEY0QPCAhQQLhiABBiKBRixAxiDARjHARjRA8ICCxAuGIAEGLEDGIMBwgIHEAAYgAQYCg&sclient=gws-wiz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "838dcdd8-ac87-443a-b8ff-d5945b0fd7b8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "778x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "535a7868-237c-4fae-9d23-fadcf52636a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ULSxyf:nth-child(1) .yuRUbf > div",
+      "targets": [
+        ["css=.ULSxyf:nth-child(1) .yuRUbf > div", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbb82504-ea98-42f8-9d27-ee93b75b2e76",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,440.79998779296875)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fd2dadf-ddb9-44f7-a150-d555d29bc72a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ULSxyf:nth-child(2) .LC20lb:nth-child(2)",
+      "targets": [
+        ["css=.ULSxyf:nth-child(2) .LC20lb:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div[2]/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/span/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06b14790-f140-405d-95fb-b8eb6602d62b",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Java Tutorial",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7746b810-ddce-4bfd-b5f0-b92284786b9b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "25f03151-c73b-40b2-a80c-cadb8d4df259",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7b2beda7-1ff3-4f10-84e8-876b9f297844"]
+  }],
+  "urls": ["https://shop.app/", "https://www.google.com/"],
+  "plugins": []
+}

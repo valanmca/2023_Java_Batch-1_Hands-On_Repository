@@ -1,0 +1,79 @@
+{
+  "id": "9ccc0801-1f83-4938-b235-7ecbe72ebd13",
+  "version": "2.0",
+  "name": "SeleniumUnitTestingProject2",
+  "url": "https://google.com/",
+  "tests": [{
+    "id": "c0393c40-b37e-44e2-9b94-a6de97c0ad8e",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "fed242a0-6396-4c27-b7c9-af61c0b42c76",
+    "name": "Java_Tutorial_Search_Test",
+    "commands": [{
+      "id": "d4c6c965-cac2-45d3-9f0c-1cb12d73f7b1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/search?q=Java+Tutorial&sca_esv=597118812&source=hp&ei=NzGeZa26I4mLseMPhpGdqA8&iflsig=ANes7DEAAAAAZZ4_R4csTukyieFY8CU3clCspBgP1-RS&ved=0ahUKEwjtsfmTkdKDAxWJRWwGHYZIB_UQ4dUDCAo&uact=5&oq=Java+Tutorial&gs_lp=Egdnd3Mtd2l6Ig1KYXZhIFR1dG9yaWFsMgsQABiABBixAxiDATIFEAAYgAQyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjXIFAAWMwacAB4AJABAJgBiAGgAaYJqgEEMTEuMrgBA8gBAPgBAcICBRAuGIAEwgIIEC4YgAQYsQPCAg4QLhiABBiKBRixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIOEC4YgAQYsQMYxwEY0QPCAgsQLhiABBixAxiDAcICBxAAGIAEGAo&sclient=gws-wiz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "267a2bd0-f4df-488a-a1b9-dc070f0a616f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "673741a7-bfa4-410d-acf3-bc4478c3be01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hlcw0c:nth-child(1) .LC20lb:nth-child(2)",
+      "targets": [
+        ["css=.hlcw0c:nth-child(1) .LC20lb:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Java Tutorial')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e514ecf-588f-44cb-9a5f-9dc17b30f5a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PHP",
+      "targets": [
+        ["linkText=PHP", "linkText"],
+        ["css=.ga-nav:nth-child(9)", "css:finder"],
+        ["xpath=(//a[contains(text(),'PHP')])[3]", "xpath:link"],
+        ["xpath=//div[@id='subtopnav']/a[7]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/php/default.asp')])[3]", "xpath:href"],
+        ["xpath=//body/div[3]/a[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1505843-dd9b-450e-9b5f-0989562c9137",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "PHP Tutorial",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6422341d-81ae-4aa4-97cf-ff8bf5dc7a88",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7545f184-77b1-412c-8470-f1b51453329e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c0393c40-b37e-44e2-9b94-a6de97c0ad8e"]
+  }],
+  "urls": ["https://google.com/"],
+  "plugins": []
+}

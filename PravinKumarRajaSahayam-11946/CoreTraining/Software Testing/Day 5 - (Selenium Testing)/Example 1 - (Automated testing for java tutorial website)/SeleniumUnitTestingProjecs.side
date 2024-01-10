@@ -1,0 +1,573 @@
+{
+  "id": "cc365853-ff38-468d-bae1-49f177192f00",
+  "version": "2.0",
+  "name": "SeleniumUnitTestingProject 1",
+  "url": "https://www.google.com/search?",
+  "tests": [{
+    "id": "31c9a0d2-4afd-4eaa-a328-0167c2d2ae84",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "3f755223-0b8b-448b-bedb-e38a54f2fced",
+    "name": "Java_Tutorial_Search_Test",
+    "commands": [{
+      "id": "3ea00745-0d85-4f51-8ad2-8264f75dc95a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdb15ea9-6b17-470a-b2e0-9ef8a6b93116",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a769203e-0d60-4d5d-a646-1f63341863e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "baed857e-9baa-4cad-a2e0-e3e2f13db3c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ULSxyf:nth-child(2) .LC20lb:nth-child(2)",
+      "targets": [
+        ["css=.ULSxyf:nth-child(2) .LC20lb:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div[2]/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/span/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "223e7657-0587-4a23-ba9b-35b4e2411be1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Java - Hello World Program",
+      "targets": [
+        ["linkText=Java - Hello World Program", "linkText"],
+        ["css=.chapters > li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Java - Hello World Program')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/java/java_hello_world.htm')]", "xpath:href"],
+        ["xpath=//ul[2]/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Java - Hello World Program')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "113c6d14-80d5-4918-aedf-239e9f21b097",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Java - Hello World Program",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95605ad4-9f87-44b8-883a-e46af4e7bc2f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dac6bdfe-2b83-4979-b2e3-39237662811a",
+    "name": "Search_Tutorial_From_JavaTPoint",
+    "commands": [{
+      "id": "4f5c95c7-5a01-4e89-ae45-cdcca98ae89b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.geeksforgeeks.org/java/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "763771c0-417c-4d10-815f-36d5439cb4be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39764b7d-cd3f-4356-84cc-30eefb388507",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(6) > .dropdown-title",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(6) > .dropdown-title", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Basics of Java')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a258ee7-8465-45c1-9a7f-02dc7059852b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Java Basic Syntax",
+      "targets": [
+        ["linkText=Java Basic Syntax", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(6) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Java Basic Syntax')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.geeksforgeeks.org/java-basic-syntax/?ref=lbp')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Java Basic Syntax')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5268aea-7757-4d42-a1a3-10a147898fa4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) > .dropdown-title",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) > .dropdown-title", "css:finder"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[8]/h2", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/ul/div[8]/h2", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf71bc5f-474e-4cde-8075-a1b8e7b6f178",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "linkText=Access Modifiers in Java",
+      "targets": [
+        ["linkText=Access Modifiers in Java", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) li:nth-child(6) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Access Modifiers in Java')])[3]", "xpath:link"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[8]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.geeksforgeeks.org/access-modifiers-java/?ref=lbp')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/div[8]/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00e71c1c-c56a-4471-bfd8-b81f0ff62ba8",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "linkText=Four Main Object Oriented Programming Concepts of Java",
+      "targets": [
+        ["linkText=Four Main Object Oriented Programming Concepts of Java", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) li:nth-child(8) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Four Main Object Oriented Programming Concepts of Java')])[2]", "xpath:link"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[8]/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.geeksforgeeks.org/four-main-object-oriented-programming-concepts-of-java/?ref=lbp')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/div[8]/ul/li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "149d3435-5f68-4f52-b6b9-fab7ed3f12cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) > ul",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) > ul", "css:finder"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[8]/ul", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/ul/div[8]/ul", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8aefa59e-1790-42f0-94b3-6913eb93596c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Four Main Object Oriented Programming Concepts of Java",
+      "targets": [
+        ["linkText=Four Main Object Oriented Programming Concepts of Java", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(12) li:nth-child(8) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Four Main Object Oriented Programming Concepts of Java')])[2]", "xpath:link"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[8]/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.geeksforgeeks.org/four-main-object-oriented-programming-concepts-of-java/?ref=lbp')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/div[8]/ul/li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "788dfb7f-94f3-4eb5-9fc5-9c3088a36a00",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(13) > .dropdown-title",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(13) > .dropdown-title", "css:finder"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[9]/h2", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/ul/div[9]/h2", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adbc2e01-84b9-404c-afec-ea99ae2cb677",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Interfaces and Inheritance in Java",
+      "targets": [
+        ["linkText=Interfaces and Inheritance in Java", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(13) li:nth-child(3) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Interfaces and Inheritance in Java')])[2]", "xpath:link"],
+        ["xpath=//div[@id='home-page']/div/div/div/div/ul/div[9]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.geeksforgeeks.org/interfaces-and-inheritance-in-java/?ref=lbp')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/div[9]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "171af3d6-8234-4734-b8ed-2d9a254d20b8",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Interfaces and Inheritance in Java - GeeksforGeeks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dd6d8a6-7463-4c32-bccb-ad96ef13e666",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[9]/div[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a6a25c6-b7f6-43f4-aaa0-37e7167e4a05",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ce165285-2da4-43f7-9709-4dad5d906156",
+    "name": "Java_Tutorial_Search_Test_Auto",
+    "commands": [{
+      "id": "604d0e9e-6511-4f67-980f-c0fd80d4af94",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/search?q=Java+Tutorial&sca_esv=597118812&source=hp&ei=5TOeZc26Aq2WseMP26aMsAQ&iflsig=ANes7DEAAAAAZZ5B9eaHoKe4Jq62tRn3kHvtRH8n72On&ved=0ahUKEwiNwebak9KDAxUtS2wGHVsTA0YQ4dUDCAo&uact=5&oq=Java+Tutorial&gs_lp=Egdnd3Mtd2l6Ig1KYXZhIFR1dG9yaWFsMgsQABiABBixAxiDATIFEAAYgAQyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEiTBVAAWABwAHgAkAEAmAFloAFlqgEDMC4xuAEDyAEA-AEC-AEB&sclient=gws-wiz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3829920-c5d9-4998-8b87-57b57a6b0ee5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01478c00-8fd7-474c-a99f-c77b4fd9854d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(4) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(4) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div[3]/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div/span/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5143c062-2110-4e7e-9a59-78c531ac2f85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(10) > .dropdown-title",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(10) > .dropdown-title", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[6]/h2", "xpath:idRelative"],
+        ["xpath=//div[6]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Strings in Java')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc844afe-26f1-4e6f-8331-f9d27ea10d87",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=String vs StringBuilder vs StringBuffer in Java",
+      "targets": [
+        ["linkText=String vs StringBuilder vs StringBuffer in Java", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(10) li:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'String vs StringBuilder vs StringBuffer in Java')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[6]/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.geeksforgeeks.org/string-vs-stringbuilder-vs-stringbuffer-in-java/?ref=lbp')]", "xpath:href"],
+        ["xpath=//div[6]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'String vs StringBuilder vs StringBuffer in Java')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db14105c-c00d-4929-a576-582c266c654b",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "String vs StringBuilder vs StringBuffer in Java - GeeksforGeeks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2360be8-c658-4b7e-988b-fc3245a61b82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[9]/div[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "947c5d24-25f7-41b7-828e-8766bba9380e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "57844bcd-3c41-434b-acf0-b172ef36c806",
+    "name": "Java_Tutorial_Search_Tests",
+    "commands": [{
+      "id": "cbfcfede-ac34-4586-8969-c566b8955b33",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/search?q=java+tutorial&sca_esv=597127733&source=hp&ei=EjaeZY7ZNfjh4-EPq8OI8A0&iflsig=ANes7DEAAAAAZZ5EIkX6yuH8ufu_W_hgFgQrgOdfBayH&ved=0ahUKEwiOqubkldKDAxX48DgGHashAt4Q4dUDCAo&uact=5&oq=java+tutorial&gs_lp=Egdnd3Mtd2l6Ig1qYXZhIHR1dG9yaWFsMgsQABiABBixAxiDATIFEAAYgAQyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjVJVAAWMAhcAB4AJABAJgBZqABzQmqAQQxMS4yuAEDyAEA-AEBwgIFEC4YgATCAggQLhiABBixA8ICDhAuGIAEGIoFGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICCxAuGIAEGLEDGIMBwgIIEAAYgAQYsQPCAgcQABiABBgK&sclient=gws-wiz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee9794bc-2e7e-4dd8-a2e1-df88f4561be7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5258a09-abf5-419f-b74f-7ca199c72c63",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,297)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaa97b63-d55f-4220-895d-c0d9750742ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(4) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(4) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div[3]/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div/span/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2123fc5-8bc9-49e9-a6de-0aeefad98055",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Java Tutorial",
+      "targets": [
+        ["linkText=Java Tutorial", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .currentpage > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Java Tutorial')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.geeksforgeeks.org/java/?ref=lbp')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Java Tutorial')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98d93b9c-358f-464f-8b91-340a85a7bfee",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Java Tutorial",
+      "targets": [
+        ["linkText=Java Tutorial", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .currentpage > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Java Tutorial')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.geeksforgeeks.org/java/?ref=lbp')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Java Tutorial')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "884e0027-d707-4924-8097-43cc67035071",
+      "comment": "",
+      "command": "click",
+      "target": "css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(9) > .dropdown-title",
+      "targets": [
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(9) > .dropdown-title", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[5]/h2", "xpath:idRelative"],
+        ["xpath=//div[5]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Operators in Java')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "707c0aa7-b92d-47cd-b9ed-73ca95a522e1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Java Assignment Operators with Examples",
+      "targets": [
+        ["linkText=Java Assignment Operators with Examples", "linkText"],
+        ["css=.leftBarList:nth-child(1) > .leftbar-dropdown:nth-child(9) li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Java Assignment Operators with Examples')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/ul/div[5]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.geeksforgeeks.org/java-assignment-operator-with-examples/?ref=lbp')]", "xpath:href"],
+        ["xpath=//div[5]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Java Assignment Operators with Examples')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90942c04-5916-43d8-9e1a-8bb7344e9f07",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Java Assignment Operators with Examples - GeeksforGeeks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a3f89af-9334-4962-a6b3-86d024426299",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[9]/div[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9083cdbb-1ca6-4822-a96e-2339b53540e5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "01245522-c3ce-4e77-b29d-11481a71ab5c",
+    "name": "Java_Tutorial_Search_Testi",
+    "commands": [{
+      "id": "52d5a671-6cdb-43d1-84e5-5ab80c8fe6e4",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/search?q=Java+Tutorial&sca_esv=597127733&source=hp&ei=tjeeZarZJtOXjuMPksuUkAM&iflsig=ANes7DEAAAAAZZ5Fxn7gQW5lsoFSdxxbdw10hboNBHwA&ved=0ahUKEwiqjPqsl9KDAxXTi2MGHZIlBTIQ4dUDCAo&uact=5&oq=Java+Tutorial&gs_lp=Egdnd3Mtd2l6Ig1KYXZhIFR1dG9yaWFsMgsQABiABBixAxiDATIFEAAYgAQyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEizOlAAWKE2cAB4AJABAJgBvAGgAd4QqgEEMC4xM7gBA8gBAPgBAcICBRAuGIAEwgIIEC4YgAQYsQPCAg4QLhiABBiKBRixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIOEC4YgAQYsQMYxwEY0QPCAgsQLhiABBixAxiDAcICCBAAGIAEGLEDwgIHEAAYgAQYCsICDRAAGIAEGAoYsQMYgwE&sclient=gws-wiz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aca8e929-5d19-451e-9e84-a878b7f66517",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80d66be9-2b84-43a9-96a6-993920bba8e9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,218)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b2234e4-47b0-4360-a824-559a81c362b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(4) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(4) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div[3]/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div/span/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86b1d755-918d-4a05-9944-1a05f60d2e6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gcse-search__btn > .gfg-icon",
+      "targets": [
+        ["css=.gcse-search__btn > .gfg-icon", "css:finder"],
+        ["xpath=//form[@id='gcse-form']/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae56a25b-883d-4ec3-a788-aec32d140e3a",
+      "comment": "",
+      "command": "type",
+      "target": "id=gcse-search-input",
+      "targets": [
+        ["id=gcse-search-input", "id"],
+        ["css=#gcse-search-input", "css:finder"],
+        ["xpath=//input[@id='gcse-search-input']", "xpath:attributes"],
+        ["xpath=//form[@id='gcse-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "java"
+    }, {
+      "id": "87b75f6a-e2c2-4bb2-abfa-ef76587b98d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddf80ed7-9d8b-4768-b2ee-9fa1f2c7946c",
+      "comment": "",
+      "command": "click",
+      "target": "id=gcse-search-input",
+      "targets": [
+        ["id=gcse-search-input", "id"],
+        ["css=#gcse-search-input", "css:finder"],
+        ["xpath=//input[@id='gcse-search-input']", "xpath:attributes"],
+        ["xpath=//form[@id='gcse-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5285069-4312-43ac-88a2-be5b10c706b3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=gcse-search-input",
+      "targets": [
+        ["id=gcse-search-input", "id"],
+        ["css=#gcse-search-input", "css:finder"],
+        ["xpath=//input[@id='gcse-search-input']", "xpath:attributes"],
+        ["xpath=//form[@id='gcse-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "90ca6a5d-2575-4b4a-9d71-ae376d45145b",
+      "comment": "",
+      "command": "type",
+      "target": "id=gcse-search-input",
+      "targets": [
+        ["id=gcse-search-input", "id"],
+        ["css=#gcse-search-input", "css:finder"],
+        ["xpath=//input[@id='gcse-search-input']", "xpath:attributes"],
+        ["xpath=//form[@id='gcse-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "java"
+    }, {
+      "id": "0e46aa05-e240-449d-bd54-5d0c579e0549",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Java Tutorial | Learn Java Programming",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff3a7107-f354-4259-8add-e127d819745c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "323aa983-12c6-4b01-b27d-5e15be17b3b8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["31c9a0d2-4afd-4eaa-a328-0167c2d2ae84"]
+  }],
+  "urls": ["https://shop.app/", "https://www.google.com/", "https://www.geeksforgeeks.org/java/", "https://www.google.com/search?"],
+  "plugins": []
+}

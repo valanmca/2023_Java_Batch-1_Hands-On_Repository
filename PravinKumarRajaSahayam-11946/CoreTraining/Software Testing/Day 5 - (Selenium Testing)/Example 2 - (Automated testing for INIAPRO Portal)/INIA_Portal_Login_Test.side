@@ -1,0 +1,296 @@
+{
+  "id": "1d8fdc22-3ebd-4cf6-8a6f-3520abe604d3",
+  "version": "2.0",
+  "name": "INIA_Portal_Login_Test",
+  "url": "https://google.com/",
+  "tests": [{
+    "id": "ac3f6c53-41aa-4f2c-855e-80b653ee9310",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "06d2c7ff-071a-4a88-99fb-0b15ff50b14a",
+    "name": "INIA_Portal_Login_Test",
+    "commands": [{
+      "id": "8e14f163-dbed-4b0b-a16a-5c3efc7e7143",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6692cb64-5e84-49df-a190-e232efeab676",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89da6964-d347-46c6-9f50-4fed4963c744",
+      "comment": "",
+      "command": "click",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//div[@id='quick-search']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a4be4fb-1dfa-4c02-b922-dca71d31f39a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.drdn-trigger",
+      "targets": [
+        ["css=.drdn-trigger", "css:finder"],
+        ["xpath=//div[@id='project-jump']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jump to a project...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24df148b-6672-43a5-9d55-ded0b9c53201",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=ORG.RI100.FRESHERSBATCH1",
+      "targets": [
+        ["linkText=ORG.RI100.FRESHERSBATCH1", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='project-jump']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/projects/pro0949150623?jump=welcome')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ORG.RI100.FRESHERSBATCH1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44f1b7c5-9d82-46f4-8fd8-e7e5f95ed79f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=ORG.RI100.FRESHERSBATCH1",
+      "targets": [
+        ["linkText=ORG.RI100.FRESHERSBATCH1", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='project-jump']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/projects/pro0949150623?jump=welcome')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ORG.RI100.FRESHERSBATCH1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71993d4c-1af8-4261-b107-ea8a826941d3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='project-jump']/div/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/projects/pro0949150623?jump=welcome')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f63fff4b-a679-4c71-8cbf-cd4b42831b26",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='project-jump']/div/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/projects/pro0949150623?jump=welcome')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "176ac25b-ad91-4509-abf5-134c1295c1ac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Projects",
+      "targets": [
+        ["linkText=All Projects", "linkText"],
+        ["css=.all-projects > a", "css:finder"],
+        ["xpath=//a[contains(text(),'All Projects')]", "xpath:link"],
+        ["xpath=//div[@id='project-jump']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/projects?jump=welcome')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Projects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d068b44-4293-496a-a356-28aa65b88370",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Projects - iNiaPro",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f43999e-77bb-4523-ac37-9f55cb2f9a5c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7a9fb75b-398e-4a53-a5a5-ef201db479d1",
+    "name": "INIA_Portal_Login_Test1",
+    "commands": [{
+      "id": "cadb4fb9-87c2-4f7e-8cce-3536aab10063",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f61d6aa3-6812-4834-a064-d25e1b6039aa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2d1a47c-ab05-4da3-b33a-cfa83a7dd08f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Images",
+      "targets": [
+        ["linkText=Images", "linkText"],
+        ["css=.gb_H:nth-child(2) > .gb_F", "css:finder"],
+        ["xpath=//a[contains(text(),'Images')]", "xpath:link"],
+        ["xpath=//div[@id='gb']/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.google.com/imghp?hl=en&ogbl')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Images')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae0d270-052d-4de6-95fa-cfde39d0bacb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Images",
+      "targets": [
+        ["linkText=Images", "linkText"],
+        ["css=.gb_H:nth-child(2) > .gb_F", "css:finder"],
+        ["xpath=//a[contains(text(),'Images')]", "xpath:link"],
+        ["xpath=//div[@id='gb']/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.google.com/imghp?hl=en&ogbl')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Images')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2b5796-bb50-4f05-b103-1bd0e0036c8d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Gmail",
+      "targets": [
+        ["linkText=Gmail", "linkText"],
+        ["css=.gb_H:nth-child(1) > .gb_F", "css:finder"],
+        ["xpath=//a[contains(text(),'Gmail')]", "xpath:link"],
+        ["xpath=//div[@id='gb']/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://mail.google.com/mail/&ogbl')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gmail')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24377fa7-07c6-46e1-aa33-0a30a664aab8",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6f16d9e-db69-4626-8a3f-a3db3b61cfbe",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "iniapro"
+    }, {
+      "id": "c5e43775-9283-40d2-9032-f87459d99ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jZ2SBf > .wM6W7d > span",
+      "targets": [
+        ["css=#jZ2SBf > .wM6W7d > span", "css:finder"],
+        ["xpath=//div[@id='jZ2SBf']/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'iniapro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ad1749e-b705-4bcb-9fb6-47584f3d9477",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hlcw0c:nth-child(1) .LC20lb:nth-child(2)",
+      "targets": [
+        ["css=.hlcw0c:nth-child(1) .LC20lb:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'iNiaPro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09ea9749-0345-4b12-a72b-31a6e2a94fbd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help",
+      "targets": [
+        ["linkText=Help", "linkText"],
+        ["css=.help", "css:finder"],
+        ["xpath=//a[contains(text(),'Help')]", "xpath:link"],
+        ["xpath=//div[@id='top-menu']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://sangam.relevantz.com')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Help')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f71f1710-6290-44ca-a007-72ad534dbc66",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee17f09c-9bcf-47b7-a002-39513ed14e0f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Portal",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bfccc27-34ae-4be7-943f-fdd0dba90d8c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9a223dbb-ae43-422f-b15b-cf34c1f651a0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ac3f6c53-41aa-4f2c-855e-80b653ee9310"]
+  }],
+  "urls": ["https://iniapro.relevantz.com/", "https://google.com/"],
+  "plugins": []
+}

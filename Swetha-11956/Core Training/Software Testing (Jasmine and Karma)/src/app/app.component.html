@@ -1,0 +1,22 @@
+<!--
+  <b>Welcome to Angular UI Testing</b>
+<h3>{{name}}</h3>
+
+<div class="email1">
+   My Email is : {{email}}
+</div>
+-->
+
+<!-- Reactive form-->
+<br>
+<form [formGroup]="LoginForm" id="LoginForm"> 
+  <div>
+    <input formControlName="username" placeholder="Username" type="text" required />
+  </div>
+  <div>
+    <input formControlName="password" placeholder="Password" type="password" required />
+  </div>
+  <div>
+    <input type="submit" value="Login" />
+  </div>
+</form>

@@ -45,6 +45,11 @@ Swetha Sadhasivam
 | Hibernate | Done |
 | Spring Boot | Done |
 | Microservices | Done |
+| Docker | Done |
+| DevOps | Done |
+| Code Quality | Done |
+| Sotware Testing | Done |
+| Cloud Computing | Done |
 
 ## **🤝🏻Contributors**
 
